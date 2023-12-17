@@ -1,4 +1,4 @@
-from PyPDF2 import PdfReader
+from PyPDF2 import PdfReader  #acha o gabarito de uma questão X 
 import re
 
 pdf = PdfReader("enem_1dia_2022_gaba_azul.pdf")

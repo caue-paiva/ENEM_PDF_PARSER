@@ -1,4 +1,4 @@
-import re 
+import re  #file das funções usadas no PDF_PRCOESSING_FINAL.py 
 
 test_str = """A história do Primeiro de Maio de 1890 — na França e na 
 Europa, o primeiro de todos os Primeiros de Maio — é, sob 
@@ -53,4 +53,4 @@ def parse_alternatives(str_quest):
        
     return str_quest
 
-print(parse_alternatives(test_str))
+#print(parse_alternatives(test_str))

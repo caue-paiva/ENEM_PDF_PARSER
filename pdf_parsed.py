@@ -1,6 +1,6 @@
 
-resposta_size = len("(RESPOSTA) sempre correta:d ")
-question_subjects= "humanas"
+resposta_size = len("(RESPOSTA) sempre correta:d ") #esse codigo remove partes do .txt que estão com o (enem/20xx) e (resposta) sem nenhuma questão entre eles
+question_subjects= "humanas"  #otimizar:  colocar o find_all_substrings como uma importação de functions.py
 def find_all_substrings(string, substring):
     substring = substring or "*"
     start = 0  

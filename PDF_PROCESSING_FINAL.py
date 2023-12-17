@@ -13,16 +13,12 @@ num_pags= len(reader.pages)
 
 replacement = "QUESTÃO"
 
-
-page2 = reader.pages[6] 
-texto2= page2.extract_text()
-
-questao_index = 0
+questao_index = 0   #conta o numero da questão e se ja passou das questões de ingles
 eng_quest_passed = False
 
 for i in range(1,num_pags): 
     
-    page = reader.pages[i]
+    page = reader.pages[i]  #loop sobre todas as paginas do PDF, extraindo o texto de cada uma
     num_images = 0
     texto = page.extract_text() 
     
@@ -30,7 +26,7 @@ for i in range(1,num_pags):
      inicio_quest = next(find_all_substrings(texto, 'QUESTÃO')) #itera sobre todas as questões da pagina
     except:
         print("sem questões")
-        continue
+        continue 
         
     texto_sem_header = texto[inicio_quest:]
     texto_sem_header = replace_code(texto_sem_header, replacement)
@@ -62,7 +58,7 @@ for i in range(1,num_pags):
              correc_answer = correc_answer.lower()
              unparsed_alter = texto_sem_header[quest_string_start:position]
              parsed_alternatives = fn.parse_alternatives(unparsed_alter)
-             questao_parsed =  f"(Enem/{test_year}) "+ parsed_alternatives +f"\n(RESPOSTA) sempre correta:{correc_answer} \n\n"
+             questao_parsed =  f"(Enem/{test_year}) "+ parsed_alternatives +f"\n(RESPOSTA) sempre correta: {correc_answer} \n\n"
              
              if num_gaba in range (1,6) and eng_quest_passed == False:          
                 with open( "questoes_ingles3.txt", "a") as f_ing:
