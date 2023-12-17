@@ -2,15 +2,16 @@ from PyPDF2 import PdfReader
 import re #tentar parsear o arquivo das questoes, ver se existem questoes sem nada, ai compara a distancia entra a string (enem) e a (resposta), se ala for muito pequena, deleta tudo entre elas
 import pdf_gabarito as gab
 import functions as fn
-from functions import find_all_substrings
+from functions import yield_all_substrings
 from functions import replace_code
+
 
 reader = PdfReader("enem_1_dia_2022_azul.pdf") #achar o ano das questões
 year_pattern = "20\d{2}"
 test_year = re.findall(year_pattern, "enem_1_dia_2022_azul.pdf")
 test_year = test_year[0]
 num_pags= len(reader.pages)
-
+ 
 replacement = "QUESTÃO"
 
 questao_index = 0   #conta o numero da questão e se ja passou das questões de ingles
@@ -23,7 +24,7 @@ for i in range(1,num_pags):
     texto = page.extract_text() 
     
     try:              
-     inicio_quest = next(find_all_substrings(texto, 'QUESTÃO')) #itera sobre todas as questões da pagina
+     inicio_quest = next(yield_all_substrings(texto, 'QUESTÃO')) #itera sobre todas as questões da pagina
     except:
         print("sem questões")
         continue 
@@ -34,7 +35,7 @@ for i in range(1,num_pags):
     start_quest_index = questao_index
 
 
-    for position in find_all_substrings(texto_sem_header, 'QUESTÃO'):
+    for position in yield_all_substrings(texto_sem_header, 'QUESTÃO'):
         questao_index += 1  #itera sobre o contador do numero de questões
         print(questao_index)
         
@@ -50,7 +51,7 @@ for i in range(1,num_pags):
 
     if num_images == 0:
          num_gaba = start_quest_index
-         for position in find_all_substrings(texto_sem_header, 'QUESTÃO'):
+         for position in yield_all_substrings(texto_sem_header, 'QUESTÃO'):
              
              print("num sendo mandado no gaba: "+  str(num_gaba))
 
