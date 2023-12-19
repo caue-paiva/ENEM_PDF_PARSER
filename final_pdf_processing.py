@@ -117,6 +117,8 @@ class EnemPDFextractor():
              
         text:str = current_page.extract_text()
 
+        if i < 4:
+         print(text + "\n\n")
         first_question: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.QUESTION_IDENTIFIER) , -1 ) #acha a primeira questão da folha
         
         if first_question == -1:
@@ -130,7 +132,8 @@ class EnemPDFextractor():
 
         page_first_question: int = total_question_number #a primeira questão da prox página sera o numero total de questões processadas ate o momento
         total_questions_before = total_question_number
-        for _ in self.__yield_all_substrings__(text, 'QUESTÃO'):
+        
+        for _ in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER):
             total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
             #print(total_question_number)
         
@@ -148,23 +151,35 @@ class EnemPDFextractor():
              continue  #caso tenha imagens na página vamos pular ela, já que não podemos extrair a imagem
         
         #não é possível fazer essa verificação no começo pois é preciso contar todas as questões da página para a variavel total_question_number, já que ela dita qual matéria esta sendo processada
-
+        
+        text += f" {self.QUESTION_IDENTIFIER}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
         question_start_index:int = 0
         answer_number: int = page_first_question
         in_spanish_question: bool = False
         
         for position in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes
              
+             if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
+                 continue
+             
+             print(position)
              print(f"questao atual {answer_number}")
+             
              if answer_number > 5 and answer_number < 11:
                  in_spanish_question = True  #verifica se a questão é de espanhol
              else:
                  in_spanish_question = False
             
+             if answer_number < 10:  #texto vindo sempre começa com QUESTAO X
+              print(f"texto vindo: {text}\n\n")
+
+
              # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
              correct_answer:str = self.__find_correct_answer__(answer_number,in_spanish_question).lower() 
              unparsed_alternatives: str = text[question_start_index:position]
              parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
+             
+            
              
              parsed_question = self.QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
              
