@@ -1,8 +1,13 @@
 from PyPDF2 import PdfReader 
-import re #tentar parsear o arquivo das questoes, ver se existem questoes sem nada, ai compara a distancia entra a string (enem) e a (resposta), se ala for muito pequena, deleta tudo entre elas
-import pdf_gabarito as gab
-import os
+import re, os ,json #tentar parsear o arquivo das questoes, ver se existem questoes sem nada, ai compara a distancia entra a string (enem) e a (resposta), se ala for muito pequena, deleta tudo entre elas
 
+""" A melhorar:
+1) Lidar com casos de questão anulada (atualmente ele pega essas questões e fala que o gabarito é A)
+
+
+
+
+"""
 
 
 
@@ -16,7 +21,7 @@ class EnemPDFextractor():
     NUM_PATTERN1 = r"\*\w{9}\*"  #esses padrões vem de um código de barras presente no topo de toda página, ele vai ser removido
     NUM_PATTERN2 = r"\*\w{10}\*"
     QUESTION_IDENTIFIER = "QUESTÃO"
-    QUESTION_TEMPLATE= "(Enem/{test_year})  {question_text}\n(RESPOSTA CORRETA): {correct_answer}\n\n"
+    TXT_QUESTION_TEMPLATE= "(Enem/{test_year})  {question_text}\n(RESPOSTA CORRETA): {correct_answer}\n\n"
     SUPPORTED_OUTPUT_FILES:tuple = ("txt", "json")
     TEST_COLOR_PATTERN = "CD\d{1}"  #provas/cadernos e gabaritos  são separadas por cores, se as cores de ambos forem iguais, eles estão relacionados
 
@@ -187,7 +192,7 @@ class EnemPDFextractor():
                  answer_number += 1
                  continue
              
-             parsed_question = self.QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+             parsed_question = self.TXT_QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
              
              start_natu, end_natu = topic_question_range["natu"] #desempacotando a tuple de ranges de questões das matérias
              start_math, end_math = topic_question_range["math"]
@@ -277,7 +282,7 @@ class EnemPDFextractor():
                  answer_number += 1
                  continue
 
-             parsed_question = self.QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+             parsed_question = self.TXT_QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
              
              start_eng, end_eng = topic_question_range["eng"] #desempacotando a tuple de ranges de questões das matérias
              start_spa, end_spa = topic_question_range["spa"]
@@ -316,7 +321,137 @@ class EnemPDFextractor():
      with open(file_path, "a") as f_huma:
         f_huma.write(humanities_questions)
      
-    def extract_pdf(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str, output_type:str = "txt")->None: #extrai o texto dos PDF de um ano específico
+    def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correc_answer:str, number:int)->dict:
+        day_identifier = "D1" if day_one else "D2"
+        
+        if day_one:
+            number = number if number < 6 else number -5 #subtrair as 5 questões contadas na matéria de espanhol
+        else:
+            number += 90
+        
+        json_dict = {
+           "question_text": question,
+           "correct_answer": correc_answer ,
+           "ID": f"{year}_{day_identifier}_N{number}",
+           "year": year,
+           "day": day_identifier,
+           "question_num": number
+        }
+        return json_dict
+
+    def __json_handle_day_one_tests__(self, pdf_reader: PdfReader, test_year:int)->None:
+        total_question_number: int = 0 
+        english_questions: list[dict] = []
+        spanish_questions: list[dict] = []
+        humanities_questions: list[dict] = []
+        languages_arts_questions: list[dict] = []
+
+        num_pages: int = len(pdf_reader.pages)
+        topic_question_range:dict[str,tuple] = {"eng": (1,5), "spa":(6,10), "lang": (11,50), "huma":(51,95)} #ultima questão de humanas é a 96 pq tbm são contadas as de ingles e espanho,ambas entre 1-6
+
+        for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
+            current_page = pdf_reader.pages[i]             
+                
+            text:str = current_page.extract_text()
+
+            first_question_str_index: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.QUESTION_IDENTIFIER) , -1 ) #acha a primeira questão da folha
+            
+            if first_question_str_index == -1:
+                print("sem questões")
+                continue # se não tiver questões na página (pagina de redação) pula a iteração
+            
+            text = text[first_question_str_index:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
+            
+            text = re.sub(self.NUM_PATTERN1,"", text)  #remove os padrões numéricos do QR codes
+            text = re.sub(self.NUM_PATTERN2,"",text)
+
+            page_first_question: int = total_question_number + 1 #a primeira questão da prox página sera o numero total de questões processadas ate o momento + 1 (a primeira questão em si)
+            
+            for _ in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER):
+                total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
+                #print(total_question_number)
+                    
+            try:
+             num_images:int = len(current_page.images)
+            except:
+                print("exception")   #verifica se tem imagens na pagina
+                num_images = 1
+            
+            if num_images != 0:
+                print("tem imagens, pula")
+                continue  #caso tenha imagens na página vamos pular ela, já que não podemos extrair a imagem   
+            #não é possível fazer essa verificação no começo pois é preciso contar todas as questões da página para a variavel total_question_number, já que ela dita qual matéria esta sendo processada
+            
+            text += f" {self.QUESTION_IDENTIFIER}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
+            question_start_index:int = 0
+            answer_number: int = page_first_question
+            in_spanish_question: bool = False
+            
+            for position in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes     
+                if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
+                    continue
+                
+                if answer_number > 5 and answer_number < 11:
+                    in_spanish_question = True  #verifica se a questão é de espanhol
+                else:
+                    in_spanish_question = False
+
+                # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
+                correct_answer:str = self.__find_correct_answer__(question_number= answer_number, is_spanish_question= in_spanish_question, day_one=True,) 
+                unparsed_alternatives: str = text[question_start_index:position]
+                parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
+                    
+                if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
+                    question_start_index = position
+                    answer_number += 1
+                    continue
+
+                question_json:dict = self.__get_json_from_question__(
+                      question= parsed_question,
+                      day_one=True,
+                      year= test_year,
+                      correc_answer= correct_answer,
+                      number= answer_number
+                )
+                
+                start_eng, end_eng = topic_question_range["eng"] #desempacotando a tuple de ranges de questões das matérias
+                start_spa, end_spa = topic_question_range["spa"]
+                start_lang, end_lang = topic_question_range["lang"]
+                start_huma, end_huma = topic_question_range["huma"]
+
+                if answer_number in range(start_eng, end_eng+1): #precisamos incluir a ultima questão do range de cada matéria
+                    english_questions.append(question_json)
+
+                elif answer_number in range(start_spa, end_spa+1):
+                    spanish_questions.append(question_json)
+
+                elif answer_number in range(start_lang, end_lang+1):
+                    languages_arts_questions.append(question_json)
+
+                elif answer_number in range(start_huma, end_huma+1):
+                    humanities_questions.append(question_json)
+                    
+                question_start_index = position
+                answer_number += 1
+        
+     #escrever as strings extraidas nos seus arquivos respectivos
+        file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.json" )
+        with open(file_path, "a") as f_eng:
+            json.dump(english_questions,f_eng, indent=4)
+            
+        file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions.json" )
+        with open(file_path, "a") as f_spani:
+                json.dump(spanish_questions,f_spani,  indent=4)
+
+        file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions.json" )     
+        with open(file_path, "a") as f_lang:
+            json.dump(languages_arts_questions,f_lang, indent=4)
+            
+        file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.json" )
+        with open(file_path, "a") as f_huma:
+            json.dump(humanities_questions,f_huma, indent=4)
+
+    def extract_pdf(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str)->None: #extrai o texto dos PDF de um ano específico
         self.__handle_IO_errors__( test_pdf_path= test_pdf_path, answers_pdf_path= answers_pdf_path)
         
         answer_pdf_reader = PdfReader(answers_pdf_path)
@@ -333,132 +468,14 @@ class EnemPDFextractor():
 
         test_pdf_reader:PdfReader = PdfReader(test_pdf_path) 
         regex_return = re.findall(self.__YEAR_PATTERN__, self.test_pdf_path)
-        test_year:str = regex_return[0]   
+        test_year:int = int(regex_return[0])   
         print(type(regex_return[0]))
     
         if self.DAY_ONE_SUBSTR in test_pdf_path:
-            self.__txt_handle_day_one_tests__(test_pdf_reader,test_year)
+            if self.output_type == "txt":
+             self.__txt_handle_day_one_tests__(test_pdf_reader,test_year)
+            else:
+                self.__json_handle_day_one_tests__(test_pdf_reader,test_year)
         else:
             self.__txt_handle_day_two_tests__(test_pdf_reader,test_year)
         
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-    """def __handle_day_one_tests__(pdf_reader:PdfReader,test_pdf_path:str, answers_pdf_path:str, test_year:int, num_pages:int)->None:
-     
-     total_question_number: int = 0
-     english_questions: str = ""
-     spanish_questions: str = ""
-     humanities_questions: str = ""
-     languages_arts_questions: str = ""
-     
-     past_eng_questions: bool = False
-     topic_question_range:dict[str,tuple] = {"eng": (1,6), "spa":(1,6), "lang": (11,51), "huma":(51,96)} #ultima questão de humanas é a 96 pq tbm são contadas as de ingles e espanho,ambas entre 1-6
-
-     for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
-        current_page = pdf_reader.pages[i]             
-         
-        try:
-           num_images:int = len(current_page.images)
-        except:
-            print("exception")   #verifica se tem imagens na pagina
-            num_images = 1
-         
-        if num_images != 0:
-             continue  #caso tenha imagens na página vamos pular ela, já que não podemos extrair a imagem
-         
-        text:str = current_page.extract_text()
-        first_question: int = next(yield_all_substrings(text,QUESTION_IDENTIFIER),-1) #acha a primeira questão da folha
-        
-        if first_question == -1:
-            print("sem questões")
-            continue # se não tiver questões na página (pagina de redação) pula a iteração
-         
-        text = text[first_question:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
-         
-        text = re.sub(NUM_PATTERN1,"", text)  #remove os padrões numéricos do QR codes
-        text = re.sub(NUM_PATTERN2,"",text)
-
-        page_first_question: int = total_question_number #a primeira questão da prox página sera o numero total de questões processadas ate o momento
- 
-        for question in yield_all_substrings(text, 'QUESTÃO'):
-            total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
-            print(total_question_number)
-        
-        #eu ACHO que não precisa colocar o questao_index -= 1 pq eu n to colocando o QUESTÃO  no regex.sub
-        
-        question_start_index:int = 0
-        answer_number: int = page_first_question
-        for position in yield_all_substrings(text,QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes
-             
-             correct_answer:str = (gab.find_answer(answer_number)).lower()
-             unparsed_alternatives: str = text[question_start_index:position]
-             parsed_question: str = fn.self.__parse_alternatives__(unparsed_alternatives)
-             
-             parsed_question = QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
-             
-             start_eng, end_eng = topic_question_range["eng"]
-             start_spa, end_spa = topic_question_range["spa"]
-             start_lang, end_lang = topic_question_range["lang"]
-             start_huma, end_huma = topic_question_range["huma"]
-
-             if answer_number in range(start_eng, end_eng + 1) and not past_eng_questions:
-                english_questions += parsed_question
-
-             elif answer_number in range(start_spa, end_spa + 1):
-                spanish_questions += parsed_question
-
-             elif answer_number in range(start_lang, end_lang + 1):
-                languages_arts_questions += parsed_question
-
-             elif answer_number in range(start_huma, end_huma + 1):
-                humanities_questions += parsed_question
-             
-             question_start_index = position
-             answer_number += 1"""
-        
-        
-         
-                 
-                 
-"""def extract_one_pdf(test_pdf_path:str, answers_pdf_path:str , output_text_path: str)->None: #extrai o texto dos PDF de um ano específico
-    if TEST_IDENTIFIER not in test_pdf_path:
-        raise Exception("nome do arquivo da prova está incorreto")
-    
-    if ANSWER_PDF_IDENTIFIER not in answers_pdf_path:
-        raise Exception("nome do arquivo dr gabarito está incorreto")
-      
-
-    pdf_reader:PdfReader = PdfReader(test_pdf_path)
-    
-    test_year = re.findall(YEAR_PATTERN, "enem_1_dia_2022_azul.pdf")
-    test_year:str = test_year[0]
-
-    num_pages:int = len(pdf_reader.pages)    
-    question_index: int = 0
-
-    day_one_test: bool
-
-    if DAY_ONE_SUBSTR in test_pdf_path:
-        day_one_test = False # a prova não é do primeiro dia
-    else:
-        day_one_test = True
-    
-
-
-
-    passed_eng_questions: bool =  False #essa variável diz se na prova do primeiro dia, passamos da questão de ingles ou não
-    pass
-
-def extract_all_pdfs()->None: #extra o texto de todos os PDFs em um certo ditório, desde que ele esteja estruturado como ./pdfs_enem
-    pass"""
