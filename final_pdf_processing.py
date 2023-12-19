@@ -63,10 +63,16 @@ class EnemPDFextractor():
                 replacement = question[start_posi]
                 repla_str = f"{replacement})" 
                 question= re.sub(chosen_pattern, repla_str, question) #troca a substr (ex: A A) com apenas a primeira letra (ex: A)
-                index +=1          
+                index +=1  
+
+                start_posi_str: str = question[start_posi:]
+                newline_posi: int =  start_posi_str.find("\n")
+                alternative_text_str: str =  question[start_posi+2: start_posi + newline_posi] # essa string contem o texto em si da alternativa depois da Letra e )
+                
+                if alternative_text_str.isspace(): #caso o texto da alternativa esteja vazia (Alternativas são imagens que não são checadas pelo PDF reader), retornamos um str de erro
+                     return "non-standard alternatives"   
             else:
-                break #o padrão não existe, então não é o texto de uma alternativa
-        
+                return "non-standard alternatives" #o padrão não existe, então não é o texto de uma alternativa  
         return question
 
     def __yield_all_substrings__(self, input_str: str, sub_str:str)->int:
@@ -167,16 +173,20 @@ class EnemPDFextractor():
             
              if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                  continue
-             
              # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
              correct_answer:str = self.__find_correct_answer__(question_number = answer_number, is_spanish_question= False, day_one= False) 
              unparsed_alternatives: str = text[question_start_index:position]
              parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
              
+             if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
+                 question_start_index = position
+                 answer_number += 1
+                 continue
+             
              parsed_question = self.QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
              
-             start_natu, end_natu:int = topic_question_range["natu"] #desempacotando a tuple de ranges de questões das matérias
-             start_math, end_math:int = topic_question_range["math"]
+             start_natu, end_natu = topic_question_range["natu"] #desempacotando a tuple de ranges de questões das matérias
+             start_math, end_math = topic_question_range["math"]
 
              if answer_number in range(start_natu,  end_natu+1): #precisamos incluir a ultima questão do range de cada matéria
                 natural_sci_questions += parsed_question
@@ -378,7 +388,7 @@ class EnemPDFextractor():
         if self.DAY_ONE_SUBSTR in self.test_pdf_path:
             self.__txt_handle_day_one_tests__(pdf_reader,test_year,num_pages)
         else:
-            #day_one_test = True
+            self.__txt_handle_day_two_tests__(pdf_reader,test_year,num_pages)
         
 
     
@@ -393,7 +403,7 @@ class EnemPDFextractor():
 
 
 
-         """def __handle_day_one_tests__(pdf_reader:PdfReader,test_pdf_path:str, answers_pdf_path:str, test_year:int, num_pages:int)->None:
+    """def __handle_day_one_tests__(pdf_reader:PdfReader,test_pdf_path:str, answers_pdf_path:str, test_year:int, num_pages:int)->None:
      
      total_question_number: int = 0
      english_questions: str = ""
