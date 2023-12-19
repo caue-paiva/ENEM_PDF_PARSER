@@ -16,7 +16,7 @@ class EnemPDFextractor():
     NUM_PATTERN1 = r"\*\w{9}\*"  #esses padrões vem de um código de barras presente no topo de toda página, ele vai ser removido
     NUM_PATTERN2 = r"\*\w{10}\*"
     QUESTION_IDENTIFIER = "QUESTÃO"
-    QUESTION_TEMPLATE= "(Enem/{test_year})  {question_text} \n (RESPOSTA) sempre correta: {correct_answer} \n\n"
+    QUESTION_TEMPLATE= "(Enem/{test_year})  {question_text}\n(RESPOSTA CORRETA): {correct_answer}\n\n"
     SUPPORTED_OUTPUT_FILES:tuple = ("txt", "json")
 
     test_pdf_path:str 
@@ -103,7 +103,7 @@ class EnemPDFextractor():
     
     def __txt_handle_day_one_tests__(self, pdf_reader:PdfReader, test_year:int, num_pages:int)->None:
      
-     total_question_number: int = 0
+     total_question_number: int = 0 
      english_questions: str = ""
      spanish_questions: str = ""
      humanities_questions: str = ""
@@ -117,8 +117,6 @@ class EnemPDFextractor():
              
         text:str = current_page.extract_text()
 
-        if i < 4:
-         print(text + "\n\n")
         first_question: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.QUESTION_IDENTIFIER) , -1 ) #acha a primeira questão da folha
         
         if first_question == -1:
@@ -130,16 +128,14 @@ class EnemPDFextractor():
         text = re.sub(self.NUM_PATTERN1,"", text)  #remove os padrões numéricos do QR codes
         text = re.sub(self.NUM_PATTERN2,"",text)
 
-        page_first_question: int = total_question_number #a primeira questão da prox página sera o numero total de questões processadas ate o momento
-        total_questions_before = total_question_number
+        page_first_question: int = total_question_number + 1 #a primeira questão da prox página sera o numero total de questões processadas ate o momento + 1 (a primeira questão em si)
         
+        total_questions_before = total_question_number
+        print(f"page first question {page_first_question} \n\n")
         for _ in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER):
             total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
             #print(total_question_number)
-        
-        print(f"foram achadas {total_question_number - total_questions_before} novas questoes")
-        #eu ACHO que não precisa colocar o questao_index -= 1 pq eu n to colocando o QUESTÃO  no regex.sub
-        
+              
         try:
            num_images:int = len(current_page.images)
         except:
@@ -157,29 +153,19 @@ class EnemPDFextractor():
         answer_number: int = page_first_question
         in_spanish_question: bool = False
         
-        for position in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes
-             
+        for position in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes     
              if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                  continue
-             
-             print(position)
-             print(f"questao atual {answer_number}")
              
              if answer_number > 5 and answer_number < 11:
                  in_spanish_question = True  #verifica se a questão é de espanhol
              else:
                  in_spanish_question = False
-            
-             if answer_number < 10:  #texto vindo sempre começa com QUESTAO X
-              print(f"texto vindo: {text}\n\n")
-
 
              # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
-             correct_answer:str = self.__find_correct_answer__(answer_number,in_spanish_question).lower() 
+             correct_answer:str = self.__find_correct_answer__(answer_number,in_spanish_question) 
              unparsed_alternatives: str = text[question_start_index:position]
              parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
-             
-            
              
              parsed_question = self.QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
              
@@ -189,19 +175,15 @@ class EnemPDFextractor():
              start_huma, end_huma = topic_question_range["huma"]
 
              if answer_number in range(start_eng, end_eng):
-                print("ingles")
                 english_questions += parsed_question
 
              elif answer_number in range(start_spa, end_spa):
-                print("espa")
                 spanish_questions += parsed_question
 
              elif answer_number in range(start_lang, end_lang):
-                print("lingua")
                 languages_arts_questions += parsed_question
 
              elif answer_number in range(start_huma, end_huma):
-                print("huma")
                 humanities_questions += parsed_question
             
              #if answer_number >= 5: #se ja passou da questão 5 então ja passou das de inglês
