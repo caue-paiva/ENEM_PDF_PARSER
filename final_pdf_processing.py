@@ -98,7 +98,7 @@ class EnemPDFextractor():
             
         else: 
             return "não achou a questão"
-        print(self.answer_pdf_text[answer_index])
+        #print(self.answer_pdf_text[answer_index])
         return self.answer_pdf_text[answer_index]
     
     def __txt_handle_day_one_tests__(self, pdf_reader:PdfReader, test_year:int, num_pages:int)->None:
@@ -110,13 +110,12 @@ class EnemPDFextractor():
      languages_arts_questions: str = ""
      
      past_eng_questions: bool = False
-     topic_question_range:dict[str,tuple] = {"eng": (1,5), "spa":(6,11), "lang": (11,50), "huma":(51,95)} #ultima questão de humanas é a 96 pq tbm são contadas as de ingles e espanho,ambas entre 1-6
+     topic_question_range:dict[str,tuple] = {"eng": (1,6), "spa":(6,11), "lang": (11,51), "huma":(51,96)} #ultima questão de humanas é a 96 pq tbm são contadas as de ingles e espanho,ambas entre 1-6
 
      for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
         current_page = pdf_reader.pages[i]             
              
         text:str = current_page.extract_text()
-        print(type(text))
 
         first_question: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.QUESTION_IDENTIFIER) , -1 ) #acha a primeira questão da folha
         
@@ -130,11 +129,12 @@ class EnemPDFextractor():
         text = re.sub(self.NUM_PATTERN2,"",text)
 
         page_first_question: int = total_question_number #a primeira questão da prox página sera o numero total de questões processadas ate o momento
- 
+        total_questions_before = total_question_number
         for _ in self.__yield_all_substrings__(text, 'QUESTÃO'):
             total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
-            print(total_question_number)
+            #print(total_question_number)
         
+        print(f"foram achadas {total_question_number - total_questions_before} novas questoes")
         #eu ACHO que não precisa colocar o questao_index -= 1 pq eu n to colocando o QUESTÃO  no regex.sub
         
         try:
@@ -144,23 +144,25 @@ class EnemPDFextractor():
             num_images = 1
          
         if num_images != 0:
+             print("tem imagens, pula")
              continue  #caso tenha imagens na página vamos pular ela, já que não podemos extrair a imagem
         
         #não é possível fazer essa verificação no começo pois é preciso contar todas as questões da página para a variavel total_question_number, já que ela dita qual matéria esta sendo processada
 
         question_start_index:int = 0
         answer_number: int = page_first_question
-        spanish_question: bool = False
+        in_spanish_question: bool = False
         
         for position in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes
              
+             print(f"questao atual {answer_number}")
              if answer_number > 5 and answer_number < 11:
-                 spanish_question = True  #verifica se a questão é de espanhol
+                 in_spanish_question = True  #verifica se a questão é de espanhol
              else:
-                 spanish_question = False
+                 in_spanish_question = False
             
              # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
-             correct_answer:str = self.__find_correct_answer__(answer_number,spanish_question).lower() 
+             correct_answer:str = self.__find_correct_answer__(answer_number,in_spanish_question).lower() 
              unparsed_alternatives: str = text[question_start_index:position]
              parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
              
@@ -171,39 +173,46 @@ class EnemPDFextractor():
              start_lang, end_lang = topic_question_range["lang"]
              start_huma, end_huma = topic_question_range["huma"]
 
-             if answer_number in range(start_eng, end_eng + 1) and not past_eng_questions:
+             if answer_number in range(start_eng, end_eng):
+                print("ingles")
                 english_questions += parsed_question
 
-             elif answer_number in range(start_spa, end_spa + 1):
+             elif answer_number in range(start_spa, end_spa):
+                print("espa")
                 spanish_questions += parsed_question
 
-             elif answer_number in range(start_lang, end_lang + 1):
+             elif answer_number in range(start_lang, end_lang):
+                print("lingua")
                 languages_arts_questions += parsed_question
 
-             elif answer_number in range(start_huma, end_huma + 1):
+             elif answer_number in range(start_huma, end_huma):
+                print("huma")
                 humanities_questions += parsed_question
             
-             if answer_number >= 5: #se ja passou da questão 5 então ja passou das de inglês
-                 past_eng_questions = True
+             #if answer_number >= 5: #se ja passou da questão 5 então ja passou das de inglês
+                # past_eng_questions = True
              
              question_start_index = position
              answer_number += 1
         
-        file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.txt" )
-        with open(file_path, "a") as f_eng:
-             f_eng.write(english_questions)
+
+    
+
+     file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.txt" )
+     with open(file_path, "a") as f_eng:
+        f_eng.write(english_questions)
         
-        file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions.txt" )
-        with open(file_path, "a") as f_spani:
+     file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions.txt" )
+     with open(file_path, "a") as f_spani:
              f_spani.write(spanish_questions)
 
-        file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions.txt" )     
-        with open(file_path, "a") as f_lang:
-             f_lang.write(languages_arts_questions)
+     file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions.txt" )     
+     with open(file_path, "a") as f_lang:
+        f_lang.write(languages_arts_questions)
         
-        file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.txt" )
-        with open(file_path, "a") as f_huma:
-             f_huma.write(humanities_questions)
+     file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.txt" )
+     with open(file_path, "a") as f_huma:
+        f_huma.write(humanities_questions)
     
     def __txt_handle_day_two_tests__(self, pdf_reader:PdfReader, test_year:int, num_pages:int)->None: 
      total_question_number: int = 0
