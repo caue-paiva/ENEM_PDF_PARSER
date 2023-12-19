@@ -26,57 +26,21 @@ class EnemPDFextractor():
     output_type:str 
     answer_pdf_text:str
 
-    def __init__(self, test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str, output_type:str = "txt")-> None:
-        if self.TEST_IDENTIFIER not in test_pdf_path:
-            raise IOError("nome do arquivo da prova não segue o padrão do INEP")
-    
-        if self.ANSWER_PDF_IDENTIFIER not in answers_pdf_path:
-            raise IOError("nome do arquivo do gabarito não segue o padrão do INEP")
-        
+    def __init__(self, output_type:str = "txt")-> None:
         if output_type not in self.SUPPORTED_OUTPUT_FILES:
             raise IOError("tipo de arquivo de output não suportado")
-        
-        test_color_identifier = re.findall(self.TEST_COLOR_PATTERN, test_pdf_path)
-        if not test_color_identifier:
-            raise IOError("especificação da cor do caderno da prova não segue o padrão do INEP")
-        
-        answers_color_identifier= re.findall(self.TEST_COLOR_PATTERN, answers_pdf_path)
-        if not answers_color_identifier:
-            raise IOError("especificação da cor do gabarito não segue o padrão do INEP")
-        
-        test_color_identifier:str = test_color_identifier[0]
-        answers_color_identifier:str = answers_color_identifier[0]
-        print(test_color_identifier +answers_color_identifier) 
 
-        if test_color_identifier[2] != answers_color_identifier[2]:
-            raise IOError("prova e gabarito são de cores diferentes")
+        self.output_type =  output_type
         
-        self.output_type = output_type
-        self.test_pdf_path = test_pdf_path
-        self.answer_pdf_path = answers_pdf_path
-        self.extracted_data_path = extracted_data_path
-
-        answer_pdf_reader = PdfReader(self.answer_pdf_path)
-        
-        page = answer_pdf_reader.pages[0] #folha de gabarito tem apenas uma pagina
-        self.answer_pdf_text = page.extract_text()
-
-        if not os.path.isdir(extracted_data_path):
-             print("diretorio de output não existe, criando um novo")
-             os.makedirs(self.extracted_data_path, exist_ok=True)
-
     #ao extrair o texto das alternativas do PDF, a letra da  alternativa é repetida 2 vezes, então essa função remove essa segunda repetição
     
-    def __handle_IO_errors__(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str, output_type:str = "txt")->None:
+    def __handle_IO_errors__(self,test_pdf_path: str, answers_pdf_path:str)->None:
         if self.TEST_IDENTIFIER not in test_pdf_path:
             raise IOError("nome do arquivo da prova não segue o padrão do INEP")
     
         if self.ANSWER_PDF_IDENTIFIER not in answers_pdf_path:
             raise IOError("nome do arquivo do gabarito não segue o padrão do INEP")
-        
-        if output_type not in self.SUPPORTED_OUTPUT_FILES:
-            raise IOError("tipo de arquivo de output não suportado")
-        
+            
         test_color_identifier = re.findall(self.TEST_COLOR_PATTERN, test_pdf_path)
         if not test_color_identifier:
             raise IOError("especificação da cor do caderno da prova não segue o padrão do INEP")
@@ -88,9 +52,8 @@ class EnemPDFextractor():
         test_color_identifier:str = test_color_identifier[0]
         answers_color_identifier:str = answers_color_identifier[0]
     
-        if test_color_identifier[2] != answers_color_identifier[2]:
+        if test_color_identifier[2] != answers_color_identifier[2]:  #terceiro char desse padrão é o numero referente à cor do caderno
             raise IOError("prova e gabarito são de cores diferentes") 
-
 
     def __parse_alternatives__(self,question:str)->str:
         index:int = 0
@@ -165,14 +128,14 @@ class EnemPDFextractor():
             else:
                 return "não achou a questão"
     
-    def __txt_handle_day_two_tests__(self, pdf_reader:PdfReader, test_year:int, num_pages:int)->None: 
+    def __txt_handle_day_two_tests__(self, pdf_reader:PdfReader, test_year:int)->None: 
               
      total_question_number: int = 0 
      math_questions: str = ""
      natural_sci_questions: str = ""
      
      topic_question_range:dict[str,tuple] = {"natu": (1,45), "math":(46,91)} 
-
+     num_pages: int = len(pdf_reader.pages)
      for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
         current_page = pdf_reader.pages[i]             
              
@@ -247,14 +210,14 @@ class EnemPDFextractor():
      with open(file_path, "w") as f_math:
              f_math.write(math_questions)
 
-    def __txt_handle_day_one_tests__(self, pdf_reader:PdfReader, test_year:int, num_pages:int)->None:
+    def __txt_handle_day_one_tests__(self, pdf_reader:PdfReader, test_year:int)->None:
       
      total_question_number: int = 0 
      english_questions: str = ""
      spanish_questions: str = ""
      humanities_questions: str = ""
      languages_arts_questions: str = ""
-
+     num_pages: int = len(pdf_reader.pages)
      topic_question_range:dict[str,tuple] = {"eng": (1,5), "spa":(6,10), "lang": (11,50), "huma":(51,95)} #ultima questão de humanas é a 96 pq tbm são contadas as de ingles e espanho,ambas entre 1-6
 
      for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
@@ -353,17 +316,30 @@ class EnemPDFextractor():
      with open(file_path, "a") as f_huma:
         f_huma.write(humanities_questions)
      
-    def extract_one_pdf(self)->None: #extrai o texto dos PDF de um ano específico
+    def extract_pdf(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str, output_type:str = "txt")->None: #extrai o texto dos PDF de um ano específico
+        self.__handle_IO_errors__( test_pdf_path= test_pdf_path, answers_pdf_path= answers_pdf_path)
         
-        pdf_reader:PdfReader = PdfReader(self.test_pdf_path) 
+        answer_pdf_reader = PdfReader(answers_pdf_path)
+        answer_page = answer_pdf_reader.pages[0]
+        
+        self.answer_pdf_text = answer_page.extract_text() #texto do gabarito, usado para a função que pega a resposta oficial
+        self.answer_pdf_path = answers_pdf_path
+        self.test_pdf_path = test_pdf_path
+        self.extracted_data_path = extracted_data_path
+
+        if not os.path.isdir(extracted_data_path):
+             print("diretorio de output não existe, criando um novo")
+             os.makedirs(extracted_data_path, exist_ok=True)
+
+        test_pdf_reader:PdfReader = PdfReader(test_pdf_path) 
         regex_return = re.findall(self.__YEAR_PATTERN__, self.test_pdf_path)
-        test_year:str = regex_return[0]
-        num_pages:int = len(pdf_reader.pages)    
+        test_year:str = regex_return[0]   
+        print(type(regex_return[0]))
     
-        if self.DAY_ONE_SUBSTR in self.test_pdf_path:
-            self.__txt_handle_day_one_tests__(pdf_reader,test_year,num_pages)
+        if self.DAY_ONE_SUBSTR in test_pdf_path:
+            self.__txt_handle_day_one_tests__(test_pdf_reader,test_year)
         else:
-            self.__txt_handle_day_two_tests__(pdf_reader,test_year,num_pages)
+            self.__txt_handle_day_two_tests__(test_pdf_reader,test_year)
         
 
     
