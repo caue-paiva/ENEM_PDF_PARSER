@@ -18,6 +18,7 @@ class EnemPDFextractor():
     QUESTION_IDENTIFIER = "QUESTÃO"
     QUESTION_TEMPLATE= "(Enem/{test_year})  {question_text}\n(RESPOSTA CORRETA): {correct_answer}\n\n"
     SUPPORTED_OUTPUT_FILES:tuple = ("txt", "json")
+    TEST_COLOR_PATTERN = "CD\d{1}"  #provas/cadernos e gabaritos  são separadas por cores, se as cores de ambos forem iguais, eles estão relacionados
 
     test_pdf_path:str 
     answer_pdf_path: str
@@ -27,13 +28,28 @@ class EnemPDFextractor():
 
     def __init__(self, test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str, output_type:str = "txt")-> None:
         if self.TEST_IDENTIFIER not in test_pdf_path:
-            raise Exception("nome do arquivo da prova não segue o padrão do INEP")
+            raise IOError("nome do arquivo da prova não segue o padrão do INEP")
     
         if self.ANSWER_PDF_IDENTIFIER not in answers_pdf_path:
-            raise Exception("nome do arquivo do gabarito não segue o padrão do INEP")
+            raise IOError("nome do arquivo do gabarito não segue o padrão do INEP")
         
         if output_type not in self.SUPPORTED_OUTPUT_FILES:
-            raise Exception("tipo de arquivo de output não suportado")
+            raise IOError("tipo de arquivo de output não suportado")
+        
+        test_color_identifier = re.findall(self.TEST_COLOR_PATTERN, test_pdf_path)
+        if not test_color_identifier:
+            raise IOError("especificação da cor do caderno da prova não segue o padrão do INEP")
+        
+        answers_color_identifier= re.findall(self.TEST_COLOR_PATTERN, answers_pdf_path)
+        if not answers_color_identifier:
+            raise IOError("especificação da cor do gabarito não segue o padrão do INEP")
+        
+        test_color_identifier:str = test_color_identifier[0]
+        answers_color_identifier:str = answers_color_identifier[0]
+        print(test_color_identifier +answers_color_identifier) 
+
+        if test_color_identifier[2] != answers_color_identifier[2]:
+            raise IOError("prova e gabarito são de cores diferentes")
         
         self.output_type = output_type
         self.test_pdf_path = test_pdf_path
@@ -51,6 +67,31 @@ class EnemPDFextractor():
 
     #ao extrair o texto das alternativas do PDF, a letra da  alternativa é repetida 2 vezes, então essa função remove essa segunda repetição
     
+    def __handle_IO_errors__(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str, output_type:str = "txt")->None:
+        if self.TEST_IDENTIFIER not in test_pdf_path:
+            raise IOError("nome do arquivo da prova não segue o padrão do INEP")
+    
+        if self.ANSWER_PDF_IDENTIFIER not in answers_pdf_path:
+            raise IOError("nome do arquivo do gabarito não segue o padrão do INEP")
+        
+        if output_type not in self.SUPPORTED_OUTPUT_FILES:
+            raise IOError("tipo de arquivo de output não suportado")
+        
+        test_color_identifier = re.findall(self.TEST_COLOR_PATTERN, test_pdf_path)
+        if not test_color_identifier:
+            raise IOError("especificação da cor do caderno da prova não segue o padrão do INEP")
+        
+        answers_color_identifier= re.findall(self.TEST_COLOR_PATTERN, answers_pdf_path)
+        if not answers_color_identifier:
+            raise IOError("especificação da cor do gabarito não segue o padrão do INEP")
+        
+        test_color_identifier:str = test_color_identifier[0]
+        answers_color_identifier:str = answers_color_identifier[0]
+    
+        if test_color_identifier[2] != answers_color_identifier[2]:
+            raise IOError("prova e gabarito são de cores diferentes") 
+
+
     def __parse_alternatives__(self,question:str)->str:
         index:int = 0
         patterns_alternatives = [r"([A]) ([A])",r"([B]) ([B])",r"([C]) ([C])",r"([D]) ([D])",r"([E]) ([E])"]
@@ -267,7 +308,12 @@ class EnemPDFextractor():
              correct_answer:str = self.__find_correct_answer__(question_number= answer_number, is_spanish_question= in_spanish_question, day_one=True,) 
              unparsed_alternatives: str = text[question_start_index:position]
              parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
-             
+                
+             if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
+                 question_start_index = position
+                 answer_number += 1
+                 continue
+
              parsed_question = self.QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
              
              start_eng, end_eng = topic_question_range["eng"] #desempacotando a tuple de ranges de questões das matérias
@@ -306,78 +352,7 @@ class EnemPDFextractor():
      file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.txt" )
      with open(file_path, "a") as f_huma:
         f_huma.write(humanities_questions)
-    
-    def old__txt_handle_day_two_tests__(self, pdf_reader:PdfReader, test_year:int, num_pages:int)->None: 
-     total_question_number: int = 0
-     math_questions: str = ""
-     natural_sci_questions: str = ""
-    
-     topic_question_range:dict[str,tuple] = {"natu": (1,45), "math":(46,91)} 
-
-     for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
-        current_page = pdf_reader.pages[i]             
-              
-        text:str = current_page.extract_text()
-        first_question: int = next(self.self.__yield_all_substrings__(text,self.QUESTION_IDENTIFIER),-1) #acha a primeira questão da folha
-        
-        if first_question == -1:
-            print("sem questões")
-            continue # se não tiver questões na página (pagina de redação) pula a iteração
-         
-        text = text[first_question:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
-         
-        text = re.sub(self.NUM_PATTERN1,"", text)  #remove os padrões numéricos do QR codes
-        text = re.sub(self.NUM_PATTERN2,"",text)
-
-        page_first_question: int = total_question_number #a primeira questão da prox página sera o numero total de questões processadas ate o momento
- 
-        for _ in self.self.__yield_all_substrings__(text, 'QUESTÃO'):
-            total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
-            print(total_question_number)
-        
-        #eu ACHO que não precisa colocar o questao_index -= 1 pq eu n to colocando o QUESTÃO  no regex.sub
-        
-        try:
-           num_images:int = len(current_page.images)
-        except:
-            print("exception")   #verifica se tem imagens na pagina
-            num_images = 1
-         
-        if num_images != 0:
-             continue  #caso tenha imagens na página vamos pular ela, já que não podemos extrair a imagem 
-        
-        #não é possível fazer essa verificação no começo pois é preciso contar todas as questões da página para a variavel total_question_number, já que ela dita qual matéria esta sendo processada
-
-        question_start_index:int = 0
-        answer_number: int = page_first_question
-        for position in self.self.__yield_all_substrings__(text,self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes
-             
-             correct_answer:str = (gab.find_answer(answer_number)).lower()  #find answer para o de matemática deve levar em conta + 91 
-             unparsed_alternatives: str = text[question_start_index:position]
-             parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
-             
-             parsed_question = self.QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
-             
-             start_natu, end_natu = topic_question_range["natu"] #desempacotando a tuple de ranges de questões das matérias
-             start_math, end_math = topic_question_range["math"]
-        
-             if answer_number in range(start_natu, end_natu + 1):
-                natural_sci_questions += parsed_question
-
-             elif answer_number in range(start_math, end_math + 1):
-                 math_questions += parsed_question
-            
-             question_start_index = position
-             answer_number += 1
-        
-        file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.txt" )
-        with open(file_path, "w") as f_natu:
-             f_natu.write(natural_sci_questions)
-        
-        file_path = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.txt" )
-        with open(file_path, "w") as f_math:
-             f_math.write(math_questions)
-    
+     
     def extract_one_pdf(self)->None: #extrai o texto dos PDF de um ano específico
         
         pdf_reader:PdfReader = PdfReader(self.test_pdf_path) 
