@@ -478,7 +478,6 @@ class EnemPDFextractor():
         with open(file_path, "a") as f_huma:
             json.dump(humanities_questions,f_huma, indent=4,  ensure_ascii=False)
 
-
     def __txt_handle_day_one_tests__(self, pdf_reader:PdfReader, test_year:int)->None:
       
      total_question_number: int = 0 
