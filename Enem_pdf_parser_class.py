@@ -6,6 +6,7 @@ import re, os ,json #tentar parsear o arquivo das questoes, ver se existem quest
 
 2) fazer com que o JSON da questão inclua as alternativas em uma lista separada
 
+3) refatorar a função que pega o texto e escreve em um TXT em funções menores para acabar com menos funções repetidas
 
 """
 
@@ -451,6 +452,94 @@ class EnemPDFextractor():
         with open(file_path, "a") as f_huma:
             json.dump(humanities_questions,f_huma, indent=4,  ensure_ascii=False)
 
+    def __json_handle_day_two_tests__(self, pdf_reader: PdfReader, test_year:int)->None:
+        
+        total_question_number: int = 0 
+        math_questions: list[dict] = []
+        natural_sci_questions: list[dict] = []
+        num_pages: int = len(pdf_reader.pages)
+        topic_question_range:dict[str,tuple] = {"natu": (1,45), "math":(46,91)} 
+       
+        for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
+            current_page = pdf_reader.pages[i]             
+                
+            text:str = current_page.extract_text()
+
+            first_question_str_index: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.QUESTION_IDENTIFIER) , -1 ) #acha a primeira questão da folha
+            
+            if first_question_str_index == -1:
+                print("sem questões")
+                continue # se não tiver questões na página (pagina de redação) pula a iteração
+            
+            text = text[first_question_str_index:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
+            
+            text = re.sub(self.NUM_PATTERN1,"", text)  #remove os padrões numéricos do QR codes
+            text = re.sub(self.NUM_PATTERN2,"",text)
+
+            page_first_question: int = total_question_number + 1 #a primeira questão da prox página sera o numero total de questões processadas ate o momento + 1 (a primeira questão em si)
+            
+            for _ in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER):
+                total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
+                #print(total_question_number)
+                    
+            try:
+             num_images:int = len(current_page.images)
+            except:
+                print("exception")   #verifica se tem imagens na pagina
+                num_images = 1
+            
+            if num_images != 0:
+                print("tem imagens, pula")
+                continue  #caso tenha imagens na página vamos pular ela, já que não podemos extrair a imagem   
+            #não é possível fazer essa verificação no começo pois é preciso contar todas as questões da página para a variavel total_question_number, já que ela dita qual matéria esta sendo processada
+            
+            text += f" {self.QUESTION_IDENTIFIER}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
+            question_start_index:int = 0
+            answer_number: int = page_first_question
+            
+            for position in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes     
+                if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
+                    continue
+                
+                # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
+                correct_answer:str = self.__find_correct_answer__(question_number= answer_number, is_spanish_question= False, day_one=False,) 
+                unparsed_alternatives: str = text[question_start_index:position]
+                parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
+                    
+                if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
+                    question_start_index = position
+                    answer_number += 1
+                    continue
+
+                question_json:dict = self.__get_json_from_question__(
+                      question= parsed_question,
+                      day_one=False,
+                      year= test_year,
+                      correc_answer= correct_answer,
+                      number= answer_number
+                )
+                
+                start_natu, end_natu = topic_question_range["natu"] #desempacotando a tuple de ranges de questões das matérias
+                start_math, end_math = topic_question_range["math"]
+
+                if answer_number in range(start_natu,  end_natu+1): #precisamos incluir a ultima questão do range de cada matéria
+                  natural_sci_questions.append(question_json)
+
+                elif answer_number in range( start_math, end_math+1):
+                  math_questions.append(question_json)
+                    
+                question_start_index = position
+                answer_number += 1
+        
+     #escrever as strings extraidas nos seus arquivos respectivos
+        file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.json" )
+        with open(file_path, "a") as f_math:
+            json.dump(math_questions, f_math, indent=4,  ensure_ascii=False)
+            
+        file_path = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.json" )
+        with open(file_path, "a") as f_natu:
+            json.dump(natural_sci_questions,f_natu, indent=4,  ensure_ascii=False)
+
     def extract_pdf(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str)->None: #extrai o texto dos PDF de um ano específico
         self.__handle_IO_errors__( test_pdf_path= test_pdf_path, answers_pdf_path= answers_pdf_path)
         
@@ -473,9 +562,12 @@ class EnemPDFextractor():
     
         if self.DAY_ONE_SUBSTR in test_pdf_path:
             if self.output_type == "txt":
-             self.__txt_handle_day_one_tests__(test_pdf_reader,test_year)
+              self.__txt_handle_day_one_tests__(test_pdf_reader,test_year)
             else:
-                self.__json_handle_day_one_tests__(test_pdf_reader,test_year)
+              self.__json_handle_day_one_tests__(test_pdf_reader,test_year)
         else:
-            self.__txt_handle_day_two_tests__(test_pdf_reader,test_year)
+            if self.output_type == "txt":
+              self.__txt_handle_day_two_tests__(test_pdf_reader,test_year)
+            else:
+              self.__json_handle_day_two_tests__(test_pdf_reader,test_year)
         
