@@ -1,5 +1,6 @@
 from PyPDF2 import PdfReader 
 import re, os ,json #tentar parsear o arquivo das questoes, ver se existem questoes sem nada, ai compara a distancia entra a string (enem) e a (resposta), se ala for muito pequena, deleta tudo entre elas
+import fitz
 
 """ A melhorar:
 1) Lidar com casos de questão anulada (atualmente ele pega essas questões e fala que o gabarito é A)
@@ -30,12 +31,14 @@ class EnemPDFextractor():
     extracted_data_path:str
     output_type:str 
     answer_pdf_text:str
+    ignore_questions_with_images:bool 
 
-    def __init__(self, output_type:str = "txt")-> None:
+    def __init__(self,ignore_questions_with_images = True ,output_type:str = "txt")-> None:
         if output_type not in self.__SUPPORTED_OUTPUT_FILES__:
             raise IOError("tipo de arquivo de output não suportado")
 
         self.output_type =  output_type
+        self.ignore_questions_with_images = ignore_questions_with_images
         
     #abaixo funções de formatação do texto
 
@@ -129,6 +132,28 @@ class EnemPDFextractor():
         
         return question
 
+    def __parse_alternatives_fitz__(question: str) -> str:
+
+        first_pattern = r"([A-E])(\s{2,}|\n)"
+        
+        # Function to replace the match with the letter followed by a closing parenthesis
+        def replace_match(match):
+            return f"{match.group(1)})"
+
+        # Replace using the pattern
+        question = re.sub(first_pattern, replace_match, question)
+
+        second_pattern = r"([A-E])\)\1"
+
+        # Replace the matched pattern with just the first letter and parenthesis
+        question = re.sub(second_pattern, r"\1)", question)
+
+        # Check if all alternatives have been replaced
+        if re.search(r"[A-E](\s{2,}|\n)", question):
+            return "non-standard alternatives"
+
+        return question
+
     #retorna uma lista com todas as alternativas da questão, apenas funciona com inputs com as alternativas já formatadas
 
     def __get_alternative_list__(self,question:str)->list[str]:
@@ -197,10 +222,10 @@ class EnemPDFextractor():
     
     #método para pre-processar o texto de uma página, retornando o texto processado, o num da primeira questão da página e pulando ela caso ela não tenha questões ou tenha imagens
 
-    def __page_preprocessing__(self,pdf_reader:PdfReader,loop_index:int ,total_question_number:int)-> dict :
+    def __page_preprocessing__(self,pdf_reader:PdfReader,page_index:int ,total_question_number:int)-> dict :
         text_processing_dict: dict = {"text": "", "page_first_question": 0, "total_question_number": 0 }
         
-        current_page = pdf_reader.pages[loop_index]                    
+        current_page = pdf_reader.pages[page_index]                    
         page_text:str = current_page.extract_text()
         first_question_str_index: int = next(self.__yield_all_substrings__(input_str = page_text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
         
@@ -237,7 +262,69 @@ class EnemPDFextractor():
         text_processing_dict.update({"text":page_text,"page_first_question": page_first_question, "total_question_number": total_question_number})
         return text_processing_dict
 
-    def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correct_answer:str, number:int, alternative_list:list[str] = [])->dict:
+    def __page_preprocessing_images__(self,fitz_pdf_reader,page_index:int ,total_question_number:int)->dict:
+        image_text_dict: dict = {"text": "", "page_first_question": 0, "total_question_number": 0 , "image_name_list": []}
+        
+        image_name_list:list[str] = []
+        current_page = fitz_pdf_reader[page_index]                    
+        page_text:str = current_page.get_text()
+        first_question_str_index: int = next(self.__yield_all_substrings__(input_str = page_text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
+        
+        if first_question_str_index == -1:
+            print("sem questões")
+            return {} # se não tiver questões na página (pagina de redação) pula a iteração
+         
+        page_text = page_text[first_question_str_index:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
+         
+        page_text = re.sub(self.__NUM_PATTERN1__,"", page_text)  #remove os padrões numéricos do QR codes
+        page_text = re.sub(self.__NUM_PATTERN2__,"",page_text)
+
+        page_first_question: int = total_question_number + 1 #a primeira questão da prox página sera o numero total de questões processadas ate o momento + 1 (a primeira questão em si)  
+      
+        for _ in self.__yield_all_substrings__(page_text, self.__QUESTION_IDENTIFIER__):
+            total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
+
+        page_text += f" {self.__QUESTION_IDENTIFIER__}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
+        image_text_dict.update({"text":page_text,"page_first_question": page_first_question, "total_question_number": total_question_number})
+
+        image_list:list = current_page.get_images()
+
+        if image_list:
+            print(f" temos : {len(image_list)} imagens")
+        else:
+            print("zero imagens")
+            return image_text_dict #retorna dict sem imagens
+        
+        for image_index,img in enumerate(image_list,start=1):
+            xref = img[0]
+            base_image = fitz_pdf_reader.extract_image(xref)
+            image_bytes = base_image["image"]
+            # Create a Pixmap with the image bytes
+            pix = fitz.Pixmap(image_bytes)
+
+            # If the image has an alpha channel, drop the alpha channel
+            if pix.alpha:
+                try:
+                    pix = fitz.Pixmap(pix, 0)  # Drop the alpha channel if it's possible
+
+                except ValueError as e:
+                    print(f"Error dropping alpha channel: {e}")
+                    continue  # Skip this image and move to the next one
+
+            # If the image is CMYK, convert it to RGB
+            if pix.n == 4:
+                pix1 = fitz.Pixmap(fitz.csRGB, pix)
+                pix = pix1  # Update pix to the new RGB pixmap
+
+            output_filename = os.path.join(self.extracted_data_path ,"images", f"page{page_index}_image_{image_index}.png")
+            pix.save(output_filename)
+            image_name_list.append(output_filename)
+            pix = None
+
+        image_text_dict.update({"text":page_text,"page_first_question": page_first_question, "total_question_number": total_question_number, "image_name_list":image_name_list})
+        return image_text_dict
+
+    def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correct_answer:str, number:int, alternative_list:list[str] = [] , image_list = [])->dict:
         day_identifier = "D1" if day_one else "D2"
         
         if day_one:
@@ -246,6 +333,18 @@ class EnemPDFextractor():
             number += 90
         
         if alternative_list:
+          if image_list:
+             json_dict = {
+                "question_text": question,
+                "correct_answer": correct_answer ,
+                "alternatives": alternative_list,
+                "page_images": image_list,
+                "ID": f"{year}_{day_identifier}_N{number}",
+                "year": year,
+                "day": day_identifier,
+                "question_num": number
+            }
+          else:
             json_dict = {
                 "question_text": question,
                 "correct_answer": correct_answer ,
@@ -256,17 +355,130 @@ class EnemPDFextractor():
                 "question_num": number
             }
         else:
-            json_dict = {
-                "question_text": question,
-                "correct_answer": correct_answer ,
-                "ID": f"{year}_{day_identifier}_N{number}",
-                "year": year,
-                "day": day_identifier,
-                "question_num": number
-            }
+            if image_list:
+                json_dict = {
+                    "question_text": question,
+                    "correct_answer": correct_answer ,
+                    "ID": f"{year}_{day_identifier}_N{number}",
+                    "year": year,
+                    "day": day_identifier,
+                    "question_num": number
+                }
+            else:
+                json_dict = {
+                    "question_text": question,
+                    "correct_answer": correct_answer ,
+                    "page_images": image_list,
+                    "ID": f"{year}_{day_identifier}_N{number}",
+                    "year": year,
+                    "day": day_identifier,
+                    "question_num": number
+                }
         return json_dict
    
     #abaixo funcoes que processam e salvam o texto num arquivo
+
+    def __json_save_images_day_one__(self, pdf_reader, test_year:int):
+        total_question_number: int = 0 
+        english_questions: list[dict] = []
+        spanish_questions: list[dict] = []
+        humanities_questions: list[dict] = []
+        languages_arts_questions: list[dict] = []
+
+        num_pages: int = len(pdf_reader)
+        topic_question_range:dict[str,tuple] = {"eng": (1,5), "spa":(6,10), "lang": (11,50), "huma":(51,95)} #ultima questão de humanas é a 96 pq tbm são contadas as de ingles e espanho,ambas entre 1-6
+
+        for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
+            
+            page_attributes: dict = self.__page_preprocessing_images__(
+                fitz_pdf_reader=pdf_reader,
+                page_index=i, 
+                total_question_number=total_question_number
+            )   
+            if not page_attributes: #dict vazio, pagina não tem questões
+             continue  
+
+            page_first_question:int = page_attributes.get("page_first_question")
+            total_question_number = page_attributes.get("total_question_number")
+            text:str = page_attributes.get("text") 
+            image_name_list:list[str] = page_attributes.get("image_name_list")
+
+            question_start_index:int = 0
+            answer_number: int = page_first_question
+            in_spanish_question: bool = False
+            alternative_list:list[str] = []
+
+            for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
+                if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
+                    continue
+                
+                if answer_number > 5 and answer_number < 11:
+                    in_spanish_question = True  #verifica se a questão é de espanhol
+                else:
+                    in_spanish_question = False
+
+                # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
+                correct_answer:str = self.__find_correct_answer__(
+                    question_number= answer_number, 
+                    is_spanish_question= in_spanish_question, 
+                    day_one=True
+                ) 
+                unparsed_alternatives: str = text[question_start_index:position]
+                parsed_question, alternative_list = self.__parse_alternatives_fitz__(unparsed_alternatives)
+                    
+                #print("parsed_question" + parsed_question + "\n\n" + "alternative list" + alternative_list + "\n\n")   
+                if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
+                    question_start_index = position
+                    answer_number += 1
+                    continue
+
+                question_json:dict = self.__get_json_from_question__(
+                      question= parsed_question,
+                      day_one=True,
+                      year= test_year,
+                      correct_answer= correct_answer,
+                      number= answer_number,
+                      alternative_list= alternative_list,
+                      image_list= image_name_list
+                )
+                
+                start_eng, end_eng = topic_question_range["eng"] #desempacotando a tuple de ranges de questões das matérias
+                start_spa, end_spa = topic_question_range["spa"]
+                start_lang, end_lang = topic_question_range["lang"]
+                start_huma, end_huma = topic_question_range["huma"]
+
+                if answer_number in range(start_eng, end_eng+1): #precisamos incluir a ultima questão do range de cada matéria
+                    english_questions.append(question_json)
+
+                elif answer_number in range(start_spa, end_spa+1):
+                    spanish_questions.append(question_json)
+
+                elif answer_number in range(start_lang, end_lang+1):
+                    languages_arts_questions.append(question_json)
+
+                elif answer_number in range(start_huma, end_huma+1):
+                    humanities_questions.append(question_json)
+                    
+                question_start_index = position
+                answer_number += 1
+        
+     #escrever as strings extraidas nos seus arquivos respectivos
+        file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.json" )
+        with open(file_path, "a") as f_eng:
+            json.dump(english_questions,f_eng, indent=4,  ensure_ascii=False)
+            
+        file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions.json" )
+        with open(file_path, "a") as f_spani:
+                json.dump(spanish_questions,f_spani,  indent=4,  ensure_ascii=False)
+
+        file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions.json" )     
+        with open(file_path, "a") as f_lang:
+            json.dump(languages_arts_questions,f_lang, indent=4,  ensure_ascii=False)
+            
+        file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.json" )
+        with open(file_path, "a") as f_huma:
+            json.dump(humanities_questions,f_huma, indent=4,  ensure_ascii=False)
+
 
     def __txt_handle_day_one_tests__(self, pdf_reader:PdfReader, test_year:int)->None:
       
@@ -283,7 +495,7 @@ class EnemPDFextractor():
         #função que realiza o pre-processamento do texto da página, incluindo decidindo se pula a página ou não (e de que forma pular)
         page_attributes: dict = self.__page_preprocessing__(
                 pdf_reader=pdf_reader,
-                loop_index=i, 
+                page_index=i, 
                 total_question_number=total_question_number
         )      
         if not page_attributes: #dict vazio, pagina não tem questões
@@ -373,7 +585,7 @@ class EnemPDFextractor():
      for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
         page_attributes: dict = self.__page_preprocessing__(
                 pdf_reader=pdf_reader,
-                loop_index=i, 
+                page_index=i, 
                 total_question_number=total_question_number
         )      
         if not page_attributes: #dict vazio, pagina não tem questões
@@ -442,7 +654,7 @@ class EnemPDFextractor():
         for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
             page_attributes: dict = self.__page_preprocessing__(
                 pdf_reader=pdf_reader,
-                loop_index=i, 
+                page_index=i, 
                 total_question_number=total_question_number
             )   
             if not page_attributes: #dict vazio, pagina não tem questões
@@ -540,7 +752,7 @@ class EnemPDFextractor():
         for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
             page_attributes: dict = self.__page_preprocessing__(
                 pdf_reader=pdf_reader,
-                loop_index=i, 
+                page_index=i, 
                 total_question_number=total_question_number
             )      
             if not page_attributes: #dict vazio, pagina não tem questões
@@ -630,7 +842,11 @@ class EnemPDFextractor():
             if self.output_type == "txt":
               self.__txt_handle_day_one_tests__(test_pdf_reader,test_year)
             else:
-              self.__json_handle_day_one_tests__(test_pdf_reader,test_year)
+              if self.ignore_questions_with_images:
+                 self.__json_handle_day_one_tests__(test_pdf_reader,test_year)
+              else:
+                  fitz_pdf_reader = fitz.open(self.test_pdf_path)
+                  self.__json_save_images_day_one__(fitz_pdf_reader,test_year=test_year)
         else:
             if self.output_type == "txt":
               self.__txt_handle_day_two_tests__(test_pdf_reader,test_year)
