@@ -5,11 +5,14 @@ import fitz
 """ A melhorar:
 1) Lidar com casos de questão anulada (atualmente ele pega essas questões e fala que o gabarito é A)
 
-2) fazer com que o JSON da questão inclua as alternativas em uma lista separada
+2) o parser de list de imagens as vezes não adiciona a opção de imagens associadas mesmo quando a opção na classe está ativada, mudar na função
+de pegar JSON do texto
 
-3) refatorar a função que pega o texto e escreve em um TXT em funções menores para acabar com menos funções repetidas
+3) o código que extrai texto e imagem do fitz parece estar eliminando algumas questoes
 
-4) PyPDF2 não é muito bom em pegar imagens dos PDFs do ENEM, PymuPDF (fitz) é bem melhor
+4) ver como o código com o fitz lida com questões de alternativas com imagens
+
+5) melhorar a descrição das imagens geradas pelo  fitz
 """
 
 class EnemPDFextractor():
@@ -132,27 +135,23 @@ class EnemPDFextractor():
         
         return question
 
-    def __parse_alternatives_fitz__(self,question: str) -> str:
+    def __parse_alternatives_fitz__(self,question: str) -> tuple[str,list[str]]:
 
-        first_pattern = r"([A-E])(\s{2,}|\n)"
+        pattern = r"([A-E])\s*\n\1\s*"
         
         # Function to replace the match with the letter followed by a closing parenthesis
         def replace_match(match):
             return f"{match.group(1)})"
 
         # Replace using the pattern
-        question = re.sub(first_pattern, replace_match, question)
+        question = re.sub(pattern, replace_match, question)
 
-        second_pattern = r"([A-E])\)\1"
-
-        # Replace the matched pattern with just the first letter and parenthesis
-        question = re.sub(second_pattern, r"\1)", question)
 
         # Check if all alternatives have been replaced
-        if re.search(r"[A-E](\s{2,}|\n)", question):
-            return "non-standard alternatives"
+        if re.search(r"[A-E](\s{2,}|\n)", question): #talvez essa parte do código esteja eliminando algumas questões?
+            return "non-standard alternatives" , []
 
-        return question  #fazer o fitz retornar uma lista de alternativas tbm
+        return question  , self.__get_alternative_list__(question) #fazer o fitz retornar uma lista de alternativas tbm
 
     #retorna uma lista com todas as alternativas da questão, apenas funciona com inputs com as alternativas já formatadas
 

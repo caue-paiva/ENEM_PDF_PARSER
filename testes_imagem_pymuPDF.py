@@ -3,6 +3,120 @@ import fitz, os , re
 from io import BytesIO
 from PIL import Image, ExifTags
 
+question_str = """
+QUESTÃO 29 
+Esaú e Jacó
+Bárbara entrou, enquanto o pai pegou da viola e 
+passou ao patamar de pedra, à porta da esquerda. 
+Era uma criaturinha leve e breve, saia bordada, chinelinha 
+no pé. Não se lhe podia negar um corpo airoso. Os cabelos, 
+apanhados no alto da cabeça por um pedaço de fita 
+enxovalhada, faziam-lhe um solidéu natural, cuja borla era 
+suprida por um raminho de arruda. Já vai nisto um pouco 
+de sacerdotisa. O mistério estava nos olhos. Estes eram 
+opacos, não sempre nem tanto que não fossem também 
+lúcidos e agudos, e neste último estado eram igualmente 
+compridos; tão compridos e tão agudos que entravam 
+pela gente abaixo, revolviam o coração e tornavam cá 
+fora, prontos para nova entrada e outro revolvimento. 
+Não te minto dizendo que as duas sentiram tal ou qual 
+fascinação. Bárbara interrogou-as; Natividade disse 
+ao que vinha e entregou-lhe os retratos dos filhos e os 
+cabelos cortados, por lhe haverem dito que bastava.
+— Basta, confirmou Bárbara. Os meninos são seus filhos?
+— São.
+ASSIS, M. Obra completa. Rio de Janeiro: Nova Aguilar, 1994.
+No relato da visita de duas mulheres ricas a uma vidente 
+no Morro do Castelo, a ironia — um dos traços mais 
+representativos da narrativa machadiana — consiste no
+A 
+A modo de vestir dos moradores do morro carioca.
+B 
+B senso prático em relação às oportunidades de renda.
+C 
+C mistério que cerca as clientes de práticas de 
+vidência.
+D 
+D misto de singeleza e astúcia dos gestos da 
+personagem.
+E 
+E interesse do narrador pelas figuras femininas 
+ambíguas.
+QUESTÃO 30 
+A senhora manifestava-se por atos, por gestos, 
+e sobretudo por um certo silêncio, que amargava, que esfolava. 
+Porém desmoralizar escancaradamente o marido, não era 
+com ela. [...]
+As negras receberam ordem para meter no serviço a gente 
+do tal compadre Silveira: as cunhadas, ao fuso; os cunhados, 
+ao campo, tratar do gado com os vaqueiros; a mulher e as 
+irmãs, que se ocupassem da ninhada. Margarida não tivera 
+filhos, e como os desejasse com a força de suas vontades, 
+tratava sempre bem aos pequenitos e às mães que os estavam 
+criando. Não era isso uma sentimentalidade cristã, uma ternura, 
+era o egoísta e cru instinto da maternidade, obrando por mera 
+simpatia carnal. Quanto ao pai do lote (referia-se ao Antônio), 
+esse que fosse ajudar ao vaqueiro das bestas.
+Ordens dadas, o Quinquim referendava. Cada um 
+moralizava o outro, para moralizar-se.
+PAIVA, M. O. Dona Guidinha do Poço. Rio de Janeiro: Tecnoprint, s/d.
+No trecho do romance naturalista, a forma como 
+o narrador julga comportamentos e emoções das 
+personagens femininas revela influência do pensamento
+A 
+A capitalista, marcado pela distribuição funcional do 
+trabalho.
+B 
+B liberal, buscando a igualdade entre pessoas 
+escravizadas e livres.
+C 
+C científico, considerando o ser humano como um 
+fenômeno biológico.
+D 
+D religioso, fundamentado na fé e na aceitação dos 
+dogmas do cristianismo.
+E 
+E afetivo, manifesto na determinação de acolher 
+familiares e no respeito mútuo.
+QUESTÃO 31 
+Era o êxodo da seca de 1898. Uma ressurreição de 
+cemitérios antigos — esqueletos redivivos, com o aspecto 
+terroso e o fedor das covas podres. 
+Os fantasmas estropiados como que iam dançando, 
+de tão trôpegos e trêmulos, num passo arrastado de 
+quem leva as pernas, em vez de ser levado por elas. 
+Andavam devagar, olhando para trás, como quem 
+quer voltar. Não tinham pressa em chegar, porque não 
+sabiam aonde iam. Expulsos de seu paraíso por espadas 
+de fogo, iam, ao acaso, em descaminhos, no arrastão dos 
+maus fados. 
+Fugiam do sol e o sol guiava-os nesse forçado 
+nomadismo.
+Adelgaçados na magreira cômica, cresciam, como se 
+o vento os levantasse. E os braços afinados desciam-lhes 
+aos joelhos, de mãos abanando.
+Vinham escoteiros. Menos os hidrópicos — de ascite 
+consecutiva à alimentação tóxica — com os fardos das 
+barrigas alarmantes.
+Não tinham sexo, nem idade, nem condição nenhuma. 
+Eram os retirantes. Nada mais.
+ALMEIDA, J. A. A bagaceira. Rio de Janeiro: J. Olympio, 1978.
+Os recursos composicionais que inserem a obra no 
+chamado “Romance de 30” da literatura brasileira 
+manifestam-se aqui no(a)
+A 
+A desenho cru da realidade dramática dos retirantes.
+B 
+B indefinição dos espaços para efeito de generalização.
+C 
+C análise psicológica da reação dos personagens à seca.
+D 
+D engajamento político do narrador ante as desigualdades.
+E 
+E contemplação lírica da paisagem transformada em 
+alegoria.
+*010175AZ14*"""
+
 def __parse_alternatives_txt2__(question: str) -> str:
 
     first_pattern = r"([A-E])(\s{2,}|\n)"
@@ -60,12 +174,26 @@ def __parse_alternatives_txt__(question:str)-> str:
         
         return question
 
+def format_multiple_choice(question: str) -> str:
+    # Pattern to match 'Letter\nLetter'
+    pattern = r"([A-E])\s*\n\1\s*"
+
+    # Replacement function
+    def replace_pattern(match):
+        return f"{match.group(1)}) "
+
+    # Perform the replacement
+    formatted_question = re.sub(pattern, replace_pattern, question)
+
+    return formatted_question
+
 def fitz_get_text(page_index:int)->str:
     doc = fitz.open("pdfs_enem/2022/2022_PV_impresso_D1_CD1.pdf")
 
     #for page_index in range(len(doc)):
     page = doc[page_index]
-    return   __parse_alternatives_txt2__(page.get_text())
+    print(page.get_text() + "\n\n")
+    return   format_multiple_choice(page.get_text())
 
 
 def fitz_get_images(page_index:int):
@@ -154,5 +282,5 @@ def extract_image_and_metadata(pdf_path:str)->None:
     # Close the document
     doc.close()
 
-print(fitz_get_text(13))
+print(format_multiple_choice(question_str))
 #extract_image_and_metadata("pdfs_enem/2022/2022_PV_impresso_D1_CD1.pdf")
