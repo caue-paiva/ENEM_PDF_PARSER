@@ -64,70 +64,6 @@ class EnemPDFextractor():
 
     #essa funcao faz parecido com a _parse_alternatives_txt mas tbm retorna uma lista com as alternativas para o JSON
 
-    """def __parse_alternatives_json__(self,question:str)->tuple[str,list[str]]:
-        index:int = 0
-        patterns_alternatives = [r"([A]) ([A])",r"([B]) ([B])",r"([C]) ([C])",r"([D]) ([D])",r"([E]) ([E])"]
-        non_standard:bool = False
-        while index < 5 :   
-            chosen_pattern = patterns_alternatives[index]   #para cada letra na lista de padrões, vamos aplicar a mudança  
-            match = re.search(chosen_pattern, question)  
-            if match:  #se existir algo similar ao padrão na string 
-                start_posi =  match.start() #pega a primeira letra da alternativa
-                replacement = question[start_posi]
-                repla_str = f"{replacement})" 
-                question= re.sub(chosen_pattern, repla_str, question) #troca a substr (ex: A A) com apenas a primeira letra (ex: A)
-                index +=1  
-
-                start_posi_str: str = question[start_posi:]
-                newline_posi: int =  start_posi_str.find("\n")
-                alternative_text_str: str =  question[start_posi+2: start_posi + newline_posi] # essa string contem o texto em si da alternativa depois da Letra e )
-                
-                if alternative_text_str.isspace(): #caso o texto da alternativa esteja vazia (Alternativas são imagens que não são checadas pelo PDF reader), retornamos um str de erro
-                    non_standard = True
-                    break
-            else:
-                 non_standard = True
-                 break #o padrão não existe, então não é o texto de uma alternativa  
-    
-        if non_standard:
-               return "non-standard alternatives", []
-
-        return_list:list = self.__get_alternative_list__(question)
-        return (question, return_list)  #chama a funcao de retornar uma lista das alternativas"""
-        
-    #ao extrair o texto das alternativas do PDF, a letra da  alternativa é repetida 2 vezes, então essa função remove essa segunda repetição e retorna apenas a string   
-
-    """def __parse_alternatives_txt__(self,question:str)-> str:
-        index:int = 0
-        patterns_alternatives = [r"([A]) ([A])",r"([B]) ([B])",r"([C]) ([C])",r"([D]) ([D])",r"([E]) ([E])"]
-        non_standard:bool = False
-        
-        while index < 5 :   
-            chosen_pattern = patterns_alternatives[index]   #para cada letra na lista de padrões, vamos aplicar a mudança  
-            match = re.search(chosen_pattern, question)  
-            if match:  #se existir algo similar ao padrão na string 
-                start_posi =  match.start() #pega a primeira letra da alternativa
-                replacement = question[start_posi]
-                repla_str = f"{replacement})" 
-                question= re.sub(chosen_pattern, repla_str, question) #troca a substr (ex: A A) com apenas a primeira letra (ex: A)
-                index +=1  
-
-                start_posi_str: str = question[start_posi:]
-                newline_posi: int =  start_posi_str.find("\n")
-                alternative_text_str: str =  question[start_posi+2: start_posi + newline_posi] # essa string contem o texto em si da alternativa depois da Letra e )
-                
-                if alternative_text_str.isspace(): #caso o texto da alternativa esteja vazia (Alternativas são imagens que não são checadas pelo PDF reader), retornamos um str de erro
-                     non_standard = True
-                     break
-                     
-            else:
-                 non_standard = True
-                 break #o padrão não existe, então não é o texto de uma alternativa  
-       
-        if non_standard:
-            return "non-standard alternatives"
-        
-        return question"""
     def __parse_alternatives_txt__(self,question:str)-> str:
         pattern = r"([A-E])\s*\n\1\s*"
         
@@ -136,7 +72,10 @@ class EnemPDFextractor():
             return f"{match.group(1)})"
 
         # Replace using the pattern
-        question = re.sub(pattern, replace_match, question)
+        number_substi: int 
+        question, number_substi = re.subn(pattern, replace_match, question)
+        if number_substi < 5:
+           return "non-standard alternatives"
 
 
         # Check if all alternatives have been replaced
@@ -152,7 +91,7 @@ class EnemPDFextractor():
             alternative_text = question[start_pos:end_pos]
 
             if not alternative_text:
-                print(f"Non-standard alternative for {letter}")
+               # print(f"Non-standard alternative for {letter}")
                 return "non-standard alternatives"
 
             alternatives[letter] = alternative_text
@@ -190,7 +129,6 @@ class EnemPDFextractor():
         
         return question  , self.__get_alternative_list__(question) #fazer o fitz retornar uma lista de alternativas tbm
  
-
     #retorna uma lista com todas as alternativas da questão, apenas funciona com inputs com as alternativas já formatadas
 
     def __get_alternative_list__(self,question:str)->list[str]:
@@ -265,8 +203,7 @@ class EnemPDFextractor():
         current_page = pdf_reader[page_index]    
                       
         page_text:str = current_page.get_text()
-        if page_index < 4: 
-         print("texto inicial:" + page_text)
+        
         first_question_str_index: int = next(self.__yield_all_substrings__(input_str = page_text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
         
         if first_question_str_index == -1:
@@ -282,15 +219,12 @@ class EnemPDFextractor():
       
         for _ in self.__yield_all_substrings__(page_text, self.__QUESTION_IDENTIFIER__):
             total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
-            #print(total_question_number)
+    
         
         image_list:list = current_page.get_images()
 
         if image_list:
             print(f" temos : {len(image_list)} imagens")
-            print("zero imagens")
-            if page_index < 4:
-                print("\n\n  questoes com imagem:"+ page_text+ "\n\n")
             text_processing_dict.update({"text":"","page_first_question": page_first_question, "total_question_number": total_question_number})
             return text_processing_dict #retorna dict sem imagens
             
@@ -624,7 +558,6 @@ class EnemPDFextractor():
                 total_question_number=total_question_number
         )      
         if not page_attributes: #dict vazio, pagina não tem questões
-           print("pagina não tem questões")
            continue  
 
         page_first_question:int = page_attributes.get("page_first_question")
@@ -635,7 +568,6 @@ class EnemPDFextractor():
 
         question_start_index:int = 0
         answer_number: int = page_first_question
-        print(f"page first question: {page_first_question}")
         in_spanish_question: bool = False
         
         for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
@@ -654,9 +586,8 @@ class EnemPDFextractor():
                     day_one=True
              ) 
              unparsed_alternatives: str = text[question_start_index:position]
-             #print("unparsed" + unparsed_alternatives)
              parsed_question: str = self.__parse_alternatives_txt__(unparsed_alternatives)
-            # print("parsed" +  parsed_question)
+             
              if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                  question_start_index = position
                  answer_number += 1
@@ -709,7 +640,8 @@ class EnemPDFextractor():
      natural_sci_questions: str = ""
      
      topic_question_range:dict[str,tuple] = {"natu": (1,45), "math":(46,91)} 
-     num_pages: int = len(pdf_reader.pages)
+     num_pages: int = len(pdf_reader)
+
      for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
         page_attributes: dict = self.__page_preprocessing__(
                 pdf_reader=pdf_reader,
@@ -729,7 +661,6 @@ class EnemPDFextractor():
         answer_number: int = page_first_question
         
         for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
-            
              if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                  continue
              # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
