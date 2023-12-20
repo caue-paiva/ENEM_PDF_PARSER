@@ -61,10 +61,12 @@ class EnemPDFextractor():
         if test_color_identifier[2] != answers_color_identifier[2]:  #terceiro char desse padrão é o numero referente à cor do caderno
             raise IOError("prova e gabarito são de cores diferentes") 
 
-    def __parse_alternatives__(self,question:str)->str:
+    #essa funcao faz parecido com a _parse_alternatives_txt mas tbm retorna uma lista com as alternativas para o JSON
+
+    def __parse_alternatives_json__(self,question:str)->tuple[str,list[str]]:
         index:int = 0
         patterns_alternatives = [r"([A]) ([A])",r"([B]) ([B])",r"([C]) ([C])",r"([D]) ([D])",r"([E]) ([E])"]
-    
+        non_standard:bool = False
         while index < 5 :   
             chosen_pattern = patterns_alternatives[index]   #para cada letra na lista de padrões, vamos aplicar a mudança  
             match = re.search(chosen_pattern, question)  
@@ -80,10 +82,68 @@ class EnemPDFextractor():
                 alternative_text_str: str =  question[start_posi+2: start_posi + newline_posi] # essa string contem o texto em si da alternativa depois da Letra e )
                 
                 if alternative_text_str.isspace(): #caso o texto da alternativa esteja vazia (Alternativas são imagens que não são checadas pelo PDF reader), retornamos um str de erro
-                     return "non-standard alternatives"   
+                    non_standard = True
+                    break
             else:
-                return "non-standard alternatives" #o padrão não existe, então não é o texto de uma alternativa  
+                 non_standard = True
+                 break #o padrão não existe, então não é o texto de uma alternativa  
+    
+        if non_standard:
+               return "non-standard alternatives", []
+
+        return_list:list = self.__get_alternative_list__(question)
+        return (question, return_list)  #chama a funcao de retornar uma lista das alternativas
+        
+    #essa função apenas formata as alternativas e retorna uma string dela formatada   
+
+    def __parse_alternatives_txt__(self,question:str)-> str:
+        index:int = 0
+        patterns_alternatives = [r"([A]) ([A])",r"([B]) ([B])",r"([C]) ([C])",r"([D]) ([D])",r"([E]) ([E])"]
+        non_standard:bool = False
+        
+        while index < 5 :   
+            chosen_pattern = patterns_alternatives[index]   #para cada letra na lista de padrões, vamos aplicar a mudança  
+            match = re.search(chosen_pattern, question)  
+            if match:  #se existir algo similar ao padrão na string 
+                start_posi =  match.start() #pega a primeira letra da alternativa
+                replacement = question[start_posi]
+                repla_str = f"{replacement})" 
+                question= re.sub(chosen_pattern, repla_str, question) #troca a substr (ex: A A) com apenas a primeira letra (ex: A)
+                index +=1  
+
+                start_posi_str: str = question[start_posi:]
+                newline_posi: int =  start_posi_str.find("\n")
+                alternative_text_str: str =  question[start_posi+2: start_posi + newline_posi] # essa string contem o texto em si da alternativa depois da Letra e )
+                
+                if alternative_text_str.isspace(): #caso o texto da alternativa esteja vazia (Alternativas são imagens que não são checadas pelo PDF reader), retornamos um str de erro
+                     non_standard = True
+                     break
+                     
+            else:
+                 non_standard = True
+                 break #o padrão não existe, então não é o texto de uma alternativa  
+       
+        if non_standard:
+            return "non-standard alternatives"
+        
         return question
+
+    #retorna uma lista com todas as alternativas da questão, apenas funciona com inputs com as alternativas já formatadas
+
+    def __get_alternative_list__(self,question:str)->list[str]:
+        regex_pattern = "[A-E]\)"
+        alternatives_list: list[str] = []
+        matches_list:list[int] = [match.start() for match in re.finditer(pattern=regex_pattern, string=question)]
+       
+        for i in  range(len(matches_list)):
+            if i < len(matches_list)-1:
+              alternative_text:str = question[matches_list[i]: matches_list[i+1]]
+              alternatives_list.append(alternative_text)
+            else:
+              alternative_text:str = question[matches_list[i]: len(question)]
+              alternatives_list.append(alternative_text)
+    
+        return alternatives_list
 
     def __yield_all_substrings__(self, input_str: str, sub_str:str)->int:
      sub_str = sub_str or "*"
@@ -186,7 +246,7 @@ class EnemPDFextractor():
              # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
              correct_answer:str = self.__find_correct_answer__(question_number = answer_number, is_spanish_question= False, day_one= False) 
              unparsed_alternatives: str = text[question_start_index:position]
-             parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
+             parsed_question: str = self.__parse_alternatives_txt__(unparsed_alternatives)
              
              if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                  question_start_index = position
@@ -276,8 +336,9 @@ class EnemPDFextractor():
              # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
              correct_answer:str = self.__find_correct_answer__(question_number= answer_number, is_spanish_question= in_spanish_question, day_one=True,) 
              unparsed_alternatives: str = text[question_start_index:position]
-             parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
-                
+             parsed_question: str = self.__parse_alternatives_txt__(unparsed_alternatives)
+
+             print("parsed question" + parsed_question)  
              if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                  question_start_index = position
                  answer_number += 1
@@ -322,7 +383,7 @@ class EnemPDFextractor():
      with open(file_path, "a") as f_huma:
         f_huma.write(humanities_questions)
      
-    def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correc_answer:str, number:int)->dict:
+    def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correct_answer:str, number:int, alternative_list:list[str] = [])->dict:
         day_identifier = "D1" if day_one else "D2"
         
         if day_one:
@@ -330,14 +391,25 @@ class EnemPDFextractor():
         else:
             number += 90
         
-        json_dict = {
-           "question_text": question,
-           "correct_answer": correc_answer ,
-           "ID": f"{year}_{day_identifier}_N{number}",
-           "year": year,
-           "day": day_identifier,
-           "question_num": number
-        }
+        if alternative_list:
+            json_dict = {
+                "question_text": question,
+                "correct_answer": correct_answer ,
+                "alternatives": alternative_list,
+                "ID": f"{year}_{day_identifier}_N{number}",
+                "year": year,
+                "day": day_identifier,
+                "question_num": number
+            }
+        else:
+            json_dict = {
+                "question_text": question,
+                "correct_answer": correct_answer ,
+                "ID": f"{year}_{day_identifier}_N{number}",
+                "year": year,
+                "day": day_identifier,
+                "question_num": number
+            }
         return json_dict
 
     def __json_handle_day_one_tests__(self, pdf_reader: PdfReader, test_year:int)->None:
@@ -387,7 +459,8 @@ class EnemPDFextractor():
             question_start_index:int = 0
             answer_number: int = page_first_question
             in_spanish_question: bool = False
-            
+            alternative_list:list[str] = []
+
             for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
                 if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                     continue
@@ -400,8 +473,9 @@ class EnemPDFextractor():
                 # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
                 correct_answer:str = self.__find_correct_answer__(question_number= answer_number, is_spanish_question= in_spanish_question, day_one=True,) 
                 unparsed_alternatives: str = text[question_start_index:position]
-                parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
+                parsed_question, alternative_list = self.__parse_alternatives_json__(unparsed_alternatives)
                     
+                #print("parsed_question" + parsed_question + "\n\n" + "alternative list" + alternative_list + "\n\n")   
                 if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                     question_start_index = position
                     answer_number += 1
@@ -411,8 +485,9 @@ class EnemPDFextractor():
                       question= parsed_question,
                       day_one=True,
                       year= test_year,
-                      correc_answer= correct_answer,
-                      number= answer_number
+                      correct_answer= correct_answer,
+                      number= answer_number,
+                      alternative_list= alternative_list
                 )
                 
                 start_eng, end_eng = topic_question_range["eng"] #desempacotando a tuple de ranges de questões das matérias
@@ -496,7 +571,8 @@ class EnemPDFextractor():
             text += f" {self.__QUESTION_IDENTIFIER__}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
             question_start_index:int = 0
             answer_number: int = page_first_question
-            
+            alternative_list: list[str]
+
             for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
                 if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                     continue
@@ -504,8 +580,8 @@ class EnemPDFextractor():
                 # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
                 correct_answer:str = self.__find_correct_answer__(question_number= answer_number, is_spanish_question= False, day_one=False,) 
                 unparsed_alternatives: str = text[question_start_index:position]
-                parsed_question: str = self.__parse_alternatives__(unparsed_alternatives)
-                    
+                parsed_question , alternative_list = self.__parse_alternatives_json__(unparsed_alternatives)
+               # print("parsed_question" + parsed_question + "\n\n" + f"alternative list {alternative_list}"  + "\n\n")       
                 if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                     question_start_index = position
                     answer_number += 1
@@ -515,8 +591,9 @@ class EnemPDFextractor():
                       question= parsed_question,
                       day_one=False,
                       year= test_year,
-                      correc_answer= correct_answer,
-                      number= answer_number
+                      correct_answer= correct_answer,
+                      number= answer_number,
+                      alternative_list= alternative_list
                 )
                 
                 start_natu, end_natu = topic_question_range["natu"] #desempacotando a tuple de ranges de questões das matérias
