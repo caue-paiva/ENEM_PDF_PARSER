@@ -4,7 +4,7 @@ import re, os ,json #tentar parsear o arquivo das questoes, ver se existem quest
 """ A melhorar:
 1) Lidar com casos de questão anulada (atualmente ele pega essas questões e fala que o gabarito é A)
 
-
+2) fazer com que o JSON da questão inclua as alternativas em uma lista separada
 
 
 """
@@ -437,19 +437,19 @@ class EnemPDFextractor():
      #escrever as strings extraidas nos seus arquivos respectivos
         file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.json" )
         with open(file_path, "a") as f_eng:
-            json.dump(english_questions,f_eng, indent=4)
+            json.dump(english_questions,f_eng, indent=4,  ensure_ascii=False)
             
         file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions.json" )
         with open(file_path, "a") as f_spani:
-                json.dump(spanish_questions,f_spani,  indent=4)
+                json.dump(spanish_questions,f_spani,  indent=4,  ensure_ascii=False)
 
         file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions.json" )     
         with open(file_path, "a") as f_lang:
-            json.dump(languages_arts_questions,f_lang, indent=4)
+            json.dump(languages_arts_questions,f_lang, indent=4,  ensure_ascii=False)
             
         file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.json" )
         with open(file_path, "a") as f_huma:
-            json.dump(humanities_questions,f_huma, indent=4)
+            json.dump(humanities_questions,f_huma, indent=4,  ensure_ascii=False)
 
     def extract_pdf(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str)->None: #extrai o texto dos PDF de um ano específico
         self.__handle_IO_errors__( test_pdf_path= test_pdf_path, answers_pdf_path= answers_pdf_path)
