@@ -1,0 +1,941 @@
+(Enem/2022)  QUESTÃO 136 
+Uma	máquina	 em	operação	 tem	sua	temperatura	
+T monitorada	 por	meio	de	um	registro	gráfico,	ao	longo	do	
+tempo t.	Essa	máquina	possui	um	pistão	cuja	velocidade	
+V varia com a temperatura T da máquina, de acordo 
+com	a	expressão	 V = T 2 - 4. Após a máquina funcionar 
+durante o intervalo de tempo de 10 horas, o seu operador 
+analisa	o	registro	gráfico,	apresentado	 na	figura,	para	
+avaliar a necessidade de eventuais ajustes, sabendo que 
+a máquina apresenta falhas de funcionamento quando a 
+velocidade	do	pistão	se	anula.
+4T (ºC)
+2
+0
+−210t (h)
+Quantas	vezes	a	velocidade	 do	pistão	se	anulou	durante	
+as	10	horas	de	funcionamento?
+A) 1
+B) 2
+C) 3
+D) 4
+E) 5
+
+(RESPOSTA CORRETA): E
+
+(Enem/2022)  QUESTÃO 137 
+A World Series	 é	a	decisão	do	campeonato	  
+norte-americano	 de	beisebol.	Os	dois	times	que	chegam	
+a essa fase jogam, entre si, até sete partidas. O primeiro 
+desses times que completar quatro vitórias é declarado 
+campeão.
+Considere que, em todas as partidas, a probabilidade 
+de qualquer um dos dois times vencer é sempre 1
+2.
+Qual	é	a	probabilidade	 de	o	time	campeão	ser	aquele	que 
+venceu a primeira partida da World Series ?
+A) 35
+64
+B) 40
+64
+C) 42
+64
+D) 44
+64
+E) 52
+64
+(RESPOSTA CORRETA): C
+
+(Enem/2022)  QUESTÃO 138 
+O	gráfico	apresenta	 os	totais	de	receitas	e	despesas	
+de	uma	empresa,	 expressos	 em	milhão	de	reais,	no	
+decorrer dos meses de um determinado ano. A empresa 
+obtém lucro quando a diferença entre receita e despesa é 
+positiva e tem prejuízo quando essa diferença é negativa.
+Jan.  Fev.  Mar.  Abr.  Maio  Jun.  Jul.   Ago.  Set.  Out.  Nov.  Dez.9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+Receitas             Despesas
+Qual	é	a	mediana,	 em	milhão	de	reais,	dos	valores	dos	
+lucros	apurados	pela	empresa	nesse	ano?
+A) 1,5
+B) 2,0
+C) 2,9
+D) 3,0
+E) 5,5 
+(RESPOSTA CORRETA): D
+
+(Enem/2022)  QUESTÃO 139 
+Um casal está reformando a cozinha de casa e 
+decidiu comprar um refrigerador novo. Observando a 
+planta da nova cozinha, desenhada na escala de 1 : 50, 
+notaram que o espaço destinado ao refrigerador tinha 
+3,8 cm de altura e 1,6 cm de largura. Eles sabem que 
+os fabricantes de refrigeradores indicam que, para um 
+bom funcionamento e fácil manejo na limpeza, esses 
+eletrodomésticos devem ser colocados em espaços que 
+permitam uma distância de, pelo menos, 10 cm de outros 
+móveis ou paredes, tanto na parte superior quanto nas 
+laterais. O casal comprou um refrigerador que caberia 
+no local a ele destinado na nova cozinha, seguindo as 
+instruções do fabricante.
+Esse refrigerador tem altura e largura máximas, em 
+metro, respectivamente, iguais a
+A) 1,80 e 0,60.
+B) 1,80 e 0,70.
+C) 1,90 e 0,80.
+D) 2,00 e 0,90.
+E) 2,00 e 1,00.
+
+(RESPOSTA CORRETA): A
+
+(Enem/2022)  QUESTÃO 140 
+Foram convidadas 32 equipes para um torneio de 
+futebol, que foram divididas em 8 grupos com 4 equipes, 
+sendo que, dentro de um grupo, cada equipe disputa uma 
+única partida contra cada uma das demais equipes de 
+seu grupo. A primeira e a segunda colocadas de cada 
+grupo seguem para realizar as 8 partidas da próxima 
+fase	do	torneio,	chamada	oitavas	de	final.	Os	vencedores	
+das	partidas	das	oitavas	de	final	seguem	para	jogar	
+as	4	partidas	das	quartas	de	final.	Os	vencedores	 das	
+quartas	de	final	disputam	as	2	partidas	das	semifinais,	 e	
+os	vencedores	 avançam	para	a	grande	final,	que	define	a	
+campeã	do	torneio.
+Pelas regras do torneio, cada equipe deve ter um 
+período de descanso de, no mínimo, 3 dias entre dois 
+jogos por ela disputados, ou seja, se um time disputar 
+uma partida, por exemplo, num domingo, só poderá 
+disputar	a	partida	seguinte	a	partir	da	quinta-feira	 da	
+mesma semana.
+O	número	mínimo	de	dias	necessários	 para	a	realização	
+desse torneio é
+A) 22.
+B) 25.
+C) 28.
+D) 48.
+E) 64.
+(RESPOSTA CORRETA): B
+
+(Enem/2022)  QUESTÃO 141 
+Em um jogo de bingo, as cartelas contêm  
+16 quadrículas dispostas em linhas e colunas. Cada 
+quadrícula tem impresso um número, dentre os inteiros 
+de	1	a	50,	sem	repetição	de	número.	Na	primeira	rodada,	
+um número é sorteado, aleatoriamente, dentre os 50 
+possíveis. Em todas as rodadas, o número sorteado 
+é	descartado	 e	não	participa	dos	sorteios	das	rodadas	
+seguintes. Caso o jogador tenha em sua cartela o número 
+sorteado, ele o assinala na cartela. Ganha o jogador que  
+primeiro conseguir preencher quatro quadrículas  
+que formam uma linha, uma coluna ou uma diagonal, 
+conforme os tipos de situações ilustradas na Figura 1.
+Preenchimento 
+em linhaPreenchimento 
+em colunaPreenchimento 
+em diagonal
+Figura 1
+O jogo inicia e, nas quatro primeiras rodadas, foram 
+sorteados os seguintes números: 03, 27, 07 e 48. Ao 
+final	da	quarta	rodada,	somente	 Pedro	possuía	uma	
+cartela que continha esses quatro números sorteados, 
+sendo que todos os demais jogadores conseguiram 
+assinalar, no máximo, um desses números em suas 
+cartelas.	Observe	na	Figura	2	o	cartão	de	Pedro	após	as	
+quatro primeiras rodadas.
+Figura 20348
+0727
+491112
+2205
+29501945
+332338
+A probabilidade de Pedro ganhar o jogo em uma das duas 
+próximas rodadas é
+A) 1
+461
+45+
+B) 1
+462
+4645/g14/g117
+C) 1
+468
+4645/g14/g117
+D) 1
+4643
+4645/g14/g117
+E) 1
+4649
+4645/g14/g117 
+(RESPOSTA CORRETA): E
+
+(Enem/2022)  QUESTÃO 142 
+Uma montadora de automóveis divulgou que oferta a 
+seus	clientes	mais	de	1	000	configurações	 diferentes	 de	
+carro,	variando	o	modelo,	a	motorização,	 os	opcionais	 e	
+a cor do veículo. Atualmente, ela oferece 7 modelos de 
+carros	com	2	tipos	de	motores:	1.0	e	1.6.	Já	em	relação	
+aos opcionais, existem 3 escolhas possíveis: central 
+multimídia, rodas de liga leve e bancos de couro, podendo 
+o cliente optar por incluir um, dois, três ou nenhum dos 
+opcionais disponíveis.
+Para	ser	fiel	à	divulgação	 feita,	a	quantidade	 mínima	
+de cores que a montadora deverá disponibilizar a seus 
+clientes é
+A) 8.
+B) 9.
+C) 11.
+D) 18.
+E) 24.
+
+(RESPOSTA CORRETA): B
+
+(Enem/2022)  QUESTÃO 144 
+Cada	número	que	identifica	uma	agência	bancária	tem	
+quatro dígitos: N1, N2, N3, N4	mais	um	dígito	verificador	 N5.
+N1N2N3N4N5
+Todos	esses	dígitos	são	números	 naturais	
+pertencentes ao conjunto {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}. 
+Para	a	determinação	 de	N5,	primeiramente	 multiplica-se 	
+ordenadamente os quatro primeiros dígitos do número 
+da	agência	por	5,	4,	3	e	2,	respectivamente,	 somam-se 	
+os	resultados	e	obtém-se	S	=  5 N1 + 4 N2 + 3 N3 + 2 N4.
+Posteriormente,	 encontra-se	 o	resto	da	divisão	de	 
+S por 11, denotando por R esse resto. Dessa forma, N5 é 
+a diferença 11 - R.
+Considere o número de uma agência bancária cujos 
+quatro	primeiros	dígitos	são	0100.
+Qual	é	o	dígito	verificador	N5	dessa	agência	bancária?
+A) 0
+B) 6
+C) 7
+D) 8
+E) 9 
+(RESPOSTA CORRETA): C
+
+(Enem/2022)  QUESTÃO 145 
+O pacote básico de um jogo para smartphone, que 
+é vendido a R$ 50,00, contém 2 000 gemas e 100 000 
+moedas	de	ouro,	que	são	itens	utilizáveis	nesse	jogo.
+A empresa que comercializa esse jogo decidiu criar 
+um pacote especial que será vendido a R$ 100,00 e que 
+se diferenciará do pacote básico por apresentar maiores 
+quantidades de gemas e moedas de ouro. Para estimular 
+as vendas desse novo pacote, a empresa decidiu inserir 
+nele	6	000	gemas	a	mais,	em	relação	ao	que	o	cliente	
+teria caso optasse por comprar, com a mesma quantia, 
+dois pacotes básicos.
+A quantidade de moedas de ouro que a empresa deverá 
+inserir ao pacote especial, para que seja mantida a mesma 
+proporção	 existente	entre	as	quantidades	 de	gemas	e	de	
+moedas de ouro contidas no pacote básico, é
+A) 50 000.
+B) 100 000.
+C) 200 000.
+D) 300 000.
+E) 400 000.
+
+(RESPOSTA CORRETA): E
+
+(Enem/2022)  QUESTÃO 146 
+Um parque tem dois circuitos de tamanhos 
+diferentes para corridas. Um corredor treina nesse 
+parque e, no primeiro dia, inicia seu treino percorrendo 
+3 voltas em torno do circuito maior e 2 voltas em torno 
+do menor, perfazendo um total de 1 800 m. Em seguida, 
+dando continuidade a seu treino, corre mais 2 voltas 
+em torno do circuito maior e 1 volta em torno do menor, 
+percorrendo mais 1 100 m.
+No segundo dia, ele pretende percorrer 5 000 m nos 
+circuitos do parque, fazendo um número inteiro de voltas 
+em torno deles e de modo que o número de voltas seja o 
+maior possível.
+A soma do número de voltas em torno dos dois circuitos, 
+no segundo dia, será
+A) 10.
+B) 13.
+C) 14.
+D) 15.
+E) 16.
+(RESPOSTA CORRETA): E
+
+(Enem/2022)  QUESTÃO 147 
+Uma equipe de marketing digital foi contratada para 
+aumentar as vendas de um produto ofertado em um site 
+de	comércio	 eletrônico.	 Para	isso,	elaborou	um	anúncio	
+que, quando o cliente clica sobre ele, é direcionado 
+para a página de vendas do produto. Esse anúncio foi 
+divulgado em duas redes sociais, A e B, e foram obtidos 
+os seguintes resultados:
+• rede social A: o anúncio foi visualizado por  
+3 000 pessoas; 10% delas clicaram sobre o anúncio 
+e foram redirecionadas para o site; 3% das que  
+clicaram sobre o anúncio compraram o produto. 
+O	investimento 	feito	para	a	publicação	 do	anúncio	
+nessa rede foi de R$ 100,00;
+• rede social B: o anúncio foi visualizado por  
+1 000 pessoas; 30% delas clicaram sobre o anúncio 
+e foram redirecionadas para o site; 2% das que  
+clicaram sobre o anúncio compraram o produto. 
+O	investimento 	feito	para	a	publicação	 do	anúncio	
+nessa rede foi de R$ 200,00.
+Por experiência, o pessoal da equipe de marketing 
+considera	 que	a	quantidade	 de	novas	pessoas	que	verão	
+o anúncio é diretamente proporcional ao investimento 
+realizado,	 e	que	a	quantidade	 de	pessoas	que	comprarão	
+o produto também se manterá proporcional à quantidade 
+de	pessoas	que	clicarão	sobre	o	anúncio.
+O	responsável	 pelo	produto	decidiu,	então,	investir	
+mais R$ 300,00 em cada uma das duas redes sociais 
+para	a	divulgação	 desse	anúncio	e	obteve,	de	fato,	o	
+aumento proporcional esperado na quantidade de clientes 
+que	compraram	 esse	produto.	Para	classificar	 o	aumento	
+obtido na quantidade (Q) de compradores desse produto, 
+em	consequência	 dessa	segunda	divulgação,	 em	relação	
+aos	resultados	 observados	 na	primeira	divulgação,	 o	
+responsável pelo produto adotou o seguinte critério:
+• Q ≤	60%:	não	satisfatório;
+• 60% < Q ≤ 100%: regular;
+• 100% < Q ≤ 150%: bom;
+• 150% < Q ≤ 190%: muito bom;
+• 190% < Q ≤ 200%: excelente.
+O aumento na quantidade de compradores, em 
+consequência	 dessa	segunda	 divulgação,	 em	relação	
+ao	que	foi	registrado	 com	a	primeira	divulgação,	 foi	
+classificado	como
+A) não	satisfatório.
+B) regular.
+C) bom.
+D) muito bom.
+E) excelente. 
+(RESPOSTA CORRETA): C
+
+(Enem/2022)  QUESTÃO 151 
+Um médico faz o acompanhamento clínico de um grupo de pessoas que realizam atividades físicas diariamente. 
+Ele observou que a perda média de massa dessas pessoas para cada hora de atividade física era de 1,5 kg. Sabendo 
+que	a	massa	de	1	L	de	água	é	de	1	kg,	ele	recomendou	 que	ingerissem,	 ao	longo	das	3	horas	seguintes	 ao	final	da	
+atividade, uma quantidade total de água correspondente a 40% a mais do que a massa perdida na atividade física, 
+para	evitar	desidratação.
+Seguindo	 a	recomendação	 médica,	uma	dessas	pessoas	ingeriu,	certo	dia,	um	total	de	1,7	L	de	água	após	
+terminar seus exercícios físicos.
+Para	que	a	recomendação	 médica	tenha	efetivamente	 sido	respeitada,	 a	atividade	física	dessa	pessoa,	nesse	dia,	durou
+A) 30 minutos ou menos.
+B) mais de 35 e menos de 45 minutos.
+C) mais de 45 e menos de 55 minutos.
+D) mais de 60 e menos de 70 minutos.
+E) 70 minutos ou mais.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2022)  QUESTÃO 152 
+Em	uma	sala	de	cinema,	para	garantir	que	os	espectadores 	vejam	toda	a	imagem	projetada	 na	tela,	a	disposição	
+das	poltronas	 deve	obedecer	 à	norma	técnica	da	Associação	 Brasileira	 de	Normas	Técnicas	 (ABNT),	que	faz	as	
+seguintes indicações:
+• Distância mínima (Dmín)	entre	a	tela	de	projeção	e	o	encosto	da	poltrona	da	primeira	fileira	deve	ser	de,	pelo	
+menos, 60% da largura ( L) da tela.
+• Distância máxima (Dmáx)	entre	a	tela	de	projeção	e	o	encosto	da	poltrona	da	última	fileira	deve	ser	o	dobro	da	
+largura ( L) da tela, sendo aceitável uma distância de até 2,9 vezes a largura ( L) da tela.
+Para	o	espaçamento	 entre	as	fileiras	de	poltronas,	 é	considerada	 a	distância	de	1	metro	entre	os	encostos	de	
+poltronas	em	duas	fileiras	consecutivas.
+Disponível em: www.ctav.gov.br. Acesso em: 14 nov. 2013.
+Uma sala de cinema, cuja largura da tela mede 12 m, está montada em conformidade com as normas da ABNT e 
+tem	suas	dimensões	especificadas	na	figura.
+D 2L=máx
+LTelaÁrea de instalação
+de novas poltronas
+D 0,6Lmín=D 2,9Laceitável=
+1 m 1 mFileira
+Fileira
+Fileira
+Pretende-se	 ampliar	essa	sala,	mantendo-se	 na	mesma	posição	a	tela	e	todas	as	poltronas	 já	instaladas,	
+ampliando-se	 ao	máximo	a	sala	para	os	fundos	(área	de	instalação	 de	novas	poltronas),	 respeitando-se	 o	limite	
+aceitável	da	norma	da	ABNT.	A	intenção	é	aumentar,	 ao	máximo,	a	quantidade	 de	poltronas	 da	sala,	instalando-se	  
+novas unidades, iguais às já instaladas.
+Quantas	fileiras	de	poltronas	a	sala	comportará	após	essa	ampliação?
+A) 26
+B) 27
+C) 28
+D) 29
+E) 35 
+(RESPOSTA CORRETA): C
+
+(Enem/2022)  QUESTÃO 153 
+Uma empresa produz e vende um tipo de chocolate, 
+maciço, em formato de cone circular reto com as medidas 
+do diâmetro da base e da altura iguais a 8 cm e 10 cm, 
+respectivamente,	como	apresenta	a	figura.
+8 cm
+10 cm
+Devido a um aumento de preço dos ingredientes 
+utilizados	 na	produção	 desse	chocolate,	 a	empresa	
+decide produzir esse mesmo tipo de chocolate com um 
+volume 19% menor, no mesmo formato de cone circular 
+reto com altura de 10 cm.
+Para isso, a empresa produzirá esses novos chocolates 
+com medida do raio da base, em centímetro, igual a
+A) 1,52.
+B) 3,24.
+C) 3,60.
+D) 6,48.
+E) 7,20.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2022)  QUESTÃO 154 
+Em janeiro de 2013, foram declaradas 1 794 272 
+admissões e 1 765 372 desligamentos no Brasil, ou seja, 
+foram criadas 28 900 vagas de emprego, segundo dados 
+do Cadastro Geral de Empregados e Desempregados 
+(Caged), divulgados pelo Ministério do Trabalho e 
+Emprego (MTE). Segundo o Caged, o número de vagas 
+criadas em janeiro de 2013 sofreu uma queda de 75%, 
+quando comparado com o mesmo período de 2012.
+Disponível em: http://portal.mte.gov.br. Acesso em: 23 fev. 2013 (adaptado).
+De acordo com as informações dadas, o número de 
+vagas criadas em janeiro de 2012 foi
+A) 16 514.
+B) 86 700.
+C) 115 600.
+D) 441 343.
+E) 448 568.
+(RESPOSTA CORRETA): C
+
+(Enem/2022)  QUESTÃO 155 
+Um prédio, com 9 andares e 8 apartamentos de  
+2 quartos por andar, está com todos os seus apartamentos 
+à	venda.	Os	apartamentos	 são	identificados	 por	números	
+formados por dois algarismos, sendo que a dezena indica 
+o andar onde se encontra o apartamento, e a unidade, 
+um algarismo de 1 a 8, que diferencia os apartamentos 
+de um mesmo andar. Quanto à incidência de sol 
+nos	quartos	desses	apartamentos,	 constatam-se	 as	
+seguintes	 características,	 em	função	de	seus	números	de	
+identificação:
+• naqueles	que	finalizam	em	1	ou	2,	ambos	os	quartos	
+recebem	sol	apenas	na	parte	da	manhã;	
+• naqueles	que	finalizam	em	3,	 4,	5	ou	6,	apenas	um	
+dos	quartos	recebe	sol	na	parte	da	manhã;
+• naqueles	que	finalizam	em	7	ou	8,	ambos	os	quartos	
+recebem sol apenas na parte da tarde.
+Uma pessoa pretende comprar 2 desses 
+apartamentos em um mesmo andar, mas quer que, em 
+ambos, pelo menos um dos quartos receba sol na parte 
+da	manhã.
+De quantas maneiras diferentes essa pessoa poderá 
+escolher 2 desses apartamentos para compra nas 
+condições	desejadas?
+A) 96
+62/g117/g16!
+! /g11/g12
+B) 96
+62 2/g117/g16/g117!
+!! /g11/g12
+C) 94
+42 2/g117/g16/g117!
+!! /g11/g12
+D) 92
+22 2/g117/g16/g117!
+!! /g11/g12
+E) 98
+82 21 /g117/g16/g117/g16!
+!! /g11/g12/g167
+/g169/g168/g168/g183
+/g185/g184/g184 
+(RESPOSTA CORRETA): B
+
+(Enem/2022)  QUESTÃO 157 
+O	funcionário	 de	uma	loja	tem	seu	salário	mensal	formado	por	uma	parcela	fixa	de	675	reais	mais	uma	comissão	
+que	depende	da	quantidade	 de	peças	vendidas	por	ele	no	mês.	O	cálculo	do	valor	dessa	comissão	 é	feito	de	acordo	
+com estes critérios:
+• até	a	quinquagésima	peça	vendida,	paga-se	5	reais	por	peça;
+• a partir da quinquagésima primeira peça vendida, o valor pago é de 7 reais por peça.
+Represente por q a quantidade de peças vendidas no mês por esse funcionário, e por S(q) o seu salário mensal, 
+em real, nesse mês.
+A	expressão	algébrica	que	descreve	S (q)	em	função	de	q  é
+A) S(q) = 675 + 12q
+B) S(q) = 325 + 12q
+C) S(q) = 675 + 7q
+D) Sqqq
+qq(),
+,/g32/g14
+/g14/g33625 55 0
+925 75 0se
+se/g100 /g173
+/g174
+/g175
+E) Sqqq
+qq(),
+,/g32/g14
+/g14/g33625 55 0
+575 75 0se
+se/g100 /g173
+/g174
+/g175
+
+(RESPOSTA CORRETA): A
+
+(Enem/2022)  QUESTÃO 158 
+Ao analisar os dados de uma epidemia em uma cidade, peritos obtiveram um modelo que avalia a quantidade de 
+pessoas infectadas a cada mês, ao longo de um ano. O modelo é dado por p (t) = -t 2 + 10t + 24, sendo t um número 
+natural, variando de 1 a 12, que representa os meses do ano, e p(t) a quantidade de pessoas infectadas no mês t do 
+ano.	Para	tentar	diminuir	o	número	de	infectados	 no	próximo	ano,	a	Secretaria	 Municipal	 de	Saúde	decidiu	intensificar	
+a	propaganda	 oficial	sobre	os	cuidados	 com	a	epidemia.	 Foram	apresentadas	 cinco	propostas	 (I,	II,	III,	IV	e	V),	 
+com	diferentes	períodos	de	intensificação	das	propagandas:
+• I: 1 ≤ t ≤ 2;
+• II: 3 ≤ t ≤ 4;
+• III: 5 ≤ t ≤ 6;
+• IV: 7 ≤ t ≤ 9; 
+• V: 10 ≤ t ≤ 12.
+A	sugestão	dos	peritos	é	que	seja	escolhida	 a	proposta	cujo	período	de	intensificação	 da	propaganda	 englobe	o	
+mês	em	que,	segundo	o	modelo,	há	a	maior	quantidade	de	infectados.	 A	sugestão	foi	aceita.
+A proposta escolhida foi a
+A) I.
+B) II.
+C) III.
+D) IV.
+E) V.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2022)  QUESTÃO 159 
+Um	atleta	iniciou	seu	treinamento	 visando	as	competições	 de	fim	de	ano.	Seu	treinamento	 consiste	em	cinco	tipos	 
+diferentes de treinos: treino T1, treino T2, treino T3, treino T4 e treino T5. A sequência dos treinamentos deve seguir esta ordem:
+A	letra	R	significa	repouso.	Após	completar	 a	sequência	 de	treinamentos,	 o	atleta	começa	novamente	 a	sequência	 a	
+partir do treino T1 e segue a ordem descrita. Após 24 semanas completas de treinamento, se dará o início das competições.
+A sequência de treinamentos que o atleta realizará na 24ª semana de treinos é
+A) T3  R  T4  R  R  T5  R.
+B) R  T3  R  T4  R  R  T5.
+C) R  T4  R  R  T5  R  T1.
+D) R  R  T5  R  T1  R  R.
+E) R  T5  R  T1  R  R  T2. 
+(RESPOSTA CORRETA): B
+
+(Enem/2022)  QUESTÃO 161 
+Uma empresa de engenharia projetou uma casa com 
+a forma de um retângulo para um de seus clientes. Esse 
+cliente	solicitou	a	inclusão	de	uma	varanda	em	forma	
+de	L.	A	figura	apresenta	 a	planta	baixa	desenhada	 pela	
+empresa, já com a varanda incluída, cujas medidas, 
+indicadas em centímetro, representam os valores das 
+dimensões da varanda na escala de 1 : 50.
+16 cm
+ESCALA 1 : 50SALA
+QUARTOSUÍTEBANHO
+SOCIALBANHO
+SUÍTE COZINHAVARANDA
+QUARTO
+4 cm18,4 cm5 cm
+A medida real da área da varanda, em metro quadrado, é
+A) 33,40.
+B) 66,80.
+C) 89,24.
+D) 133,60.
+E) 534,40.
+
+(RESPOSTA CORRETA): A
+
+(Enem/2022)  QUESTÃO 162 
+Uma	loja	de	roupas	fixou	uma	meta	de	vendas	de	
+77 000 reais para um determinado mês de 30 dias.  
+O	gráfico	mostra	o	volume	de	vendas	dessa	loja,	em	real,	
+nos dez primeiros dias do mês e entre o dia dez e o dia 
+vinte desse mês, nos seus dois únicos setores (infantil e 
+adulto).	Suponha	que	a	variação	no	volume	de	vendas,	
+para o período registrado, tenha se dado de forma linear, 
+como	mostrado	 no	gráfico,	e	que	essa	tendência	 se	
+mantenha a mesma para os próximos dez dias.
+18 000
+8 000
+10 307 00015 000Adulto
+DiasInfantil
+20
+Ao	final	do	trigésimo	dia,	quanto	faltará	no	volume	de	vendas,	
+em	real,	para	que	a	meta	fixada	para	o	mês	seja	alcançada?
+A) 5 000
+B) 7 000
+C) 11 000
+D) 18 000
+E) 29 000 
+(RESPOSTA CORRETA): C
+
+(Enem/2022)  QUESTÃO 163 
+Em	uma	universidade,	 atuam	professores	 que	estão	
+enquadrados	 funcionalmente	 pela	sua	maior	titulação:	
+mestre ou doutor. Nela há, atualmente, 60 mestres e  
+40 doutores. Os salários mensais dos professores mestres 
+e	dos	doutores	 são,	respectivamente,	 R$	8	000,00	e 
+R$ 12 000,00.
+A	diretoria	da	instituição	 pretende	 proporcionar	 um	
+aumento salarial diferenciado para o ano seguinte, de tal 
+forma que o salário médio mensal dos professores dessa 
+instituição	 não	ultrapasse	 R$	12	240,00.	A	universidade	 já	
+estabeleceu que o aumento salarial será de 25% para os 
+mestres	e	precisa	ainda	definir	o	percentual	 de	reajuste	
+para os doutores.
+Mantido o número atual de professores com suas atuais 
+titulações, o aumento salarial, em porcentagem, a ser 
+concedido aos doutores deverá ser de, no máximo,
+A) 14,4.
+B) 20,7.
+C) 22,0.
+D) 30,0.
+E) 37,5.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2022)  QUESTÃO 164 
+Um	borrifador	 de	atuação	automática	 libera,	a	cada	
+acionamento, uma mesma quantidade de inseticida.  
+O recipiente desse produto, quando cheio, contém 360 mL 
+de inseticida, que duram 60 dias se o borrifador permanecer 
+ligado ininterruptamente e for acionado a cada 48 minutos.
+A quantidade de inseticida que é liberada a cada 
+acionamento do borrifador, em mililitro, é
+A) 0,125.
+B) 0,200.
+C) 4,800.
+D) 6,000.
+E) 12,000.
+
+(RESPOSTA CORRETA): B
+
+(Enem/2022)  QUESTÃO 165 
+Definem-se	 o	dia	e	o	ano	de	um	planeta	de	um	sistema	solar	
+como sendo, respectivamente, o tempo que o planeta leva para 
+dar	1	volta	completa	em	torno	de	seu	próprio	eixo	de	rotação	e	o	
+tempo para dar 1 volta completa em torno de seu Sol.
+Suponha	que	exista	um	planeta	Z,	em	algum	sistema	
+solar, onde um dia corresponda a 73 dias terrestres e 
+que 2 de seus anos correspondam a 1 ano terrestre. 
+Considere que 1 ano terrestre tem 365 de seus dias.
+No	planeta	Z,	seu	ano	corresponderia	 a	quantos	de	seus	
+dias?
+A) 2,5
+B) 10,0
+C) 730,0
+D) 13 322,5
+E) 53 290,0
+(RESPOSTA CORRETA): A
+
+(Enem/2022)  QUESTÃO 166 
+Em	uma	competição	 de	velocidade,	 diz-se	que	há	uma	
+ultrapassagem quando um veículo que está atrás de outro 
+passa à sua frente, com ambos se deslocando no mesmo 
+sentido.	Considere	 uma	competição	 automobilística	 entre	
+cinco carros em uma pista com 100 m de comprimento, 
+onde todos largam no mesmo instante e da mesma linha.  
+O	gráfico	mostra	a	variação	da	distância	percorrida	 por	cada	
+veículo,	em	função	do	tempo,	durante	toda	a	competição.
+100
+0 Distância (m)
+0 Tempo (s) 15
+Qual o número de ultrapassagens, após o início da 
+competição,	 efetuadas	 pelo	veículo	que	chegou	em	
+último	lugar?
+A) 0
+B) 1
+C) 2
+D) 3
+E) 4
+
+(RESPOSTA CORRETA): A
+
+(Enem/2022)  QUESTÃO 167 
+Em uma loja, o preço promocional de uma geladeira 
+é de R$ 1 000,00 para pagamento somente em dinheiro. 
+Seu	preço	normal,	fora	da	promoção,	 é	10%	maior.	Para	
+pagamento	 feito	com	o	cartão	de	crédito	da	loja,	é	dado	
+um desconto de 2% sobre o preço normal.
+Uma cliente decidiu comprar essa geladeira, optando 
+pelo	pagamento	 com	o	cartão	de	crédito	da	loja.	Ela	
+calculou que o valor a ser pago seria o preço promocional 
+acrescido de 8%. Ao ser informada pela loja do valor a 
+pagar,	segundo	sua	opção,	percebeu	 uma	diferença	entre	
+seu cálculo e o valor que lhe foi apresentado.
+O valor apresentado pela loja, comparado ao valor 
+calculado pela cliente, foi
+A) R$ 2,00 menor.
+B) R$ 100,00 menor.
+C) R$ 200,00 menor.
+D) R$ 42,00 maior.
+E) R$ 80,00 maior. 
+(RESPOSTA CORRETA): A
+
+(Enem/2022)  QUESTÃO 168 
+Uma pessoa precisa se deslocar de automóvel do 
+ponto P para o ponto Q,	 indicados	 na	figura,	na	qual	as	
+linhas verticais e horizontais simbolizam ruas.
+PQ
+Por causa do sentido de tráfego nessas ruas, o 
+caminho poligonal destacado é a possibilidade mais 
+curta	de	efetuar	esse	deslocamento.	 Para	descrevê-lo,	
+deve-se	especificar	 qual	o	sentido	a	ser	tomado	em	cada	
+cruzamento	 de	ruas,	em	relação	à	direção	de	deslocamento 	
+do automóvel, que se movimentará continuamente. 
+Para	isso,	empregam-se 	as	letras	E,	F	e	D	para	indicar	
+“vire	à	esquerda”,	 “siga	em	frente”	e	“vire	à	direita”,	
+respectivamente.
+A sequência de letras que descreve o caminho poligonal 
+destacado é
+A) DDEFDDEEFFD.
+B) DFEFDDDEFFD.
+C) DFEFDDEEFFD.
+D) EFDFEEDDFFE.
+E) EFDFEEEDFFE.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2022)  QUESTÃO 169 
+Uma loja comercializa cinco modelos de  
+caixas-d’água	 (I,	II,	III,	IV	e	V),	todos	em	formato	  
+de cilindro reto de base circular. Os modelos II, III, IV e V  
+têm	as	especificações	 de	suas	dimensões	 dadas	em	
+relação	às	dimensões	 do	modelo	I,	cuja	profundidade	 é	P 
+e área da base é Ab, como segue:
+• modelo II: o dobro da profundidade e a metade da 
+área da base do modelo I;
+• modelo III: o dobro da profundidade e a metade do 
+raio da base do modelo I;
+• modelo IV: a metade da profundidade e o dobro da 
+área da base do modelo I;
+• modelo V: a metade da profundidade e o dobro do 
+raio da base do modelo I.Uma pessoa pretende comprar nessa loja o modelo 
+de	caixa-d’água	 que	ofereça	a	maior	capacidade	
+volumétrica.
+O modelo escolhido deve ser o
+A) I.
+B) II.
+C) III.
+D) IV.
+E) V.
+
+(RESPOSTA CORRETA): E
+
+(Enem/2022)  QUESTÃO 170 
+No período de 2005 a 2013, o valor de venda dos 
+imóveis em uma cidade apresentou alta, o que resultou 
+no	aumento	 dos	aluguéis.	 Os	gráficos	apresentam	 a	
+evolução	 desses	valores,	para	um	mesmo	imóvel,	no	
+mercado imobiliário dessa cidade.
+6309601 3501 8003 240Valor mensal do aluguel (R$)2005 2007 2009 2011 2013
+Ano
+90120270450540Valor de mercado do imóvel
+(milhar de R$)
+2005 2007 2009 2011 2013
+Ano
+A rentabilidade do aluguel de um imóvel é calculada 
+pela	razão	entre	o	valor	mensal	de	aluguel	e	o	valor	de	
+mercado desse imóvel.
+Com base nos dados fornecidos, em que ano a 
+rentabilidade	do	aluguel	foi	maior?
+A) 2005
+B) 2007
+C) 2009
+D) 2011
+E) 2013 
+(RESPOSTA CORRETA): B
+
+(Enem/2022)  QUESTÃO 171 
+Nos	cinco	jogos	finais	da	última	temporada,	 com	
+uma média de 18 pontos por jogo, um jogador foi eleito o 
+melhor do campeonato de basquete. Na atual temporada, 
+cinco jogadores têm a chance de igualar ou melhorar 
+essa	média.	No	quadro	estão	registradas	 as	pontuações	
+desses cinco jogadores nos quatro primeiros jogos das 
+finais	deste	ano.
+Jogadores Jogo 1 Jogo 2 Jogo 3 Jogo 4
+I 12 25 20 20
+II 12 12 27 20
+III 14 14 17 26
+IV 15 18 21 21
+V 22 15 23 15
+O quinto e último jogo será realizado para decidir a 
+equipe	campeã	e	qual	o	melhor	jogador	da	temporada.
+O jogador que precisa fazer a menor quantidade de 
+pontos no quinto jogo, para igualar a média de pontos do 
+melhor jogador da temporada passada, é o 
+A) I.
+B) II.
+C) III.
+D) IV.
+E) V.
+
+(RESPOSTA CORRETA): A
+
+(Enem/2022)  QUESTÃO 172 
+Um casal planeja construir em sua chácara uma 
+piscina com o formato de um paralelepípedo reto 
+retângulo com capacidade para 90 000 L de água.  
+O casal contratou uma empresa de construções que 
+apresentou cinco projetos com diferentes combinações 
+nas dimensões internas de profundidade, largura 
+e comprimento. A piscina a ser construída terá 
+revestimento interno em suas paredes e fundo com uma 
+mesma cerâmica, e o casal irá escolher o projeto que 
+exija a menor área de revestimento.
+As dimensões internas de profundidade, largura 
+e comprimento, respectivamente, para cada um dos 
+projetos,	são:
+• projeto I: 1,8 m, 2,0 m e 25,0 m;
+• projeto II: 2,0 m, 5,0 m e 9,0 m;
+• projeto III: 1,0 m, 6,0 m e 15,0 m; 
+• projeto IV: 1,5 m, 15,0 m e 4,0 m;
+• projeto V: 2,5 m, 3,0 m e 12,0 m.
+O projeto que o casal deverá escolher será o
+A) I.
+B) II.
+C) III.
+D) IV.
+E) V.
+(RESPOSTA CORRETA): B
+
+(Enem/2022)  QUESTÃO 173 
+Uma	instituição	 de	ensino	superior	ofereceu	vagas	
+em um processo seletivo de acesso a seus cursos. 
+Finalizadas	 as	inscrições,	 foi	divulgada	 a	relação	do	
+número de candidatos por vaga em cada um dos cursos 
+oferecidos.	Esses	dados	são	apresentados	no	quadro.
+CursoNúmero 
+de vagas 
+oferecidasNúmero 
+de candidatos 
+por vaga
+Administração 30 6
+Ciências Contábeis 40 6
+Engenharia Elétrica 50 7
+História 30 8
+Letras 25 4
+Pedagogia 25 5
+Qual foi o número total de candidatos inscritos nesse 
+processo	seletivo?
+A) 200
+B) 400
+C) 1 200
+D) 1 235
+E) 7 200
+
+(RESPOSTA CORRETA): D
+
+(Enem/2022)  QUESTÃO 174 
+Peças metálicas de aeronaves abandonadas em 
+aeroportos	 serão	recicladas.	 Uma	dessas	peças	é	
+maciça e tem o formato cilíndrico, com a medida do raio 
+da base igual a 4 cm e a da altura igual a 50 cm. Ela será 
+derretida, e o volume de metal resultante será utilizado 
+para	a	fabricação	 de	esferas	maciças	com	diâmetro	de	
+1 cm, a serem usadas para confeccionar rolamentos. 
+Para	estimar	a	quantidade	 de	esferas	que	poderão	ser	
+produzidas a partir de cada uma das peças cilíndricas, 
+admite-se	 que	não	ocorre	perda	de	material	durante	o	
+processo de derretimento.
+Quantas	dessas	esferas	poderão	ser	obtidas	a	partir	de	
+cada	peça	cilíndrica?
+A) 800
+B) 1 200
+C) 2 400
+D) 4 800
+E) 6 400 
+(RESPOSTA CORRETA): D
+
+(Enem/2022)  QUESTÃO 175 
+Ao	escutar	a	notícia	de	que	um	filme	recém-lançado	
+arrecadou,	 no	primeiro	mês	de	lançamento,	 R$	1,35	bilhão	
+em bilheteria, um estudante escreveu corretamente o 
+número que representa essa quantia, com todos os seus 
+algarismos.
+O número escrito pelo estudante foi
+A) 135 000,00.
+B) 1 350 000,00.
+C) 13 500 000,00.
+D) 135 000 000,00.
+E) 1 350 000 000,00.
+
+(RESPOSTA CORRETA): E
+
+(Enem/2022)  QUESTÃO 176 
+O governo de um estado pretende realizar uma 
+obra	de	infraestrutura	 para	auxiliar	na	integração	 e	
+no	processo	 de	escoamento	 da	produção	 agrícola	
+de	duas	cidades.	 O	projeto	consiste	na	interligação 	
+direta das cidades A e B com a Rodovia 003, pela 
+construção	 das	Rodovias	 001	e	002.	As	duas	rodovias	
+serão	construídas	 em	linha	reta	e	deverão	se	conectar	
+à Rodovia 003 em um mesmo ponto, conforme 
+esboço	apresentado	 na	figura,	na	qual	estão	também	
+indicadas as posições das cidades A e B, considerando 
+o eixo x posicionado sobre a Rodovia 003, e cinco 
+localizações	 sugeridas	 para	o	ponto	de	conexão	entre	
+as três rodovias.
+0 510152025303540455055 x (km)10203040y (km)Cidade A
+Cidade B
+Rodovia 003Rodovia 001
+Rodovia 002
+I IIIIIIV V
+Pretende-se	 que	a	distância	percorrida	 entre	as	duas	
+cidades, pelas Rodovias 001 e 002, passando pelo ponto 
+de	conexão,	seja	a	menor	possível.
+Dadas as exigências do projeto, qual das localizações 
+sugeridas	 deve	ser	a	escolhida	para	o	ponto	de	conexão?
+A) I
+B) II
+C) III
+D) IV
+E) V
+(RESPOSTA CORRETA): D
+
+(Enem/2022)  QUESTÃO 177 
+Uma pessoa precisa contratar um operário para 
+fazer um serviço em sua casa. Para isso, ela postou um 
+anúncio em uma rede social.
+Cinco pessoas responderam informando preços por 
+hora trabalhada, gasto diário com transporte e tempo 
+necessário	 para	conclusão	 do	serviço,	conforme	 valores	
+apresentados no quadro.
+OperárioPreço por 
+hora
+(real)Preço do 
+transporte
+(real)Tempo até 
+conclusão
+(hora)
+I 120 0,00 8
+II 180 0,00 6
+III 170 20,00 6
+IV 110 10,00 9
+V 110 0,00 10
+Se a pessoa pretende gastar o mínimo possível com essa 
+contratação,	irá	contratar	o	operário
+A) I.
+B) II.
+C) III.
+D) IV.
+E) V.
+
+(RESPOSTA CORRETA): A
+
+(Enem/2022)  QUESTÃO 178 
+Uma cozinheira produz docinhos especiais por 
+encomenda.	 Usando	uma	receita-base	 de	massa,	ela	
+prepara	uma	porção,	com	a	qual	produz	50	docinhos	
+maciços de formato esférico, com 2 cm de diâmetro.  
+Um cliente encomenda 150 desses docinhos, mas pede 
+que cada um tenha formato esférico com 4 cm de diâmetro.  
+A cozinheira pretende preparar o número exato de 
+porções	da	receita-base	 de	massa	necessário	 para	
+produzir os docinhos dessa encomenda.
+Quantas	porções	da	receita-base	 de	massa	ela	deve	
+preparar	para	atender	esse	cliente?
+A) 2
+B) 3
+C) 6
+D) 12
+E) 24
+  
+(RESPOSTA CORRETA): E
+
