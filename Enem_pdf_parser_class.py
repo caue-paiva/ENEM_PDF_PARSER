@@ -38,6 +38,8 @@ class EnemPDFextractor():
 
         self.output_type =  output_type
         
+    #abaixo funções de formatação do texto
+
     #ao extrair o texto das alternativas do PDF, a letra da  alternativa é repetida 2 vezes, então essa função remove essa segunda repetição
     
     def __handle_IO_errors__(self,test_pdf_path: str, answers_pdf_path:str)->None:
@@ -94,7 +96,7 @@ class EnemPDFextractor():
         return_list:list = self.__get_alternative_list__(question)
         return (question, return_list)  #chama a funcao de retornar uma lista das alternativas
         
-    #essa função apenas formata as alternativas e retorna uma string dela formatada   
+    #ao extrair o texto das alternativas do PDF, a letra da  alternativa é repetida 2 vezes, então essa função remove essa segunda repetição e retorna apenas a string   
 
     def __parse_alternatives_txt__(self,question:str)-> str:
         index:int = 0
@@ -194,73 +196,6 @@ class EnemPDFextractor():
             else:
                 return "não achou a questão"
     
-    def __txt_handle_day_two_tests__(self, pdf_reader:PdfReader, test_year:int)->None: 
-              
-     total_question_number: int = 0 
-     math_questions: str = ""
-     natural_sci_questions: str = ""
-     
-     topic_question_range:dict[str,tuple] = {"natu": (1,45), "math":(46,91)} 
-     num_pages: int = len(pdf_reader.pages)
-     for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
-        page_attributes: dict = self.__page_preprocessing__(
-                pdf_reader=pdf_reader,
-                loop_index=i, 
-                total_question_number=total_question_number
-        )      
-        if not page_attributes: #dict vazio, pagina não tem questões
-           continue  
-
-        page_first_question:int = page_attributes.get("page_first_question")
-        total_question_number = page_attributes.get("total_question_number")
-        text:str = page_attributes.get("text") 
-        if not text: #dict com texto vazio (imagens na pagina), mas atualizando page_first question e total_question_number
-            continue
-
-        question_start_index:int = 0
-        answer_number: int = page_first_question
-        
-        for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
-            
-             if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
-                 continue
-             # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
-             correct_answer:str = self.__find_correct_answer__(
-                    question_number= answer_number, 
-                    is_spanish_question= False, 
-                    day_one=False
-             )  
-             unparsed_alternatives: str = text[question_start_index:position]
-             parsed_question: str = self.__parse_alternatives_txt__(unparsed_alternatives)
-             
-             if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
-                 question_start_index = position
-                 answer_number += 1
-                 continue
-             
-             parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
-             
-             start_natu, end_natu = topic_question_range["natu"] #desempacotando a tuple de ranges de questões das matérias
-             start_math, end_math = topic_question_range["math"]
-
-             if answer_number in range(start_natu,  end_natu+1): #precisamos incluir a ultima questão do range de cada matéria
-                natural_sci_questions += parsed_question
-
-             elif answer_number in range( start_math, end_math+1):
-                math_questions += parsed_question
-
-             question_start_index = position
-             answer_number += 1
-        
-     #escrever as strings extraidas nos seus arquivos respectivos
-     file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.txt" )
-     with open(file_path, "w") as f_natu:
-             f_natu.write(natural_sci_questions)
-        
-     file_path = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.txt" )
-     with open(file_path, "w") as f_math:
-             f_math.write(math_questions)
-
     def __page_preprocessing__(self,pdf_reader:PdfReader,loop_index:int ,total_question_number:int)-> dict :
         text_processing_dict: dict = {"text": "", "page_first_question": 0, "total_question_number": 0 }
         
@@ -300,6 +235,37 @@ class EnemPDFextractor():
         
         text_processing_dict.update({"text":page_text,"page_first_question": page_first_question, "total_question_number": total_question_number})
         return text_processing_dict
+
+    def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correct_answer:str, number:int, alternative_list:list[str] = [])->dict:
+        day_identifier = "D1" if day_one else "D2"
+        
+        if day_one:
+            number = number if number < 6 else number -5 #subtrair as 5 questões contadas na matéria de espanhol
+        else:
+            number += 90
+        
+        if alternative_list:
+            json_dict = {
+                "question_text": question,
+                "correct_answer": correct_answer ,
+                "alternatives": alternative_list,
+                "ID": f"{year}_{day_identifier}_N{number}",
+                "year": year,
+                "day": day_identifier,
+                "question_num": number
+            }
+        else:
+            json_dict = {
+                "question_text": question,
+                "correct_answer": correct_answer ,
+                "ID": f"{year}_{day_identifier}_N{number}",
+                "year": year,
+                "day": day_identifier,
+                "question_num": number
+            }
+        return json_dict
+   
+    #abaixo funcoes que processam e salvam o texto num arquivo
 
     def __txt_handle_day_one_tests__(self, pdf_reader:PdfReader, test_year:int)->None:
       
@@ -394,35 +360,73 @@ class EnemPDFextractor():
      file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.txt" )
      with open(file_path, "a") as f_huma:
         f_huma.write(humanities_questions)
+
+    def __txt_handle_day_two_tests__(self, pdf_reader:PdfReader, test_year:int)->None: 
+              
+     total_question_number: int = 0 
+     math_questions: str = ""
+     natural_sci_questions: str = ""
      
-    def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correct_answer:str, number:int, alternative_list:list[str] = [])->dict:
-        day_identifier = "D1" if day_one else "D2"
+     topic_question_range:dict[str,tuple] = {"natu": (1,45), "math":(46,91)} 
+     num_pages: int = len(pdf_reader.pages)
+     for i in range(1,num_pages): #começamos da página numero um para não processar a capa 
+        page_attributes: dict = self.__page_preprocessing__(
+                pdf_reader=pdf_reader,
+                loop_index=i, 
+                total_question_number=total_question_number
+        )      
+        if not page_attributes: #dict vazio, pagina não tem questões
+           continue  
+
+        page_first_question:int = page_attributes.get("page_first_question")
+        total_question_number = page_attributes.get("total_question_number")
+        text:str = page_attributes.get("text") 
+        if not text: #dict com texto vazio (imagens na pagina), mas atualizando page_first question e total_question_number
+            continue
+
+        question_start_index:int = 0
+        answer_number: int = page_first_question
         
-        if day_one:
-            number = number if number < 6 else number -5 #subtrair as 5 questões contadas na matéria de espanhol
-        else:
-            number += 90
+        for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
+            
+             if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
+                 continue
+             # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
+             correct_answer:str = self.__find_correct_answer__(
+                    question_number= answer_number, 
+                    is_spanish_question= False, 
+                    day_one=False
+             )  
+             unparsed_alternatives: str = text[question_start_index:position]
+             parsed_question: str = self.__parse_alternatives_txt__(unparsed_alternatives)
+             
+             if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
+                 question_start_index = position
+                 answer_number += 1
+                 continue
+             
+             parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+             
+             start_natu, end_natu = topic_question_range["natu"] #desempacotando a tuple de ranges de questões das matérias
+             start_math, end_math = topic_question_range["math"]
+
+             if answer_number in range(start_natu,  end_natu+1): #precisamos incluir a ultima questão do range de cada matéria
+                natural_sci_questions += parsed_question
+
+             elif answer_number in range( start_math, end_math+1):
+                math_questions += parsed_question
+
+             question_start_index = position
+             answer_number += 1
         
-        if alternative_list:
-            json_dict = {
-                "question_text": question,
-                "correct_answer": correct_answer ,
-                "alternatives": alternative_list,
-                "ID": f"{year}_{day_identifier}_N{number}",
-                "year": year,
-                "day": day_identifier,
-                "question_num": number
-            }
-        else:
-            json_dict = {
-                "question_text": question,
-                "correct_answer": correct_answer ,
-                "ID": f"{year}_{day_identifier}_N{number}",
-                "year": year,
-                "day": day_identifier,
-                "question_num": number
-            }
-        return json_dict
+     #escrever as strings extraidas nos seus arquivos respectivos
+     file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.txt" )
+     with open(file_path, "w") as f_natu:
+             f_natu.write(natural_sci_questions)
+        
+     file_path = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.txt" )
+     with open(file_path, "w") as f_math:
+             f_math.write(math_questions)
 
     def __json_handle_day_one_tests__(self, pdf_reader: PdfReader, test_year:int)->None:
         total_question_number: int = 0 
@@ -599,6 +603,8 @@ class EnemPDFextractor():
         with open(file_path, "a") as f_natu:
             json.dump(natural_sci_questions,f_natu, indent=4,  ensure_ascii=False)
 
+    #método para extrair os contéudos de um PDF (dado o path dele e do gabarito relacionado) e escrever os contéudos em uma pasta específicada 
+            
     def extract_pdf(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str)->None: #extrai o texto dos PDF de um ano específico
         self.__handle_IO_errors__( test_pdf_path= test_pdf_path, answers_pdf_path= answers_pdf_path)
         
