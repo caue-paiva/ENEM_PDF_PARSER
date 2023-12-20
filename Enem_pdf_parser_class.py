@@ -7,6 +7,8 @@ import re, os ,json #tentar parsear o arquivo das questoes, ver se existem quest
 2) fazer com que o JSON da questão inclua as alternativas em uma lista separada
 
 3) refatorar a função que pega o texto e escreve em um TXT em funções menores para acabar com menos funções repetidas
+
+4) PyPDF2 não é muito bom em pegar imagens dos PDFs do ENEM, PymuPDF (fitz) é bem melhor
 """
 
 class EnemPDFextractor():
