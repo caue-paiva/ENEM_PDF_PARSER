@@ -3,16 +3,10 @@ import re, os ,json #tentar parsear o arquivo das questoes, ver se existem quest
 import fitz
 
 """ A melhorar:
-1) Lidar com casos de questão anulada (atualmente ele pega essas questões e fala que o gabarito é A)
-
-2) o parser de list de imagens as vezes não adiciona a opção de imagens associadas mesmo quando a opção na classe está ativada, mudar na função
-de pegar JSON do texto
 
 3) o código que extrai texto e imagem do fitz parece estar eliminando algumas questoes
 
 4) ver como o código com o fitz lida com questões de alternativas com imagens
-
-5) melhorar a descrição das imagens geradas pelo  fitz
 """
 
 class EnemPDFextractor():
@@ -261,9 +255,9 @@ class EnemPDFextractor():
         text_processing_dict.update({"text":page_text,"page_first_question": page_first_question, "total_question_number": total_question_number})
         return text_processing_dict
 
-    def __page_preprocessing_images__(self,fitz_pdf_reader,page_index:int ,total_question_number:int)->dict:
+    def __page_preprocessing_images__(self,fitz_pdf_reader,page_index:int ,total_question_number:int, test_year:int, day_one:bool)->dict:
         image_text_dict: dict = {"text": "", "page_first_question": 0, "total_question_number": 0 , "image_name_list": []}
-        
+        day_identifier:str = "D1" if day_one else "D2"
         image_name_list:list[str] = []
         current_page = fitz_pdf_reader[page_index]                    
         page_text:str = current_page.get_text()
@@ -319,7 +313,7 @@ class EnemPDFextractor():
                 pix1 = fitz.Pixmap(fitz.csRGB, pix)
                 pix = pix1  # Update pix to the new RGB pixmap
 
-            output_filename = os.path.join(self.extracted_data_path ,"images", f"page{page_index}_image_{image_index}.png")
+            output_filename = os.path.join(self.extracted_data_path ,"images", f"{test_year}_{day_identifier}_page{page_index}_{image_index}.png")
             pix.save(output_filename)
             image_name_list.append(output_filename)
             pix = None
@@ -327,7 +321,7 @@ class EnemPDFextractor():
         image_text_dict.update({"text":page_text,"page_first_question": page_first_question, "total_question_number": total_question_number, "image_name_list":image_name_list})
         return image_text_dict
 
-    def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correct_answer:str, number:int, alternative_list:list[str] = [] , image_list = [])->dict:
+    def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correct_answer:str, number:int, alternative_list:list[str] = [] , image_list = [None])->dict:
         day_identifier = "D1" if day_one else "D2"
         
         if day_one:
@@ -336,7 +330,7 @@ class EnemPDFextractor():
             number += 90
         
         if alternative_list:
-          if image_list:
+          if len(image_list) == 0 or  image_list[0] != None:
              json_dict = {
                 "question_text": question,
                 "correct_answer": correct_answer ,
@@ -396,7 +390,9 @@ class EnemPDFextractor():
             page_attributes: dict = self.__page_preprocessing_images__(
                 fitz_pdf_reader=pdf_reader,
                 page_index=i, 
-                total_question_number=total_question_number
+                total_question_number=total_question_number,
+                test_year= test_year,
+                day_one= True
             )   
             if not page_attributes: #dict vazio, pagina não tem questões
              continue  
