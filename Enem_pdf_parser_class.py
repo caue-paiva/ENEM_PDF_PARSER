@@ -132,7 +132,7 @@ class EnemPDFextractor():
         
         return question
 
-    def __parse_alternatives_fitz__(question: str) -> str:
+    def __parse_alternatives_fitz__(self,question: str) -> str:
 
         first_pattern = r"([A-E])(\s{2,}|\n)"
         
@@ -152,7 +152,7 @@ class EnemPDFextractor():
         if re.search(r"[A-E](\s{2,}|\n)", question):
             return "non-standard alternatives"
 
-        return question
+        return question  #fazer o fitz retornar uma lista de alternativas tbm
 
     #retorna uma lista com todas as alternativas da questão, apenas funciona com inputs com as alternativas já formatadas
 
@@ -294,6 +294,10 @@ class EnemPDFextractor():
         else:
             print("zero imagens")
             return image_text_dict #retorna dict sem imagens
+        
+        if not os.path.isdir(os.path.join(self.extracted_data_path, "images")):
+             print("diretorio de output não existe, criando um novo")
+             os.makedirs(os.path.join(self.extracted_data_path, "images"), exist_ok=True)
         
         for image_index,img in enumerate(image_list,start=1):
             xref = img[0]
