@@ -10,7 +10,7 @@
             "E)fortalecimento do elo familiar em comunidades \nestadunidenses.\n"
         ],
         "page_images": [
-            "output_fitz/images/2022_D1_page1_image_1.png"
+            "output_fitz/images/2022_D1_page1_1.png"
         ],
         "ID": "2022_D1_N1",
         "year": 2022,
@@ -28,12 +28,30 @@
             "E)valorizar a importância da aparência física na \nseleção de pretendentes.\n"
         ],
         "page_images": [
-            "output_fitz/images/2022_D1_page1_image_1.png"
+            "output_fitz/images/2022_D1_page1_1.png"
         ],
         "ID": "2022_D1_N2",
         "year": 2022,
         "day": "D1",
         "question_num": 2
+    },
+    {
+        "question_text": "QUESTÃO 03 \nNOW THAT YOU ARE MY\nBRIDE, YOU WILL NEVER\nLEAVE THIS CASTLE!\nWOW! YOUR\nLIBRARY IS\nAMAZING!\nBEYOND THE CASTLE IS\nA HIGH WALL WITH NO\nGATE, AND BEYOND THAT\nIS A DEEP, DARK FOREST\nWITH NO PATH.\nI SUPPOSE IT´S\nMY LIBRARY TOO,\nNOW WE‛ RE\nMARRIED.\nTHE FOREST IS CRAWLING\nWITH RAVENOUS WOLVES,\nMALIGNANT BIRDS AND\nTHE SPIRITS OF LONG-\nDEAD TRAVELLERS.\nSO MANY BOOKS!\nI CAN´T BELIEVE\nMY LUCK!\nWHEN THE SUN SETS,\nI TRANSFORM INTO A WILD\nBEAST AND SOAR INTO\nTHE NIGHT, SEIZED BY\nA TERRIBLE BLOODLUST!\nOK. I´LL STAY\nHERE AND READ.\nSEE YOU IN THE\nMORNING.\n1\n2\n3\n4\nGAULD, T. Disponível em: www.tomgauld.com. Acesso em: 25 out. 2021.\nNessa tirinha, o comportamento da mulher expressa\nA)revolta com a falta de sorte.\nB)gosto pela prática da leitura.\nC)receio pelo futuro do casamento.\nD)entusiasmo com os livros de terror.\nE)rejeição ao novo tipo de residência.\n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)revolta com a falta de sorte.\n",
+            "B)gosto pela prática da leitura.\n",
+            "C)receio pelo futuro do casamento.\n",
+            "D)entusiasmo com os livros de terror.\n",
+            "E)rejeição ao novo tipo de residência.\n\n "
+        ],
+        "page_images": [
+            "output_fitz/images/2022_D1_page1_1.png"
+        ],
+        "ID": "2022_D1_N3",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 3
     },
     {
         "question_text": "QUESTÃO 04 \nA Teen’s View of Social Media\nInstagram is made up of all photos and videos. There \nis the home page that showcases the posts from people \nyou follow, an explore tab which offers posts from accounts \nall over the world, and your own page, with a notification \ntab to show who likes and comments on your posts.\nIt has some downsides though. It is known to make \nmany people feel insecure or down about themselves \nbecause the platform showcases the highlights of \neveryone’s lives, while rarely showing the negatives. \nThis can make one feel like their life is not going as well \nas others, contributing to the growing rates of anxiety or \ndepression in many teens today. There is an underlying \ndesire for acceptance through the number of likes or \nfollowers one has.\nDisponível em: https://cyberbullying.org. Acesso em: 29 out. 2021.\nO termo “downsides” introduz a ideia de que o Instagram \né responsável por\nA)oferecer recursos de fotografia.\nB)divulgar problemas dos usuários.\nC)estimular aceitação dos seguidores.\nD)provocar ansiedade nos adolescentes.\nE)aproximar pessoas ao redor do mundo.\n",
@@ -46,8 +64,8 @@
             "E)aproximar pessoas ao redor do mundo.\n"
         ],
         "page_images": [
-            "output_fitz/images/2022_D1_page2_image_1.png",
-            "output_fitz/images/2022_D1_page2_image_2.png"
+            "output_fitz/images/2022_D1_page2_1.png",
+            "output_fitz/images/2022_D1_page2_2.png"
         ],
         "ID": "2022_D1_N4",
         "year": 2022,
@@ -65,8 +83,8 @@
             "E)insatisfação com uma forma de comunicação.\nQuestões de 01 a 05 (opção: espanhol)\n"
         ],
         "page_images": [
-            "output_fitz/images/2022_D1_page2_image_1.png",
-            "output_fitz/images/2022_D1_page2_image_2.png"
+            "output_fitz/images/2022_D1_page2_1.png",
+            "output_fitz/images/2022_D1_page2_2.png"
         ],
         "ID": "2022_D1_N5",
         "year": 2022,

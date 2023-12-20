@@ -1,0 +1,699 @@
+[
+    {
+        "question_text": "QUESTÃO 136 \nUma máquina em operação tem sua temperatura \nT monitorada por meio de um registro gráfico, ao longo do \ntempo t. Essa máquina possui um pistão cuja velocidade \nV varia com a temperatura T da máquina, de acordo \ncom a expressão V = T 2 - 4. Após a máquina funcionar \ndurante o intervalo de tempo de 10 horas, o seu operador \nanalisa o registro gráfico, apresentado na figura, para \navaliar a necessidade de eventuais ajustes, sabendo que \na máquina apresenta falhas de funcionamento quando a \nvelocidade do pistão se anula.\n4\nT (ºC)\n2\n0\n−2\n10\nt (h)\nQuantas vezes a velocidade do pistão se anulou durante \nas 10 horas de funcionamento?\nA)1\nB)2\nC)3\nD)4\nE)5\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "C)\n2\n0\n−2\n10\nt (h)\nQuantas vezes a velocidade do pistão se anulou durante \nas 10 horas de funcionamento?\n",
+            "A)1\n",
+            "B)2\n",
+            "C)3\n",
+            "D)4\n",
+            "E)5\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N136",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 136
+    },
+    {
+        "question_text": "QUESTÃO 137 \nA World Series é a decisão do campeonato  \nnorte-americano de beisebol. Os dois times que chegam \na essa fase jogam, entre si, até sete partidas. O primeiro \ndesses times que completar quatro vitórias é declarado \ncampeão.\nConsidere que, em todas as partidas, a probabilidade \nde qualquer um dos dois times vencer é sempre 1\n2 .\nQual é a probabilidade de o time campeão ser aquele que \nvenceu a primeira partida da World Series?\nA)35\n64\nB)40\n64\nC)42\n64\nD)44\n64\nE)52\n64\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)35\n64\n",
+            "B)40\n64\n",
+            "C)42\n64\n",
+            "D)44\n64\n",
+            "E)52\n64\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N137",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 137
+    },
+    {
+        "question_text": "QUESTÃO 138 \nO gráfico apresenta os totais de receitas e despesas \nde uma empresa, expressos em milhão de reais, no \ndecorrer dos meses de um determinado ano. A empresa \nobtém lucro quando a diferença entre receita e despesa é \npositiva e tem prejuízo quando essa diferença é negativa.\nJan.  Fev.  Mar.  Abr.  Maio  Jun.  Jul.   Ago.  Set.  Out.  Nov.  Dez.\n9\n8\n7\n6\n5\n4\n3\n2\n1\n0\nReceitas             Despesas\nQual é a mediana, em milhão de reais, dos valores dos \nlucros apurados pela empresa nesse ano?\nA)1,5\nB)2,0\nC)2,9\nD)3,0\nE)5,5\n\n ",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)1,5\n",
+            "B)2,0\n",
+            "C)2,9\n",
+            "D)3,0\n",
+            "E)5,5\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N138",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 138
+    },
+    {
+        "question_text": "QUESTÃO 139 \nUm casal está reformando a cozinha de casa e \ndecidiu comprar um refrigerador novo. Observando a \nplanta da nova cozinha, desenhada na escala de 1 : 50, \nnotaram que o espaço destinado ao refrigerador tinha \n3,8 cm de altura e 1,6 cm de largura. Eles sabem que \nos fabricantes de refrigeradores indicam que, para um \nbom funcionamento e fácil manejo na limpeza, esses \neletrodomésticos devem ser colocados em espaços que \npermitam uma distância de, pelo menos, 10 cm de outros \nmóveis ou paredes, tanto na parte superior quanto nas \nlaterais. O casal comprou um refrigerador que caberia \nno local a ele destinado na nova cozinha, seguindo as \ninstruções do fabricante.\nEsse refrigerador tem altura e largura máximas, em \nmetro, respectivamente, iguais a\nA)1,80 e 0,60.\nB)1,80 e 0,70.\nC)1,90 e 0,80.\nD)2,00 e 0,90.\nE)2,00 e 1,00.\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)1,80 e 0,60.\n",
+            "B)1,80 e 0,70.\n",
+            "C)1,90 e 0,80.\n",
+            "D)2,00 e 0,90.\n",
+            "E)2,00 e 1,00.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N139",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 139
+    },
+    {
+        "question_text": "QUESTÃO 140 \nForam convidadas 32 equipes para um torneio de \nfutebol, que foram divididas em 8 grupos com 4 equipes, \nsendo que, dentro de um grupo, cada equipe disputa uma \núnica partida contra cada uma das demais equipes de \nseu grupo. A primeira e a segunda colocadas de cada \ngrupo seguem para realizar as 8 partidas da próxima \nfase do torneio, chamada oitavas de final. Os vencedores \ndas partidas das oitavas de final seguem para jogar \nas 4 partidas das quartas de final. Os vencedores das \nquartas de final disputam as 2 partidas das semifinais, e \nos vencedores avançam para a grande final, que define a \ncampeã do torneio.\nPelas regras do torneio, cada equipe deve ter um \nperíodo de descanso de, no mínimo, 3 dias entre dois \njogos por ela disputados, ou seja, se um time disputar \numa partida, por exemplo, num domingo, só poderá \ndisputar a partida seguinte a partir da quinta-feira da \nmesma semana.\nO número mínimo de dias necessários para a realização \ndesse torneio é\nA)22.\nB)25.\nC)28.\nD)48.\nE)64.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)22.\n",
+            "B)25.\n",
+            "C)28.\n",
+            "D)48.\n",
+            "E)64.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N140",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 140
+    },
+    {
+        "question_text": "QUESTÃO 141 \nEm um jogo de bingo, as cartelas contêm  \n16 quadrículas dispostas em linhas e colunas. Cada \nquadrícula tem impresso um número, dentre os inteiros \nde 1 a 50, sem repetição de número. Na primeira rodada, \num número é sorteado, aleatoriamente, dentre os 50 \npossíveis. Em todas as rodadas, o número sorteado \né descartado e não participa dos sorteios das rodadas \nseguintes. Caso o jogador tenha em sua cartela o número \nsorteado, ele o assinala na cartela. Ganha o jogador que \nprimeiro \nconseguir \npreencher \nquatro \nquadrículas  \nque formam uma linha, uma coluna ou uma diagonal, \nconforme os tipos de situações ilustradas na Figura 1.\nPreenchimento \nem linha\nPreenchimento \nem coluna\nPreenchimento \nem diagonal\nFigura 1\nO jogo inicia e, nas quatro primeiras rodadas, foram \nsorteados os seguintes números: 03, 27, 07 e 48. Ao \nfinal da quarta rodada, somente Pedro possuía uma \ncartela que continha esses quatro números sorteados, \nsendo que todos os demais jogadores conseguiram \nassinalar, no máximo, um desses números em suas \ncartelas. Observe na Figura 2 o cartão de Pedro após as \nquatro primeiras rodadas.\nFigura 2\n03\n48\n07\n27\n49\n11\n12\n22\n05\n29\n50\n19\n45\n33\n23\n38\nA probabilidade de Pedro ganhar o jogo em uma das duas \npróximas rodadas é\nA)1\n46\n1\n45\n+\nB)1\n46\n2\n� 46 45\n�\nC)1\n46\n8\n� 46 45\n�\nD)1\n46\n43\n� 46 45\n�\nE)1\n46\n49\n� 46 45\n�\n\n ",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)1\n46\n1\n45\n+\n",
+            "B)1\n46\n2\n� 46 45\n�\n",
+            "C)1\n46\n8\n� 46 45\n�\n",
+            "D)1\n46\n43\n� 46 45\n�\n",
+            "E)1\n46\n49\n� 46 45\n�\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N141",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 141
+    },
+    {
+        "question_text": "QUESTÃO 142 \nUma montadora de automóveis divulgou que oferta a \nseus clientes mais de 1 000 configurações diferentes de \ncarro, variando o modelo, a motorização, os opcionais e \na cor do veículo. Atualmente, ela oferece 7 modelos de \ncarros com 2 tipos de motores: 1.0 e 1.6. Já em relação \naos opcionais, existem 3 escolhas possíveis: central \nmultimídia, rodas de liga leve e bancos de couro, podendo \no cliente optar por incluir um, dois, três ou nenhum dos \nopcionais disponíveis.\nPara ser fiel à divulgação feita, a quantidade mínima \nde cores que a montadora deverá disponibilizar a seus \nclientes é\nA)8.\nB)9.\nC)11.\nD)18.\nE)24.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)8.\n",
+            "B)9.\n",
+            "C)11.\n",
+            "D)18.\n",
+            "E)24.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N142",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 142
+    },
+    {
+        "question_text": "QUESTÃO 144 \nCada número que identifica uma agência bancária tem \nquatro dígitos: N1, N2, N3, N4 mais um dígito verificador N5.\nN1 N2 N3\nN4\nN5\nTodos \nesses \ndígitos \nsão \nnúmeros \nnaturais \npertencentes ao conjunto {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}. \nPara a determinação de N5, primeiramente multiplica-se \nordenadamente os quatro primeiros dígitos do número \nda agência por 5, 4, 3 e 2, respectivamente, somam-se \nos resultados e obtém-se S = 5 N1 + 4 N2 + 3 N3 + 2 N4.\nPosteriormente, encontra-se o resto da divisão de  \nS por 11, denotando por R esse resto. Dessa forma, N5 é \na diferença 11 - R.\nConsidere o número de uma agência bancária cujos \nquatro primeiros dígitos são 0100.\nQual é o dígito verificador N5 dessa agência bancária?\nA)0\nB)6\nC)7\nD)8\nE)9\n\n ",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)0\n",
+            "B)6\n",
+            "C)7\n",
+            "D)8\n",
+            "E)9\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N144",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 144
+    },
+    {
+        "question_text": "QUESTÃO 145 \nO pacote básico de um jogo para smartphone, que \né vendido a R$ 50,00, contém 2 000 gemas e 100 000 \nmoedas de ouro, que são itens utilizáveis nesse jogo.\nA empresa que comercializa esse jogo decidiu criar \num pacote especial que será vendido a R$ 100,00 e que \nse diferenciará do pacote básico por apresentar maiores \nquantidades de gemas e moedas de ouro. Para estimular \nas vendas desse novo pacote, a empresa decidiu inserir \nnele 6 000 gemas a mais, em relação ao que o cliente \nteria caso optasse por comprar, com a mesma quantia, \ndois pacotes básicos.\nA quantidade de moedas de ouro que a empresa deverá \ninserir ao pacote especial, para que seja mantida a mesma \nproporção existente entre as quantidades de gemas e de \nmoedas de ouro contidas no pacote básico, é\nA)50 000.\nB)100 000.\nC)200 000.\nD)300 000.\nE)400 000.\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)50 000.\n",
+            "B)100 000.\n",
+            "C)200 000.\n",
+            "D)300 000.\n",
+            "E)400 000.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N145",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 145
+    },
+    {
+        "question_text": "QUESTÃO 146 \nUm parque tem dois circuitos de tamanhos \ndiferentes para corridas. Um corredor treina nesse \nparque e, no primeiro dia, inicia seu treino percorrendo \n3 voltas em torno do circuito maior e 2 voltas em torno \ndo menor, perfazendo um total de 1 800 m. Em seguida, \ndando continuidade a seu treino, corre mais 2 voltas \nem torno do circuito maior e 1 volta em torno do menor, \npercorrendo mais 1 100 m.\nNo segundo dia, ele pretende percorrer 5 000 m nos \ncircuitos do parque, fazendo um número inteiro de voltas \nem torno deles e de modo que o número de voltas seja o \nmaior possível.\nA soma do número de voltas em torno dos dois circuitos, \nno segundo dia, será\nA)10.\nB)13.\nC)14.\nD)15.\nE)16.\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)10.\n",
+            "B)13.\n",
+            "C)14.\n",
+            "D)15.\n",
+            "E)16.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N146",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 146
+    },
+    {
+        "question_text": "QUESTÃO 147 \nUma equipe de marketing digital foi contratada para \naumentar as vendas de um produto ofertado em um site \nde comércio eletrônico. Para isso, elaborou um anúncio \nque, quando o cliente clica sobre ele, é direcionado \npara a página de vendas do produto. Esse anúncio foi \ndivulgado em duas redes sociais, A e B, e foram obtidos \nos seguintes resultados:\n• rede social A: o anúncio foi visualizado por  \n3 000 pessoas; 10% delas clicaram sobre o anúncio \ne foram redirecionadas para o site; 3% das que  \nclicaram sobre o anúncio compraram o produto. \nO investimento feito para a publicação do anúncio \nnessa rede foi de R$ 100,00;\n• rede social B: o anúncio foi visualizado por  \n1 000 pessoas; 30% delas clicaram sobre o anúncio \ne foram redirecionadas para o site; 2% das que  \nclicaram sobre o anúncio compraram o produto. \nO investimento feito para a publicação do anúncio \nnessa rede foi de R$ 200,00.\nPor experiência, o pessoal da equipe de marketing \nconsidera que a quantidade de novas pessoas que verão \no anúncio é diretamente proporcional ao investimento \nrealizado, e que a quantidade de pessoas que comprarão \no produto também se manterá proporcional à quantidade \nde pessoas que clicarão sobre o anúncio.\nO responsável pelo produto decidiu, então, investir \nmais R$ 300,00 em cada uma das duas redes sociais \npara a divulgação desse anúncio e obteve, de fato, o \naumento proporcional esperado na quantidade de clientes \nque compraram esse produto. Para classificar o aumento \nobtido na quantidade (Q) de compradores desse produto, \nem consequência dessa segunda divulgação, em relação \naos resultados observados na primeira divulgação, o \nresponsável pelo produto adotou o seguinte critério:\n• Q ≤ 60%: não satisfatório;\n• 60% < Q ≤ 100%: regular;\n• 100% < Q ≤ 150%: bom;\n• 150% < Q ≤ 190%: muito bom;\n• 190% < Q ≤ 200%: excelente.\nO aumento na quantidade de compradores, em \nconsequência dessa segunda divulgação, em relação \nao que foi registrado com a primeira divulgação, foi \nclassificado como\nA)não satisfatório.\nB)regular.\nC)bom.\nD)muito bom.\nE)excelente.\n\n ",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)não satisfatório.\n",
+            "B)regular.\n",
+            "C)bom.\n",
+            "D)muito bom.\n",
+            "E)excelente.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N147",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 147
+    },
+    {
+        "question_text": "QUESTÃO 148 \nA luminosidade L de uma estrela está relacionada com \no raio R e com a temperatura T dessa estrela segundo a \nLei de Stefan-Boltzmann: L = c ⋅ R 2 ⋅ T 4, em que c é uma \nconstante igual para todas as estrelas.\nDisponível em: http://ciencia.hsw.uol.com.br. Acesso em: 22 nov. 2013 (adaptado).\nConsidere duas estrelas E e F, sendo que a estrela E \ntem metade do raio da estrela F e o dobro da temperatura \nde F.\nIndique por LE e LF suas respectivas luminosidades.\nA relação entre as luminosidades dessas duas estrelas é \ndada por\nA)L\nL\nE\nF\n= 2\nB)L\nL\nE\nF\n= 4\nC)LE = LF\nD)LE = 4LF\nE)LE = 8LF\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)L\nL\nE\nF\n= 2\n",
+            "B)L\nL\nE\nF\n= 4\n",
+            "C)LE = LF\n",
+            "D)LE = 4LF\n",
+            "E)LE = 8LF\n"
+        ],
+        "page_images": [
+            "output_fitz2/images/2022_D1_page20_1.png"
+        ],
+        "ID": "2022_D2_N148",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 148
+    },
+    {
+        "question_text": "QUESTÃO 149 \nUma das informações que pode auxiliar no \ndimensionamento do número de pediatras que devem \natender em uma Unidade Básica de Saúde (UBS) é \no número que representa a mediana da quantidade \nde crianças por família existente na região sob sua \nresponsabilidade. O quadro mostra a distribuição das \nfrequências do número de crianças por família na região \nde responsabilidade de uma UBS.\nNúmero de crianças\npor família\nFrequência\n0\n100\n1\n400\n2\n200\n3\n150\n4\n100\n5\n50\nO número que representa a mediana da quantidade de \ncrianças por família nessa região é\nA)1,0.\nB)1,5.\nC)1,9.\nD)2,1.\nE)2,5.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)1,0.\n",
+            "B)1,5.\n",
+            "C)1,9.\n",
+            "D)2,1.\n",
+            "E)2,5.\n"
+        ],
+        "page_images": [
+            "output_fitz2/images/2022_D1_page20_1.png"
+        ],
+        "ID": "2022_D2_N149",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 149
+    },
+    {
+        "question_text": "QUESTÃO 150 \nEm jogos de voleibol, um saque é invalidado se a bola \natingir o teto do ginásio onde ocorre o jogo. Um jogador de \numa equipe tem um saque que atinge uma grande altura. \nSeu recorde foi quando a batida do saque se iniciou a \numa altura de 1,5 m do piso da quadra, e a trajetória da \nbola foi descrita pela parábola y\nx\nx\n� �\n�\n�\n2\n6\n7\n3\n12 , em \nque y representa a altura da bola em relação ao eixo \nx (das abscissas) que está localizado a 1,5 m do piso \nda quadra, como representado na figura. Suponha que \nem todas as partidas algum saque desse jogador atinja a \nmesma altura do seu recorde.\n1,5 m\n1,5 m\n1,5 m\ny\nx\nA equipe desse jogador participou de um torneio de \nvoleibol no qual jogou cinco partidas, cada uma delas \nem um ginásio diferente. As alturas dos tetos desses \nginásios, em relação aos pisos das quadras, são:\n• ginásio I: 17 m; \n• ginásio II: 18 m; \n• ginásio III: 19 m; \n• ginásio IV: 21 m;\n• ginásio V: 40 m.\nO saque desse atleta foi invalidado\nA)apenas no ginásio I.\nB)apenas nos ginásios I e II.\nC)apenas nos ginásios I, II e III.\nD)apenas nos ginásios I, II, III e IV.\nE)em todos os ginásios.\n\n ",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)apenas no ginásio I.\n",
+            "B)apenas nos ginásios I e II.\n",
+            "C)apenas nos ginásios I, II e III.\n",
+            "D)apenas nos ginásios I, II, III e IV.\n",
+            "E)em todos os ginásios.\n\n "
+        ],
+        "page_images": [
+            "output_fitz2/images/2022_D1_page20_1.png"
+        ],
+        "ID": "2022_D2_N150",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 150
+    },
+    {
+        "question_text": "QUESTÃO 151 \nUm médico faz o acompanhamento clínico de um grupo de pessoas que realizam atividades físicas diariamente. \nEle observou que a perda média de massa dessas pessoas para cada hora de atividade física era de 1,5 kg. Sabendo \nque a massa de 1 L de água é de 1 kg, ele recomendou que ingerissem, ao longo das 3 horas seguintes ao final da \natividade, uma quantidade total de água correspondente a 40% a mais do que a massa perdida na atividade física, \npara evitar desidratação.\nSeguindo a recomendação médica, uma dessas pessoas ingeriu, certo dia, um total de 1,7 L de água após \nterminar seus exercícios físicos.\nPara que a recomendação médica tenha efetivamente sido respeitada, a atividade física dessa pessoa, nesse dia, durou\nA)30 minutos ou menos.\nB)mais de 35 e menos de 45 minutos.\nC)mais de 45 e menos de 55 minutos.\nD)mais de 60 e menos de 70 minutos.\nE)70 minutos ou mais.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)30 minutos ou menos.\n",
+            "B)mais de 35 e menos de 45 minutos.\n",
+            "C)mais de 45 e menos de 55 minutos.\n",
+            "D)mais de 60 e menos de 70 minutos.\n",
+            "E)70 minutos ou mais.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N151",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 151
+    },
+    {
+        "question_text": "QUESTÃO 152 \nEm uma sala de cinema, para garantir que os espectadores vejam toda a imagem projetada na tela, a disposição \ndas poltronas deve obedecer à norma técnica da Associação Brasileira de Normas Técnicas (ABNT), que faz as \nseguintes indicações:\n• Distância mínima (Dmín) entre a tela de projeção e o encosto da poltrona da primeira fileira deve ser de, pelo \nmenos, 60% da largura (L) da tela.\n• Distância máxima (Dmáx) entre a tela de projeção e o encosto da poltrona da última fileira deve ser o dobro da \nlargura (L) da tela, sendo aceitável uma distância de até 2,9 vezes a largura (L) da tela.\nPara o espaçamento entre as fileiras de poltronas, é considerada a distância de 1 metro entre os encostos de \npoltronas em duas fileiras consecutivas.\nDisponível em: www.ctav.gov.br. Acesso em: 14 nov. 2013.\nUma sala de cinema, cuja largura da tela mede 12 m, está montada em conformidade com as normas da ABNT e \ntem suas dimensões especificadas na figura.\nD\n= 2L\nmáx\nL\nTela\nÁrea de instalação\nde novas poltronas\nD\n0,6L\nmín=\nD\n2,9L\naceitável=\n1 m\n1 m\nFileira\nFileira\nFileira\nPretende-se ampliar essa sala, mantendo-se na mesma posição a tela e todas as poltronas já instaladas, \nampliando-se ao máximo a sala para os fundos (área de instalação de novas poltronas), respeitando-se o limite \naceitável da norma da ABNT. A intenção é aumentar, ao máximo, a quantidade de poltronas da sala, instalando-se  \nnovas unidades, iguais às já instaladas.\nQuantas fileiras de poltronas a sala comportará após essa ampliação?\nA)26\nB)27\nC)28\nD)29\nE)35\n\n ",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)26\n",
+            "B)27\n",
+            "C)28\n",
+            "D)29\n",
+            "E)35\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N152",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 152
+    },
+    {
+        "question_text": "QUESTÃO 153 \nUma empresa produz e vende um tipo de chocolate, \nmaciço, em formato de cone circular reto com as medidas \ndo diâmetro da base e da altura iguais a 8 cm e 10 cm, \nrespectivamente, como apresenta a figura.\n8 cm\n10 cm\nDevido a um aumento de preço dos ingredientes \nutilizados na produção desse chocolate, a empresa \ndecide produzir esse mesmo tipo de chocolate com um \nvolume 19% menor, no mesmo formato de cone circular \nreto com altura de 10 cm.\nPara isso, a empresa produzirá esses novos chocolates \ncom medida do raio da base, em centímetro, igual a\nA)1,52.\nB)3,24.\nC)3,60.\nD)6,48.\nE)7,20.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)1,52.\n",
+            "B)3,24.\n",
+            "C)3,60.\n",
+            "D)6,48.\n",
+            "E)7,20.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N153",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 153
+    },
+    {
+        "question_text": "QUESTÃO 154 \nEm janeiro de 2013, foram declaradas 1 794 272 \nadmissões e 1 765 372 desligamentos no Brasil, ou seja, \nforam criadas 28 900 vagas de emprego, segundo dados \ndo Cadastro Geral de Empregados e Desempregados \n(Caged), divulgados pelo Ministério do Trabalho e \nEmprego (MTE). Segundo o Caged, o número de vagas \ncriadas em janeiro de 2013 sofreu uma queda de 75%, \nquando comparado com o mesmo período de 2012.\nDisponível em: http://portal.mte.gov.br. Acesso em: 23 fev. 2013 (adaptado).\nDe acordo com as informações dadas, o número de \nvagas criadas em janeiro de 2012 foi\nA)16 514.\nB)86 700.\nC)115 600.\nD)441 343.\nE)448 568.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "E). Segundo o Caged, o número de vagas \ncriadas em janeiro de 2013 sofreu uma queda de 75%, \nquando comparado com o mesmo período de 2012.\nDisponível em: http://portal.mte.gov.br. Acesso em: 23 fev. 2013 (adaptado).\nDe acordo com as informações dadas, o número de \nvagas criadas em janeiro de 2012 foi\n",
+            "A)16 514.\n",
+            "B)86 700.\n",
+            "C)115 600.\n",
+            "D)441 343.\n",
+            "E)448 568.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N154",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 154
+    },
+    {
+        "question_text": "QUESTÃO 155 \nUm prédio, com 9 andares e 8 apartamentos de  \n2 quartos por andar, está com todos os seus apartamentos \nà venda. Os apartamentos são identificados por números \nformados por dois algarismos, sendo que a dezena indica \no andar onde se encontra o apartamento, e a unidade, \num algarismo de 1 a 8, que diferencia os apartamentos \nde um mesmo andar. Quanto à incidência de sol \nnos quartos desses apartamentos, constatam-se as \nseguintes características, em função de seus números de \nidentificação:\n• naqueles que finalizam em 1 ou 2, ambos os quartos \nrecebem sol apenas na parte da manhã; \n• naqueles que finalizam em 3, 4, 5 ou 6, apenas um \ndos quartos recebe sol na parte da manhã;\n• naqueles que finalizam em 7 ou 8, ambos os quartos \nrecebem sol apenas na parte da tarde.\nUma \npessoa \npretende \ncomprar \n2 \ndesses \napartamentos em um mesmo andar, mas quer que, em \nambos, pelo menos um dos quartos receba sol na parte \nda manhã.\nDe quantas maneiras diferentes essa pessoa poderá \nescolher 2 desses apartamentos para compra nas \ncondições desejadas?\nA)9\n6\n6\n2\n�\n�\n!\n!\n�\n�\nB)9\n6\n6\n2\n2\n�\n�\n�\n!\n!\n!\n�\n�\nC)9\n4\n4\n2\n2\n�\n�\n�\n!\n!\n!\n�\n�\nD)9\n2\n2\n2\n2\n�\n�\n�\n!\n!\n!\n�\n�\nE)9\n8\n8\n2\n2\n1\n�\n�\n�\n�\n!\n!\n!\n�\n�\n�\n�\n��\n�\n�\n��\n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)9\n6\n6\n2\n�\n�\n!\n!\n�\n�\n",
+            "B)9\n6\n6\n2\n2\n�\n�\n�\n!\n!\n!\n�\n�\n",
+            "C)9\n4\n4\n2\n2\n�\n�\n�\n!\n!\n!\n�\n�\n",
+            "D)9\n2\n2\n2\n2\n�\n�\n�\n!\n!\n!\n�\n�\n",
+            "E)9\n8\n8\n2\n2\n1\n�\n�\n�\n�\n!\n!\n!\n�\n�\n�\n�\n��\n�\n�\n��\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N155",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 155
+    },
+    {
+        "question_text": "QUESTÃO 156 \nO professor de artes orientou seus estudantes a realizarem a seguinte sequência de atividades:\n• Dobrar uma folha de papel em formato quadrado duas vezes, em sequência, ao longo das linhas tracejadas, \nconforme ilustrado nas figuras 1 e 2, para obter o papel dobrado, conforme Figura 3.\nFigura 1\nFigura 2\nFigura 3\nO\nO\n\n\n• Em seguida, no papel dobrado da Figura 3, considerar o ponto R, sobre o segmento OM, sendo M o ponto \nmédio do lado do quadrado original, de modo que OR = 1\n4 OM, traçar um arco de circunferência de raio \nmedindo 1\n2 OM com centro no ponto R, obtendo a Figura 4. Por último, recortar o papel ao longo do arco \nde circunferência e excluir a parte que contém o setor circular, obtendo o papel dobrado, conforme Figura 5.\nR\nO\nM\n⇒\nFigura 4\nFigura 5\nApós desdobrado o papel que restou na Figura 5, a figura plana que os estudantes obterão será\nA\nB\nC\nD\nE\n\n ",
+        "correct_answer": "C",
+        "page_images": [],
+        "ID": "2022_D2_N156",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 156
+    },
+    {
+        "question_text": "QUESTÃO 157 \nO funcionário de uma loja tem seu salário mensal formado por uma parcela fixa de 675 reais mais uma comissão \nque depende da quantidade de peças vendidas por ele no mês. O cálculo do valor dessa comissão é feito de acordo \ncom estes critérios:\n• até a quinquagésima peça vendida, paga-se 5 reais por peça;\n• a partir da quinquagésima primeira peça vendida, o valor pago é de 7 reais por peça.\nRepresente por q a quantidade de peças vendidas no mês por esse funcionário, e por S(q) o seu salário mensal, \nem real, nesse mês.\nA expressão algébrica que descreve S(q) em função de q é\nA)S(q) = 675 + 12q\nB)S(q) = 325 + 12q\nC)S(q) = 675 + 7q\nD)S q\nq\nq\nq\nq\n( )\n,\n,\n�\n�\n�\n�\n625\n5\n50\n925\n7\n50\nse\nse\n�\n�\n�\n�\nE)S q\nq\nq\nq\nq\n( )\n,\n,\n�\n�\n�\n�\n625\n5\n50\n575\n7\n50\nse\nse\n�\n�\n�\n�\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)S(q) = 675 + 12q\n",
+            "B)S(q) = 325 + 12q\n",
+            "C)S(q) = 675 + 7q\n",
+            "D)S q\nq\nq\nq\nq\n( )\n,\n,\n�\n�\n�\n�\n625\n5\n50\n925\n7\n50\nse\nse\n�\n�\n�\n�\n",
+            "E)S q\nq\nq\nq\nq\n( )\n,\n,\n�\n�\n�\n�\n625\n5\n50\n575\n7\n50\nse\nse\n�\n�\n�\n�\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N157",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 157
+    },
+    {
+        "question_text": "QUESTÃO 158 \nAo analisar os dados de uma epidemia em uma cidade, peritos obtiveram um modelo que avalia a quantidade de \npessoas infectadas a cada mês, ao longo de um ano. O modelo é dado por p(t) = -t 2 + 10t + 24, sendo t um número \nnatural, variando de 1 a 12, que representa os meses do ano, e p(t) a quantidade de pessoas infectadas no mês t do \nano. Para tentar diminuir o número de infectados no próximo ano, a Secretaria Municipal de Saúde decidiu intensificar \na propaganda oficial sobre os cuidados com a epidemia. Foram apresentadas cinco propostas (I, II, III, IV e V), \ncom diferentes períodos de intensificação das propagandas:\n• I: 1 ≤ t ≤ 2;\n• II: 3 ≤ t ≤ 4;\n• III: 5 ≤ t ≤ 6;\n• IV: 7 ≤ t ≤ 9; \n• V: 10 ≤ t ≤ 12.\nA sugestão dos peritos é que seja escolhida a proposta cujo período de intensificação da propaganda englobe o \nmês em que, segundo o modelo, há a maior quantidade de infectados. A sugestão foi aceita.\nA proposta escolhida foi a\nA)I.\nB)II.\nC)III.\nD)IV.\nE)V.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)I.\n",
+            "B)II.\n",
+            "C)III.\n",
+            "D)IV.\n",
+            "E)V.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N158",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 158
+    },
+    {
+        "question_text": "QUESTÃO 159 \nUm atleta iniciou seu treinamento visando as competições de fim de ano. Seu treinamento consiste em cinco tipos \ndiferentes de treinos: treino T1, treino T2, treino T3, treino T4 e treino T5. A sequência dos treinamentos deve seguir esta ordem:\nA letra R significa repouso. Após completar a sequência de treinamentos, o atleta começa novamente a sequência a \npartir do treino T1 e segue a ordem descrita. Após 24 semanas completas de treinamento, se dará o início das competições.\nA sequência de treinamentos que o atleta realizará na 24ª semana de treinos é\nA)T3  R  T4  R  R  T5  R.\nB)R  T3  R  T4  R  R  T5.\nC)R  T4  R  R  T5  R  T1.\nD)R  R  T5  R  T1  R  R.\nE)R  T5  R  T1  R  R  T2.\n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)T3  R  T4  R  R  T5  R.\n",
+            "B)R  T3  R  T4  R  R  T5.\n",
+            "C)R  T4  R  R  T5  R  T1.\n",
+            "D)R  R  T5  R  T1  R  R.\n",
+            "E)R  T5  R  T1  R  R  T2.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N159",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 159
+    },
+    {
+        "question_text": "QUESTÃO 160 \nUm robô, que tem um ímã em sua base, se desloca \nsobre a superfície externa de um cubo metálico, ao longo de \nsegmentos de reta cujas extremidades são pontos médios de \narestas e centros de faces. Ele inicia seu deslocamento no \nponto P, centro da face superior do cubo, segue para o centro \nda próxima face, converte à esquerda e segue para o centro da \nface seguinte, converte à direita e continua sua movimentação, \nsempre alternando entre conversões à esquerda e à direita \nquando alcança o centro de uma face. O robô só termina sua \nmovimentação quando retorna ao ponto P. A figura apresenta \nos deslocamentos iniciais desse robô.\nP\nA projeção ortogonal do trajeto descrito por esse robô \nsobre o plano da base, após terminada sua movimentação, \nvisualizada da posição em que se está enxergando esse \ncubo, é\nA\nB\nC\nD\nE\n",
+        "correct_answer": "A",
+        "page_images": [],
+        "ID": "2022_D2_N160",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 160
+    },
+    {
+        "question_text": "QUESTÃO 161 \nUma empresa de engenharia projetou uma casa com \na forma de um retângulo para um de seus clientes. Esse \ncliente solicitou a inclusão de uma varanda em forma \nde L. A figura apresenta a planta baixa desenhada pela \nempresa, já com a varanda incluída, cujas medidas, \nindicadas em centímetro, representam os valores das \ndimensões da varanda na escala de 1 : 50.\n16 cm\nESCALA 1 : 50\nSALA\nQUARTO\nSUÍTE\nBANHO\nSOCIAL\nBANHO\nSUÍTE\nCOZINHA\nVARANDA\nQUARTO\n4 cm\n18,4 cm\n5 cm\nA medida real da área da varanda, em metro quadrado, é\nA)33,40.\nB)66,80.\nC)89,24.\nD)133,60.\nE)534,40.\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)33,40.\n",
+            "B)66,80.\n",
+            "C)89,24.\n",
+            "D)133,60.\n",
+            "E)534,40.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N161",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 161
+    },
+    {
+        "question_text": "QUESTÃO 162 \nUma loja de roupas fixou uma meta de vendas de \n77 000 reais para um determinado mês de 30 dias.  \nO gráfico mostra o volume de vendas dessa loja, em real, \nnos dez primeiros dias do mês e entre o dia dez e o dia \nvinte desse mês, nos seus dois únicos setores (infantil e \nadulto). Suponha que a variação no volume de vendas, \npara o período registrado, tenha se dado de forma linear, \ncomo mostrado no gráfico, e que essa tendência se \nmantenha a mesma para os próximos dez dias.\n18 000\n8 000\n10\n30\n7 000\n15 000\nAdulto\nDias\nInfantil\n20\nAo final do trigésimo dia, quanto faltará no volume de vendas, \nem real, para que a meta fixada para o mês seja alcançada?\nA)5 000\nB)7 000\nC)11 000\nD)18 000\nE)29 000\n\n ",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)5 000\n",
+            "B)7 000\n",
+            "C)11 000\n",
+            "D)18 000\n",
+            "E)29 000\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N162",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 162
+    },
+    {
+        "question_text": "QUESTÃO 163 \nEm uma universidade, atuam professores que estão \nenquadrados funcionalmente pela sua maior titulação: \nmestre ou doutor. Nela há, atualmente, 60 mestres e  \n40 doutores. Os salários mensais dos professores mestres \ne dos doutores são, respectivamente, R$ 8 000,00 e \nR$ 12 000,00.\nA diretoria da instituição pretende proporcionar um \naumento salarial diferenciado para o ano seguinte, de tal \nforma que o salário médio mensal dos professores dessa \ninstituição não ultrapasse R$ 12 240,00. A universidade já \nestabeleceu que o aumento salarial será de 25% para os \nmestres e precisa ainda definir o percentual de reajuste \npara os doutores.\nMantido o número atual de professores com suas atuais \ntitulações, o aumento salarial, em porcentagem, a ser \nconcedido aos doutores deverá ser de, no máximo,\nA)14,4.\nB)20,7.\nC)22,0.\nD)30,0.\nE)37,5.\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)14,4.\n",
+            "B)20,7.\n",
+            "C)22,0.\n",
+            "D)30,0.\n",
+            "E)37,5.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N163",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 163
+    },
+    {
+        "question_text": "QUESTÃO 164 \nUm borrifador de atuação automática libera, a cada \nacionamento, uma mesma quantidade de inseticida.  \nO recipiente desse produto, quando cheio, contém 360 mL \nde inseticida, que duram 60 dias se o borrifador permanecer \nligado ininterruptamente e for acionado a cada 48 minutos.\nA quantidade de inseticida que é liberada a cada \nacionamento do borrifador, em mililitro, é\nA)0,125.\nB)0,200.\nC)4,800.\nD)6,000.\nE)12,000.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)0,125.\n",
+            "B)0,200.\n",
+            "C)4,800.\n",
+            "D)6,000.\n",
+            "E)12,000.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N164",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 164
+    },
+    {
+        "question_text": "QUESTÃO 165 \nDefinem-se o dia e o ano de um planeta de um sistema solar \ncomo sendo, respectivamente, o tempo que o planeta leva para \ndar 1 volta completa em torno de seu próprio eixo de rotação e o \ntempo para dar 1 volta completa em torno de seu Sol.\nSuponha que exista um planeta Z, em algum sistema \nsolar, onde um dia corresponda a 73 dias terrestres e \nque 2 de seus anos correspondam a 1 ano terrestre. \nConsidere que 1 ano terrestre tem 365 de seus dias.\nNo planeta Z, seu ano corresponderia a quantos de seus \ndias?\nA)2,5\nB)10,0\nC)730,0\nD)13 322,5\nE)53 290,0\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)2,5\n",
+            "B)10,0\n",
+            "C)730,0\n",
+            "D)13 322,5\n",
+            "E)53 290,0\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N165",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 165
+    },
+    {
+        "question_text": "QUESTÃO 166 \nEm uma competição de velocidade, diz-se que há uma \nultrapassagem quando um veículo que está atrás de outro \npassa à sua frente, com ambos se deslocando no mesmo \nsentido. Considere uma competição automobilística entre \ncinco carros em uma pista com 100 m de comprimento, \nonde todos largam no mesmo instante e da mesma linha.  \nO gráfico mostra a variação da distância percorrida por cada \nveículo, em função do tempo, durante toda a competição.\n100\n0\nDistância (m)\n0\nTempo (s)\n15\nQual o número de ultrapassagens, após o início da \ncompetição, efetuadas pelo veículo que chegou em \núltimo lugar?\nA)0\nB)1\nC)2\nD)3\nE)4\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)0\n",
+            "B)1\n",
+            "C)2\n",
+            "D)3\n",
+            "E)4\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N166",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 166
+    },
+    {
+        "question_text": "QUESTÃO 167 \nEm uma loja, o preço promocional de uma geladeira \né de R$ 1 000,00 para pagamento somente em dinheiro. \nSeu preço normal, fora da promoção, é 10% maior. Para \npagamento feito com o cartão de crédito da loja, é dado \num desconto de 2% sobre o preço normal.\nUma cliente decidiu comprar essa geladeira, optando \npelo pagamento com o cartão de crédito da loja. Ela \ncalculou que o valor a ser pago seria o preço promocional \nacrescido de 8%. Ao ser informada pela loja do valor a \npagar, segundo sua opção, percebeu uma diferença entre \nseu cálculo e o valor que lhe foi apresentado.\nO valor apresentado pela loja, comparado ao valor \ncalculado pela cliente, foi\nA)R$ 2,00 menor.\nB)R$ 100,00 menor.\nC)R$ 200,00 menor.\nD)R$ 42,00 maior.\nE)R$ 80,00 maior.\n\n ",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)R$ 2,00 menor.\n",
+            "B)R$ 100,00 menor.\n",
+            "C)R$ 200,00 menor.\n",
+            "D)R$ 42,00 maior.\n",
+            "E)R$ 80,00 maior.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N167",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 167
+    },
+    {
+        "question_text": "QUESTÃO 168 \nUma pessoa precisa se deslocar de automóvel do \nponto P para o ponto Q, indicados na figura, na qual as \nlinhas verticais e horizontais simbolizam ruas.\nP\nQ\nPor causa do sentido de tráfego nessas ruas, o \ncaminho poligonal destacado é a possibilidade mais \ncurta de efetuar esse deslocamento. Para descrevê-lo, \ndeve-se especificar qual o sentido a ser tomado em cada \ncruzamento de ruas, em relação à direção de deslocamento \ndo automóvel, que se movimentará continuamente. \nPara isso, empregam-se as letras E, F e D para indicar \n“vire à esquerda”, “siga em frente” e “vire à direita”, \nrespectivamente.\nA sequência de letras que descreve o caminho poligonal \ndestacado é\nA)DDEFDDEEFFD.\nB)DFEFDDDEFFD.\nC)DFEFDDEEFFD.\nD)EFDFEEDDFFE.\nE)EFDFEEEDFFE.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)DDEFDDEEFFD.\n",
+            "B)DFEFDDDEFFD.\n",
+            "C)DFEFDDEEFFD.\n",
+            "D)EFDFEEDDFFE.\n",
+            "E)EFDFEEEDFFE.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N168",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 168
+    },
+    {
+        "question_text": "QUESTÃO 169 \nUma \nloja \ncomercializa \ncinco \nmodelos \nde  \ncaixas-d’água (I, II, III, IV e V), todos em formato  \nde cilindro reto de base circular. Os modelos II, III, IV e V  \ntêm as especificações de suas dimensões dadas em \nrelação às dimensões do modelo I, cuja profundidade é P \ne área da base é Ab, como segue:\n• modelo II: o dobro da profundidade e a metade da \nárea da base do modelo I;\n• modelo III: o dobro da profundidade e a metade do \nraio da base do modelo I;\n• modelo IV: a metade da profundidade e o dobro da \nárea da base do modelo I;\n• modelo V: a metade da profundidade e o dobro do \nraio da base do modelo I.\nUma pessoa pretende comprar nessa loja o modelo \nde caixa-d’água que ofereça a maior capacidade \nvolumétrica.\nO modelo escolhido deve ser o\nA)I.\nB)II.\nC)III.\nD)IV.\nE)V.\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)I.\n",
+            "B)II.\n",
+            "C)III.\n",
+            "D)IV.\n",
+            "E)V.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N169",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 169
+    },
+    {
+        "question_text": "QUESTÃO 170 \nNo período de 2005 a 2013, o valor de venda dos \nimóveis em uma cidade apresentou alta, o que resultou \nno aumento dos aluguéis. Os gráficos apresentam a \nevolução desses valores, para um mesmo imóvel, no \nmercado imobiliário dessa cidade.\n630\n960\n1 350\n1 800\n3 240\nValor mensal do aluguel (R$)\n2005\n2007\n2009\n2011\n2013\nAno\n90\n120\n270\n450\n540\nValor de mercado do imóvel\n(milhar de R$)\n2005\n2007\n2009\n2011\n2013\nAno\nA rentabilidade do aluguel de um imóvel é calculada \npela razão entre o valor mensal de aluguel e o valor de \nmercado desse imóvel.\nCom base nos dados fornecidos, em que ano a \nrentabilidade do aluguel foi maior?\nA)2005\nB)2007\nC)2009\nD)2011\nE)2013\n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)2005\n",
+            "B)2007\n",
+            "C)2009\n",
+            "D)2011\n",
+            "E)2013\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N170",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 170
+    },
+    {
+        "question_text": "QUESTÃO 171 \nNos cinco jogos finais da última temporada, com \numa média de 18 pontos por jogo, um jogador foi eleito o \nmelhor do campeonato de basquete. Na atual temporada, \ncinco jogadores têm a chance de igualar ou melhorar \nessa média. No quadro estão registradas as pontuações \ndesses cinco jogadores nos quatro primeiros jogos das \nfinais deste ano.\nJogadores\nJogo 1\nJogo 2\nJogo 3\nJogo 4\nI\n12\n25\n20\n20\nII\n12\n12\n27\n20\nIII\n14\n14\n17\n26\nIV\n15\n18\n21\n21\nV\n22\n15\n23\n15\nO quinto e último jogo será realizado para decidir a \nequipe campeã e qual o melhor jogador da temporada.\nO jogador que precisa fazer a menor quantidade de \npontos no quinto jogo, para igualar a média de pontos do \nmelhor jogador da temporada passada, é o \nA)I.\nB)II.\nC)III.\nD)IV.\nE)V.\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)I.\n",
+            "B)II.\n",
+            "C)III.\n",
+            "D)IV.\n",
+            "E)V.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N171",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 171
+    },
+    {
+        "question_text": "QUESTÃO 172 \nUm casal planeja construir em sua chácara uma \npiscina com o formato de um paralelepípedo reto \nretângulo com capacidade para 90 000 L de água.  \nO casal contratou uma empresa de construções que \napresentou cinco projetos com diferentes combinações \nnas dimensões internas de profundidade, largura \ne comprimento. A piscina a ser construída terá \nrevestimento interno em suas paredes e fundo com uma \nmesma cerâmica, e o casal irá escolher o projeto que \nexija a menor área de revestimento.\nAs dimensões internas de profundidade, largura \ne comprimento, respectivamente, para cada um dos \nprojetos, são:\n• projeto I: 1,8 m, 2,0 m e 25,0 m;\n• projeto II: 2,0 m, 5,0 m e 9,0 m;\n• projeto III: 1,0 m, 6,0 m e 15,0 m; \n• projeto IV: 1,5 m, 15,0 m e 4,0 m;\n• projeto V: 2,5 m, 3,0 m e 12,0 m.\nO projeto que o casal deverá escolher será o\nA)I.\nB)II.\nC)III.\nD)IV.\nE)V.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)I.\n",
+            "B)II.\n",
+            "C)III.\n",
+            "D)IV.\n",
+            "E)V.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N172",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 172
+    },
+    {
+        "question_text": "QUESTÃO 173 \nUma instituição de ensino superior ofereceu vagas \nem um processo seletivo de acesso a seus cursos. \nFinalizadas as inscrições, foi divulgada a relação do \nnúmero de candidatos por vaga em cada um dos cursos \noferecidos. Esses dados são apresentados no quadro.\nCurso\nNúmero \nde vagas \noferecidas\nNúmero \nde candidatos \npor vaga\nAdministração\n30\n6\nCiências Contábeis\n40\n6\nEngenharia Elétrica\n50\n7\nHistória\n30\n8\nLetras\n25\n4\nPedagogia\n25\n5\nQual foi o número total de candidatos inscritos nesse \nprocesso seletivo?\nA)200\nB)400\nC)1 200\nD)1 235\nE)7 200\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)200\n",
+            "B)400\n",
+            "C)1 200\n",
+            "D)1 235\n",
+            "E)7 200\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N173",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 173
+    },
+    {
+        "question_text": "QUESTÃO 174 \nPeças metálicas de aeronaves abandonadas em \naeroportos serão recicladas. Uma dessas peças é \nmaciça e tem o formato cilíndrico, com a medida do raio \nda base igual a 4 cm e a da altura igual a 50 cm. Ela será \nderretida, e o volume de metal resultante será utilizado \npara a fabricação de esferas maciças com diâmetro de \n1 cm, a serem usadas para confeccionar rolamentos. \nPara estimar a quantidade de esferas que poderão ser \nproduzidas a partir de cada uma das peças cilíndricas, \nadmite-se que não ocorre perda de material durante o \nprocesso de derretimento.\nQuantas dessas esferas poderão ser obtidas a partir de \ncada peça cilíndrica?\nA)800\nB)1 200\nC)2 400\nD)4 800\nE)6 400\n\n ",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)800\n",
+            "B)1 200\n",
+            "C)2 400\n",
+            "D)4 800\n",
+            "E)6 400\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N174",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 174
+    },
+    {
+        "question_text": "QUESTÃO 175 \nAo escutar a notícia de que um filme recém-lançado \narrecadou, no primeiro mês de lançamento, R$ 1,35 bilhão \nem bilheteria, um estudante escreveu corretamente o \nnúmero que representa essa quantia, com todos os seus \nalgarismos.\nO número escrito pelo estudante foi\nA)135 000,00.\nB)1 350 000,00.\nC)13 500 000,00.\nD)135 000 000,00.\nE)1 350 000 000,00.\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)135 000,00.\n",
+            "B)1 350 000,00.\n",
+            "C)13 500 000,00.\n",
+            "D)135 000 000,00.\n",
+            "E)1 350 000 000,00.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N175",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 175
+    },
+    {
+        "question_text": "QUESTÃO 176 \nO governo de um estado pretende realizar uma \nobra de infraestrutura para auxiliar na integração e \nno processo de escoamento da produção agrícola \nde duas cidades. O projeto consiste na interligação \ndireta das cidades A e B com a Rodovia 003, pela \nconstrução das Rodovias 001 e 002. As duas rodovias \nserão construídas em linha reta e deverão se conectar \nà Rodovia 003 em um mesmo ponto, conforme \nesboço apresentado na figura, na qual estão também \nindicadas as posições das cidades A e B, considerando \no eixo x posicionado sobre a Rodovia 003, e cinco \nlocalizações sugeridas para o ponto de conexão entre \nas três rodovias.\n0\n5\n10 15 20 25 30 35 40 45 50 55\nx (km)\n10\n20\n30\n40\ny (km)\nCidade A\nCidade B\nRodovia 003\nRodovia 001\nRodovia 002\nI\nII\nIII IV\nV\nPretende-se que a distância percorrida entre as duas \ncidades, pelas Rodovias 001 e 002, passando pelo ponto \nde conexão, seja a menor possível.\nDadas as exigências do projeto, qual das localizações \nsugeridas deve ser a escolhida para o ponto de conexão?\nA)I\nB)II\nC)III\nD)IV\nE)V\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)I\n",
+            "B)II\n",
+            "C)III\n",
+            "D)IV\n",
+            "E)V\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N176",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 176
+    },
+    {
+        "question_text": "QUESTÃO 177 \nUma pessoa precisa contratar um operário para \nfazer um serviço em sua casa. Para isso, ela postou um \nanúncio em uma rede social.\nCinco pessoas responderam informando preços por \nhora trabalhada, gasto diário com transporte e tempo \nnecessário para conclusão do serviço, conforme valores \napresentados no quadro.\nOperário\nPreço por \nhora\n(real)\nPreço do \ntransporte\n(real)\nTempo até \nconclusão\n(hora)\nI\n120\n0,00\n8\nII\n180\n0,00\n6\nIII\n170\n20,00\n6\nIV\n110\n10,00\n9\nV\n110\n0,00\n10\nSe a pessoa pretende gastar o mínimo possível com essa \ncontratação, irá contratar o operário\nA)I.\nB)II.\nC)III.\nD)IV.\nE)V.\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)I.\n",
+            "B)II.\n",
+            "C)III.\n",
+            "D)IV.\n",
+            "E)V.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N177",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 177
+    },
+    {
+        "question_text": "QUESTÃO 178 \nUma cozinheira produz docinhos especiais por \nencomenda. Usando uma receita-base de massa, ela \nprepara uma porção, com a qual produz 50 docinhos \nmaciços de formato esférico, com 2 cm de diâmetro.  \nUm cliente encomenda 150 desses docinhos, mas pede \nque cada um tenha formato esférico com 4 cm de diâmetro.  \nA cozinheira pretende preparar o número exato de \nporções da receita-base de massa necessário para \nproduzir os docinhos dessa encomenda.\nQuantas porções da receita-base de massa ela deve \npreparar para atender esse cliente?\nA)2\nB)3\nC)6\nD)12\nE)24\n \n\n ",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)2\n",
+            "B)3\n",
+            "C)6\n",
+            "D)12\n",
+            "E)24\n \n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D2_N178",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 178
+    },
+    {
+        "question_text": "QUESTÃO 179 \nA esperança de vida ao nascer é o número médio \nde anos que um indivíduo tende a viver a partir de seu \nnascimento, considerando dados da população. No Brasil, \nesse número vem aumentando consideravelmente, como \nmostra o gráfico.\nEsperança de vida ao nascer\n75\n74\n73\n72\n2008\n72,78\n73,09\n73,4\n73,67\n73,95\n74,23\n2009\n2010\n2011\n2012\n2013\nDisponível em: http://cod.ibge.gov.br. Acesso em: 6 mar. 2014 (adaptado).\nPode-se observar que a esperança de vida ao nascer \nem 2012 foi exatamente a média das registradas nos \nanos de 2011 e 2013. Suponha que esse fato também \nocorreu com a esperança de vida ao nascer em 2013, em \nrelação às esperanças de vida de 2012 e de 2014.\nCaso a suposição feita tenha sido confirmada, a \nesperança de vida ao nascer no Brasil no ano de 2014 \nterá sido, em ano, igual a\nA)74,23.\nB)74,51.\nC)75,07.\nD)75,23.\nE)78,49.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)74,23.\n",
+            "B)74,51.\n",
+            "C)75,07.\n",
+            "D)75,23.\n",
+            "E)78,49.\n"
+        ],
+        "page_images": [
+            "output_fitz2/images/2022_D1_page30_1.png",
+            "output_fitz2/images/2022_D1_page30_2.png",
+            "output_fitz2/images/2022_D1_page30_3.png",
+            "output_fitz2/images/2022_D1_page30_4.png",
+            "output_fitz2/images/2022_D1_page30_5.png",
+            "output_fitz2/images/2022_D1_page30_6.png"
+        ],
+        "ID": "2022_D2_N179",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 179
+    },
+    {
+        "question_text": "QUESTÃO 180 \nNa figura estão destacadas duas trajetórias sobre a \nsuperfície do globo terrestre, descritas ao se percorrer \nparte dos meridianos 1, 2 e da Linha do Equador, sendo \nque os meridianos 1 e 2 estão contidos em planos \nperpendiculares entre si. O plano α é paralelo ao que \ncontém a Linha do Equador.\nMeridiano 2\nMeridiano 1\nLinha do Equador\nα\nN\nS\nA vista superior da projeção ortogonal sobre o plano α \ndessas duas trajetórias é\nA\nB\nC\nD\nE\n\n ",
+        "correct_answer": "E",
+        "ID": "2022_D2_N180",
+        "year": 2022,
+        "day": "D2",
+        "question_num": 180
+    }
+]
