@@ -7,10 +7,7 @@ import re, os ,json #tentar parsear o arquivo das questoes, ver se existem quest
 2) fazer com que o JSON da questão inclua as alternativas em uma lista separada
 
 3) refatorar a função que pega o texto e escreve em um TXT em funções menores para acabar com menos funções repetidas
-
 """
-
-
 
 class EnemPDFextractor():
     #constantes baseadas na nomeclatura do INEP dos arquivos do enem, ex: 2022_GB_impresso_D1_CD1.pdf 
@@ -196,6 +193,8 @@ class EnemPDFextractor():
             else:
                 return "não achou a questão"
     
+    #método para pre-processar o texto de uma página, retornando o texto processado, o num da primeira questão da página e pulando ela caso ela não tenha questões ou tenha imagens
+
     def __page_preprocessing__(self,pdf_reader:PdfReader,loop_index:int ,total_question_number:int)-> dict :
         text_processing_dict: dict = {"text": "", "page_first_question": 0, "total_question_number": 0 }
         
