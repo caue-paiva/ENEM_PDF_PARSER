@@ -16,15 +16,15 @@ class EnemPDFextractor():
     #constantes baseadas na nomeclatura do INEP dos arquivos do enem, ex: 2022_GB_impresso_D1_CD1.pdf 
     #utilizadas para identificar qual prova ou gabarito estamos lidando
     __YEAR_PATTERN__ = "20\d{2}"
-    DAY_ONE_SUBSTR = "D1"  #substr no nome do PDF que indica qual o dia da prova
-    TEST_IDENTIFIER = "PV"
-    ANSWER_PDF_IDENTIFIER = "GB"
-    NUM_PATTERN1 = r"\*\w{9}\*"  #esses padrões vem de um código de barras presente no topo de toda página, ele vai ser removido
-    NUM_PATTERN2 = r"\*\w{10}\*"
-    QUESTION_IDENTIFIER = "QUESTÃO"
-    TXT_QUESTION_TEMPLATE= "(Enem/{test_year})  {question_text}\n(RESPOSTA CORRETA): {correct_answer}\n\n"
-    SUPPORTED_OUTPUT_FILES:tuple = ("txt", "json")
-    TEST_COLOR_PATTERN = "CD\d{1}"  #provas/cadernos e gabaritos  são separadas por cores, se as cores de ambos forem iguais, eles estão relacionados
+    __DAY_ONE_SUBSTR__ = "D1"  #substr no nome do PDF que indica qual o dia da prova
+    __TEST_IDENTIFIER__ = "PV"
+    __ANSWER_PDF_IDENTIFIER__ = "GB"
+    __NUM_PATTERN1__ = r"\*\w{9}\*"  #esses padrões vem de um código de barras presente no topo de toda página, ele vai ser removido
+    __NUM_PATTERN2__ = r"\*\w{10}\*"
+    __QUESTION_IDENTIFIER__ = "QUESTÃO"
+    __TXT_QUESTION_TEMPLATE__= "(Enem/{test_year})  {question_text}\n(RESPOSTA CORRETA): {correct_answer}\n\n"
+    __SUPPORTED_OUTPUT_FILES__:tuple = ("txt", "json")
+    __TEST_COLOR_PATTERN__ = "CD\d{1}"  #provas/cadernos e gabaritos  são separadas por cores, se as cores de ambos forem iguais, eles estão relacionados
 
     test_pdf_path:str 
     answer_pdf_path: str
@@ -33,7 +33,7 @@ class EnemPDFextractor():
     answer_pdf_text:str
 
     def __init__(self, output_type:str = "txt")-> None:
-        if output_type not in self.SUPPORTED_OUTPUT_FILES:
+        if output_type not in self.__SUPPORTED_OUTPUT_FILES__:
             raise IOError("tipo de arquivo de output não suportado")
 
         self.output_type =  output_type
@@ -41,17 +41,17 @@ class EnemPDFextractor():
     #ao extrair o texto das alternativas do PDF, a letra da  alternativa é repetida 2 vezes, então essa função remove essa segunda repetição
     
     def __handle_IO_errors__(self,test_pdf_path: str, answers_pdf_path:str)->None:
-        if self.TEST_IDENTIFIER not in test_pdf_path:
+        if self.__TEST_IDENTIFIER__ not in test_pdf_path:
             raise IOError("nome do arquivo da prova não segue o padrão do INEP")
     
-        if self.ANSWER_PDF_IDENTIFIER not in answers_pdf_path:
+        if self.__ANSWER_PDF_IDENTIFIER__ not in answers_pdf_path:
             raise IOError("nome do arquivo do gabarito não segue o padrão do INEP")
             
-        test_color_identifier = re.findall(self.TEST_COLOR_PATTERN, test_pdf_path)
+        test_color_identifier = re.findall(self.__TEST_COLOR_PATTERN__, test_pdf_path)
         if not test_color_identifier:
             raise IOError("especificação da cor do caderno da prova não segue o padrão do INEP")
         
-        answers_color_identifier= re.findall(self.TEST_COLOR_PATTERN, answers_pdf_path)
+        answers_color_identifier= re.findall(self.__TEST_COLOR_PATTERN__, answers_pdf_path)
         if not answers_color_identifier:
             raise IOError("especificação da cor do gabarito não segue o padrão do INEP")
         
@@ -147,7 +147,7 @@ class EnemPDFextractor():
              
         text:str = current_page.extract_text()
 
-        first_question_str_index: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.QUESTION_IDENTIFIER) , -1 ) #acha a primeira questão da folha
+        first_question_str_index: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
         
         if first_question_str_index == -1:
             print("sem questões")
@@ -155,12 +155,12 @@ class EnemPDFextractor():
          
         text = text[first_question_str_index:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
          
-        text = re.sub(self.NUM_PATTERN1,"", text)  #remove os padrões numéricos do QR codes
-        text = re.sub(self.NUM_PATTERN2,"",text)
+        text = re.sub(self.__NUM_PATTERN1__,"", text)  #remove os padrões numéricos do QR codes
+        text = re.sub(self.__NUM_PATTERN2__,"",text)
 
         page_first_question: int = total_question_number + 1 #a primeira questão da prox página sera o numero total de questões processadas ate o momento + 1 (a primeira questão em si)
         
-        for _ in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER):
+        for _ in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__):
             total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
             #print(total_question_number)
                   
@@ -175,11 +175,11 @@ class EnemPDFextractor():
              continue   
         #não é possível fazer essa verificação no começo pois é preciso contar todas as questões da página para a variavel total_question_number, já que ela dita qual matéria esta sendo processada
         
-        text += f" {self.QUESTION_IDENTIFIER}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
+        text += f" {self.__QUESTION_IDENTIFIER__}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
         question_start_index:int = 0
         answer_number: int = page_first_question
         
-        for position in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes     
+        for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
             
              if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                  continue
@@ -193,7 +193,7 @@ class EnemPDFextractor():
                  answer_number += 1
                  continue
              
-             parsed_question = self.TXT_QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+             parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
              
              start_natu, end_natu = topic_question_range["natu"] #desempacotando a tuple de ranges de questões das matérias
              start_math, end_math = topic_question_range["math"]
@@ -231,7 +231,7 @@ class EnemPDFextractor():
              
         text:str = current_page.extract_text()
 
-        first_question_str_index: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.QUESTION_IDENTIFIER) , -1 ) #acha a primeira questão da folha
+        first_question_str_index: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
         
         if first_question_str_index == -1:
             print("sem questões")
@@ -239,12 +239,12 @@ class EnemPDFextractor():
          
         text = text[first_question_str_index:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
          
-        text = re.sub(self.NUM_PATTERN1,"", text)  #remove os padrões numéricos do QR codes
-        text = re.sub(self.NUM_PATTERN2,"",text)
+        text = re.sub(self.__NUM_PATTERN1__,"", text)  #remove os padrões numéricos do QR codes
+        text = re.sub(self.__NUM_PATTERN2__,"",text)
 
         page_first_question: int = total_question_number + 1 #a primeira questão da prox página sera o numero total de questões processadas ate o momento + 1 (a primeira questão em si)
         
-        for _ in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER):
+        for _ in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__):
             total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
             #print(total_question_number)
                   
@@ -259,12 +259,12 @@ class EnemPDFextractor():
              continue  #caso tenha imagens na página vamos pular ela, já que não podemos extrair a imagem   
         #não é possível fazer essa verificação no começo pois é preciso contar todas as questões da página para a variavel total_question_number, já que ela dita qual matéria esta sendo processada
         
-        text += f" {self.QUESTION_IDENTIFIER}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
+        text += f" {self.__QUESTION_IDENTIFIER__}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
         question_start_index:int = 0
         answer_number: int = page_first_question
         in_spanish_question: bool = False
         
-        for position in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes     
+        for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
              if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                  continue
              
@@ -283,7 +283,7 @@ class EnemPDFextractor():
                  answer_number += 1
                  continue
 
-             parsed_question = self.TXT_QUESTION_TEMPLATE.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+             parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
              
              start_eng, end_eng = topic_question_range["eng"] #desempacotando a tuple de ranges de questões das matérias
              start_spa, end_spa = topic_question_range["spa"]
@@ -355,7 +355,7 @@ class EnemPDFextractor():
                 
             text:str = current_page.extract_text()
 
-            first_question_str_index: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.QUESTION_IDENTIFIER) , -1 ) #acha a primeira questão da folha
+            first_question_str_index: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
             
             if first_question_str_index == -1:
                 print("sem questões")
@@ -363,12 +363,12 @@ class EnemPDFextractor():
             
             text = text[first_question_str_index:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
             
-            text = re.sub(self.NUM_PATTERN1,"", text)  #remove os padrões numéricos do QR codes
-            text = re.sub(self.NUM_PATTERN2,"",text)
+            text = re.sub(self.__NUM_PATTERN1__,"", text)  #remove os padrões numéricos do QR codes
+            text = re.sub(self.__NUM_PATTERN2__,"",text)
 
             page_first_question: int = total_question_number + 1 #a primeira questão da prox página sera o numero total de questões processadas ate o momento + 1 (a primeira questão em si)
             
-            for _ in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER):
+            for _ in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__):
                 total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
                 #print(total_question_number)
                     
@@ -383,12 +383,12 @@ class EnemPDFextractor():
                 continue  #caso tenha imagens na página vamos pular ela, já que não podemos extrair a imagem   
             #não é possível fazer essa verificação no começo pois é preciso contar todas as questões da página para a variavel total_question_number, já que ela dita qual matéria esta sendo processada
             
-            text += f" {self.QUESTION_IDENTIFIER}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
+            text += f" {self.__QUESTION_IDENTIFIER__}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
             question_start_index:int = 0
             answer_number: int = page_first_question
             in_spanish_question: bool = False
             
-            for position in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes     
+            for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
                 if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                     continue
                 
@@ -465,7 +465,7 @@ class EnemPDFextractor():
                 
             text:str = current_page.extract_text()
 
-            first_question_str_index: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.QUESTION_IDENTIFIER) , -1 ) #acha a primeira questão da folha
+            first_question_str_index: int = next(self.__yield_all_substrings__(input_str = text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
             
             if first_question_str_index == -1:
                 print("sem questões")
@@ -473,12 +473,12 @@ class EnemPDFextractor():
             
             text = text[first_question_str_index:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
             
-            text = re.sub(self.NUM_PATTERN1,"", text)  #remove os padrões numéricos do QR codes
-            text = re.sub(self.NUM_PATTERN2,"",text)
+            text = re.sub(self.__NUM_PATTERN1__,"", text)  #remove os padrões numéricos do QR codes
+            text = re.sub(self.__NUM_PATTERN2__,"",text)
 
             page_first_question: int = total_question_number + 1 #a primeira questão da prox página sera o numero total de questões processadas ate o momento + 1 (a primeira questão em si)
             
-            for _ in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER):
+            for _ in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__):
                 total_question_number += 1  #aumenta o numero de questoes ja processadas com todas daquela página
                 #print(total_question_number)
                     
@@ -493,11 +493,11 @@ class EnemPDFextractor():
                 continue  #caso tenha imagens na página vamos pular ela, já que não podemos extrair a imagem   
             #não é possível fazer essa verificação no começo pois é preciso contar todas as questões da página para a variavel total_question_number, já que ela dita qual matéria esta sendo processada
             
-            text += f" {self.QUESTION_IDENTIFIER}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
+            text += f" {self.__QUESTION_IDENTIFIER__}" #coloca isso no final do texto para ajudar no processamento, já que teremos uma substr de parada do algoritmo
             question_start_index:int = 0
             answer_number: int = page_first_question
             
-            for position in self.__yield_all_substrings__(text, self.QUESTION_IDENTIFIER): #yield na posição da substring que identifica as questoes     
+            for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
                 if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                     continue
                 
@@ -560,7 +560,7 @@ class EnemPDFextractor():
         test_year:int = int(regex_return[0])   
         print(type(regex_return[0]))
     
-        if self.DAY_ONE_SUBSTR in test_pdf_path:
+        if self.__DAY_ONE_SUBSTR__ in test_pdf_path:
             if self.output_type == "txt":
               self.__txt_handle_day_one_tests__(test_pdf_reader,test_year)
             else:
