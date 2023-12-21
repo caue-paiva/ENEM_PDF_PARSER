@@ -8,6 +8,12 @@ A melhorar:
 2) melhorar função de parsear as alternativas
 
 
+código age:
+bem com ENEM 2023/22
+
+alguns problemas com o de 2020
+
+não funciona com o de 2021 (chars estranhos que não conseguem ser decodados)
 """
 
 class EnemPDFextractor():
