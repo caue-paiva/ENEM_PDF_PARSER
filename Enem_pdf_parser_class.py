@@ -5,9 +5,7 @@ import fitz
 """ A melhorar:
 1) juntar funções de escrever JSON e TXT
 
-2) ver como fitz lida quando eu mando ele ignorar imagens
 
-4) ver como o código com o fitz lida com questões de alternativas com imagens (lida relativamente bem)
 """
 
 class EnemPDFextractor():
@@ -41,7 +39,7 @@ class EnemPDFextractor():
         
     #abaixo funções de formatação do texto
 
-    #ao extrair o texto das alternativas do PDF, a letra da  alternativa é repetida 2 vezes, então essa função remove essa segunda repetição
+    #lida com erros de input/output, alertando sobre nomes não baseados na nomeclatura do INEP, assim como alerta sobre gabaritos e provas de cores diferentes
     
     def __handle_IO_errors__(self,test_pdf_path: str, answers_pdf_path:str)->None:
         if self.__TEST_IDENTIFIER__ not in test_pdf_path:
@@ -64,9 +62,9 @@ class EnemPDFextractor():
         if test_color_identifier[2] != answers_color_identifier[2]:  #terceiro char desse padrão é o numero referente à cor do caderno
             raise IOError("prova e gabarito são de cores diferentes") 
 
-    #essa funcao faz parecido com a _parse_alternatives_txt mas tbm retorna uma lista com as alternativas para o JSON
+    #ao extrair o texto das alternativas do PDF, a letra da  alternativa é repetida 2 vezes, então essa função remove essa segunda repetição e formata as alternativas
 
-    def __parse_alternatives__(self,question:str)-> str | tuple[str,list[str]]:
+    def __parse_alternatives__(self,question:str)-> str | tuple[str,list[str]]: #essa funcao retorna uma string caso o output é TXT e uma tuple (str,lista) caso o output seja JSON
         if self.output_type == "txt":
             return_val: str = "non-standard alternatives"
         else:
@@ -104,7 +102,9 @@ class EnemPDFextractor():
         elif isinstance(return_val,tuple):
             return_val = (question, self.__get_alternative_list__(question))
             
-        return return_val  #fazer o fitz retornar uma lista de alternativas tbm
+        return return_val  
+    
+    #retorna uma lista das alternativas da questão
 
     def __get_alternative_list__(self,question:str)->list[str]:
         regex_pattern = "[A-E]\)"
@@ -120,6 +120,7 @@ class EnemPDFextractor():
               alternatives_list.append(alternative_text)
     
         return alternatives_list
+    #generator que itera sobre todas as substrings e retorna o index dela na string principal
 
     def __yield_all_substrings__(self, input_str: str, sub_str:str)->int:
      sub_str = sub_str or "*"
@@ -129,7 +130,8 @@ class EnemPDFextractor():
         if start == -1: return  
         yield start
         start += len(sub_str) 
-    
+    #acha a resposta correta dado o texto do gabarito (var de class) e o numero da questão, retorna a alternativa correta
+
     def __find_correct_answer__ (self, question_number:int,day_one: bool,is_spanish_question:bool = False, )->str:          
         if day_one:    
             if question_number > 5:
@@ -210,6 +212,8 @@ class EnemPDFextractor():
         
         text_processing_dict.update({"text":page_text,"page_first_question": page_first_question, "total_question_number": total_question_number})
         return text_processing_dict
+   
+    #método para pre-processar o texto de uma página, retornando o texto processado, o num da primeira questão da página escrevendo as imagens da página no diretório de output
 
     def __page_preprocessing_images__(self,pdf_reader: fitz.fitz.Document,page_index:int ,total_question_number:int, test_year:int, day_one:bool)->dict:
         image_text_dict: dict = {"text": "", "page_first_question": 0, "total_question_number": 0 , "image_name_list": []}
@@ -277,6 +281,7 @@ class EnemPDFextractor():
 
         image_text_dict.update({"text":page_text,"page_first_question": page_first_question, "total_question_number": total_question_number, "image_name_list":image_name_list})
         return image_text_dict
+    #retorna uma dict com informações sobre a questão, esse dict sera transformado num JSON
 
     def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correct_answer:str, number:int, alternative_list:list[str] = [] , image_list = [None])->dict:
         day_identifier = "D1" if day_one else "D2"
