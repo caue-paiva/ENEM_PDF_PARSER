@@ -1,28 +1,28 @@
-import re, os ,json
+import re, os ,json , fitz
 from typing import Any 
-import fitz
 
 
 class EnemPDFextractor():
     """
-    Classe para extração de conteúdo de PDFs do ENEM
+    Classe para extração de conteúdo de PDFs do ENEM.
     
     A implementação dessa classe é baseada na nomeclatura dos PDFs do ENEM baixados do site do INEP, então para o funcionamento correto do código é necessário
-    que os arquivos de input sejam dessa fonte
+    que os arquivos de input sejam dessa fonte.
 
-    Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS, isso é feito com o objetivo de filtrar 
-    questões de texto puro, que podem ser utilizadas facilmente sem se preocupar com falta de contexto devido à imagens associadas (Útil para várias tarefas de NLP)
+    Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS, isso é feito com o objetivo de filtrar. 
+    questões de texto puro, que podem ser utilizadas facilmente sem se preocupar com falta de contexto devido à imagens associadas (Útil para várias tarefas de NLP).
 
 
     Atributos:
-        output_type (str) :  Tipos de arquivo de output do texto, são suportados outputs .TXT e .JSON 
-        -OBS:  arquivos JSON contem informações adicionais como lista de alternativas e lista de imagens associadas, caso imagens sejam extraidas
+        output_type (str) :  Tipos de arquivo de output do texto, são suportados outputs .TXT e .JSON. 
+        -OBS:  arquivos JSON contem informações adicionais como lista de alternativas e lista de imagens associadas, caso imagens sejam extraidas.
 
-        ignore_questions_with_images (bool) : Dita se textos e imagens de páginas com imagens serão processadas ou não
-        -OBS: Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS
+        ignore_questions_with_images (bool) : Dita se textos e imagens de páginas com imagens serão processadas ou não.
+        -OBS: Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS.
     """
 
     #-------constantes baseadas na nomeclatura do INEP dos arquivos do enem, ex: 2022_GB_impresso_D1_CD1.pdf------- 
+    
     #utilizadas para identificar qual prova ou gabarito estamos lidando
     __YEAR_PATTERN__ = "20\d{2}"
     __DAY_ONE_SUBSTR__ = "D1"  #substr no nome do PDF que indica qual o dia da prova
@@ -45,18 +45,16 @@ class EnemPDFextractor():
 
     def __init__(self,output_type:str, ignore_questions_with_images:bool = True)->None:
         """
-        Construtor para a classe EnemPDFextractor
+        Construtor para a classe EnemPDFextractor.
         
         Argumentos:
-            output_type (str) :  Tipos de arquivo de output do texto, são suportados outputs .TXT e .JSON 
-            -OBS:  arquivos JSON contem informações adicionais como lista de alternativas e lista de imagens associadas, caso imagens sejam extraidas
+            output_type (str) :  Tipos de arquivo de output do texto, são suportados outputs .TXT e .JSON.
+            -OBS:  arquivos JSON contem informações adicionais como lista de alternativas e lista de imagens associadas, caso imagens sejam extraidas.
             
 
-            ignore_questions_with_images (bool) : Dita se textos e imagens de páginas com imagens serão processadas ou não    
-            -OBS: Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS
-        """
-        
-        
+            ignore_questions_with_images (bool) : Dita se textos e imagens de páginas com imagens serão processadas ou não.   
+            -OBS: Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS.
+        """    
         output_type = output_type.lower()
         if output_type not in self.__SUPPORTED_OUTPUT_FILES__:
             raise IOError("tipo de arquivo de output não suportado")
@@ -64,8 +62,6 @@ class EnemPDFextractor():
         self.output_type =  output_type
         self.ignore_questions_with_images = ignore_questions_with_images
         
-    
-
     #lida com erros de input/output, alertando sobre nomes não baseados na nomeclatura do INEP, assim como alerta sobre gabaritos e provas de cores diferentes
     
     def __handle_IO_errors__(self,test_pdf_path: str, answers_pdf_path:str)->None:
@@ -149,6 +145,7 @@ class EnemPDFextractor():
               alternatives_list.append(alternative_text)
     
         return alternatives_list
+   
     #generator que itera sobre todas as substrings e retorna o index dela na string principal
 
     def __yield_all_substrings__(self, input_str: str, sub_str:str)->int:
@@ -159,7 +156,8 @@ class EnemPDFextractor():
         if start == -1: return  
         yield start
         start += len(sub_str) 
-    #acha a resposta correta dado o texto do gabarito (var de class) e o numero da questão, retorna a alternativa correta
+    
+    #acha a resposta correta dado o texto do gabarito (attbr de class) e o numero da questão, retorna a alternativa correta
 
     def __find_correct_answer__ (self, question_number:int,day_one: bool,is_spanish_question:bool = False )->str:          
         if day_one:    
@@ -255,7 +253,6 @@ class EnemPDFextractor():
         first_question_str_index: int = next(self.__yield_all_substrings__(input_str = page_text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
         
         if first_question_str_index == -1:
-            print("sem questões")
             return {} # se não tiver questões na página (pagina de redação) pula a iteração
          
         page_text = page_text[first_question_str_index:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
@@ -277,7 +274,7 @@ class EnemPDFextractor():
             return image_text_dict #retorna dict sem imagens
              
         if not os.path.isdir(os.path.join(self.extracted_data_path, "images")):  #caso não exista um dir para guardar as imagens, cria um
-             print("diretorio de output não existe, criando um novo")
+             print("diretorio de output de imagens não existe, criando um novo")
              os.makedirs(os.path.join(self.extracted_data_path, "images"), exist_ok=True)
         
         #loop sobre os indices da imagem e suas listas de conteúdo para extrair seu valor com a lib Fitz/PymuPDF
@@ -880,14 +877,14 @@ class EnemPDFextractor():
             
     def extract_pdf(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str)->None: #extrai o texto dos PDF de um ano específico
         """
-        Método público para extrair os contéudos de um PDF do ENEM e escrever numa localização específica
+        Método público para extrair os contéudos de um PDF do ENEM e escrever numa localização específica.
 
         Argumentos:
-            test_pdf_path (str) : path para o PDF da prova do ENEM 
-            answers_pdf_path (str) : path para o gabarito da prova do ENEM
-            -OBS: ambos arquivos acima devem seguir a nomeclatura do PDF baixado do site do INEP
+            test_pdf_path (str) : path para o PDF da prova do ENEM. 
+            answers_pdf_path (str) : path para o gabarito da prova do ENEM.
+            -OBS: ambos arquivos acima devem seguir a nomeclatura do PDF baixado do site do INEP.
 
-            extracted_data_path (str) : path para o diretório onde os dados extraidos serão escritos
+            extracted_data_path (str) : path para o diretório onde os dados extraidos serão escritos.
         
         """
         self.__handle_IO_errors__(test_pdf_path= test_pdf_path, answers_pdf_path= answers_pdf_path)
@@ -898,11 +895,13 @@ class EnemPDFextractor():
         self.answer_pdf_text:str = answer_page.get_text() #texto do gabarito, usado para a função que pega a resposta oficial
         self.answer_pdf_path:str = answers_pdf_path
         self.test_pdf_path:str = test_pdf_path
-        self.extracted_data_path:str = extracted_data_path
-
-        if not os.path.isdir(extracted_data_path): 
-             print("diretorio de output não existe, criando um novo")
-             os.makedirs(extracted_data_path, exist_ok=True)
+       
+        absolute_path:str = os.path.abspath(extracted_data_path)   #cria path absoluto para o diretório de output com o argumento da função
+        if not os.path.isdir(absolute_path):
+            print("diretório não encontrado, criando um novo")
+            os.makedirs(absolute_path)
+        
+        self.extracted_data_path:str = absolute_path
 
         test_pdf_reader: fitz.fitz.Document  = fitz.open(test_pdf_path) 
         regex_return:list = re.findall(self.__YEAR_PATTERN__, self.test_pdf_path)
