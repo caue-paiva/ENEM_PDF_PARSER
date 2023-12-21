@@ -9,7 +9,7 @@ import fitz
 """
 
 class EnemPDFextractor():
-    #constantes baseadas na nomeclatura do INEP dos arquivos do enem, ex: 2022_GB_impresso_D1_CD1.pdf 
+    #-------constantes baseadas na nomeclatura do INEP dos arquivos do enem, ex: 2022_GB_impresso_D1_CD1.pdf------- 
     #utilizadas para identificar qual prova ou gabarito estamos lidando
     __YEAR_PATTERN__ = "20\d{2}"
     __DAY_ONE_SUBSTR__ = "D1"  #substr no nome do PDF que indica qual o dia da prova
@@ -22,6 +22,7 @@ class EnemPDFextractor():
     __SUPPORTED_OUTPUT_FILES__:tuple = ("txt", "json")
     __TEST_COLOR_PATTERN__ = "CD\d{1}"  #provas/cadernos e gabaritos  são separadas por cores, se as cores de ambos forem iguais, eles estão relacionados
 
+    #-------variáveis específicas de cada classe-------
     test_pdf_path:str 
     answer_pdf_path: str
     extracted_data_path:str
@@ -29,7 +30,7 @@ class EnemPDFextractor():
     answer_pdf_text:str
     ignore_questions_with_images:bool 
 
-    def __init__(self,output_type:str, ignore_questions_with_images:bool = True ,)-> None:
+    def __init__(self,output_type:str, ignore_questions_with_images:bool = True)-> None:
         output_type = output_type.lower()
         if output_type not in self.__SUPPORTED_OUTPUT_FILES__:
             raise IOError("tipo de arquivo de output não suportado")
@@ -37,7 +38,7 @@ class EnemPDFextractor():
         self.output_type =  output_type
         self.ignore_questions_with_images = ignore_questions_with_images
         
-    #abaixo funções de formatação do texto
+    
 
     #lida com erros de input/output, alertando sobre nomes não baseados na nomeclatura do INEP, assim como alerta sobre gabaritos e provas de cores diferentes
     
@@ -61,6 +62,8 @@ class EnemPDFextractor():
     
         if test_color_identifier[2] != answers_color_identifier[2]:  #terceiro char desse padrão é o numero referente à cor do caderno
             raise IOError("prova e gabarito são de cores diferentes") 
+
+    #------abaixo funções de formatação do texto------
 
     #ao extrair o texto das alternativas do PDF, a letra da  alternativa é repetida 2 vezes, então essa função remove essa segunda repetição e formata as alternativas
 
@@ -97,7 +100,7 @@ class EnemPDFextractor():
 
             alternatives[letter] = alternative_text
        
-        if isinstance(return_val,str):
+        if isinstance(return_val,str):  #return_val depende do tipo de output, se for .txt retorna uma string, se for .json retorna uma tuple
             return_val = question
         elif isinstance(return_val,tuple):
             return_val = (question, self.__get_alternative_list__(question))
@@ -217,11 +220,12 @@ class EnemPDFextractor():
 
     def __page_preprocessing_images__(self,pdf_reader: fitz.fitz.Document,page_index:int ,total_question_number:int, test_year:int, day_one:bool)->dict:
         image_text_dict: dict = {"text": "", "page_first_question": 0, "total_question_number": 0 , "image_name_list": []}
-        day_identifier:str = "D1" if day_one else "D2"
+        
+        day_identifier:str = "D1" if day_one else "D2" #identificar do D1 para ser escrito no nome de arquivo das imagens
         image_name_list:list[str] = []
        
-        current_page = pdf_reader[page_index]                    
-        page_text:str = current_page.get_text()
+        current_page: fitz.fitz.Page = pdf_reader[page_index]                    
+        page_text: str = current_page.get_text()
         first_question_str_index: int = next(self.__yield_all_substrings__(input_str = page_text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
         
         if first_question_str_index == -1:
@@ -231,7 +235,7 @@ class EnemPDFextractor():
         page_text = page_text[first_question_str_index:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
          
         page_text = re.sub(self.__NUM_PATTERN1__,"", page_text)  #remove os padrões numéricos do QR codes
-        page_text = re.sub(self.__NUM_PATTERN2__,"",page_text)
+        page_text = re.sub(self.__NUM_PATTERN2__,"", page_text)
 
         page_first_question: int = total_question_number + 1 #a primeira questão da prox página sera o numero total de questões processadas ate o momento + 1 (a primeira questão em si)  
       
@@ -243,45 +247,45 @@ class EnemPDFextractor():
 
         image_list:list = current_page.get_images()
 
-        if image_list:
-            print(f" temos : {len(image_list)} imagens")
-        else:
-            print("zero imagens")
+        if not image_list:
             return image_text_dict #retorna dict sem imagens
-        
-        if not os.path.isdir(os.path.join(self.extracted_data_path, "images")):
+             
+        if not os.path.isdir(os.path.join(self.extracted_data_path, "images")):  #caso não exista um dir para guardar as imagens, cria um
              print("diretorio de output não existe, criando um novo")
              os.makedirs(os.path.join(self.extracted_data_path, "images"), exist_ok=True)
         
+        #loop sobre os indices da imagem e suas listas de conteúdo para extrair seu valor com a lib Fitz/PymuPDF
         for image_index,img in enumerate(image_list,start=1):
-            xref = img[0]
+            xref = img[0] #pega o valor xref de cada imagem
             base_image = pdf_reader.extract_image(xref)
             image_bytes = base_image["image"]
-            # Create a Pixmap with the image bytes
+
+            # Cria um Pixmap do fitz com os bytes da imagem
             pix = fitz.Pixmap(image_bytes)
 
-            # If the image has an alpha channel, drop the alpha channel
+            # se a imagem tem um canal alpha, remove ele
             if pix.alpha:
                 try:
-                    pix = fitz.Pixmap(pix, 0)  # Drop the alpha channel if it's possible
+                    pix = fitz.Pixmap(pix, 0)  # tenta tirar o canal alfa
 
                 except ValueError as e:
                     print(f"Error dropping alpha channel: {e}")
-                    continue  # Skip this image and move to the next one
+                    continue  # não foi possível tirar o canal alfa, vai para a proxima imagem
 
-            # If the image is CMYK, convert it to RGB
+            # se a imagem é CMYK, converte para RGB    
             if pix.n == 4:
                 pix1 = fitz.Pixmap(fitz.csRGB, pix)
-                pix = pix1  # Update pix to the new RGB pixmap
+                pix = pix1  # atualiza o pix para o novo pixmap RGB
 
-            output_filename = os.path.join(self.extracted_data_path ,"images", f"{test_year}_{day_identifier}_page{page_index}_{image_index}.png")
+            output_filename:str = os.path.join(self.extracted_data_path ,"images", f"{test_year}_{day_identifier}_page{page_index}_{image_index}.png")
             pix.save(output_filename)
             image_name_list.append(output_filename)
             pix = None
 
         image_text_dict.update({"text":page_text,"page_first_question": page_first_question, "total_question_number": total_question_number, "image_name_list":image_name_list})
         return image_text_dict
-    #retorna uma dict com informações sobre a questão, esse dict sera transformado num JSON
+        
+        #retorna uma dict com informações sobre a questão, esse dict sera transformado num JSON
 
     def __get_json_from_question__(self, question:str, day_one: bool ,year: int, correct_answer:str, number:int, alternative_list:list[str] = [] , image_list = [None])->dict:
         day_identifier = "D1" if day_one else "D2"
@@ -335,15 +339,22 @@ class EnemPDFextractor():
                 }
         return json_dict
    
-    #abaixo funcoes que processam e salvam o texto num arquivo
+    #-------abaixo funcoes que processam e salvam o texto num arquivo, funções diferentes para cada dia e se precisa salvar imagem ou não-------
 
-    def __json_save_images_day_one__(self, pdf_reader: fitz.fitz.Document, test_year:int)->None:
+    def __handle_day_one_with_images__(self, pdf_reader: fitz.fitz.Document, test_year:int)->None:
+        
         total_question_number: int = 0 
-        english_questions: list[dict] = []
-        spanish_questions: list[dict] = []
-        humanities_questions: list[dict] = []
-        languages_arts_questions: list[dict] = []
-
+        if self.output_type == "txt":
+            english_questions: str = ""
+            spanish_questions: str = ""
+            humanities_questions: str = ""
+            languages_arts_questions: str = ""
+        else:
+            english_questions: list[dict] = []
+            spanish_questions: list[dict] = []
+            humanities_questions: list[dict] = []
+            languages_arts_questions: list[dict] = []
+            
         num_pages: int = len(pdf_reader)
         topic_question_range:dict[str,tuple] = {"eng": (1,5), "spa":(6,10), "lang": (11,50), "huma":(51,95)} #ultima questão de humanas é a 96 pq tbm são contadas as de ingles e espanho,ambas entre 1-6
 
@@ -362,12 +373,13 @@ class EnemPDFextractor():
             page_first_question:int = page_attributes.get("page_first_question")
             total_question_number = page_attributes.get("total_question_number")
             text:str = page_attributes.get("text") 
-            image_name_list:list[str] = page_attributes.get("image_name_list")
+
+            if self.output_type == "json": image_name_list:list[str] = page_attributes.get("image_name_list")
 
             question_start_index:int = 0
             answer_number: int = page_first_question
             in_spanish_question: bool = False
-            alternative_list:list[str] = []
+            if self.output_type== "json": alternative_list:list[str] = []
 
             for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
                 if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
@@ -385,65 +397,107 @@ class EnemPDFextractor():
                     day_one=True
                 ) 
                 unparsed_alternatives: str = text[question_start_index:position]
-                parsed_question, alternative_list = self.__parse_alternatives_json__(unparsed_alternatives)
+                
+                parsed_question_vals: Any   = self.__parse_alternatives__(unparsed_alternatives)
+                if isinstance(parsed_question_vals, tuple):
+                    parsed_question:str = parsed_question_vals[0]
+                    alternative_list = parsed_question_vals[1]
+                elif isinstance(parsed_question_vals, str):
+                    parsed_question:str = parsed_question_vals
                     
-                #print("parsed_question" + parsed_question + "\n\n" + "alternative list" + alternative_list + "\n\n")   
                 if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                     question_start_index = position
                     answer_number += 1
                     continue
 
-                question_json:dict = self.__get_json_from_question__(
-                      question= parsed_question,
-                      day_one=True,
-                      year= test_year,
-                      correct_answer= correct_answer,
-                      number= answer_number,
-                      alternative_list= alternative_list,
-                      image_list= image_name_list
-                )
+                if self.output_type == "txt":
+                    parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+                else:
+                    question_json:dict = self.__get_json_from_question__(
+                        question= parsed_question,
+                        day_one=True,
+                        year= test_year,
+                        correct_answer= correct_answer,
+                        number= answer_number,
+                        alternative_list= alternative_list,
+                        image_list= image_name_list
+                    )
                 
                 start_eng, end_eng = topic_question_range["eng"] #desempacotando a tuple de ranges de questões das matérias
                 start_spa, end_spa = topic_question_range["spa"]
                 start_lang, end_lang = topic_question_range["lang"]
                 start_huma, end_huma = topic_question_range["huma"]
 
-                if answer_number in range(start_eng, end_eng+1): #precisamos incluir a ultima questão do range de cada matéria
-                    english_questions.append(question_json)
+                if answer_number in range(start_eng, end_eng+1):
+                    if self.output_type == "txt":
+                        english_questions += parsed_question
+                    else:
+                        english_questions.append(question_json)
 
                 elif answer_number in range(start_spa, end_spa+1):
-                    spanish_questions.append(question_json)
+                    if self.output_type == "txt":
+                        spanish_questions += parsed_question
+                    else:
+                        spanish_questions.append(question_json)
 
                 elif answer_number in range(start_lang, end_lang+1):
-                    languages_arts_questions.append(question_json)
+                    if self.output_type == "txt":
+                        languages_arts_questions += parsed_question
+                    else:
+                        languages_arts_questions.append(question_json)
 
                 elif answer_number in range(start_huma, end_huma+1):
-                    humanities_questions.append(question_json)
-                    
+                    if self.output_type == "txt":
+                        humanities_questions += parsed_question
+                    else:
+                        humanities_questions.append(question_json)
+
                 question_start_index = position
                 answer_number += 1
         
      #escrever as strings extraidas nos seus arquivos respectivos
-        file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.json" )
-        with open(file_path, "w") as f_eng:
-            json.dump(english_questions,f_eng, indent=4,  ensure_ascii=False)
-            
-        file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions.json" )
-        with open(file_path, "w") as f_spani:
-                json.dump(spanish_questions,f_spani,  indent=4,  ensure_ascii=False)
+        if self.output_type == "txt":   
+            file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.txt" )
+            with open(file_path, "w") as f_eng:
+                f_eng.write(english_questions)
+                
+            file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions.txt" )
+            with open(file_path, "w") as f_spani:
+                    f_spani.write(spanish_questions)
 
-        file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions.json" )     
-        with open(file_path, "w") as f_lang:
-            json.dump(languages_arts_questions,f_lang, indent=4,  ensure_ascii=False)
-            
-        file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.json" )
-        with open(file_path, "w") as f_huma:
-            json.dump(humanities_questions,f_huma, indent=4,  ensure_ascii=False)
+            file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions.txt" )     
+            with open(file_path, "w") as f_lang:
+                f_lang.write(languages_arts_questions)
+                
+            file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.txt" )
+            with open(file_path, "w") as f_huma:
+                f_huma.write(humanities_questions)
+        else:
+            file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.json" )
+            with open(file_path, "w") as f_eng:
+                json.dump(english_questions,f_eng, indent=4,  ensure_ascii=False)
+                
+            file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions.json" )
+            with open(file_path, "w") as f_spani:
+                    json.dump(spanish_questions,f_spani,  indent=4,  ensure_ascii=False)
 
-    def __json_save_images_day_two__(self, pdf_reader: fitz.fitz.Document, test_year:int)->None:
+            file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions.json" )     
+            with open(file_path, "w") as f_lang:
+                json.dump(languages_arts_questions,f_lang, indent=4,  ensure_ascii=False)
+                
+            file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.json" )
+            with open(file_path, "w") as f_huma:
+                json.dump(humanities_questions,f_huma, indent=4,  ensure_ascii=False)
+
+    def __handle_day_two_with_images__(self, pdf_reader: fitz.fitz.Document, test_year:int)->None: 
         total_question_number: int = 0 
-        math_questions: list[dict] = []
-        natural_sci_questions: list[dict] = []
+        if self.output_type == "txt":
+             math_questions: str = ""
+             natural_sci_questions: str = ""
+        else:
+            math_questions: list[dict] = []
+            natural_sci_questions: list[dict] = []
+
         num_pages: int = len(pdf_reader)
         topic_question_range:dict[str,tuple] = {"natu": (1,45), "math":(46,91)} 
         
@@ -453,7 +507,7 @@ class EnemPDFextractor():
                 page_index=i, 
                 total_question_number=total_question_number,
                 test_year= test_year,
-                day_one= True
+                day_one=False
             )   
             if not page_attributes: #dict vazio, pagina não tem questões
               continue  
@@ -461,11 +515,12 @@ class EnemPDFextractor():
             page_first_question:int = page_attributes.get("page_first_question")
             total_question_number = page_attributes.get("total_question_number")
             text:str = page_attributes.get("text") 
-            image_name_list:list[str] = page_attributes.get("image_name_list")
+            if self.output_type == "json": image_name_list:list[str] = page_attributes.get("image_name_list")
 
             question_start_index:int = 0
             answer_number: int = page_first_question
             alternative_list:list[str] = []
+            if self.output_type== "json": alternative_list:list[str] = []
 
             for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
                 if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
@@ -478,46 +533,67 @@ class EnemPDFextractor():
                     day_one=False
                 )  
                 unparsed_alternatives: str = text[question_start_index:position]
-                parsed_question , alternative_list = self.__parse_alternatives_json__(unparsed_alternatives)
-               # print("parsed_question" + parsed_question + "\n\n" + f"alternative list {alternative_list}"  + "\n\n")       
+                parsed_question_vals: Any   = self.__parse_alternatives__(unparsed_alternatives)
+               
+                if isinstance(parsed_question_vals, tuple):
+                    parsed_question:str = parsed_question_vals[0]
+                    alternative_list = parsed_question_vals[1]
+                elif isinstance(parsed_question_vals, str):
+                    parsed_question:str = parsed_question_vals
+
                 if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                     question_start_index = position
                     answer_number += 1
                     continue
 
-                question_json:dict = self.__get_json_from_question__(
-                      question= parsed_question,
-                      day_one=False,
-                      year= test_year,
-                      correct_answer= correct_answer,
-                      number= answer_number,
-                      alternative_list= alternative_list,
-                      image_list=image_name_list
-                )
+                if self.output_type == "txt":
+                    parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+                else:
+                    question_json:dict = self.__get_json_from_question__(  #retorna um dict com as informações da questão, para ser carregada num JSON
+                        question= parsed_question,
+                        day_one=False,
+                        year= test_year,
+                        correct_answer= correct_answer,
+                        number= answer_number,
+                        alternative_list= alternative_list,
+                        image_list= image_name_list
+                    )
                 
                 start_natu, end_natu = topic_question_range["natu"] #desempacotando a tuple de ranges de questões das matérias
                 start_math, end_math = topic_question_range["math"]
 
-                if answer_number in range(start_natu,  end_natu+1): #precisamos incluir a ultima questão do range de cada matéria
-                  natural_sci_questions.append(question_json)
+                if answer_number in range(start_natu, end_natu+1):  #acha qual é a matéria da questão e adiciona a questão na variável associada
+                    if self.output_type == "txt":
+                       natural_sci_questions += parsed_question
+                    else:
+                        natural_sci_questions.append(question_json)
 
-                elif answer_number in range( start_math, end_math+1):
-                  math_questions.append(question_json)
+                elif answer_number in range(start_math, end_math+1):
+                    if self.output_type == "txt":
+                        math_questions += parsed_question
+                    else:
+                        math_questions.append(question_json)
                     
                 question_start_index = position
                 answer_number += 1
+       
         #escrever as strings extraidas nos seus arquivos respectivos
-        file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.json" )
-        with open(file_path, "w") as f_math:
-            json.dump(math_questions, f_math, indent=4,  ensure_ascii=False)
+        if self.output_type == "txt":   
+             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.txt" )
+             with open(file_path, "w") as f_natu:
+                f_natu.write(natural_sci_questions)
             
-        file_path = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.json" )
-        with open(file_path, "w") as f_natu:
-            json.dump(natural_sci_questions,f_natu, indent=4,  ensure_ascii=False)
-
-
-        
-        pass
+             file_path = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.txt" )
+             with open(file_path, "w") as f_math:
+                  f_math.write(math_questions)
+        else:
+             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.json" )
+             with open(file_path, "w") as f_math:
+                json.dump(math_questions, f_math, indent=4,  ensure_ascii=False)
+                
+             file_path = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.json" )
+             with open(file_path, "w") as f_natu:
+                json.dump(natural_sci_questions,f_natu, indent=4,  ensure_ascii=False)
 
     def __handle_day_one_tests__(self, pdf_reader: fitz.fitz.Document, test_year:int)->None:
 
@@ -671,7 +747,7 @@ class EnemPDFextractor():
     def __handle_day_two_tests__(self, pdf_reader: fitz.fitz.Document, test_year:int)->None:
         
         total_question_number: int = 0 
-        if self.output_type == "txt":
+        if self.output_type == "txt":  #a variavel para as questões de cada matéria depende do tipo de output, se for .txt é uma string, se for JSON é uma lista de dicts
              math_questions: str = ""
              natural_sci_questions: str = ""
         else:
@@ -679,7 +755,7 @@ class EnemPDFextractor():
             natural_sci_questions: list[dict] = []
             
         num_pages: int = len(pdf_reader)
-        topic_question_range:dict[str,tuple] = {"natu": (1,45), "math":(46,91)}  #ultima questão de humanas é a 96 pq tbm são contadas as de ingles e espanho,ambas entre 1-6
+        topic_question_range:dict[str,tuple] = {"natu": (1,45), "math":(46,91)} #dict com o range de questões para cada matéria, contando que cada dia começa na questão 1
 
         for i in range(1,num_pages): #começamos da página numero um para não processar a capa  
             
@@ -695,7 +771,8 @@ class EnemPDFextractor():
             page_first_question:int = page_attributes.get("page_first_question")
             total_question_number = page_attributes.get("total_question_number")
             text:str = page_attributes.get("text") 
-            if not text: #dict com texto vazio (imagens na pagina), mas atualizando page_first question e total_question_number
+            
+            if not text: #dict com texto vazio (imagens na pagina),pular página mas atualizando page_first question e total_question_number
                 continue
 
             question_start_index:int = 0
@@ -706,18 +783,15 @@ class EnemPDFextractor():
                 if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                     continue
                 
-           
-
-                # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
                 correct_answer:str = self.__find_correct_answer__(
                         question_number= answer_number, 
                         is_spanish_question= False, 
                         day_one=False
                 ) 
                 unparsed_alternatives: str = text[question_start_index:position]
-                parsed_question_vals: Any   = self.__parse_alternatives__(unparsed_alternatives)
+                parsed_question_vals: Any   = self.__parse_alternatives__(unparsed_alternatives) #retorna os valores da questão processada, pode ser uma string ou um tuple
                
-                if isinstance(parsed_question_vals, tuple):
+                if isinstance(parsed_question_vals, tuple): #processa os valores baseado no tipo de retorno
                     parsed_question:str = parsed_question_vals[0]
                     alternative_list = parsed_question_vals[1]
                 elif isinstance(parsed_question_vals, str):
@@ -728,7 +802,7 @@ class EnemPDFextractor():
                     answer_number += 1
                     continue
                 
-                if self.output_type == "txt":
+                if self.output_type == "txt":  #valor da questão depende do tipo de output
                     parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
                 else:
                     question_json:dict = self.__get_json_from_question__(
@@ -758,43 +832,43 @@ class EnemPDFextractor():
                 question_start_index = position
                 answer_number += 1
             
-        #escrever as strings extraidas nos seus arquivos respectivos
+        #escrever as strings extraidas nos seus arquivos respectivos, dependendo do tipo de output
         if self.output_type == "txt":   
-             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.txt" )
+             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.txt")
              with open(file_path, "w") as f_natu:
                 f_natu.write(natural_sci_questions)
             
-             file_path = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.txt" )
+             file_path = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.txt")
              with open(file_path, "w") as f_math:
                   f_math.write(math_questions)
         else:
-             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.json" )
+             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.json")
              with open(file_path, "w") as f_math:
                 json.dump(math_questions, f_math, indent=4,  ensure_ascii=False)
                 
-             file_path = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.json" )
+             file_path = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.json")
              with open(file_path, "w") as f_natu:
                 json.dump(natural_sci_questions,f_natu, indent=4,  ensure_ascii=False)
    
-    #método para extrair os contéudos de um PDF (dado o path dele e do gabarito relacionado) e escrever os contéudos em uma pasta específicada 
+    #-------método principal para o user extrair os contéudos de um PDF (dado o path dele e do gabarito relacionado) e escrever os contéudos em uma pasta específicada------- 
             
     def extract_pdf(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str)->None: #extrai o texto dos PDF de um ano específico
         self.__handle_IO_errors__( test_pdf_path= test_pdf_path, answers_pdf_path= answers_pdf_path)
         
         answer_pdf_reader: fitz.fitz.Document = fitz.open(answers_pdf_path)
-        answer_page = answer_pdf_reader[0]
+        answer_page: fitz.fitz.Page = answer_pdf_reader[0]
         
-        self.answer_pdf_text = answer_page.get_text() #texto do gabarito, usado para a função que pega a resposta oficial
-        self.answer_pdf_path = answers_pdf_path
-        self.test_pdf_path = test_pdf_path
-        self.extracted_data_path = extracted_data_path
+        self.answer_pdf_text:str = answer_page.get_text() #texto do gabarito, usado para a função que pega a resposta oficial
+        self.answer_pdf_path:str = answers_pdf_path
+        self.test_pdf_path:str = test_pdf_path
+        self.extracted_data_path:str = extracted_data_path
 
-        if not os.path.isdir(extracted_data_path):
+        if not os.path.isdir(extracted_data_path): 
              print("diretorio de output não existe, criando um novo")
              os.makedirs(extracted_data_path, exist_ok=True)
 
         test_pdf_reader: fitz.fitz.Document  = fitz.open(test_pdf_path) 
-        regex_return = re.findall(self.__YEAR_PATTERN__, self.test_pdf_path)
+        regex_return:list = re.findall(self.__YEAR_PATTERN__, self.test_pdf_path)
         test_year:int = int(regex_return[0])   
     
         if self.__DAY_ONE_SUBSTR__ in test_pdf_path:     
@@ -802,82 +876,9 @@ class EnemPDFextractor():
                  self.__handle_day_one_tests__(test_pdf_reader,test_year)
               else:
                   pdf_reader = fitz.open(self.test_pdf_path)
-                  self.__json_save_images_day_one__(pdf_reader,test_year=test_year)
+                  self.__handle_day_one_with_images__(pdf_reader,test_year=test_year)
         else:
               if self.ignore_questions_with_images:
-                self.__handle_day_two_tests__(test_pdf_reader,test_year)
+                 self.__handle_day_two_tests__(test_pdf_reader,test_year)
               else:
-                self.__json_save_images_day_two__(test_pdf_reader,test_year)
-
-
-"""
-def __parse_alternatives_txt__(self,question:str)-> str:
-        pattern = r"([A-E])\s*\n\1\s*"
-        
-        #troca a letra por ela mesmo com um ) depois
-        def replace_match(match):
-            return f"{match.group(1)})"
-
-        number_substi: int 
-        question, number_substi = re.subn(pattern, replace_match, question)
-        if number_substi < 5:
-           return "non-standard alternatives"
-        #caso nos tenhamos realizado menos que 5 substituições (num de alternativas) então a estrutura da questão estava quebrada
-        #provavelmente uma questão com imagem de alternativa 
-
-
-      
-        alternative_pattern = r"([A-E])\)"
-        alternatives = {}
-        #vamos ver se as alternativas contem texto vazio (então são imagens) e se for vamos pular a questão
-        matches = list(re.finditer(alternative_pattern, question))
-        for i, match in enumerate(matches):
-            letter = match.group(1)
-            start_pos = match.end()
-            end_pos = matches[i + 1].start() if i + 1 < len(matches) else len(question)
-            
-            alternative_text = question[start_pos:end_pos]
-
-            if not alternative_text:
-                return "non-standard alternatives"
-
-            alternatives[letter] = alternative_text
-        
-        return question  #fazer o fitz retornar uma lista de alternativas tbm
-
-    def __parse_alternatives_json__(self,question: str) -> tuple[str,list[str]]:
-        pattern = r"([A-E])\s*\n\1\s*"
-        
-        #troca a letra por ela mesmo com um ) depois
-        def replace_match(match):
-            return f"{match.group(1)})"
-
-        # Replace using the pattern
-        number_substi: int 
-        question, number_substi = re.subn(pattern, replace_match, question)
-        if number_substi < 5:
-           return "non-standard alternatives" , []
-
-        alternative_pattern = r"([A-E])\)"
-        alternatives = {}
-        
-        #vamos ver se as alternativas contem texto vazio (então são imagens) e se for vamos pular a questão
-        matches = list(re.finditer(alternative_pattern, question))
-        for i, match in enumerate(matches):
-            letter = match.group(1)
-            start_pos = match.end()
-            end_pos = matches[i + 1].start() if i + 1 < len(matches) else len(question)
-            
-            alternative_text = question[start_pos:end_pos].strip()
-
-            if not alternative_text:
-                print(f"Non-standard alternative for {letter}")
-                return "non-standard alternatives", []
-
-            alternatives[letter] = alternative_text
-        
-        return question  , self.__get_alternative_list__(question) #fazer o fitz retornar uma lista de alternativas tbm
- 
-    #retorna uma lista com todas as alternativas da questão, apenas funciona com inputs com as alternativas já formatadas
-
-"""
+                 self.__handle_day_two_with_images__(test_pdf_reader,test_year)
