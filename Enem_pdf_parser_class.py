@@ -8,6 +8,24 @@ import fitz
 
 """
 
+"""
+Classe para extração de conteúdo de PDFs do ENEM
+
+Informações importantes:
+
+1) A implementação dessa classe é baseada na nomeclatura dos PDFs do ENEM baixados do site do INEP, então para o funcionamento correto do código é necessário
+que os arquivos de input sejam dessa fonte
+
+2) Tipos de dados de output supportado são: .txt, .json para o texto, e .png para imagens
+
+3) Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA a extração VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS, isso é feito com o objetivo de filtrar 
+questões de texto puro, que podem ser utilizadas facilmente sem se preocupar com falta de contexto devido à imagens associadas (Útil para várias tarefas de NLP)
+
+4) para habilitar extração de imagens é necessário inicializar a classe com o parâmetro  ignore_questions_with_images= False
+
+
+"""
+
 class EnemPDFextractor():
     #-------constantes baseadas na nomeclatura do INEP dos arquivos do enem, ex: 2022_GB_impresso_D1_CD1.pdf------- 
     #utilizadas para identificar qual prova ou gabarito estamos lidando
