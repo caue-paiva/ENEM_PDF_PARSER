@@ -1,4 +1,4 @@
-from PyPDF2 import PdfReader  #acha o gabarito de uma questão X 
+"""from PyPDF2 import PdfReader  #acha o gabarito de uma questão X 
 import re
 
 pdf = PdfReader("enem_1dia_2022_gaba_azul.pdf")
@@ -50,4 +50,4 @@ def find_answer2 (question_number:int, spanish_questions:bool = False)->str:
     
     return text[answer_index]
 
-#print(find_answer(94))
+#print(find_answer(94))"""

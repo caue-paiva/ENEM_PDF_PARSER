@@ -1,6 +1,14 @@
 import re, os ,json , fitz
 from typing import Any 
 
+"""
+A melhorar: 
+1) gabarito das questões de 2020 , a primeira questão de ingles ta errada
+
+2) melhorar função de parsear as alternativas
+
+
+"""
 
 class EnemPDFextractor():
     """
@@ -10,14 +18,14 @@ class EnemPDFextractor():
     que os arquivos de input sejam dessa fonte.
 
     Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS, isso é feito com o objetivo de filtrar. 
-    questões de texto puro, que podem ser utilizadas facilmente sem se preocupar com falta de contexto devido à imagens associadas (Útil para várias tarefas de NLP).
+    questões de texto puro, que podem ser utilizadas facilmente sem se preocupar com falta de contexto devido à imagens associadas (Útil para várias tarefas de NLP)
 
 
     Atributos:
         output_type (str) :  Tipos de arquivo de output do texto, são suportados outputs .TXT e .JSON. 
         -OBS:  arquivos JSON contem informações adicionais como lista de alternativas e lista de imagens associadas, caso imagens sejam extraidas.
 
-        ignore_questions_with_images (bool) : Dita se textos e imagens de páginas com imagens serão processadas ou não.
+         process_questions_with_images (bool) : Dita se textos e imagens de páginas com imagens serão processadas ou não.
         -OBS: Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS.
     """
 
@@ -41,9 +49,9 @@ class EnemPDFextractor():
     extracted_data_path:str
     output_type:str 
     answer_pdf_text:str
-    ignore_questions_with_images:bool 
+    process_questions_with_images:bool 
 
-    def __init__(self,output_type:str, ignore_questions_with_images:bool = True)->None:
+    def __init__(self,output_type:str, process_questions_with_images:bool = True)->None:
         """
         Construtor para a classe EnemPDFextractor.
         
@@ -60,7 +68,7 @@ class EnemPDFextractor():
             raise IOError("tipo de arquivo de output não suportado")
 
         self.output_type =  output_type
-        self.ignore_questions_with_images = ignore_questions_with_images
+        self.process_questions_with_images = process_questions_with_images
         
     #lida com erros de input/output, alertando sobre nomes não baseados na nomeclatura do INEP, assim como alerta sobre gabaritos e provas de cores diferentes
     
@@ -96,14 +104,17 @@ class EnemPDFextractor():
             return_val: tuple[str,list[str]] = "non-standard alternatives" , []
         pattern = r"([A-E])\s*\n\1\s*"
         
+        single_letter_pattern = r"([A-E])\s{2}" #padrão de uma letra maiuscula com 2 espaços , pq o ENEM 2020 não repete as alternativas 2 vezes
+        
         #troca a letra por ela mesmo com um ) depois
         def replace_match(match):
             return f"{match.group(1)})"
-
         number_substi: int 
         question, number_substi = re.subn(pattern, replace_match, question)
         if number_substi < 5:
-           return return_val
+           question , num = re.subn(single_letter_pattern,replace_match, question)
+           if num < 5: #menos que 5 substituições no novo padrão
+             return return_val
         #caso nos tenhamos realizado menos que 5 substituições (num de alternativas) então a estrutura da questão estava quebrada
         #provavelmente uma questão com imagem de alternativa 
 
@@ -149,13 +160,13 @@ class EnemPDFextractor():
     #generator que itera sobre todas as substrings e retorna o index dela na string principal
 
     def __yield_all_substrings__(self, input_str: str, sub_str:str)->int:
-     sub_str = sub_str or "*"
+     sub_str = sub_str or "*" 
      start = 0  
      while True:
         start:int = input_str.find(sub_str, start)
         if start == -1: return  
         yield start
-        start += len(sub_str) 
+        start += len(sub_str)  
     
     #acha a resposta correta dado o texto do gabarito (attbr de class) e o numero da questão, retorna a alternativa correta
 
@@ -207,7 +218,7 @@ class EnemPDFextractor():
         current_page:fitz.fitz.Page = pdf_reader[page_index]    
                       
         page_text:str = current_page.get_text()
-        
+        page_text = page_text.replace("Questão", "QUESTÃO")
         first_question_str_index: int = next(self.__yield_all_substrings__(input_str = page_text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
         
         if first_question_str_index == -1:
@@ -250,6 +261,7 @@ class EnemPDFextractor():
        
         current_page: fitz.fitz.Page = pdf_reader[page_index]                    
         page_text: str = current_page.get_text()
+        page_text = page_text.replace("Questão", "QUESTÃO")
         first_question_str_index: int = next(self.__yield_all_substrings__(input_str = page_text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
         
         if first_question_str_index == -1:
@@ -407,7 +419,7 @@ class EnemPDFextractor():
             for position in self.__yield_all_substrings__(text, self.__QUESTION_IDENTIFIER__): #yield na posição da substring que identifica as questoes     
                 if position == 0: #se ele detectar a substr "QUESTÃO" no começo do texto, ele pula, caso contrário seria adicionado um string vazia
                     continue
-                
+
                 if answer_number > 5 and answer_number < 11:
                     in_spanish_question = True  #verifica se a questão é de espanhol
                 else:
@@ -445,7 +457,6 @@ class EnemPDFextractor():
                         alternative_list= alternative_list,
                         image_list= image_name_list
                     )
-                
                 start_eng, end_eng = topic_question_range["eng"] #desempacotando a tuple de ranges de questões das matérias
                 start_spa, end_spa = topic_question_range["spa"]
                 start_lang, end_lang = topic_question_range["lang"]
@@ -733,6 +744,7 @@ class EnemPDFextractor():
                 question_start_index = position
                 answer_number += 1
             
+        
         #escrever as strings extraidas nos seus arquivos respectivos
         if self.output_type == "txt":   
             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.txt" )
@@ -908,13 +920,13 @@ class EnemPDFextractor():
         test_year:int = int(regex_return[0])   
     
         if self.__DAY_ONE_SUBSTR__ in test_pdf_path:     
-              if self.ignore_questions_with_images:
+              if not self.process_questions_with_images:
                  self.__handle_day_one_tests__(test_pdf_reader,test_year)
               else:
                   pdf_reader = fitz.open(self.test_pdf_path)
                   self.__handle_day_one_with_images__(pdf_reader,test_year=test_year)
         else:
-              if self.ignore_questions_with_images:
+              if not self.process_questions_with_images:
                  self.__handle_day_two_tests__(test_pdf_reader,test_year)
               else:
                  self.__handle_day_two_with_images__(test_pdf_reader,test_year)
