@@ -1,4 +1,4 @@
-from Enem_pdf_parser_class import EnemPDFextractor
+from Enem_PDF_extractor import EnemPDFextractor
 
 
 #extrac_day2 = EnemPDFextractor("pdfs_enem/2022/2022_PV_impresso_D2_CD7.pdf","pdfs_enem/2022/2022_GB_impresso_D2_CD7.pdf","output2", "txt")

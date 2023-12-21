@@ -2,31 +2,26 @@ import re, os ,json
 from typing import Any 
 import fitz
 
-""" A melhorar:
-1) juntar funções de escrever JSON e TXT
-
-
-"""
-
-"""
-Classe para extração de conteúdo de PDFs do ENEM
-
-Informações importantes:
-
-1) A implementação dessa classe é baseada na nomeclatura dos PDFs do ENEM baixados do site do INEP, então para o funcionamento correto do código é necessário
-que os arquivos de input sejam dessa fonte
-
-2) Tipos de dados de output supportado são: .txt, .json para o texto, e .png para imagens
-
-3) Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA a extração VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS, isso é feito com o objetivo de filtrar 
-questões de texto puro, que podem ser utilizadas facilmente sem se preocupar com falta de contexto devido à imagens associadas (Útil para várias tarefas de NLP)
-
-4) para habilitar extração de imagens é necessário inicializar a classe com o parâmetro  ignore_questions_with_images= False
-
-
-"""
 
 class EnemPDFextractor():
+    """
+    Classe para extração de conteúdo de PDFs do ENEM
+    
+    A implementação dessa classe é baseada na nomeclatura dos PDFs do ENEM baixados do site do INEP, então para o funcionamento correto do código é necessário
+    que os arquivos de input sejam dessa fonte
+
+    Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS, isso é feito com o objetivo de filtrar 
+    questões de texto puro, que podem ser utilizadas facilmente sem se preocupar com falta de contexto devido à imagens associadas (Útil para várias tarefas de NLP)
+
+
+    Atributos:
+        output_type (str) :  Tipos de arquivo de output do texto, são suportados outputs .TXT e .JSON 
+        -OBS:  arquivos JSON contem informações adicionais como lista de alternativas e lista de imagens associadas, caso imagens sejam extraidas
+
+        ignore_questions_with_images (bool) : Dita se textos e imagens de páginas com imagens serão processadas ou não
+        -OBS: Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS
+    """
+
     #-------constantes baseadas na nomeclatura do INEP dos arquivos do enem, ex: 2022_GB_impresso_D1_CD1.pdf------- 
     #utilizadas para identificar qual prova ou gabarito estamos lidando
     __YEAR_PATTERN__ = "20\d{2}"
@@ -48,7 +43,20 @@ class EnemPDFextractor():
     answer_pdf_text:str
     ignore_questions_with_images:bool 
 
-    def __init__(self,output_type:str, ignore_questions_with_images:bool = True)-> None:
+    def __init__(self,output_type:str, ignore_questions_with_images:bool = True)->None:
+        """
+        Construtor para a classe EnemPDFextractor
+        
+        Argumentos:
+            output_type (str) :  Tipos de arquivo de output do texto, são suportados outputs .TXT e .JSON 
+            -OBS:  arquivos JSON contem informações adicionais como lista de alternativas e lista de imagens associadas, caso imagens sejam extraidas
+            
+
+            ignore_questions_with_images (bool) : Dita se textos e imagens de páginas com imagens serão processadas ou não    
+            -OBS: Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS
+        """
+        
+        
         output_type = output_type.lower()
         if output_type not in self.__SUPPORTED_OUTPUT_FILES__:
             raise IOError("tipo de arquivo de output não suportado")
@@ -153,7 +161,7 @@ class EnemPDFextractor():
         start += len(sub_str) 
     #acha a resposta correta dado o texto do gabarito (var de class) e o numero da questão, retorna a alternativa correta
 
-    def __find_correct_answer__ (self, question_number:int,day_one: bool,is_spanish_question:bool = False, )->str:          
+    def __find_correct_answer__ (self, question_number:int,day_one: bool,is_spanish_question:bool = False )->str:          
         if day_one:    
             if question_number > 5:
                 question_number = question_number -5
@@ -198,7 +206,7 @@ class EnemPDFextractor():
     def __page_preprocessing__(self,pdf_reader:fitz.fitz.Document,page_index:int ,total_question_number:int)-> dict :
         text_processing_dict: dict = {"text": "", "page_first_question": 0, "total_question_number": 0 }
         
-        current_page = pdf_reader[page_index]    
+        current_page:fitz.fitz.Page = pdf_reader[page_index]    
                       
         page_text:str = current_page.get_text()
         
@@ -871,7 +879,18 @@ class EnemPDFextractor():
     #-------método principal para o user extrair os contéudos de um PDF (dado o path dele e do gabarito relacionado) e escrever os contéudos em uma pasta específicada------- 
             
     def extract_pdf(self,test_pdf_path: str, answers_pdf_path:str, extracted_data_path:str)->None: #extrai o texto dos PDF de um ano específico
-        self.__handle_IO_errors__( test_pdf_path= test_pdf_path, answers_pdf_path= answers_pdf_path)
+        """
+        Método público para extrair os contéudos de um PDF do ENEM e escrever numa localização específica
+
+        Argumentos:
+            test_pdf_path (str) : path para o PDF da prova do ENEM 
+            answers_pdf_path (str) : path para o gabarito da prova do ENEM
+            -OBS: ambos arquivos acima devem seguir a nomeclatura do PDF baixado do site do INEP
+
+            extracted_data_path (str) : path para o diretório onde os dados extraidos serão escritos
+        
+        """
+        self.__handle_IO_errors__(test_pdf_path= test_pdf_path, answers_pdf_path= answers_pdf_path)
         
         answer_pdf_reader: fitz.fitz.Document = fitz.open(answers_pdf_path)
         answer_page: fitz.fitz.Page = answer_pdf_reader[0]
