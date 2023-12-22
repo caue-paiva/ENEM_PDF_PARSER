@@ -197,7 +197,7 @@ class EnemPDFextractor():
                 
             else: 
                 return "não achou a questão"
-            #print(self.answer_pdf_text[answer_index])
+            print(answer_index)
             return self.answer_pdf_text[answer_index]
         else:
             question_number += 90  #gabarito do segundo dia começa da questão 91, mas a lógica do código conta as questões do 0 independente do dia, entao para achar é preciso somar +90
@@ -430,6 +430,9 @@ class EnemPDFextractor():
                     in_spanish_question = True  #verifica se a questão é de espanhol
                 else:
                     in_spanish_question = False
+                if answer_number == 1:
+                    print(text)
+                    print(in_spanish_question)
 
                 # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
                 correct_answer:str = self.__find_correct_answer__(
@@ -567,6 +570,7 @@ class EnemPDFextractor():
                     continue
                 
                 # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
+               
                 correct_answer:str = self.__find_correct_answer__(
                     question_number= answer_number, 
                     is_spanish_question= False, 
@@ -909,8 +913,12 @@ class EnemPDFextractor():
         
         answer_pdf_reader: fitz.fitz.Document = fitz.open(answers_pdf_path)
         answer_page: fitz.fitz.Page = answer_pdf_reader[0]
-        
-        self.answer_pdf_text:str = answer_page.get_text() #texto do gabarito, usado para a função que pega a resposta oficial
+        raw_answer_text :str = answer_page.get_text()
+       
+        answers_pattern = "^.{4,}$" #tira todas as linhas do gabarito com mais de 4 chars, ja que todas as respostas são formatadas com os numeros (max de 3 chars) em uma linha e a letra certa na prox
+        modified_text = re.sub(answers_pattern, "", raw_answer_text, flags=re.MULTILINE)
+
+        self.answer_pdf_text:str = modified_text #texto do gabarito, usado para a função que pega a resposta oficial
         self.answer_pdf_path:str = answers_pdf_path
         self.test_pdf_path:str = test_pdf_path
        
