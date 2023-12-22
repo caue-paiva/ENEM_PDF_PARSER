@@ -1,0 +1,98 @@
+(Enem/2021)  QUESTÃO 102
+É possível ligar aparelhos elétricos de baixa corrente utilizando materiais comuns de laboratório no lugar das 
+�������������������������������������������������������������������������������������������������
+Voltímetro
+2,20 v
+00:0652
+Cronômetro
+Zn(s)
+ZnSO4(aq)
+CuSO4(aq)
+ZnSO4(aq)
+CuSO4(aq)
+Zn(s)
+Cu(s)
+Cu(s)
+Papel umedecido
+com Na SO (aq)
+2
+4
+Papel umedecido
+com Na SO (aq)
+2
+4
+�����������������������������������������������������������������������������������������
+A)v
+D)v
+B)v
+E)v
+C)v
+ 
+(RESPOSTA CORRETA): B
+
+(Enem/2021)  QUESTÃO 126
+Um garoto precisa montar um circuito que acenda 
+três lâmpadas de cores diferentes, uma de cada vez. 
+���� ������� ���� ���������� ��� ����� ���� �������� �� �����
+interruptores, como ilustrado, junto com seu símbolo de 
+�������������������������������������������������������
+�������������
+Lâmpadas
+VERDE
+VERMELHA)ZUL
+Bateria
+A
+B
+C
+A
+B
+C
+O garoto fez cinco circuitos elétricos usando os dois 
+interruptores, mas apenas um satisfaz a sua necessidade. 
+Esse circuito é representado por
+A 
+VERDE
+VERMELHA)ZUL
+A
+B
+C
+A
+B
+C
+B 
+VERDE
+VERMELHA)ZUL
+A
+B
+C
+A
+B
+C)VERDE
+VERMELHA)ZUL
+A
+B
+C
+A
+B
+C
+D 
+VERDE
+VERMELHA)ZUL
+A
+B
+C
+A
+B
+C
+E 
+VERDE
+VERMELHA)ZUL
+A
+B
+C
+A
+B
+C
+ 
+(RESPOSTA CORRETA): D
+

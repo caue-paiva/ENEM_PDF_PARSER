@@ -1,0 +1,722 @@
+(Enem/2021)  QUESTÃO 138
+�������������������������������������������������������������������������������������������������������
+������������������������������������������������������������������������������������������������������������
+��������������������������������������������������������������������������������������������������������������������
+������������������������������������������������������������������������������������������������������������������
+������������������������������������������������������������������������������������������������������������������
+cariocas (Flamengo, Vasco e Fluminense); a terceira, somente times mineiros (Cruzeiro e Atlético Mineiro); a quarta, 
+exclusivamente clubes paulistas (Corinthians, Palmeiras, Santos, Paulista FC, Santo André), e as duas últimas sem 
+������������������
+__________
+Cruzeiro
+��������������
+06 Títulos
+__________
+������
+�������������������
+05 Títulos
+__________
+Corinthians
+�����������
+03 Títulos
+__________
+Flamengo
+(Rio de Janeiro)
+03 Títulos
+__________
+Palmeiras
+�����������
+03 Títulos
+_
+___________
+�������������
+�������������������
+01 Título
+________________
+Criciúma
+(Santa Catarina)
+01 Título
+___________
+�������������
+(Rio de Janeiro)
+01 Título
+__________
+Atlético Mineiro
+��������������
+01 Título
+___________
+Santos
+�����������
+01 Título
+__________
+Fluminense
+(Rio de Janeiro)
+01 Título
+__________
+Sport
+(Pernambuco)
+01 Título
+___________
+Paulista FC
+�����������
+01 Título
+___________
+Santo André
+�����������
+01 Título
+___________
+Juventude
+�������������������
+01 Título
+Disponível em: http://campeoesdofutebol.com.br. Acesso em: 1 nov. 2018 (adaptado).
+������������������������������������������������������������������������������������
+A)
+7
+5
+5
+3
+7
+6
+9
+3
+3
+10
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+B)7
+5
+7
+9 10
+!
+!
+!
+!
+!
+C)30!
+D)
+7
+5
+5
+7
+5
+2
+9
+5
+4
+!
+!
+!
+!
+!
+!
+!
+!
+!
+E)
+9
+3
+5
+7
+2
+9
+4
+10
+!
+!
+!
+!
+!
+!
+!
+!
+ 
+(RESPOSTA CORRETA): 
+
+
+(Enem/2021)  QUESTÃO 141
+Aplicativos que gerenciam serviços de hospedagem 
+���� �������� ������� ��� ������� �� ��� ������ ���� ���������
+��������������������������������������������������������
+de hospedagem. Em um desses aplicativos, o preço P a 
+ser pago  pela hospedagem é calculado considerando um 
+preço por diária d���������������������������������������L 
+e de uma taxa de serviço. Essa taxa de serviço é um valor 
+percentual s calculado sobre o valor pago pelo total das 
+diárias.
+����������������������������������������������������������
+hospedagem de n���������������������������������������
+A)P = d�n + L + d�n�s
+B)P = d�n + L + d�s
+C)P = d + L + s
+D)P = d�n�s + L
+E)P = d�n + L + s
+
+(RESPOSTA CORRETA): A
+
+(Enem/2021)  QUESTÃO 142
+�������������������������������������������������
+dardos pretende tornar o campeonato mais competitivo. 
+������ ������� ������� ��� ������������ ����� �������� ��
+jogador lança 3 dardos e pontua caso acerte pelo menos 
+um deles no alvo. O organizador considera que, em 
+média, os jogadores têm, em cada lançamento, 1
+2 de 
+probabilidade de acertar um dardo no alvo.
+������������������������������������������������������
+as regras de modo que a probabilidade de um jogador 
+pontuar em uma rodada seja igual ou superior a 9
+10. Para 
+isso, decide aumentar a quantidade de dardos a serem 
+lançados em cada rodada.
+Com base nos valores considerados pelo organizador da 
+����������������������������������������������������
+ser disponibilizados em uma rodada para tornar o jogo 
+mais atrativo é
+A)2.
+B)4.
+C)6.
+D)9.
+E)10.
+ 
+(RESPOSTA CORRETA): B
+
+(Enem/2021)  QUESTÃO 145
+��� ��� ������� ���������� ����� ����� ��� �������
+estados e no Distrito Federal, com mais de 5 mil pessoas 
+������������������������������������������������������
+em média, apenas seis minutos do dia de cada pessoa. 
+Na faixa de idade de 10 a 24 anos, a média diária é de 
+três minutos. No entanto, no grupo de idades entre 
+24 e 60 anos, o tempo médio diário dedicado à 
+leitura é de 5 minutos. Entre os mais velhos, com 
+60 anos ou mais, a média é de 12 minutos.
+A quantidade de pessoas entrevistadas de cada faixa 
+��� ������ ������� �� ������������� ����������� ��������� ���
+quadro.
+ Faixa etária
+Percentual de entrevistados
+De 10 a 24 anos
+x
+Entre 24 e 60 anos
+y
+A partir de 60 anos
+x
+Disponível em: www.oglobo.globo.com. Acesso em: 16 ago. 2013 (adaptado).
+Os valores de x e y�����������������������������������������
+A)10 e 80.
+B)10 e 90.
+C)20 e 60.
+D)20 e 80.
+E)25 e 50.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2021)  QUESTÃO 146
+�������������������������������������������������
+����� �������� �� ����� ��������� ��� ���� �� ���� ���� ����
+����������� ������������ �� ������ ������ ������������ ����
+������������������������������������������������������
+������������������������������������������������������
+de três meses.
+O zootecnista selecionou uma amostra de coelhos e 
+����������������������������������������������������
+�������������������������������������������������������
+��� ������� ������� ��� ���� ��� ����� �� ������������� ����
+massas dos coelhos dessa amostra.
+����� �������� �� ���������� ������ ������� ���� ����������
+�� ����������� ��� ��������� �CV) que é uma medida de 
+����������������������CV � s
+x , em que s representa o 
+����������������x, a média das massas dos coelhos que 
+��������������������������������������������
+�������������������������������������������������������
+���������������������������������������������������������
+das massas dos coelhos que foram alimentados com a 
+�����������������������������������������������������
+��� ������������� ���� ������� ���� �������� ���� ������
+������������������������������
+������������������������������������������������������������
+das massas dos coelhos da amostra, em quilograma, for 
+superior a
+A)5,0.
+B)9,5.
+C)10,0.
+D)10,5.
+E)15,0.
+ 
+(RESPOSTA CORRETA): E
+
+(Enem/2021)  QUESTÃO 149
+A receita R��������������������������������������
+dinheiro captado com a venda de mercadorias ou com a 
+���������������������������������������������D é todo o 
+dinheiro utilizado para pagamento de salários, contas de 
+água e luz, impostos, entre outros. O lucro mensal obtido 
+���������������������������������������������������������
+������������ ��� ����� �� ������� ���������� ��� ��������� ��
+����������������������������������������������������
+dos cinco primeiros meses de um dado ano.
+Receitas e despesas
+Receita
+Despesa
+janeiro fevereiro março
+abril
+maio
+Mês
+28
+25
+20
+15
+10
+5
+0
+�������������������������������������������������������
+����������������������������������������������������������
+Nessas condições, o lucro mensal para os próximos 
+meses deve ser maior ou igual ao do mês de
+A)janeiro.
+B)fevereiro.
+C)março.
+D)abril.
+E)maio.
+
+(RESPOSTA CORRETA): B
+
+(Enem/2021)  QUESTÃO 156
+����������������������������������������������������������������������������������������������������������P (em cm) 
+da massa m��������������������t (em segundo) em um sistema de coordenadas cartesianas. Esse movimento periódico 
+�������������������������������������P(t) = ��A cos (�t)  ou P(t) = ��A sen (�t), em que A > 0 é a amplitude de deslocamento 
+máximo e � é a frequência, que se relaciona com o período T pela fórmula �
+T
+2  . 
+Considere a ausência de quaisquer forças dissipativas.
+1
+2
+3
+0
+�1
+�2
+�3
+P
+2
+�
+�
+2
+3�
+2�
+2
+5�
+3�
+t
+Gráfico
+Posição
+de equilíbrio
+m
+m
+Mola distendida
+�������������������������������������������������P(t) da massa m���������������������������������
+A)�3 cos (2t)
+B)�3 sen (2t)
+C)3 cos (2t)
+D)�6 cos (2t)
+E)6 sen (2t)
+ 
+(RESPOSTA CORRETA): A
+
+(Enem/2021)  QUESTÃO 157
+����������������������������������������������������
+de imóveis em uma metrópole com cinco grandes 
+regiões, fez uma pesquisa sobre a quantidade de famílias 
+���� �������� ��� ���� ������� ����� ������� ��� ����� ��
+����������� ����� ������� ���� �� �������� ��� ������ ����� ���
+���������������������������������������������������������
+���� ��������� �� �������� ��� �������� ��� ��������� ������
+dispostos em uma matriz A ���aij�, 
+i, j � ���������������
+, 
+em que o elemento aij corresponde ao total de famílias 
+�������������������������������������i���������������j 
+durante um certo período, e o elemento aii é considerado 
+����������������������������������������������������
+entre regiões distintas. A seguir, está apresentada a 
+matriz com os dados da pesquisa.
+A �
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+4
+2
+2
+5
+0
+0
+6
+2
+3
+2
+2
+0
+3
+0
+0
+1
+0
+2
+0
+4
+1
+2
+0
+4
+0
+����� ������� ���� ������������ ����� �� ������������� ���
+construtora?
+A)1
+B)2
+C)3
+D)4
+E)5
+
+(RESPOSTA CORRETA): E
+
+(Enem/2021)  QUESTÃO 162
+�����������������������������������������������������������R) e seu respectivo imposto devido (I).
+Preço do produto (R)
+Imposto devido (I)
+R � 5 000
+isento
+5 000 � R � 10 000
+��������R � 5 000)
+10 000 � R � 15 000
+500 ����������R � 10 000)
+���������������������������������������������
+A)R
+I
+2 000
+500
+0
+5 000 10 000 15 000
+D)
+R
+I
+2 000
+500
+0
+5 000 10 000 15 000
+B)
+R
+I
+1 000
+500
+0
+5 000 10 000 15 000
+E)
+R
+I
+1 000
+500
+0
+5 000 10 000 15 000
+C)R
+I
+1 000
+500
+0
+5 000 10 000 15 000
+ 
+(RESPOSTA CORRETA): A
+
+(Enem/2021)  QUESTÃO 163
+����������������������������������������������������
+������������ ��� ��� ������ �� ������������ ������������� ���
+quadrado da velocidade do som (em metro por segundo) no 
+����������������������������������������������������������
+com uma constante de proporcionalidade adimensional.
+���������������������������������������������������
+módulo volumétrico é
+A)kg�m���s��
+B)kg�m���s��
+C)kg�m���s2
+D)kg���m1�s2
+E)kg���m5�s��
+
+(RESPOSTA CORRETA): B
+
+(Enem/2021)  QUESTÃO 164
+Uma pessoa pretende viajar por uma companhia 
+aérea que despacha gratuitamente uma mala com até 
+10 kg.
+Em duas viagens que realizou, essa pessoa utilizou 
+a mesma mala e conseguiu 10 kg com as seguintes 
+combinações de itens:
+Viagem
+Camisetas
+Calças
+Sapatos
+�
+12
+4
+3
+��
+18
+3
+2
+Para ter certeza de que sua bagagem terá massa de 
+10 kg, ela decide levar essa mala com duas calças, um 
+sapato e o máximo de camisetas, admitindo que itens do 
+mesmo tipo têm a mesma massa.
+Qual a quantidade máxima de camisetas que essa 
+pessoa poderá levar?
+A)22
+B)24
+C)26
+D)33
+E)39
+
+(RESPOSTA CORRETA): B
+
+(Enem/2021)  QUESTÃO 167
+Um povoado com 100 habitantes está passando por 
+���� ��������� ��� ����� ����������� �� ��� �������������
+����� �������������� �������� ������ �������� ���������� ��
+����������� ��� ��� �������������� ���� ������� ���� �� ������
+de um cilindro circular reto, cuja base tenha 5 metros 
+de diâmetro interno, e atender à demanda de água da 
+���������� ���� ��� �������� ��� ����������� ����� �����
+consecutivos. No oitavo dia, o reservatório vazio é 
+�������������������������������������������
+Considere que o consumo médio diário por habitante 
+������������������������������������������������������.
+Nas condições apresentadas, o reservatório deverá ser 
+construído com uma altura interna mínima, em metro, igual a
+A)1,12.
+B)3,10.
+C)4,35.
+D)4,48.
+E)5,60.
+ 
+(RESPOSTA CORRETA): D
+
+(Enem/2021)  QUESTÃO 168
+��������������������������������������������������
+����������������������������������������������������
+������������������������������������������������������
+������������������������������������������������������
+cor cinza escuro e outras quatro faces numeradas.
+1
+3
+2
+4
+���������������������������������������������������������
+escuro, quando o octaedro for reconstruído a partir da 
+�����������������
+A)1, 2, 3 e 4
+B)1 e 3
+C)1
+D)2
+E)4
+
+(RESPOSTA CORRETA): E
+
+(Enem/2021)  QUESTÃO 171
+O dono de uma loja pretende usar cartões imantados 
+�������������������������������������������������������
+����������������������������������������������������������
+���������������������������������������������������������
+����������������������������������������������
+• um triângulo equilátero de lado 12 cm; 
+• um quadrado de lado 8 cm; 
+• um retângulo de lados 11 cm e 8 cm;
+• um hexágono regular de lado 6 cm;
+• um círculo de diâmetro 10 cm.
+O dono da loja está disposto a pagar, no máximo, 
+����������������������������������������������������������
+��������������������������������������������������
+���� �� ����� ������������ ����� �� �� ���� ���� �����
+����������������� �.
+Nessas condições, o modelo que deverá ser escolhido 
+������������������������������������
+A)triângulo.
+B)quadrado.
+C)retângulo.
+D)hexágono.
+E)círculo.
+ 
+(RESPOSTA CORRETA): E
+
+(Enem/2021)  QUESTÃO 172
+Um ciclista amador de 61 anos de idade utilizou 
+um monitor cardíaco para medir suas frequências 
+cardíacas em quatro diferentes tipos de trechos do 
+percurso. Os resultados das frequências cardíacas 
+máximas alcançadas nesses trechos foram:
+Trechos do percurso 
+Frequências cardíacas 
+máximas (bpm)
+Leve no plano
+90
+Forte no plano
+120
+Subida moderada
+130
+Subida forte
+140
+�������� ���� �� ������ ��������� ������ ����� �� ������
+��� ���������������� ������� �� ������ ���� �� ���� ���
+frequência cardíaca máxima (Fc máx.), que, por sua vez, 
+é determinada pela fórmula:
+Fc máx. = 220 – idade,
+em que a idade é dada em ano e Fc máx. é dada em bpm 
+(batimento por minuto).
+Os trechos do percurso nos quais esse ciclista se mantém 
+dentro de sua faixa aeróbica ideal, para o ganho de 
+���������������������������
+A)leve no plano, forte no plano, subida moderada e 
+subida forte.
+B)leve no plano, forte no plano e subida moderada.
+C)forte no plano, subida moderada e subida forte.
+D)forte no plano e subida moderada.
+E)leve no plano e subida forte.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2021)  QUESTÃO 175
+�������
+�����������
+����
+���������������
+����
+encontrados em praças e parques públicos apresentam 
+��������� ��� ������� ������������ ��������������� ��
+tridimensionais. Uma empresa foi contratada para 
+desenvolver uma nova forma de brinquedo. A proposta 
+apresentada pela empresa foi de uma estrutura formada 
+apenas por hastes metálicas, conectadas umas às 
+������������������������������������������������������
+���������������������������������������
+���� ����� ��� ��������� ������������� �������� �������
+������������ ������� ��� ����� ����� ���� ��������� �����
+�����������������
+A)12 trapézios isósceles e 12 quadrados.
+B)24 trapézios isósceles e 12 quadrados.
+C)12 paralelogramos e 12 quadrados.
+D)8 trapézios isósceles e 12 quadrados.
+E)12 trapézios escalenos e 12 retângulos.
+ 
+(RESPOSTA CORRETA): A
+
+(Enem/2021)  QUESTÃO 177
+Uma das bases mais utilizadas para representar um 
+número é a base decimal. Entretanto, os computadores 
+trabalham com números na base binária. Nessa base, 
+qualquer número natural é representado usando apenas 
+os algarismos 0 e 1. Por exemplo, as representações 
+������������������������������������������������������
+��������������������������������������������������������
+segue um algoritmo similar ao utilizado na base decimal, 
+como detalhado no quadro:
+a
+b
+a � b
+0
+0
+0
+0
+1
+1
+1
+0
+1
+1
+1
+10
+Por exemplo, na base binária, a soma dos números 
+10 e 10 é 100, como apresentado:
+   10
+� 10
+   
+____
+ 100
+Considerando as informações do texto, o resultado da 
+�����o 9 � 12 será representado, na base binária, por
+A)101.
+B)1101.
+C)1111.
+D)10101.
+E)11001.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2021)  QUESTÃO 179
+Uma pessoa produzirá uma fantasia utilizando 
+como materiais: 2 tipos de tecidos diferentes e 5 tipos 
+distintos de pedras ornamentais. Essa pessoa tem à sua 
+��������������������������������������������������������
+distintas.
+A quantidade de fantasias com materiais diferentes que 
+��������������������������������������������������
+A)  
+6!     15!
+___ � ____ 
+4!2!   10!5!
+B)  
+6!      15!
+___ � ____ 
+4!2!    10!5!
+C)
+6!    15!
+__  � ___ 
+2!     5!
+D)
+6!   15!
+__  � ___ 
+2!    5!
+E) 21!
+____ 
+�����
+
+(RESPOSTA CORRETA): A
+
+(Enem/2021)  QUESTÃO 180
+Os diretores de uma escola precisam construir um 
+laboratório para uso dos alunos. Há duas possibilidades:
+(i) um laboratório do tipo A, com capacidade para 
+100 usuários, a um custo de 180 mil reais e gastos de 
+��������������������������������������
+����� ��� ������������ ��� ����� ��� ���� ����������� �����
+80 usuários, a um custo de 120 mil reais e gastos com 
+������������������������������������
+������������� ����� ��� ��������� ������ �� ������������
+implantado será utilizado na totalidade de sua capacidade.
+������������������������������������������������������
+��������������������������������������������������������
+4 anos, por usuário, será de
+A)1,31 mil reais.
+B)1,90 mil reais.
+C)2,30 mil reais.
+D)2,36 mil reais.
+E)2,95 mil reais.
+ 
+(RESPOSTA CORRETA): B
+

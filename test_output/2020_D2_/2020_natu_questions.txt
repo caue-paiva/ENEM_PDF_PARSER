@@ -1,0 +1,1149 @@
+(Enem/2020)  QUESTÃO 94                
+Um microempresário do ramo de cosméticos utiliza óleos essenciais e quer produzir um creme com fragrância 
+de rosas. O principal componente do óleo de rosas tem cadeia poli-insaturada e hidroxila em carbono terminal. O 
+catálogo dos óleos essenciais apresenta, para escolha da essência, estas estruturas químicas:
+OH
+CHO
+OH
+CHO
+CHO
+OH
+OH
+CHO
+OH
+CHO
+CHO
+OH
+OH
+OH
+CHO
+CHO
+OH
+OH
+OH
+CHO
+CHO
+OH
+OH
+CHO
+(1)
+(2)
+(3)
+(4)
+(5)
+OH
+CHO
+OH
+CHO
+CHO
+OH
+OH
+CHO
+OH
+CHO
+CHO
+OH
+OH
+OH
+CHO
+CHO
+OH
+OH
+OH
+CHO
+CHO
+OH
+OH
+HO
+(1)
+(2)
+(3)
+(4)
+(5)
+OH
+CHO
+CHO
+CHO
+OH
+OH
+CHO
+CHO
+CHO
+OH
+OH
+CHO
+CHO
+OH
+OH
+C)HO
+OH
+OH
+OH
+CHO
+CHO
+OH
+(1)
+(2)
+(3)
+(4)
+(5)
+(1)
+(2)
+(3)
+(4)
+(5)
+Qual substância o empresário deverá utilizar?
+A)1
+B)2
+C)3
+D)4
+E)5
+ 
+(RESPOSTA CORRETA): A
+
+(Enem/2020)  QUESTÃO 95        
+A fragmentação dos hábitats é caracterizada pela 
+formação de ilhas da paisagem original, circundadas 
+por áreas transformadas. Esse tipo de interferência no 
+ambiente ameaça a biodiversidade. Imagine que uma 
+população de onças foi isolada em uma mata pequena. 
+Elas se extinguiriam mesmo sem terem sido abatidas. 
+Diversos componentes da ilha de hábitat, como o 
+tamanho, a heterogeneidade, o seu entorno, a sua 
+conectividade e o efeito de borda são determinantes para 
+a persistência ou não das espécies originais.
+Uma medida que auxilia na conservação da biodiversidade 
+nas ilhas mencionadas no texto compreende a
+A)formação de micro-hábitats.
+B)ampliação do efeito de borda.
+C)construção de corredores ecológicos.
+D)promoção da sucessão ecológica.
+E)introdução de novas espécies de animais e vegetais.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 96        
+A sacarase (ou invertase) é uma enzima que atua no 
+intestino humano hidrolisando o dissacarídeo sacarose 
+nos monossacarídeos glicose e frutose. Em um estudo 
+cinético da reação de hidrólise da sacarose (C12H22O11), 
+foram dissolvidos 171 g de sacarose em 500 mL de 
+água. Observou-se que, a cada 100 minutos de reação, 
+a concentração de sacarose foi reduzida à metade, 
+qualquer que fosse o momento escolhido como tempo 
+inicial. As massas molares dos elementos H, C e O são 
+iguais a 1, 12 e 16 g mol−1, respectivamente.
+Qual é a concentração de sacarose depois de 400 minutos 
+do início da reação de hidrólise?
+A)2,50 × 10−3 mol L−1
+B)6,25 × 10−2 mol L−1
+C)1,25 × 10−1 mol L−1
+D)2,50 × 10−1 mol L−1
+E)4,27 × 10−1 mol L−1
+
+(RESPOSTA CORRETA): B
+
+(Enem/2020)  QUESTÃO 97        
+Grandes reservatórios de óleo leve de melhor 
+qualidade e que produz petróleo mais fino foram 
+descobertos 
+no 
+litoral 
+brasileiro 
+numa 
+camada 
+denominada pré-sal, formada há 150 milhões de anos.
+A utilização desse recurso energético acarreta para o 
+ambiente um desequilíbrio no ciclo do
+A)nitrogênio, 
+devido 
+à 
+nitrificação 
+ambiental 
+transformando amônia em nitrito.
+B)nitrogênio, devido ao aumento dos compostos 
+nitrogenados no ambiente terrestre.
+C)carbono, devido ao aumento dos carbonatos 
+dissolvidos no ambiente marinho.
+D)carbono, devido à liberação das cadeias carbônicas 
+aprisionadas abaixo dos sedimentos.
+E)fósforo, devido à liberação dos fosfatos acumulados 
+no ambiente marinho.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 98        
+Em uma usina geradora de energia elétrica, seja 
+através de uma queda-d’água ou através de vapor 
+sob pressão, as pás do gerador são postas a girar. 
+O movimento relativo de um ímã em relação a um 
+conjunto de bobinas produz um fluxo magnético variável 
+através delas, gerando uma diferença de potencial em 
+seus terminais. Durante o funcionamento de um dos 
+geradores, o operador da usina percebeu que houve um 
+aumento inesperado da diferença de potencial elétrico 
+nos terminais das bobinas. 
+Nessa situação, o aumento do módulo da diferença de 
+potencial obtida nos terminais das bobinas resulta do 
+aumento do(a)
+A)intervalo de tempo em que as bobinas ficam imersas no 
+campo magnético externo, por meio de uma diminuição 
+de velocidade no eixo de rotação do gerador.
+B)fluxo magnético através das bobinas, por meio de 
+um aumento em sua área interna exposta ao campo 
+magnético aplicado.
+C)intensidade do campo magnético no qual as bobinas 
+estão imersas, por meio de aplicação de campos 
+magnéticos mais intensos.
+D)rapidez com que o fluxo magnético varia através das 
+bobinas, por meio de um aumento em sua velocidade 
+angular.
+E)resistência interna do condutor que constitui as bobinas, 
+por meio de um aumento na espessura dos terminais.
+ 
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 99        
+Você foi contratado para sincronizar os quatro 
+semáforos de uma avenida, indicados pelas letras O, A, 
+B e C, conforme a figura. 
+C
+B
+A
+O
+Os semáforos estão separados por uma distância 
+de 500 m. Segundo os dados estatísticos da companhia 
+controladora de trânsito, um veículo, que está 
+inicialmente parado no semáforo O, tipicamente parte 
+com aceleração constante de 1 m s−2 até atingir a 
+velocidade de 72 km h−1 e, a partir daí, prossegue com 
+velocidade constante. Você deve ajustar os semáforos 
+A, B e C de modo que eles mudem para a cor verde 
+quando o veículo estiver a 100 m de cruzá-los, para 
+que ele não tenha que reduzir a velocidade em nenhum 
+momento.
+Considerando 
+essas 
+condições, 
+aproximadamente 
+quanto tempo depois da abertura do semáforo O os 
+semáforos A, B e C devem abrir, respectivamente?
+A)20 s, 45 s e 70 s.
+B)25 s, 50 s e 75 s.
+C)28 s, 42 s e 53 s.
+D)30 s, 55 s e 80 s.
+E)35 s, 60 s e 85 s.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 100        
+Nos dias atuais, o amplo uso de objetos de plástico 
+gera bastante lixo, que muitas vezes é eliminado pela 
+população por meio da queima. Esse procedimento é 
+prejudicial ao meio ambiente por lançar substâncias 
+poluentes. Para constatar esse problema, um estudante 
+analisou a decomposição térmica do policloreto de 
+vinila (PVC), um tipo de plástico, cuja estrutura é 
+representada na figura.
+Policloreto de vinila (PVC)
+Para realizar esse experimento, o estudante colocou 
+uma amostra de filme de PVC em um tubo de ensaio e o 
+aqueceu, promovendo a decomposição térmica. Houve a 
+liberação majoritária de um gás diatômico heteronuclear 
+que foi recolhido em um recipiente acoplado ao tubo 
+de ensaio. Esse gás, quando borbulhado em solução 
+alcalina diluída contendo indicador ácido-base, alterou a 
+cor da solução. Além disso, em contato com uma solução 
+aquosa de carbonato de sódio (Na2CO3), liberou gás 
+carbônico.
+Qual foi o gás liberado majoritariamente na decomposição 
+térmica desse tipo de plástico?
+A)H2
+B)Cl2
+C)CO
+D)CO2
+E)HCl
+
+(RESPOSTA CORRETA): E
+
+(Enem/2020)  QUESTÃO 101        
+Uma população (momento A) sofre isolamento 
+em duas subpopulações (momento B) por um fator de 
+isolamento (I). Passado um tempo, essas subpopulações 
+apresentam características fenotípicas e genotípicas que 
+as distinguem (momento C), representadas na figura 
+pelas tonalidades de cor. O posterior desaparecimento 
+do fator de isolamento I pode levar, no momento D, às 
+situações D1 e D2.
+A
+B
+C
+D)1
+D2
+Tempo
+ 
+A representação indica que, no momento D, na situação
+A)D1 ocorre um novo fator de isolamento geográfico.
+B)D1 existe uma única população distribuída em 
+gradiente.
+C)D1 ocorrem duas populações separadas por 
+isolamento reprodutivo.
+D)D2 coexistem duas populações com características 
+fenotípicas distintas.
+E)D2 foram preservadas as mesmas características 
+fenotípicas da população original A.
+ 
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 102                
+A obtenção de óleos vegetais, de maneira geral, passa pelas etapas descritas no quadro.
+Etapa
+Subetapa
+O que ocorre
+Preparação da 
+matéria-prima
+Seleção dos grãos
+Separação das sujidades mais grossas
+Descascamento
+Separação de polpa e casca
+Trituração
+Rompimento dos tecidos e das paredes das células
+Cozimento
+Aumento da permeabilidade das membranas celulares
+Extração do 
+óleo bruto
+Prensagem
+Remoção parcial do óleo
+Extração
+Obtenção do óleo bruto com hexano
+Destilação
+Separação do óleo e do solvente
+ 
+Qual das subetapas do processo é realizada em função apenas da polaridade das substâncias?
+A)Trituração.
+B)Cozimento.
+C)Prensagem.
+D)Extração.
+E)Destilação.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 103                
+O dióxido de carbono passa para o estado sólido (gelo seco) a −78 °C e retorna ao estado gasoso à temperatura 
+ambiente. O gás é facilmente solubilizado em água, capaz de absorver radiação infravermelha da superfície da terra 
+e não conduz eletricidade. Ele é utilizado como matéria-prima para a fotossíntese até o limite de saturação. Após a fixação 
+pelos organismos autotróficos, o gás retorna ao meio ambiente pela respiração aeróbica, fermentação, decomposição 
+ou por resíduos industriais, queima de combustíveis fósseis e queimadas. Apesar da sua importância ecológica, seu 
+excesso causa perturbações no equilíbrio ambiental.
+Considerando as propriedades descritas, o aumento atmosférico da substância afetará os organismos aquáticos em 
+razão da
+A)redução do potencial hidrogeniônico da água.
+B)restrição da aerobiose pelo excesso de poluentes.
+C)diminuição da emissão de oxigênio pelos autótrofos.
+D)limitação de transferência de energia entre os seres vivos.
+E)retração dos oceanos pelo congelamento do gás nos polos.
+
+(RESPOSTA CORRETA): A
+
+(Enem/2020)  QUESTÃO 104                
+Grupos de proteção ao meio ambiente conseguem resgatar muitas aves aquáticas vítimas de vazamentos de 
+petróleo. Essas aves são lavadas com água e detergente neutro para a retirada completa do óleo de seu corpo e, 
+posteriormente, são aquecidas, medicadas, desintoxicadas e alimentadas. Mesmo após esses cuidados, o retorno ao 
+ambiente não pode ser imediato, pois elas precisam recuperar a capacidade de flutuação.
+Para flutuar, essas aves precisam
+A)recuperar o tônus muscular.
+B)restaurar a massa corporal.
+C)substituir as penas danificadas.
+D)restabelecer a capacidade de homeotermia.
+E)refazer a camada de cera impermeabilizante das penas.
+ 
+(RESPOSTA CORRETA): E
+
+(Enem/2020)  QUESTÃO 105        
+Os 
+manuais 
+de 
+refrigerador 
+apresentam 
+a 
+recomendação de que o equipamento não deve ser 
+instalado próximo a fontes de calor, como fogão e 
+aquecedores, ou em local onde incida diretamente a 
+luz do sol. A instalação em local inadequado prejudica 
+o funcionamento do refrigerador e aumenta o consumo 
+de energia.
+O não atendimento dessa recomendação resulta em 
+aumento do consumo de energia porque
+A)o fl uxo de calor por condução no condensador sofre 
+considerável redução.
+B)a 
+temperatura 
+da 
+substância 
+refrigerante 
+no 
+condensador diminui mais rapidamente.
+C)o fl uxo de calor promove signifi cativa elevação da 
+temperatura no interior do refrigerador.
+D)a 
+liquefação 
+da 
+substância 
+refrigerante 
+no 
+condensador exige mais trabalho do compressor.
+E)as correntes de convecção nas proximidades do 
+condensador ocorrem com maior difi culdade.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 106        
+Um mergulhador fi ca preso ao explorar uma caverna 
+no oceano. Dentro da caverna formou-se um bolsão de 
+ar, como mostrado na fi gura, onde o mergulhador se 
+abrigou.
+Durante o resgate, para evitar danos a seu 
+organismo, foi necessário que o mergulhador passasse 
+por um processo de descompressão antes de retornar 
+à superfície para que seu corpo fi casse novamente sob 
+pressão atmosférica. O gráfi co mostra a relação entre 
+os tempos de descompressão recomendados para 
+indivíduos nessa situação e a variação de pressão.
+Tempo de 
+descompressão  (min)
+Variação de pressão (kPa)
+100
+80
+60
+40
+20
+100
+200
+300
+400
+500
+600
+700
+Considere que a aceleração da gravidade seja 
+igual a 10 m s−2 e que a densidade da água seja de 
+ρ = 1 000 kg m−3.
+Em minutos, qual é o tempo de descompressão a que o 
+mergulhador deverá ser submetido?
+A)100
+B)80
+C)60
+D)40
+E)20
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 107        
+A Torre Eiﬀ el, com seus 324 metros de altura, feita 
+com treliças de ferro, pesava 7 300 toneladas quando 
+terminou de ser construída em 1889. Um arquiteto 
+resolve construir um protótipo dessa torre em escala 
+1:100, usando os mesmos materiais (cada dimensão 
+linear em escala de 1:100 do monumento real). 
+Considere que a torre real tenha uma massa Mtorre
+e exerça na fundação sobre a qual foi erguida uma 
+pressão Ptorre. O modelo construído pelo arquiteto terá 
+uma massa Mmodelo e exercerá uma pressão Pmodelo.
+Como a pressão exercida pela torre se compara  com a 
+pressão exercida pelo protótipo? Ou seja, qual é a razão 
+entre as pressões (Ptorre)/(Pmodelo) ?
+A)100
+B)101
+C)102
+D)104
+E)106
+ 
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 108        
+Na indústria farmacêutica, é muito comum o emprego 
+de substâncias de revestimento em medicamentos de uso 
+oral, pois trazem uma série de benefícios como alteração de 
+sabor em medicamentos que tenham gosto ruim, melhoria 
+da assimilação do composto, entre outras ações. Alguns 
+compostos poliméricos à base do polissacarídeo celulose 
+são utilizados para garantir que o fármaco somente seja 
+liberado quando em contato com soluções aquosas cujo pH 
+se encontre próximo da faixa da neutralidade.
+BORTOLINI, K. et al. Análise de perfil de dissolução de cápsulas gastrorresistentes 
+utilizando polímeros industriais com aplicação em farmácias magistrais. 
+Revista da Unifebe, n. 12, 2013 (adaptado). 
+Qual é a finalidade do uso desse revestimento à base de 
+celulose?
+A)Diminuir a absorção do princípio ativo no intestino.
+B)Impedir que o fármaco seja solubilizado no intestino.
+C)Garantir que o fármaco não seja afetado pelas 
+secreções gástricas.
+D)Permitir a liberação do princípio ativo pela ação das 
+amilases salivares.
+E)Facilitar a liberação do fármaco pela ação dos sais 
+biliares sobre o revestimento.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 109        
+As panelas de pressão reduzem o tempo de 
+cozimento dos alimentos por elevar a temperatura de 
+ebulição da água. Os usuários conhecedores do utensílio 
+normalmente abaixam a intensidade do fogo em panelas 
+de pressão após estas iniciarem a saída dos vapores.
+Ao abaixar o fogo, reduz-se a chama, pois assim evita-se o(a)
+A)aumento da pressão interna e os riscos de explosão.
+B)dilatação da panela e a desconexão com sua tampa.
+C)perda da qualidade nutritiva do alimento.
+D)deformação da borracha de vedação.
+E)consumo de gás desnecessário.
+
+(RESPOSTA CORRETA): E
+
+(Enem/2020)  QUESTÃO 110        
+A nanotecnologia pode ser caracterizada quando os 
+compostos estão na ordem de milionésimos de milímetros, 
+como na utilização de nanomateriais catalíticos nos 
+processos industriais. O uso desses materiais aumenta 
+a eficiência da produção, consome menos energia e gera 
+menores quantidades de resíduos. O sucesso dessa 
+aplicação tecnológica muitas vezes está relacionado ao 
+aumento da velocidade da reação química envolvida.
+O êxito da aplicação dessa tecnologia é por causa 
+da realização de reações químicas que ocorrem em 
+condições de
+A)alta pressão.
+B)alta temperatura.
+C)excesso de reagentes.
+D)maior superfície de contato.
+E)elevada energia de ativação.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 111        
+Os fones de ouvido  tradicionais transmitem a música 
+diretamente para os nossos ouvidos. Já os modelos 
+dotados de tecnologia redutora de ruído — Cancelamento 
+de Ruído (CR) —  além de transmitirem música, também 
+reduzem todo ruído inconsistente à nossa volta, como 
+o barulho de turbinas de avião e aspiradores de pó. Os 
+fones de ouvido CR não reduzem realmente barulhos 
+irregulares como discursos e choros de bebês. Mesmo 
+assim, a supressão do ronco das turbinas do avião 
+contribui para reduzir a “fadiga de ruído”, um cansaço 
+persistente provocado pela exposição a um barulho alto 
+por horas a fio. Esses aparelhos também permitem que 
+nós ouçamos músicas ou assistamos a vídeos no trem ou 
+no avião a um volume muito menor (e mais seguro).
+Disponível em: http://tecnologia.uol.com.br. Acesso em: 21 abr. 2015 (adaptado).
+A tecnologia redutora de ruído CR utilizada na produção 
+de fones de ouvido baseia-se em qual fenômeno 
+ondulatório?
+A)Absorção.
+B)Interferência.
+C)Polarização.
+D)Reflexão.
+E)Difração.
+
+(RESPOSTA CORRETA): B
+
+(Enem/2020)  QUESTÃO 112        
+Para garantir que produtos eletrônicos estejam 
+armazenados de forma adequada antes da venda, 
+algumas empresas utilizam cartões indicadores de 
+umidade nas embalagens desses produtos. Alguns 
+desses cartões contêm um sal de cobalto que 
+muda de cor em presença de água, de acordo com 
+a equação química:
+∆H < 0
+(azul)
+(rosa)
+Como você procederia para reutilizar, num curto 
+intervalo de tempo, um cartão que já estivesse com a 
+coloração rosa?
+A)Resfriaria no congelador.
+B)Borrifaria com spray de água.
+C)Envolveria com papel alumínio.
+D)Aqueceria com secador de cabelos.
+E)Embrulharia em guardanapo de papel.
+ 
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 114        
+Dois engenheiros estão verificando se uma cavidade 
+perfurada no solo está de acordo com o planejamento 
+de uma obra, cuja profundidade requerida é de 30 m. 
+O teste é feito por um dispositivo denominado oscilador 
+de áudio de frequência variável, que permite relacionar 
+a profundidade com os valores da frequência de duas 
+ressonâncias consecutivas, assim como em um tubo 
+sonoro fechado. A menor frequência de ressonância que 
+o aparelho mediu foi 135 Hz. Considere que a velocidade 
+do som dentro da cavidade perfurada é de 360 m s-1.
+Se a profundidade estiver de acordo com o projeto, qual 
+será o valor da próxima frequência de ressonância que 
+será medida?
+A)137 Hz.
+B)138 Hz.
+C)141 Hz.
+D)144 Hz.
+E)159 Hz.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 115        
+Instituições acadêmicas e de pesquisa no mundo estão 
+inserindo genes em genomas de plantas que possam 
+codificar produtos de interesse farmacológico. No Brasil, 
+está sendo desenvolvida uma variedade de soja com um 
+viricida ou microbicida capaz de prevenir a contaminação 
+pelo vírus causador da aids. Essa leguminosa está sendo 
+induzida a produzir a enzima cianovirina-N, que tem 
+eficiência comprovada contra o vírus.
+OLIVEIRA, M. Remédio na planta. Pesquisa Fapesp, n. 206, abr. 2013.
+A técnica para gerar essa leguminosa é um exemplo de
+A)hibridismo.
+B)transgenia.
+C)conjugação.
+D)terapia gênica.
+E)melhoramento genético.
+ 
+(RESPOSTA CORRETA): B
+
+(Enem/2020)  QUESTÃO 116        
+Um estudante tem uma fonte de tensão com corrente 
+contínua que opera em tensão fixa de 12 V. Como 
+precisa alimentar equipamentos que operam em tensões 
+menores, ele emprega quatro resistores de 100 Ω para 
+construir um divisor de tensão. Obtém-se este divisor 
+associando os resistores, como exibido na figura. Os 
+aparelhos podem ser ligados entre os pontos A, B, C, D e 
+E, dependendo da tensão especificada.
+Fonte CC
+12 V
++
+−
+100 Ω
+100 Ω
+100 Ω
+100 Ω
+A
+B
+C
+D
+E)le tem um equipamento que opera em 9,0 V com 
+uma resistência interna de 10 kΩ.
+Entre quais pontos do divisor de tensão esse equipamento 
+deve ser ligado para funcionar corretamente e qual será o 
+valor da intensidade da corrente nele estabelecida?
+A)Entre A e C; 30 mA.
+B)Entre B e E; 30 mA.
+C)Entre A e D; 1,2 mA.
+D)Entre B e E; 0,9 mA.
+E)Entre A e E; 0,9 mA.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 117        
+Pesquisadores dos Estados Unidos desenvolveram 
+uma nova técnica, que utiliza raios de luz infravermelha 
+(invisíveis a olho nu) para destruir tumores. Primeiramente, 
+o paciente recebe uma injeção com versões modificadas 
+de anticorpos que têm a capacidade de “grudar” apenas 
+nas células cancerosas. Sozinhos, eles não fazem nada 
+contra o tumor. Entretanto, esses anticorpos estão ligados 
+a uma molécula, denominada IR700, que funcionará como 
+uma “microbomba”, que irá destruir o câncer. Em seguida, o 
+paciente recebe raios infravermelhos. Esses raios penetram 
+no corpo e chegam até a molécula IR700, que é ativada e 
+libera uma substância que ataca a célula cancerosa. 
+Disponível em: http://super.abril.com.br. Acesso em: 13 dez. 2012 (adaptado).
+Com base nas etapas de desenvolvimento, o nome 
+apropriado para a técnica descrita é:
+A)Radioterapia.
+B)Cromoterapia.
+C)Quimioterapia.
+D)Fotoimunoterapia.
+E)Terapia magnética.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 118        
+Aranhas, escorpiões, carrapatos e ácaros são 
+representantes da classe dos Aracnídeos. Esses animais 
+são terrestres em sua grande maioria e ocupam os mais 
+variados hábitats, tais como montanhas altas, pântanos, 
+desertos e solos arenosos. Podem ter sido os primeiros 
+representantes do filo Arthropoda a habitar a terra seca.
+A característica que justifica o sucesso adaptativo desse 
+grupo na ocupação do ambiente terrestre é a presença de
+A)quelíceras e pedipalpos que coordenam o movimento 
+corporal.
+B)excreção de ácido úrico que confere estabilidade ao 
+pH corporal.
+C)exoesqueleto constituído de quitina que auxilia no 
+controle hídrico corporal.
+D)circulação sanguínea aberta que impede a desidratação 
+dos tecidos corporais.
+E)sistema nervoso ganglionar que promove a coordenação 
+central do movimento corporal.
+ 
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 119        
+Pesquisadores coletaram amostras de água de um 
+rio em pontos diferentes, distantes alguns quilômetros 
+um do outro. Ao longo do rio, há locais de águas limpas, 
+como também locais que recebem descarga de esgoto 
+de área urbana, e locais onde há decomposição ativa 
+com ausência de peixes. Os pesquisadores analisaram 
+dois parâmetros: oxigênio dissolvido (OD) e demanda 
+bioquímica de oxigênio (DBO) em cada ponto de coleta 
+de água, obtendo o gráfico:
+OD e DBO (mg L−1)
+OD)BO
+OD ≥ 5 mg L−1  e  DBO ≤ 5 mg L−1.
+Legenda:
+∗
++
+Valores limites permitidos para águas doces destinadas ao abastecimento
+para o consumo humano após tratamento convencional, segundo Resolução 
+Conama n. 357/2005:
+14 
+12
+10
+4
+8
+6
+2
+1
+2
+3
+4
+5
+∗
+∗
+∗
+∗
+∗
++
++
++
++
++
+Pontos de amostragem
+O OD é proveniente da atmosfera e da fotossíntese 
+que ocorre no curso-d’água e sua concentração é 
+função das variáveis físicas, químicas e bioquímicas 
+locais. A DBO é a quantidade de oxigênio consumido 
+por microrganismos em condições aeróbicas para 
+degradar uma determinada quantidade de matéria 
+orgânica, durante um período de tempo, numa 
+temperatura de incubação específica.
+Disponível em: www.programaaguaazul.rn.gov.br. Acesso em: 16 ago. 2014 (adaptado).
+Qual ponto de amostragem da água do rio está mais 
+próximo ao local em que o rio recebe despejo de esgoto?
+A)1
+B)2
+C)3
+D)4
+E)5
+
+(RESPOSTA CORRETA): A
+
+(Enem/2020)  QUESTÃO 120        
+O crescimento da frota de veículos em circulação 
+no mundo tem levado à busca e desenvolvimento 
+de tecnologias que permitam minimizar emissões de 
+poluentes atmosféricos. O uso de veículos elétricos é 
+uma das propostas mais propagandeadas por serem de 
+emissão zero. Podemos comparar a emissão de carbono 
+na forma de CO2 (massa molar igual a 44 g mol−1) para os 
+dois tipos de carros (a combustão e elétrico). Considere 
+que os veículos tradicionais a combustão, movidos a 
+etanol (massa molar igual a 46 g mol−1), emitem uma 
+média de 2,6 mol de CO2 por quilômetro rodado, e os 
+elétricos emitem o equivalente a 0,45 mol de CO2 por 
+quilômetro rodado (considerando as emissões na geração 
+e transmissão da eletricidade). A reação de combustão 
+do etanol pode ser representada pela equação química:
+C2H5OH (l) + 3 O2 (g) → 2 CO2 (g) + 3 H2O (g)
+Foram analisadas as emissões de CO2 envolvidas 
+em dois veículos, um movido a etanol e outro elétrico, 
+em um mesmo trajeto de 1 000 km.
+CHIARADIA, C. A. Estudo da viabilidade da implantação de frotas de veículos elétricos 
+e híbridos elétricos no atual cenário econômico, político, energético e ambiental brasileiro.
+Guaratinguetá: Unesp, 2015 (adaptado).
+A quantidade equivalente de etanol economizada, em 
+quilograma, com o uso do veículo elétrico nesse trajeto, 
+é mais próxima de
+A)50.
+B)60.
+C)95.
+D)99.
+E)120.
+
+(RESPOSTA CORRETA): A
+
+(Enem/2020)  QUESTÃO 121        
+Em uma aula sobre metabolismo energético, 
+foi apresentado um experimento clássico realizado 
+por Engelmann. Um recipiente contendo bactérias 
+aeróbias e uma alga verde filamentosa foi submetido 
+à iluminação de uma fonte de luz, representada 
+pelo microespectro. Após a explicação, um aluno 
+esquematizou na lousa o resultado do referido 
+experimento.
+Bactérias aeróbias
+Filamento de alga verde
+Microespectro
+Vermelho
+Amarelo
+Verde
+Azul
+Anil
+Violeta
+Considerando a figura, a faixa do microespectro em que a 
+alga possui maior taxa de realização fotossintética é a do:
+A)Anil.
+B)Verde.
+C)Violeta.
+D)Amarelo.
+E)Vermelho.
+ 
+(RESPOSTA CORRETA): E
+
+(Enem/2020)  QUESTÃO 122        
+O exame parasitológico de fezes é utilizado para 
+detectar ovos de parasitos. Um dos métodos utilizados, 
+denominado 
+de 
+centrífugo-flutuação, 
+considera 
+a 
+densidade dos ovos em relação a uma solução de 
+densidade 1,15 g mL−1. Assim, ovos que flutuam na 
+superfície dessa solução são detectados. Os dados 
+de densidade dos ovos de alguns parasitos estão 
+apresentados na tabela.
+Parasito
+Densidade (g mL-1)
+Ancylostoma
+1,06
+Ascaris lumbricoides
+1,11
+Ascaris suum
+1,13
+Schistosoma mansoni
+1,18
+Taenia saginata
+1,30
+ZERBINI, A. M. Identificação e análise de viabilidade de ovos de helmintos em um 
+sistema de tratamento de esgotos domésticos constituídos de reatores anaeróbios e 
+rampas de escoamento superficial. Belo Horizonte: Prosab, 2001 (adaptado).
+Considerando-se a densidade dos ovos e da solução, ovos 
+de quais parasitos podem ser detectados por esse método? 
+A)A. lumbricoides, A. suum e S. mansoni.
+B)S. mansoni, T. saginata e Ancylostoma.
+C)Ancylostoma, A. lumbricoides e A. suum.
+D)T. saginata, S. mansoni e A. lumbricoides.
+E)A. lumbricoides, A. suum e T. saginata.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 123        
+Em seu laboratório, um técnico em química foi 
+incumbido de tratar um resíduo, evitando seu descarte 
+direto no meio ambiente. Ao encontrar o frasco, observou 
+a seguinte informação: “Resíduo: mistura de acetato de 
+etila e água”.
+Considere os dados do acetato de etila:
+•  Baixa solubilidade em água;
+•  Massa específica = 0,9 g cm−3;
+•  Temperatura de fusão = −83 °C;
+•  Pressão de vapor maior que a da água.
+A fim de tratar o resíduo, recuperando o acetato de etila, 
+o técnico deve
+A)evaporar o acetato de etila sem alterar o conteúdo de 
+água.
+B)filtrar a mistura utilizando um funil comum e um papel 
+de filtro.
+C)realizar uma destilação simples para separar a água do 
+acetato de etila.
+D)proceder a uma centrifugação da mistura para remover 
+o acetato de etila.
+E)decantar a mistura separando os dois componentes em 
+um funil adequado.
+
+(RESPOSTA CORRETA): E
+
+(Enem/2020)  QUESTÃO 124        
+Em 2011, uma falha no processo de perfuração 
+realizado por uma empresa petrolífera ocasionou 
+derramamento de petróleo na bacia hidrográfica de 
+Campos, no Rio de Janeiro.
+Os impactos decorrentes desse derramamento ocorrem 
+porque os componentes do petróleo
+A)reagem com a água do mar e sofrem degradação, 
+gerando compostos com elevada toxicidade.
+B)acidificam o meio, promovendo o desgaste das 
+conchas calcárias de moluscos e a morte de corais.
+C)dissolvem-se na água, causando a mortandade dos 
+seres marinhos por ingestão da água contaminada.
+D)têm caráter hidrofóbico e baixa densidade, impedindo 
+as trocas gasosas entre o meio aquático e a atmosfera.
+E)têm 
+cadeia 
+pequena 
+e 
+elevada 
+volatilidade, 
+contaminando a atmosfera local e regional em função 
+dos ventos nas orlas marítimas.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 125        
+Uma população encontra-se em equilíbrio genético 
+quanto ao sistema ABO, em que 25% dos indivíduos 
+pertencem ao grupo O e 16%, ao grupo A homozigotos. 
+Considerando que: p = frequência de IA; q = frequência 
+de IB; e r = frequência de i, espera-se encontrar:
+Grupo
+Genótipos
+Frequências
+A
+IAIA e IAi
+p2 + 2pr
+B
+IBIB e IBi
+q2 + 2qr
+AB
+IAIB)
+2pq
+O
+ii   
+r2
+A porcentagem de doadores compatíveis para alguém do 
+grupo B nessa população deve ser de
+A)11%.
+B)19%.
+C)26%.
+D)36%.
+E)60%.
+ 
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 126        
+Embora a energia nuclear possa ser utilizada 
+para fins pacíficos, recentes conflitos geopolíticos 
+têm trazido preocupações em várias partes do 
+planeta e estimulado discussões visando o combate 
+ao uso de armas de destruição em massa. Além do 
+potencial destrutivo da bomba atômica, uma grande 
+preocupação associada ao emprego desse artefato 
+bélico é a poeira radioativa deixada após a bomba 
+ser detonada.
+Qual é o processo envolvido na detonação dessa bomba?
+A)Fissão nuclear do urânio, provocada por nêutrons.
+B)Fusão nuclear do hidrogênio, provocada por 
+prótons.
+C)Desintegração nuclear do plutônio, provocada por 
+elétrons.
+D)Associação em cadeia de chumbo, provocada por 
+pósitrons.
+E)Decaimento radioativo do carbono, provocado por 
+partículas beta.
+
+(RESPOSTA CORRETA): A
+
+(Enem/2020)  QUESTÃO 127        
+Plantas pioneiras são as que iniciam o processo 
+natural de cicatrização de uma área desprovida de 
+vegetação. Em geral, têm pequeno porte e crescem 
+muito rápido, desenvolvem-se a pleno sol e são pouco 
+exigentes quanto às condições do solo. Produzem 
+grande quantidade de sementes e possuem ciclo de 
+vida curto.
+BLUM, C. T. Lista preliminar de espécies vegetais pioneiras nativas do Paraná – versão 
+2008. Disponível em: www.chaua.org.br. Acesso em: 10 fev. 2015.
+Essas plantas são importantes em um projeto de 
+restauração ambiental, pois promovem, no solo,
+A)aumento da incidência de luz solar.
+B)diminuição da absorção de água.
+C)estabilização da umidade.
+D)elevação de temperatura.
+E)liberação de oxigênio.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 129        
+Em uma pesquisa estão sendo testados 
+cinco quimioterápicos quanto à sua capacidade 
+antitumoral. No entanto, para o tratamento de 
+pacientes, sabe-se que é necessário verificar também 
+o quanto cada composto agride células normais. Para o 
+experimento, partiu-se de cultivos de células tumorais 
+(colunas escuras na figura) e células normais (colunas 
+claras) com o mesmo número de células iniciais. 
+Dois grupos-controle não receberam quimioterápicos: 
+controle de células tumorais (CT) e de células normais 
+(CN). As colunas I, II, III, IV e V correspondem aos 
+grupos tratados com os cinco compostos. O número de 
+células viáveis após os tratamentos está representado 
+pelas colunas.
+Número de células (milhão)
+60
+50
+40
+30
+20
+10
+0
+CT
+I
+II
+III
+IV
+V
+CN
+I
+II
+III
+IV
+V
+Qual quimioterápico deve ser escolhido para tratamento 
+desse tipo de tumor?
+A)I
+B)II
+C)III
+D)IV
+E)V
+ 
+(RESPOSTA CORRETA): B
+
+(Enem/2020)  QUESTÃO 130                
+Herschel, em 1880, começou a escrever sobre a condensação da luz solar no foco de uma lente e queria verificar 
+de que maneira os raios coloridos contribuem para o aquecimento. Para isso, ele projetou sobre um anteparo o espectro 
+solar obtido com um prisma, colocou termômetros nas diversas faixas de cores e verificou nos dados obtidos que um 
+dos termômetros iluminados indicou um aumento de temperatura maior para uma determinada faixa de frequências.
+SAYURI, M.; GASPAR, M. B. Infravermelho na sala de aula. Disponível em: www.cienciamao.usp.br. Acesso em: 15 ago. 2016 (adaptado).
+Para verificar a hipótese de Herschel, um estudante montou o dispositivo apresentado na figura. Nesse aparato, 
+cinco recipientes contendo água, à mesma temperatura inicial, e separados por um material isolante térmico e refletor são 
+posicionados lado a lado (A, B, C, D e E) no interior de uma caixa de material isolante térmico e opaco. A luz solar, ao entrar 
+na caixa, atravessa o prisma e incide sobre os recipientes. O estudante aguarda até que ocorra o aumento da temperatura 
+e a afere em cada recipiente.
+Caixa isolada e
+    opaca
+Incidência de luz
+       solar
+Luz
+  solar
+    decomposta
+Vermelho
+A
+B
+C
+D
+E
+Violeta
+Espectro
+visível
+Recipientes
+PRISMA
+Em qual dos recipientes a água terá maior temperatura ao final do experimento?
+A)A
+B)B
+C)C
+D)D
+E)E
+
+(RESPOSTA CORRETA): A
+
+(Enem/2020)  QUESTÃO 131                
+A)Química Verde é um ramo da química que prega o desenvolvimento de processos eficientes, que transformem a maior 
+parte do reagente em produto, de forma mais rápida e seletiva, que utilizem poucos reagentes, que produzam somente o 
+produto desejado, evitando a formação de coprodutos, e que utilizem solventes não agressivos ao meio ambiente. Assim, 
+as indústrias contornariam problemas relacionados à poluição ambiental e ao desperdício de água e energia.
+O perfil de um processo que segue todos os princípios desse ramo da química pode ser representado por:
+A)A + B + C → D)  (a reação ocorre a altas pressões).
+B)A + B → C + D)  (a reação é fortemente endotérmica).
+C)A + 3B → C)  (a reação ocorre com uso de solvente orgânico).
+D)3A + 2B → 2C → 3D + 2E)  (a reação ocorrre sob pressão atmosférica).
+E)A + 1−2B → C)  (a reação ocorre com o uso de um catalisador contendo um metal não tóxico).
+ 
+(RESPOSTA CORRETA): E
+
+(Enem/2020)  QUESTÃO 132        
+Megaespetáculos com queima de grande quantidade 
+de fogos de artifício em festas de final de ano são muito 
+comuns no Brasil. Após a queima, grande quantidade 
+de material particulado permanece suspensa no ar. 
+Entre os resíduos, encontram-se compostos de sódio, 
+potássio, bário, cálcio, chumbo, antimônio, cromo, além 
+de percloratos e gases, como os dióxidos de nitrogênio 
+e enxofre.
+BRUNNING, A. The Chemistry of Firework Pollution. Disponível em:
+www.compoundchem.com. Acesso em: 1 dez. 2017 (adaptado).
+Esses espetáculos promovem riscos ambientais, porque
+A)as substâncias resultantes da queima de fogos de 
+artifício são inflamáveis.
+B)os resíduos produzidos na queima de fogos de 
+artifício ainda são explosivos.
+C)o sódio e o potássio são os principais responsáveis 
+pela toxicidade do produto da queima.
+D)os produtos da queima contêm metais pesados e 
+gases tóxicos que resultam em poluição atmosférica.
+E)o material particulado gerado se deposita na superfície 
+das folhas das plantas impedindo os processos de 
+respiração celular.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 133        
+Há muitos mitos em relação a como se proteger de 
+raios, cobrir espelhos e não pegar em facas, garfos e 
+outros objetos metálicos, por exemplo. Mas, de fato, se 
+houver uma tempestade com raios, alguns cuidados são 
+importantes, como evitar ambientes abertos. Um bom 
+abrigo para proteção é o interior de um automóvel, desde 
+que este não seja conversível.
+OLIVEIRA, A. Raios nas tempestades de verão. Disponível em:
+http://cienciahoje.uol.com.br. Acesso em: 10 dez. 2014 (adaptado).
+Qual o motivo físico da proteção fornecida pelos 
+automóveis, conforme citado no texto?
+A)Isolamento elétrico dos pneus.
+B)Efeito de para-raios da antena.
+C)Blindagem pela carcaça metálica.
+D)Escoamento da água pela lataria.
+E)Aterramento pelo fio terra da bateria.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 135        
+Os diferentes tipos de café que consumimos nem 
+sempre vêm da mesma espécie de planta. As duas 
+espécies de café mais utilizadas são Coffea canephora 
+e Coffea arabica. A primeira é diploide (2n = 22) e a 
+segunda é tetraploide (2n = 44). Acredita-se que a 
+espécie tetraploide surgiu de um cruzamento natural 
+entre C. canephora e C. eugenioides, ambas diploides, 
+há milhões de anos. De fato, as análises genéticas atuais 
+nos cromossomos de C. arabica detectam os alelos de 
+ambas as origens.
+A alteração cromossômica que poderia explicar o 
+surgimento do café da espécie C. arabica é:
+A)Duplicação em uma das plantas parentais antes do 
+cruzamento.
+B)Inversão durante a meiose gamética em ambas as 
+plantas parentais.
+C)Separação desigual na meiose gamética de uma das 
+plantas parentais.
+D)Falha na separação durante a meiose gamética em 
+ambas as plantas parentais.
+E)Deleções durante as primeiras mitoses zigóticas na 
+planta descendente C. arabica.
+ 
+(RESPOSTA CORRETA): 
+
+

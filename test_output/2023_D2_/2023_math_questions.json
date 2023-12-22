@@ -1,0 +1,533 @@
+[
+    {
+        "question_text": "QUESTÃO 136 \nUm artista plástico esculpe uma escultura a partir \nde um bloco de madeira de lei, em etapas. Inicialmente, \nesculpe um cone reto com 36 cm de altura e diâmetro da \nbase medindo 18 cm. Em seguida, remove desse cone um \ncone menor, cujo diâmetro da base mede 6 cm, obtendo, \nassim, um tronco de cone, conforme ilustrado na figura.\n6 cm\n36 cm\n18 cm\nEm seguida, perfura esse tronco de cone, removendo \num cilindro reto, de diâmetro 6 cm, cujo eixo de simetria é o \nmesmo do cone original. Dessa forma, ao final, a escultura \ntem a forma de um tronco de cone com uma perfuração \ncilíndrica de base a base.\nO tipo de madeira utilizada para produzir essa escultura \ntem massa igual a 0,6 g por centímetro cúbico de volume. \nUtilize 3 como aproximação para π.\nQual é a massa, em grama, dessa escultura?\nA)1 198,8\nB)1 296,0\nC)1 360,8\nD)4 665,6\nE)4 860,0\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)1 198,8\n",
+            "B)1 296,0\n",
+            "C)1 360,8\n",
+            "D)4 665,6\n",
+            "E)4 860,0\n"
+        ],
+        "ID": "2023_D2_N136",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 136
+    },
+    {
+        "question_text": "QUESTÃO 137 \nOs 100 funcionários de uma empresa estão \ndistribuídos em dois setores: Produção e Administração. \nOs funcionários de um mesmo setor recebem salários \ncom valores iguais. O quadro apresenta a quantidade de \nfuncionários por setor e seus respectivos salários.\nSetor\nQuantidade de \nfuncionários\nSalário \n(em real)\nProdução\n75\n2 000,00\nAdministração\n25\n7 000,00\nA média dos salários dos 100 funcionários dessa \nempresa, em real, é\nA)2 000,00.\nB)2 500,00.\nC)3 250,00.\nD)4 500,00.\nE)9 000,00.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)2 000,00.\n",
+            "B)2 500,00.\n",
+            "C)3 250,00.\n",
+            "D)4 500,00.\n",
+            "E)9 000,00.\n"
+        ],
+        "ID": "2023_D2_N137",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 137
+    },
+    {
+        "question_text": "QUESTÃO 138 \nVisando atrair mais clientes, o gerente de uma loja \nanunciou uma promoção em que cada cliente que realizar \numa compra pode ganhar um voucher para ser usado \nem sua próxima compra. Para ganhar seu voucher,  \no cliente precisa retirar, ao acaso, uma bolinha de dentro \nde cada uma das duas urnas A e B disponibilizadas pelo \ngerente, nas quais há apenas bolinhas pretas e brancas. \nAtualmente, a probabilidade de se escolher, ao acaso,  \numa bolinha preta na urna A é igual a 20% e a probabilidade  \nde se escolher uma bolinha preta na urna B é 25%.  \nGanha o voucher o cliente que retirar duas bolinhas pretas, \numa de cada urna.\nCom o passar dos dias, o gerente percebeu que, para a \npromoção ser viável aos negócios, era preciso alterar \na probabilidade de acerto do cliente sem alterar a regra \nda promoção. Para isso, resolveu alterar a quantidade de \nbolinhas brancas na urna B de forma que a probabilidade \nde um cliente ganhar o voucher passasse a ser menor ou \nigual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e \nque, em ambas as urnas, todas as bolinhas têm a mesma \nprobabilidade de serem retiradas.\nQual é o número mínimo de bolinhas brancas que o \ngerente deve adicionar à urna B?\nA)20\nB)60\nC)64\nD)68\nE)80\n\n ",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)20\n",
+            "B)60\n",
+            "C)64\n",
+            "D)68\n",
+            "E)80\n\n "
+        ],
+        "ID": "2023_D2_N138",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 138
+    },
+    {
+        "question_text": "QUESTÃO 139 \nO gerente de uma fábrica pretende comparar a evolução das vendas de dois produtos similares (I e II). Para isso, \npassou a verificar o número de unidades vendidas de cada um desses produtos em cada mês. Os resultados dessa \nverificação, para os meses de abril a junho, são apresentados na tabela. \nProduto\nVendas\nem abril\n(unidade)\nVendas\nem maio\n(unidade)\nVendas\nem junho\n(unidade)\nl\n80\n90\n100\nll\n190\n170\n150\nO gerente estava decidido a cessar a produção do produto II no mês seguinte àquele em que as vendas do \nproduto I superassem as do produto II.\nSuponha que a variação na quantidade de unidades vendidas dos produtos I e II se manteve, mês a mês, como \nno período representado na tabela.\nEm qual mês o produto II parou de ser produzido?\nA)Junho.\nB)Julho.\nC)Agosto.\nD)Setembro.\nE)Outubro.\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)Junho.\n",
+            "B)Julho.\n",
+            "C)Agosto.\n",
+            "D)Setembro.\n",
+            "E)Outubro.\n"
+        ],
+        "ID": "2023_D2_N139",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 139
+    },
+    {
+        "question_text": "QUESTÃO 140 \nUma empresa de transporte faz regularmente um levantamento do número de viagens realizadas durante o dia \npor todos os 160 motoristas cadastrados em seu aplicativo. Em um certo dia, foi gerado um relatório, por meio de um \ngráfico de barras, no qual se relacionaram a quantidade de motoristas com a quantidade de viagens realizadas até \naquele instante do dia.\nQuantidade de viagens realizadas\nQuantidade de motoristas\n0\n5\n10\n15\n20\n25\n30\n35\n40\n45\n50\n55\n7\n6\n4\n3\n2\n1\n5\nComparando os valores da média, da mediana e da moda da distribuição das quantidades de viagens realizadas \npelos motoristas cadastrados nessa empresa, obtém-se\nA)mediana = média < moda.\nB)mediana = moda < média.\nC)mediana < média < moda.\nD)moda < média < mediana.\nE)moda < mediana < média.\n\n ",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)mediana = média < moda.\n",
+            "B)mediana = moda < média.\n",
+            "C)mediana < média < moda.\n",
+            "D)moda < média < mediana.\n",
+            "E)moda < mediana < média.\n\n "
+        ],
+        "ID": "2023_D2_N140",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 140
+    },
+    {
+        "question_text": "QUESTÃO 141 \nNo alojamento de uma universidade, há alguns quartos com o padrão superior ao dos demais. Um desses quartos \nficou disponível, e muitos estudantes se candidataram para morar no local. Para escolher quem ficará com o quarto, \num sorteio será realizado. Para esse sorteio, cartões individuais com os nomes de todos os estudantes inscritos serão \ndepositados em uma urna, sendo que, para cada estudante de primeiro ano, será depositado um único cartão com \nseu nome; para cada estudante de segundo ano, dois cartões com seu nome; e, para cada estudante de terceiro ano, \ntrês cartões com seu nome. Foram inscritos 200 estudantes de primeiro ano, 150 de segundo ano e 100 de terceiro \nano. Todos os cartões têm a mesma probabilidade de serem sorteados.\nQual a probabilidade de o vencedor do sorteio ser um estudante de terceiro ano?\nA)1\n2\nB)1\n3\nC)1\n8\nD)2\n9\nE)3\n8\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)1\n2\n",
+            "B)1\n3\n",
+            "C)1\n8\n",
+            "D)2\n9\n",
+            "E)3\n8\n"
+        ],
+        "ID": "2023_D2_N141",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 141
+    },
+    {
+        "question_text": "QUESTÃO 142 \nA água utilizada pelos 75 moradores de um vilarejo provém de um reservatório de formato cilíndrico circular reto \ncujo raio da base mede 5 metros, sempre abastecido no primeiro dia de cada mês por caminhões-pipa. Cada morador \ndesse vilarejo consome, em média, 200 litros de água por dia.\nNo mês de junho de um determinado ano, o vilarejo festejou o dia do seu padroeiro e houve um gasto extra de água \nnos primeiros 20 dias. Passado esse período, as pessoas verificaram a quantidade de água presente no reservatório \ne constataram que o nível da coluna de água estava em 1,5 metro. Decidiram, então, fazer um racionamento de água \ndurante os 10 dias seguintes. Considere 3 como aproximação para π.\nQual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo \nque o reservatório não fique sem água nos próximos 10 dias?\nA)50\nB)60\nC)80\nD)140\nE)150\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)50\n",
+            "B)60\n",
+            "C)80\n",
+            "D)140\n",
+            "E)150\n"
+        ],
+        "ID": "2023_D2_N142",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 142
+    },
+    {
+        "question_text": "QUESTÃO 143 \nEm janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com \n10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos \ndos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, \na lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma \nquantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para \na creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista \nde espera no próximo ano seja 25% menor que o deste ano.\nO número mínimo de salas que deverão ser construídas é\nA)10.\nB)11.\nC)13.\nD)30.\nE)33.\n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)10.\n",
+            "B)11.\n",
+            "C)13.\n",
+            "D)30.\n",
+            "E)33.\n\n "
+        ],
+        "ID": "2023_D2_N143",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 143
+    },
+    {
+        "question_text": "QUESTÃO 149 \nUm controlador de voo dispõe de um instrumento que \ndescreve a altitude de uma aeronave em voo, em função \nda distância em solo. Essa distância em solo é a medida na \nhorizontal entre o ponto de origem do voo até o ponto que \nrepresenta a projeção ortogonal da posição da aeronave, \nem voo, no solo. Essas duas grandezas são dadas numa \nmesma unidade de medida.\nA tela do instrumento representa proporcionalmente \nas dimensões reais das distâncias associadas ao voo.  \nA figura apresenta a tela do instrumento depois de \nconcluída a viagem de um avião, sendo a medida do lado \nde cada quadradinho da malha igual a 1 cm.\nAltitude\nOrigem \ndo voo\nDestino\nDistância\nEssa tela apresenta os dados de um voo cuja maior \naltitude alcançada foi de 5 km.\nA escala em que essa tela representa as medidas reais é\nA)1 : 5.\nB)1 : 11.\nC)1 : 55.\nD)1 : 5 000.\nE)1 : 500 000.\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)1 : 5.\n",
+            "B)1 : 11.\n",
+            "C)1 : 55.\n",
+            "D)1 : 5 000.\n",
+            "E)1 : 500 000.\n"
+        ],
+        "ID": "2023_D2_N147",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 147
+    },
+    {
+        "question_text": "QUESTÃO 147 \nAlguns estudos comprovam que os carboidratos \nfornecem energia ao corpo, preservam as proteínas \nestruturais dos músculos durante a prática de atividade \nfísica e ainda dão força para o cérebro coordenar os \nmovimentos, o que de fato tem impacto positivo no \ndesenvolvimento do praticante. O ideal é consumir 1 grama \nde carboidrato para cada minuto de caminhada.\nCIRINO, C. Boa pergunta: consumir carboidratos antes dos exercícios melhora o \ndesempenho do atleta? Revista Saúde! É Vital, n. 330, nov. 2010 (adaptado).\nUm casal realizará diariamente 30 minutos de \ncaminhada, ingerindo, antes dessa atividade, a quantidade \nideal de carboidratos recomendada. Para ter o consumo ideal \napenas por meio do consumo de pão de fôrma integral, o \ncasal planeja garantir o suprimento de pães para um período \nde 30 dias ininterruptos. Sabe-se que cada pacote desse pão \nvem com 18 fatias, e que cada uma delas tem 15 gramas \nde carboidratos.\nA quantidade mínima de pacotes de pão de fôrma \nnecessários para prover o suprimento a esse casal é \nA)1.\nB)4.\nC)6.\nD)7.\nE)8.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)1.\n",
+            "B)4.\n",
+            "C)6.\n",
+            "D)7.\n",
+            "E)8.\n"
+        ],
+        "ID": "2023_D2_N148",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 148
+    },
+    {
+        "question_text": "QUESTÃO 150 \nDirigir após ingerir bebidas alcoólicas é uma atitude \nextremamente perigosa, uma vez que, a partir da primeira \ndose, a pessoa já começa a ter perda de sensibilidade \nde movimentos e de reflexos. Apesar de a eliminação e \nabsorção do álcool depender de cada pessoa e de como \no organismo consegue metabolizar a substância, ao final \nda primeira hora após a ingestão, a concentração de álcool \n(C) no sangue corresponde a aproximadamente 90% da \nquantidade (q) de álcool ingerida, e a eliminação total \ndessa concentração pode demorar até 12 horas.\nDisponível em: http://g1.globo.com. Acesso em: 1 dez. 2018 (adaptado).\nNessas condições, ao final da primeira hora após a ingestão \nda quantidade q de álcool, a concentração C dessa \nsubstância no sangue é expressa algebricamente por\nA)C = 0,9q\nB)C = 0,1q\nC)C = 1 − 0,1q\nD)C = 1 − 0,9q\nE)C = q − 10\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "C) no sangue corresponde a aproximadamente 90% da \nquantidade (q) de álcool ingerida, e a eliminação total \ndessa concentração pode demorar até 12 horas.\nDisponível em: http://g1.globo.com. Acesso em: 1 dez. 2018 (adaptado).\nNessas condições, ao final da primeira hora após a ingestão \nda quantidade q de álcool, a concentração C dessa \nsubstância no sangue é expressa algebricamente por\n",
+            "A)C = 0,9q\n",
+            "B)C = 0,1q\n",
+            "C)C = 1 − 0,1q\n",
+            "D)C = 1 − 0,9q\n",
+            "E)C = q − 10\n"
+        ],
+        "ID": "2023_D2_N150",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 150
+    },
+    {
+        "question_text": "QUESTÃO 151 \nUm investidor iniciante observou o gráfico que \napresenta a evolução dos valores de duas criptomoedas \nA e B em relação ao tempo.\nCriptomoeda B\n(milhar de real)\nCriptomoeda A\n(milhar de real)\nDurante horas consecutivas, esses valores foram \nobservados em nove instantes, representados por horas \nexatas.\nEm quantos desses instantes a criptomoeda A estava \nmais valorizada do que a criptomoeda B?\nA)3\nB)4\nC)6\nD)7\nE)9\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)3\n",
+            "B)4\n",
+            "C)6\n",
+            "D)7\n",
+            "E)9\n"
+        ],
+        "ID": "2023_D2_N151",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 151
+    },
+    {
+        "question_text": "QUESTÃO 152 \nA exposição a alguns níveis sonoros pode causar \nlesões auditivas. Por isso, em uma indústria, são adotadas \nmedidas preventivas de acordo com a máquina que o \nfuncionário opera e o nível N de intensidade do som, \nmedido em decibel (dB), a que o operário é exposto, \nsendo N = log10I 10 − log10I 10\n0 , I a intensidade do som e \nI0 = 10−12 W/m2.\nDisponível em: www.sofisica.com.br. Acesso em: 8 jul. 2015 (adaptado).\nQuando o som é considerado baixo, ou seja, \nN = 48 dB ou menos, deve ser utilizada a medida \npreventiva I. No caso de o som ser moderado, quando \nN está no intervalo (48 dB, 55 dB), deve ser utilizada a \nmedida preventiva II. Quando o som é moderado alto, \nque equivale a N no intervalo (55 dB, 80 dB), a medida \npreventiva a ser usada é a III. Se N estiver no intervalo  \n(80 dB, 115 dB), quando o som é considerado alto, deve ser \nutilizada a medida preventiva IV. E se o som é considerado \nmuito alto, com N maior que 115 dB, deve-se utilizar a \nmedida preventiva V.\nUma nova máquina, com I = 8 × 10−8 W/m2, foi adquirida \ne será classificada de acordo com o nível de ruído  \nque produz. \nConsidere 0,3 como aproximação para log102.\nO funcionário que operará a nova máquina deverá adotar \na medida preventiva\nA)I.\nB)II.\nC)III.\nD)IV.\nE)V.\n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "B), a que o operário é exposto, \nsendo N = log10I 10 − log10I 10\n0 , I a intensidade do som e \nI0 = 10−12 W/m2.\nDisponível em: www.sofisica.com.br. Acesso em: 8 jul. 2015 (adaptado).\nQuando o som é considerado baixo, ou seja, \nN = 48 dB ou menos, deve ser utilizada a medida \npreventiva I. No caso de o som ser moderado, quando \nN está no intervalo (48 dB, 55 d",
+            "B), deve ser utilizada a \nmedida preventiva II. Quando o som é moderado alto, \nque equivale a N no intervalo (55 dB, 80 d",
+            "B), a medida \npreventiva a ser usada é a III. Se N estiver no intervalo  \n(80 dB, 115 d",
+            "B), quando o som é considerado alto, deve ser \nutilizada a medida preventiva IV. E se o som é considerado \nmuito alto, com N maior que 115 dB, deve-se utilizar a \nmedida preventiva V.\nUma nova máquina, com I = 8 × 10−8 W/m2, foi adquirida \ne será classificada de acordo com o nível de ruído  \nque produz. \nConsidere 0,3 como aproximação para log102.\nO funcionário que operará a nova máquina deverá adotar \na medida preventiva\n",
+            "A)I.\n",
+            "B)II.\n",
+            "C)III.\n",
+            "D)IV.\n",
+            "E)V.\n\n "
+        ],
+        "ID": "2023_D2_N152",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 152
+    },
+    {
+        "question_text": "QUESTÃO 155 \nNa planta baixa de um clube, a piscina é representada \npor um quadrado cuja área real mede 400 m². Ao redor \ndessa piscina, será construída uma calçada, de largura \nconstante igual a 5 m.\nCalçada\nPiscina\n5 m\n5 m\n5 m\n5 m\nQual é a medida da área, em metro quadrado, ocupada \npela calçada?\nA)1 000\nB)900\nC)600\nD)500\nE)400\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)1 000\n",
+            "B)900\n",
+            "C)600\n",
+            "D)500\n",
+            "E)400\n"
+        ],
+        "ID": "2023_D2_N153",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 153
+    },
+    {
+        "question_text": "QUESTÃO 156 \nUma pessoa caminha por 30 minutos e utiliza um \naplicativo instalado em seu celular para monitorar a \nvariação da intensidade do sinal de internet recebido \npelo aparelho durante o deslocamento. Chegando ao seu \ndestino, o aplicativo forneceu este gráfico:\nIntensidade do sinal de internet\nTempo (min)\n0\n2\n4\n6\n8\n10 12 14\n16\n18 20\n22 24\n26 28 30\nPor quantos minutos, durante essa caminhada, o celular \ndessa pessoa ficou sem receber sinal de internet?\nA)6\nB)8\nC)10\nD)14\nE)24\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)6\n",
+            "B)8\n",
+            "C)10\n",
+            "D)14\n",
+            "E)24\n"
+        ],
+        "ID": "2023_D2_N154",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 154
+    },
+    {
+        "question_text": "QUESTÃO 153 \nUm supermercado conta com cinco caixas disponíveis \npara pagamento. Foram instaladas telas que apresentam  \no tempo médio gasto por cada caixa para iniciar e finalizar o \natendimento de cada cliente, e o número de pessoas \npresentes na fila de cada caixa em tempo real. Um cliente, \nna hora de passar sua compra, sabendo que cada um \ndos cinco caixas iniciará um novo atendimento naquele \nmomento, pretende gastar o menor tempo possível de \nespera na fila. Ele observa que as telas apresentavam as \ninformações a seguir.\n• Caixa I: atendimento 12 minutos, 5 pessoas na fila.\n• Caixa II: atendimento 6 minutos, 9 pessoas na fila.\n• Caixa III: atendimento 5 minutos, 6 pessoas na fila.\n• Caixa IV: atendimento 15 minutos, 2 pessoas na fila.\n• Caixa V: atendimento 9 minutos, 3 pessoas na fila.\nPara alcançar seu objetivo, o cliente deverá escolher o caixa\nA)I.\nB)II.\nC)III.\nD)IV.\nE)V.\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)I.\n",
+            "B)II.\n",
+            "C)III.\n",
+            "D)IV.\n",
+            "E)V.\n"
+        ],
+        "ID": "2023_D2_N155",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 155
+    },
+    {
+        "question_text": "QUESTÃO 154 \nAs figuras pintadas no quadro da sala de estar de \numa residência representam as silhuetas de parte das \ntorres de um castelo e, ao fundo, a de uma lua cheia.  \nA lua foi pintada na forma de um círculo, e o telhado da \ntorre mais alta, na forma de triângulo equilátero, foi pintado \nsobrepondo parte da lua. O centro da lua coincide com um \ndos vértices do telhado da torre mais alta.\nNesse quadro, a parte da lua escondida atrás da torre \nmais alta do castelo pode ser representada por um\nA)cone.\nB)setor circular.\nC)segmento circular.\nD)triângulo isósceles.\nE)arco de circunferência.\n\n ",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)cone.\n",
+            "B)setor circular.\n",
+            "C)segmento circular.\n",
+            "D)triângulo isósceles.\n",
+            "E)arco de circunferência.\n\n "
+        ],
+        "ID": "2023_D2_N156",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 156
+    },
+    {
+        "question_text": "QUESTÃO 157 \nUm professor, para promover a aprendizagem dos \nestudantes em estatística, propôs uma atividade. O objetivo \nera verificar o percentual de estudantes com massa corporal \nabaixo da média e altura acima da média de um grupo de \nestudantes. Para isso, usando uma balança e uma fita \nmétrica, avaliou uma amostra de dez estudantes, anotando as \nmedidas observadas. O gráfico apresenta a massa corporal, \nem quilograma, e a altura, em metro, obtidas na atividade.\nMassa corporal e altura de estudantes\nAltura (m)\nMassa corporal (kg)\n0\n1,8\n1,75\n1,7\n1,65\n1,6\n1,55\n1,5\n1,45\n20\n40\n60\n80\n100\n120\n140\nApós a coleta dos dados, os estudantes calcularam a \nmédia dos valores obtidos, referentes à massa corporal e \nà altura, obtendo, respectivamente, 80 kg e 1,65 m.\nQual é o percentual de estudantes dessa amostra com \nmassa corporal abaixo da média e altura acima da média?\nA)10\nB)20\nC)30\nD)50\nE)70\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)10\n",
+            "B)20\n",
+            "C)30\n",
+            "D)50\n",
+            "E)70\n"
+        ],
+        "ID": "2023_D2_N157",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 157
+    },
+    {
+        "question_text": "QUESTÃO 158 \nUm pescador tem um custo fixo diário de R$ 900,00 \ncom combustível, iscas, manutenção de seu barco e outras \npequenas despesas. Ele vende cada quilograma de peixe por \nR$ 5,00. Sua meta é obter um lucro mínimo de R$ 800,00  \npor dia. Sozinho, ele consegue, ao final de um dia de trabalho, \npescar 180 kg de peixe, o que é suficiente apenas para cobrir o \ncusto fixo diário. Portanto, precisa contratar ajudantes, pagando \npara cada um R$ 250,00 por dia de trabalho. Além desse valor, \n4% da receita obtida pela venda de peixe é repartida igualmente \nentre os ajudantes. Considerando o tamanho de seu barco, ele \npode contratar até 5 ajudantes. Ele sabe que com um ajudante \na pesca diária é de 300 kg e que, a partir do segundo  \najudante contratado, aumenta-se em 100 kg a quantidade de \npeixe pescada por ajudante em um dia de trabalho.\nA quantidade mínima de ajudantes que esse pescador \nprecisa contratar para conseguir o lucro diário pretendido é\nA)1.\nB)2.\nC)3.\nD)4.\nE)5.\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)1.\n",
+            "B)2.\n",
+            "C)3.\n",
+            "D)4.\n",
+            "E)5.\n"
+        ],
+        "ID": "2023_D2_N158",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 158
+    },
+    {
+        "question_text": "QUESTÃO 159 \nUm agricultor é informado sobre um método de proteção \npara sua lavoura que consiste em inserir larvas específicas, \nde rápida reprodução. A reprodução dessas larvas faz com \nque sua população multiplique-se por 10 a cada 3 dias e, \npara evitar eventuais desequilíbrios, é possível cessar essa \nreprodução aplicando-se um produto X. O agricultor decide \niniciar esse método com 100 larvas e dispõe de 5 litros do \nproduto X, cuja aplicação recomendada é de exatamente \n1 litro para cada população de 200 000 larvas. A quantidade \ntotal do produto X de que ele dispõe deverá ser aplicada \nde uma única vez.\nQuantos dias após iniciado esse método o agricultor \ndeverá aplicar o produto X?\nA)2\nB)4\nC)6\nD)12\nE)18 \n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)2\n",
+            "B)4\n",
+            "C)6\n",
+            "D)12\n",
+            "E)18 \n"
+        ],
+        "ID": "2023_D2_N159",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 159
+    },
+    {
+        "question_text": "QUESTÃO 160 \nAo realizar o cadastro em um aplicativo de investimentos, \nfoi solicitado ao usuário que criasse uma senha, sendo \npermitido o uso somente dos seguintes caracteres:\n• algarismos de 0 a 9;\n• 26 letras minúsculas do alfabeto;\n• 26 letras maiúsculas do alfabeto;\n• 6 caracteres especiais !, @, #, $, , &.\nTrês tipos de estruturas para senha foram apresentadas \nao usuário:\n• tipo I: formada por quaisquer quatro caracteres \ndistintos, escolhidos dentre os permitidos;\n• tipo II: formada por cinco caracteres distintos, \niniciando por três letras, seguidas por um algarismo \ne, ao final, um caractere especial;\n• tipo III: formada por seis caracteres distintos, iniciando \npor duas letras, seguidas por dois algarismos e, ao \nfinal, dois caracteres especiais.\nConsidere p1, p2 e p3 as probabilidades de se \ndescobrirem ao acaso, na primeira tentativa, as senhas \ndos tipos I, II e III, respectivamente.\nNessas condições, o tipo de senha que apresenta a \nmenor probabilidade de ser descoberta ao acaso, na \nprimeira tentativa, é o\nA)tipo I, pois p1 < p2 < p3.\nB)tipo I, pois tem menor quantidade de caracteres.\nC)tipo II, pois tem maior quantidade de letras.\nD)tipo III, pois p3 < p2 < p1.\nE)tipo III, pois tem maior quantidade de caracteres.\n\n ",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)tipo I, pois p1 < p2 < p3.\n",
+            "B)tipo I, pois tem menor quantidade de caracteres.\n",
+            "C)tipo II, pois tem maior quantidade de letras.\n",
+            "D)tipo III, pois p3 < p2 < p1.\n",
+            "E)tipo III, pois tem maior quantidade de caracteres.\n\n "
+        ],
+        "ID": "2023_D2_N160",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 160
+    },
+    {
+        "question_text": "QUESTÃO 161 \nUma loja vende seus produtos de duas formas:  \nà vista ou financiado em três parcelas mensais iguais. \nPara definir o valor dessas parcelas nas vendas \nfinanciadas, a loja aumenta em 20% o valor do produto \nà vista e divide esse novo valor por 3. A primeira parcela \ndeve ser paga no ato da compra, e as duas últimas, \nem 30 e 60 dias após a compra.\nUm cliente da loja decidiu comprar, de forma financiada, \num produto cujo valor à vista é R$ 1 500,00.\nUtilize 5,29 como aproximação para \n28.\nA taxa mensal de juros compostos praticada nesse \nfinanciamento é de\nA)6,7%\nB)10%\nC)20%\nD)21,5%\nE)23,3%\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)6,7%\n",
+            "B)10%\n",
+            "C)20%\n",
+            "D)21,5%\n",
+            "E)23,3%\n"
+        ],
+        "ID": "2023_D2_N161",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 161
+    },
+    {
+        "question_text": "QUESTÃO 162 \nPara concretar a laje de sua residência, uma pessoa \ncontratou uma construtora. Tal empresa informa que o \npreço y do concreto bombeado é composto de duas \npartes: uma fixa, chamada de taxa de bombeamento, \ne uma variável, que depende do volume x de concreto \nutilizado. Sabe-se que a taxa de bombeamento custa \nR$ 500,00 e que o metro cúbico do concreto bombeado \né de R$ 250,00.\nA expressão que representa o preço y em função do \nvolume x, em metro cúbico, é\nA)y = 250x\nB)y = 500x\nC)y = 750x\nD)y = 250x + 500\nE)y = 500x + 250\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)y = 250x\n",
+            "B)y = 500x\n",
+            "C)y = 750x\n",
+            "D)y = 250x + 500\n",
+            "E)y = 500x + 250\n"
+        ],
+        "ID": "2023_D2_N162",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 162
+    },
+    {
+        "question_text": "QUESTÃO 166 \nUma pessoa pratica quatro atividades físicas — caminhar, correr, andar de bicicleta e jogar futebol — como parte \nde seu programa de emagrecimento. Essas atividades são praticadas semanalmente de acordo com o quadro, que \napresenta o número de horas diárias por atividade.\nDias da semana\nCaminhar Correr\nAndar de bicicleta\nJogar futebol\nSegunda-feira\n1,0\n0,5\n0,0\n2,0\nTerça-feira\n0,5\n1,0\n0,5\n1,0\nQuarta-feira\n0,0\n1,5\n1,0\n0,5\nQuinta-feira\n0,0\n2,0\n0,0\n0,0\nSexta-feira\n0,0\n0,5\n0,0\n2,5\nEla deseja comemorar seu aniversário e escolhe o dia da semana em que o gasto calórico com as atividades \nfísicas praticadas for o maior. Para tanto, considera que os valores dos gastos calóricos das atividades por hora (cal/h) \nsão os seguintes:\nAtividade física\nCaminhar \nCorrer\nAndar de bicicleta \nJogar futebol\nGasto calórico (cal/h)\n248\n764\n356\n492\nO dia da semana em que será comemorado o aniversário é\nA)segunda-feira.\nB)terça-feira.\nC)quarta-feira.\nD)quinta-feira.\nE)sexta-feira.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)segunda-feira.\n",
+            "B)terça-feira.\n",
+            "C)quarta-feira.\n",
+            "D)quinta-feira.\n",
+            "E)sexta-feira.\n"
+        ],
+        "ID": "2023_D2_N166",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 166
+    },
+    {
+        "question_text": "QUESTÃO 167 \nA cada bimestre, a diretora de uma escola compra uma quantidade de folhas de papel ofício proporcional ao número \nde alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos \nmatriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos. \nA diretora só pode gastar R$ 220,00 nessa compra, e sabe que o fornecedor da escola vende as folhas de papel \nofício em embalagens de 100 unidades a R$ 4,00 a embalagem. Assim, será preciso convencer o fornecedor a dar um \ndesconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre.\nO desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo\nA)(5,0 ; 5,5).\nB)(8,0 ; 8,5).\nC)(11,5 ; 12,5).\nD)(19,5 ; 20,5). \nE)(3,5 ; 4,0).\n\n ",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)(5,0 ; 5,5).\n",
+            "B)(8,0 ; 8,5).\n",
+            "C)(11,5 ; 12,5).\n",
+            "D)(19,5 ; 20,5). \n",
+            "E)(3,5 ; 4,0).\n\n "
+        ],
+        "ID": "2023_D2_N167",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 167
+    },
+    {
+        "question_text": "QUESTÃO 168 \nEm um colégio público, a admissão no primeiro ano se \ndá por sorteio. Neste ano há 55 candidatos, cujas inscrições \nsão numeradas de 01 a 55. O sorteio de cada número de \ninscrição será realizado em etapas, utilizando-se duas \nurnas. Da primeira urna será sorteada uma bola, dentre \nbolas numeradas de 0 a 9, que representará o algarismo \ndas unidades do número de inscrição a ser sorteado e, em \nseguida, da segunda urna, será sorteada uma bola para \nrepresentar o algarismo das dezenas desse número. Depois \ndo primeiro sorteio, e antes de se sortear o algarismo das \ndezenas, as bolas que estarão presentes na segunda \nurna serão apenas aquelas cujos números formam, com o \nalgarismo já sorteado, um número de 01 a 55.\nAs probabilidades de os candidatos de inscrição número \n50 e 02 serem sorteados são, respectivamente,\nA)1\n50\n1\n60\ne\nB)1\n50\n1\n50\ne\nC)1\n50\n1\n10\ne\nD)1\n55\n1\n54\ne\nE)1\n100\n1\n100\ne\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)1\n50\n1\n60\ne\n",
+            "B)1\n50\n1\n50\ne\n",
+            "C)1\n50\n1\n10\ne\n",
+            "D)1\n55\n1\n54\ne\n",
+            "E)1\n100\n1\n100\ne\n"
+        ],
+        "ID": "2023_D2_N168",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 168
+    },
+    {
+        "question_text": "QUESTÃO 169 \nO esquema mostra como a intensidade luminosa \ndecresce com o aumento da profundidade em um rio, \nsendo L0 a intensidade na sua superfície.\n0 m\nL0\n1 m\n3\n2 L0\n2 m\n9\n4 L0\n3 m\n27\n8 L0\nIntensidade luminosa\nProfundidade\nConsidere que a intensidade luminosa diminui, a cada \nmetro acrescido na profundidade, segundo o mesmo \npadrão do esquema.\nA intensidade luminosa correspondente à profundidade \nde 6 m é igual a\nA)1\n9 L 0\nB)16\n27 L 0\nC)32\n243 L 0\nD)64\n729 L 0\nE)128\n2187\n \n0\nL \n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)1\n9 L 0\n",
+            "B)16\n27 L 0\n",
+            "C)32\n243 L 0\n",
+            "D)64\n729 L 0\n",
+            "E)128\n2187\n \n0\nL \n"
+        ],
+        "ID": "2023_D2_N169",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 169
+    },
+    {
+        "question_text": "QUESTÃO 170 \nAnalisando as vendas de uma empresa, o gerente \nconcluiu que o montante diário arrecadado, em milhar de real, \npoderia ser calculado pela expressão V x\nx\nx\n� � �\n�\n�\n2\n4\n10\n105, \nem que os valores de x representam os dias do mês, \nvariando de 1 a 30.\nUm dos fatores para avaliar o desempenho mensal \nda empresa é verificar qual é o menor montante diário V0 \narrecadado ao longo do mês e classificar o desempenho \nconforme as categorias apresentadas a seguir, em que as \nquantidades estão expressas em milhar de real.\n• Ótimo: V0 ≥ 24\n• Bom: 20 ≤ V0 < 24\n• Normal: 10 ≤ V0 < 20\n• Ruim: 4 ≤ V0 < 10\n• Péssimo: V0 < 4\nNo caso analisado, qual seria a classificação do \ndesempenho da empresa?\nA)Ótimo.\nB)Bom.\nC)Normal.\nD)Ruim.\nE)Péssimo.\n\n ",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)Ótimo.\n",
+            "B)Bom.\n",
+            "C)Normal.\n",
+            "D)Ruim.\n",
+            "E)Péssimo.\n\n "
+        ],
+        "ID": "2023_D2_N170",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 170
+    },
+    {
+        "question_text": "QUESTÃO 171 \nO calendário maia apresenta duas contagens \nsimultâneas de anos, o chamado ano Tzolkim, composto \npor 260 dias e que determinava o calendário religioso,  \ne o ano Haab, composto por 365 dias e que determinava o \ncalendário agrícola. Um historiador encontrou evidências \nde que gerações de uma mesma família governaram certa \ncomunidade maia pelo período de 20 ciclos, sendo cada \nciclo formado por 52 anos Haab.\nDisponível em: www.suapesquisa.com. Acesso em: 20 ago. 2014.\nDe acordo com as informações fornecidas, durante \nquantos anos Tzolkim aquela comunidade maia foi \ngovernada por tal família?\nA)741\nB)1 040\nC)1 460\nD)2 100\nE)5 200\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)741\n",
+            "B)1 040\n",
+            "C)1 460\n",
+            "D)2 100\n",
+            "E)5 200\n"
+        ],
+        "ID": "2023_D2_N171",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 171
+    },
+    {
+        "question_text": "QUESTÃO 172 \nSejam a, b e c as medidas dos lados de um triângulo \nretângulo, tendo a como medida da hipotenusa. Esses \nvalores a, b e c são, respectivamente, os diâmetros dos \ncírculos C1, C2 e C3, como apresentados na figura.\nCírculo C1\nCírculo C2\nCírculo C3\nc\na\nb\nObserve que essa construção assegura, pelo teorema \nde Pitágoras, que área (C1) = área (C2) + área (C3).\nUm professor de matemática era conhecedor dessa \nconstrução e, confraternizando com dois amigos em uma \npizzaria onde são vendidas pizzas somente em formato \nde círculo, lançou um desafio: mesmo sem usar um \ninstrumento de medição, poderia afirmar com certeza se \na área do círculo correspondente à pizza que ele pedisse \nera maior, igual ou menor do que a soma das áreas das \npizzas dos dois amigos. Assim, foram pedidas três pizzas. \nO professor as dividiu ao meio e formou um triângulo com \nos diâmetros das pizzas, conforme indicado na figura.\nMeia pizza do amigo 2\nMeia pizza do\namigo 1\nMeia pizza do professor\nde matemática\nα\nA partir da medida do ângulo a, o professor afirmou \nque a área de sua pizza é maior do que a soma das áreas \ndas outras duas pizzas.\nA área da pizza do professor de matemática é maior do \nque a soma das áreas das outras duas pizzas, pois\nA)0° < a < 90°\nB)a = 90°\nC)90° < a < 180°\nD)a = 180°\nE)180° < a < 360°\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)0° < a < 90°\n",
+            "B)a = 90°\n",
+            "C)90° < a < 180°\n",
+            "D)a = 180°\n",
+            "E)180° < a < 360°\n"
+        ],
+        "ID": "2023_D2_N172",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 172
+    },
+    {
+        "question_text": "QUESTÃO 173 \nEntre maratonistas, um parâmetro utilizado é o de \neconomia de corrida (EC). O valor desse parâmetro é \ncalculado pela razão entre o consumo de oxigênio, em \nmililitro (mL) por minuto (min), e a massa, em quilograma (kg), \ndo atleta correndo a uma velocidade constante.\nDisponível em: www.treinamentoonline.com.br. Acesso em: 23 out. 2019 (adaptado).\nUm maratonista, visando melhorar sua performance, \nauxiliado por um médico, mensura o seu consumo de \noxigênio por minuto a velocidade constante. Com base \nnesse consumo e na massa do atleta, o médico calcula \no EC do atleta.\nA unidade de medida da grandeza descrita pelo \nparâmetro EC é\nA)min\nmL kg\n⋅\nB)mL\nmin kg\n⋅\nC)min mL\nkg\n⋅\nD)min kg\nmL\n⋅\nE)mL kg\nmin\n⋅\n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "C). O valor desse parâmetro é \ncalculado pela razão entre o consumo de oxigênio, em \nmililitro (mL) por minuto (min), e a massa, em quilograma (kg), \ndo atleta correndo a uma velocidade constante.\nDisponível em: www.treinamentoonline.com.br. Acesso em: 23 out. 2019 (adaptado).\nUm maratonista, visando melhorar sua performance, \nauxiliado por um médico, mensura o seu consumo de \noxigênio por minuto a velocidade constante. Com base \nnesse consumo e na massa do atleta, o médico calcula \no EC do atleta.\nA unidade de medida da grandeza descrita pelo \nparâmetro EC é\n",
+            "A)min\nmL kg\n⋅\n",
+            "B)mL\nmin kg\n⋅\n",
+            "C)min mL\nkg\n⋅\n",
+            "D)min kg\nmL\n⋅\n",
+            "E)mL kg\nmin\n⋅\n\n "
+        ],
+        "ID": "2023_D2_N173",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 173
+    },
+    {
+        "question_text": "QUESTÃO 174 \nUma pessoa comprou um ingresso para o cinema em cuja entrada está afixado um mapa com a representação \nbidimensional do posicionamento das poltronas, conforme a figura. Essa pessoa, após consultar o mapa, começou \na subir uma das escadas e parou na posição indicada pela estrela, direcionada para o norte. Ela conferiu seu bilhete \ne observou que, para encontrar sua poltrona, deveria partir do ponto onde estava, continuar subindo a escada na \ndireção norte por mais quatro fileiras e olhar à sua direita, e sua poltrona será a terceira.\nFileiras\nEscada\nEscada\nPoltrona\nPosições\nTela\nEntrada\nA\nB\nC\nD\nE\nF\nG\nH\nI\nJ\n2\n1\n3\n4\n5\n6\n7\n8\n9\n10 11 12\nS\nN\nL\nO\nNesse cinema, as poltronas são identificadas por uma letra, que indica a fileira, e um número, que fornece a \nposição da poltrona na fileira, respectivamente.\nA poltrona dessa pessoa é a identificada por\nA)A6.\nB)H1.\nC)H6.\nD)I1.\nE)I6.\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)A6.\n",
+            "B)H1.\n",
+            "C)H6.\n",
+            "D)I1.\n",
+            "E)I6.\n"
+        ],
+        "ID": "2023_D2_N174",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 174
+    },
+    {
+        "question_text": "QUESTÃO 175 \nO metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos \nem cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e \numa cartela de tíquetes vermelhos são vendidas por R$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço \nde um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\nQual o preço, em real, de uma cartela de tíquetes vermelhos?\nA)4,68\nB)6,30\nC)9,30\nD)10,50\nE)10,65 \n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)4,68\n",
+            "B)6,30\n",
+            "C)9,30\n",
+            "D)10,50\n",
+            "E)10,65 \n\n "
+        ],
+        "ID": "2023_D2_N175",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 175
+    },
+    {
+        "question_text": "QUESTÃO 176 \nOs números figurados pentagonais provavelmente \nforam introduzidos pelos pitagóricos por volta do \nséculo V a.C. As figuras ilustram como obter os seis \nprimeiros deles, sendo os demais obtidos seguindo o \nmesmo padrão geométrico.\n22\n12\n5\n1\n35\n51\nO oitavo número pentagonal é \nA)59.\nB)83.\nC)86.\nD)89.\nE)92.\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)59.\n",
+            "B)83.\n",
+            "C)86.\n",
+            "D)89.\n",
+            "E)92.\n"
+        ],
+        "ID": "2023_D2_N176",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 176
+    },
+    {
+        "question_text": "QUESTÃO 177 \nA figura ilustra uma roda-gigante no exato instante em \nque a cadeira onde se encontra a pessoa P está no ponto \nmais alto dessa roda-gigante.\nP\nSolo\nCom o passar do tempo, à medida que a roda-gigante \ngira, com velocidade angular constante e no sentido \nhorário, a altura da cadeira onde se encontra a pessoa P, \nem relação ao solo, vai se alterando.\nO gráfico que melhor representa a variação dessa altura, \nem função do tempo, contado a partir do instante em que \na cadeira da pessoa P se encontra na posição mais alta \nda roda-gigante, é\nA)Altura em \nrelação ao solo\nTempo \n0\nB)Altura em \nrelação ao solo\nTempo \n0\nC)Altura em \nrelação ao solo\nTempo \n0\nD)Altura em \nrelação ao solo\nTempo \n0\nE)Altura em \nrelação ao solo\nTempo \n0\n\n ",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)Altura em \nrelação ao solo\nTempo \n0\n",
+            "B)Altura em \nrelação ao solo\nTempo \n0\n",
+            "C)Altura em \nrelação ao solo\nTempo \n0\n",
+            "D)Altura em \nrelação ao solo\nTempo \n0\n",
+            "E)Altura em \nrelação ao solo\nTempo \n0\n\n "
+        ],
+        "ID": "2023_D2_N177",
+        "year": 2023,
+        "day": "D2",
+        "question_num": 177
+    }
+]

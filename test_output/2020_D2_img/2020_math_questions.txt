@@ -1,0 +1,827 @@
+(Enem/2020)  QUESTÃO 136        
+A fabricação da Bandeira Nacional deve obedecer ao 
+descrito na Lei n. 5.700, de 1º de setembro de 1971, que 
+trata dos Símbolos Nacionais. No artigo que se refere às 
+dimensões da Bandeira, observa-se:
+“Para cálculos das dimensões, será tomada por base 
+a largura, dividindo-a em 14 (quatorze) partes iguais, 
+sendo que cada uma das partes será considerada uma 
+medida ou módulo (M). Os demais requisitos dimensionais 
+seguem o critério abaixo:
+I. 
+Comprimento será de vinte módulos (20 M);
+II. A distância dos vértices do losango amarelo ao 
+quadro externo será de um módulo e sete décimos 
+(1,7 M);
+III. O raio do círculo azul no meio do losango 
+amarelo será de três módulos e meio (3,5 M).”
+BRASIL. Lei n. 5.700, de 1º de setembro de 1971.Disponível em: www.planalto.gov.br. 
+Acesso em: 15 set. 2015. 
+A figura indica as cores da bandeira do Brasil e 
+localiza o quadro externo a que se refere a Lei n. 5.700.
+Comprimento do quadro externo
+Largura do quadro externo
+Um torcedor, preparando-se para a Copa do Mundo 
+e dispondo de cortes de tecidos verde (180 cm x 150 cm) 
+e amarelo (o quanto baste), deseja confeccionar a maior 
+Bandeira Nacional possível a partir das medidas do tecido 
+verde.
+Qual a medida, em centímetro, do lado do menor 
+quadrado de tecido azul que deverá ser comprado para 
+confecção do círculo da bandeira desejada? 
+A) 27
+B) 32
+C) 53
+D) 63
+E) 90
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 140        
+O proprietário de um apartamento decidiu instalar 
+porcelanato no piso da sala. Essa sala tem formato 
+retangular com 3,2 m de largura e 3,6 m de comprimento. 
+As peças do porcelanato têm formato de um quadrado 
+com lado medindo 80 cm. Esse porcelanato é vendido em 
+dois tipos de caixas, com os preços indicados a seguir.
+• Caixas do tipo A: 4 unidades de piso, R$ 35,00;
+• Caixas do tipo B: 3 unidades de piso, R$ 27,00.
+Na instalação do porcelanato, as peças podem ser 
+recortadas e devem ser assentadas sem espaçamento 
+entre elas, aproveitando-se ao máximo os recortes 
+feitos.
+A compra que atende às necessidades do proprietário, 
+proporciona a menor sobra de pisos e resulta no menor 
+preço é
+A)5 caixas do tipo A.
+B)1 caixa do tipo A e 4 caixas do tipo B.
+C)3 caixas do tipo A e 2 caixas do tipo B.
+D)5 caixas do tipo A e 1 caixa do tipo B.
+E)6 caixas do tipo B.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 141        
+Um hotel de 3 andares está sendo construído. Cada 
+andar terá 100 quartos. Os quartos serão numerados de 
+100 a 399 e cada um terá seu número afixado à porta. 
+Cada número será composto por peças individuais, cada 
+uma simbolizando um único algarismo.
+Qual a quantidade mínima de peças, simbolizando o 
+algarismo 2, necessárias para identificar o número de 
+todos os quartos?
+A)160
+B)157
+C)130
+D)120
+E) 60
+MT - 2° dia | Caderno 7 - AZUL - Página 17
+ 
+(RESPOSTA CORRETA): A
+
+(Enem/2020)  QUESTÃO 142        
+O Estatuto do Idoso, no Brasil, prevê certos 
+direitos às pessoas com idade avançada, concedendo 
+a estas, entre outros benefícios, a restituição de 
+imposto de renda antes dos demais contribuintes. A)tabela informa os nomes e as idades de 12 idosos 
+que aguardam suas restituições de imposto de 
+renda. Considere que, entre os idosos, a restituição 
+seja concedida em ordem decrescente de idade e 
+que, em subgrupos de pessoas com a mesma idade, 
+a ordem seja decidida por sorteio.
+Nome
+Idade (em ano)
+Orlando
+89
+Gustavo
+86
+Luana
+86
+Teresa
+85
+Márcia
+84
+Roberto
+82
+Heloisa
+75
+Marisa
+75
+Pedro
+75
+João
+75
+Antônio
+72
+Fernanda
+70
+Nessas condições, a probabilidade de João ser a sétima 
+pessoa do grupo a receber sua restituição é igual a
+A)1
+12
+ 
+ 
+B)7
+12
+ 
+C)1
+8
+ 
+D)
+5
+6
+E)1
+4
+
+(RESPOSTA CORRETA): E
+
+(Enem/2020)  QUESTÃO 143        
+No Brasil, o tempo necessário para um estudante 
+realizar sua formação até a diplomação em um 
+curso superior, considerando os 9 anos de ensino 
+fundamental, os 3 anos do ensino médio e os 4 anos de 
+graduação (tempo médio), é de 16 anos. No entanto, 
+a realidade dos brasileiros mostra que o tempo médio 
+de estudo de pessoas acima de 14 anos é ainda muito 
+pequeno, conforme apresentado na tabela.
+Tempo médio de estudo de pessoas acima de 14 anos
+Ano da Pesquisa
+1995
+1999
+2003
+2007
+Tempo de estudo (em ano)
+5,2
+5,8
+6,4
+7,0
+Disponível em: www.ibge.gov.br. Acesso em: 19 dez. 2012 (adaptado).
+Considere que o incremento no tempo de estudo, 
+a cada período, para essas pessoas, se mantenha 
+constante até o ano 2050, e que se pretenda chegar ao 
+patamar de 70% do tempo necessário à obtenção do 
+curso superior dado anteriormente.
+O ano em que o tempo médio de estudo de pessoas 
+acima de 14 anos atingirá o percentual pretendido será 
+A)2018.
+B)2023.
+C)2031.
+D)2035.
+E)2043.
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 144        
+Uma torneira está gotejando água em um balde 
+com capacidade de 18 litros. No instante atual, o 
+balde se encontra com ocupação de 50% de sua 
+capacidade. A cada segundo caem 5 gotas de água 
+da torneira, e uma gota é formada, em média, por 
+5 × 10−2 mL de água.
+Quanto tempo, em hora, será necessário para encher 
+completamente o balde, partindo do instante atual?
+A)2 × 101 
+B)1 × 101 
+C)2 × 10−2 
+D)1 × 10−2 
+E)1 × 10−3
+MT - 2° dia | Caderno 7 - AZUL - Página 18
+ 
+(RESPOSTA CORRETA): B
+
+(Enem/2020)  QUESTÃO 145        
+Um clube deseja produzir miniaturas em escala do 
+troféu que ganhou no último campeonato. O troféu está 
+representado na Figura 1 e é composto por uma base 
+em formato de um paralelepípedo reto-retângulo de 
+madeira, sobre a qual estão fi xadas três hastes verticais 
+que sustentam uma esfera de 30 cm de diâmetro, que fi ca 
+centralizada sobre a base de madeira. O troféu tem 100 cm 
+de altura, incluída sua base.
+8 cm
+50 cm
+50 cm
+Figura 1
+Figura 2
+10 cm
+?
+A miniatura desse troféu deverá ser instalada 
+no interior de uma caixa de vidro, em formato de 
+paralelepípedo reto-retângulo, cujas dimensões internas 
+de sua base estão indicadas na Figura 2, de modo que 
+a base do troféu seja colada na base da caixa e distante 
+das paredes laterais da caixa de vidro em pelo menos 1 cm. 
+Deve ainda haver uma distância de exatos 2 cm entre o 
+topo da esfera e a tampa dessa caixa de vidro. Nessas 
+condições deseja-se fazer a maior miniatura possível.
+A medida da altura, em centímetro, dessa caixa de vidro 
+deverá ser igual a
+A)12.
+B)14.
+C)16.
+D)18.
+E)20.
+
+(RESPOSTA CORRETA): B
+
+(Enem/2020)  QUESTÃO 148        
+A Pesquisa Nacional por Amostra de Domicílios 
+(Pnad) é uma pesquisa feita anualmente pelo IBGE, 
+exceto nos anos em que há Censo. Em um ano, foram 
+entrevistados 363 mil jovens para fazer um levantamento 
+sobre suas atividades profissionais e/ou acadêmicas. Os 
+resultados da pesquisa estão indicados no gráfico.
+21,6
+13,6
+45,2
+19,6
+Jovens em atividade entre 15 e 29 anos (%)
+Somente estuda
+Trabalha e estuda
+Somente
+trabalha
+Não trabalha
+nem estuda
+Disponível em: http://noticias.uol.com.br. Acesso em: 20 ago. 2014.
+De acordo com as informações dadas, o número de 
+jovens entrevistados que trabalha é
+A)114 708.
+B)164 076.
+C)213 444.
+D)284 592.
+E)291 582.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 149        
+A Lei de Zipf, batizada com o nome do linguista 
+americano George Zipf, é uma lei empírica que 
+relaciona a frequência ( f )  de uma palavra em um 
+dado texto com o seu ranking (r). Ela é dada por
+f = A
+r B
+.
+O ranking da palavra é a sua posição ao ordenar as 
+palavras por ordem de frequência. Ou seja, r = 1 para a 
+palavra mais frequente, r = 2 para a segunda palavra mais 
+frequente e assim sucessivamente. A e B são constantes 
+positivas.
+Diponível em: http://klein.sbm.org.br. Acesso em: 12 ago. 2020 (adatpado).
+Com base nos valores de X = log (r) e Y = log ( f ) , é 
+possível estimar valores para A e B.
+No caso hipotético em que a lei é verificada exatamente, 
+a relação entre Y e X é
+A)Y = log A −B X  
+B)Y =
+log A
+X + log B)
+ 
+C)Y =
+A
+B
+− X
+log
+D)Y =
+A
+B X
+log
+E)Y =
+A
+X B
+log
+
+(RESPOSTA CORRETA): A
+
+(Enem/2020)  QUESTÃO 152        
+Um processo de aeração, que consiste na introdução 
+de ar num líquido, acontece do seguinte modo: uma 
+bomba B retira o líquido de um tanque T1 e o faz passar 
+pelo aerador A1, que aumenta o volume do líquido em 
+15%, e em seguida pelo aerador A2, ganhando novo 
+aumento de volume de 10%. Ao final, ele fica armazenado 
+num tanque T2, de acordo com a figura.
+ 
+T1
+B
+T2
+A1
+A2
+Os tanques T1 e T2 são prismas retos de bases 
+retangulares, sendo que a base de T1 tem comprimento c e 
+largura L, e a base de T2 tem comprimento c
+2 e largura 2L.
+Para 
+finalizar 
+o 
+processo 
+de 
+aeração 
+sem 
+derramamento do líquido em T2, o responsável deve 
+saber a relação entre a altura da coluna de líquido que já 
+saiu de T1, denotada por X, e a altura da coluna de líquido 
+que chegou a T2, denotada por y.
+Disponível em: www.dec.ufcg.edu.br. Acesso em: 21 abr. 2015.
+A equação que relaciona as medidas das alturas y e x é 
+dada por
+A)y = 1,265x
+B)y = 1,250x
+C)y = 1,150x
+D)y = 1,125x
+E)y = x
+
+(RESPOSTA CORRETA): A
+
+(Enem/2020)  QUESTÃO 153        
+Para chegar à universidade, um estudante utiliza 
+um metrô e, depois, tem duas opções:
+• seguir num ônibus, percorrendo 2,0 km;
+• alugar uma bicicleta, ao lado da estação do metrô, 
+seguindo 3,0 km pela ciclovia.
+O quadro fornece as velocidades médias do ônibus 
+e da bicicleta, em km/h, no trajeto metrô−universidade.
+Dia da semana
+Velocidade média
+Ônibus (km/h)
+Bicicleta (km/h)
+Segunda-feira
+9
+15
+Terça-feira
+20
+22
+Quarta-feira
+15
+24
+Quinta-feira
+12
+15
+Sexta-feira
+10
+18
+Sábado
+30
+16
+A fim de poupar tempo no deslocamento para a 
+universidade, em quais dias o aluno deve seguir pela 
+ciclovia? 
+A)Às segundas, quintas e sextas-feiras.
+B)Às terças e quintas-feiras e aos sábados.
+C)Às segundas, quartas e sextas-feiras.
+D)Às terças, quartas e sextas-feiras.
+E)Às terças e quartas-feiras e aos sábados.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 154        
+Pesquisadores da Universidade de Tecnologia 
+de Viena, na Áustria, produziram miniaturas de 
+objetos em impressoras 3D de alta precisão. Ao 
+serem ativadas, tais impressoras lançam feixes de 
+laser sobre um tipo de resina, esculpindo o objeto 
+desejado. O produto final da impressão é uma 
+escultura microscópica de três dimensões, como 
+visto na imagem ampliada.
+A escultura apresentada é uma miniatura de 
+um carro de Fórmula 1, com 100 micrômetros de 
+comprimento. Um micrômetro é a milionésima parte 
+de um metro.
+Usando notação científica, qual é a representação do 
+comprimento dessa miniatura, em metro?
+A)1,0 × 10 − 1 
+B)1,0 × 10 − 3  
+C)1,0 × 10 − 4  
+D)1,0 × 10 − 6  
+E)1,0 × 10 − 7
+MT - 2° dia | Caderno 7 - AZUL - Página 21
+ 
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 155        
+O artista gráfico holandês Maurits Cornelius Escher 
+criou belíssimas obras nas quais as imagens se repetiam, 
+com diferentes tamanhos, induzindo ao raciocínio de 
+repetição infinita das imagens. Inspirado por ele, um artista 
+fez um rascunho de uma obra na qual propunha a ideia 
+de construção de uma sequência de infinitos quadrados, 
+cada vez menores, uns sob os outros, conforme indicado 
+na figura.
+P
+1
+1/2
+1/4
+T
+R
+S
+O quadrado PRST, com lado de medida 1, é o ponto 
+de partida. O segundo quadrado é construído sob ele 
+tomando-se o ponto médio da base do quadrado anterior 
+e criando-se um novo quadrado, cujo lado corresponde 
+à metade dessa base. Essa sequência de construção se 
+repete recursivamente.
+Qual é a medida do lado do centésimo quadrado 
+construído de acordo com esse padrão?
+A)1
+2
+100
+�
+��
+�
+��
+B)1
+2
+99
+�
+��
+�
+��
+C)1
+2
+97
+�
+��
+�
+��  
+D)1
+2
+98
+�
+��
+�
+��
+�
+E)1
+2
+99
+�
+��
+�
+��
+�
+
+(RESPOSTA CORRETA): B
+
+(Enem/2020)  QUESTÃO 157        
+Amigo secreto é uma brincadeira tradicional nas festas 
+de fim de ano. Um grupo de amigos se reúne e cada um 
+deles sorteia o nome da pessoa que irá presentear. No dia 
+da troca de presentes, uma primeira pessoa presenteia 
+seu amigo secreto. Em seguida, o presenteado revela seu 
+amigo secreto e o presenteia. A brincadeira continua até que 
+todos sejam presenteados, mesmo no caso em que o ciclo 
+se fecha. Dez funcionários de uma empresa, entre eles um 
+casal, participarão de um amigo secreto. A primeira pessoa 
+a revelar será definida por sorteio.
+Qual é a probabilidade de que a primeira pessoa a revelar 
+o seu amigo secreto e a última presenteada sejam as duas 
+pessoas do casal?
+A) 
+1
+5 
+B)1
+45 
+C)
+1
+50 
+D)
+1
+90 
+E)
+1
+100
+
+(RESPOSTA CORRETA): 1
+
+(Enem/2020)  QUESTÃO 159        
+Uma pessoa precisa comprar 15 sacos de cimento 
+para uma reforma em sua casa. Faz pesquisa de preço em 
+cinco depósitos que vendem o cimento de sua preferência 
+e cobram frete para entrega do material, conforme a 
+distância do depósito à sua casa. As informações sobre 
+preço do cimento, valor do frete e distância do depósito 
+até a casa dessa pessoa estão apresentadas no quadro.
+Depósito
+Valor do saco 
+de cimento
+Valor do
+frete para cada 
+quilômetro
+Distância entre 
+a casa e o 
+depósito
+(R$)
+(R$)
+(km)
+A
+23,00
+1,00
+10
+B
+21,50
+3,00
+12
+C
+22,00
+1,50
+14
+D
+21,00
+3,50
+18
+E
+24,00
+2,50
+2
+A pessoa escolherá um desses depósitos para 
+realizar sua compra, considerando os preços do cimento 
+e do frete oferecidos em cada opção.
+Se a pessoa decidir pela opção mais econômica, o depósito 
+escolhido para a realização dessa compra será o
+A)  A.
+B)  B.
+C)  C.
+D)  D.
+E)  E.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 160        
+Um motociclista planeja realizar uma viagem cujo 
+destino fica a 500 km de sua casa. Sua moto consome 
+5 litros de gasolina para cada 100 km rodados, e o 
+tanque da moto tem capacidade para 22 litros. Pelo 
+mapa, observou que no trajeto da viagem o último posto 
+disponível para reabastecimento, chamado Estrela, fica a 
+80 km do seu destino. Ele pretende partir com o tanque 
+da moto cheio e planeja fazer somente duas paradas para 
+reabastecimento, uma na ida e outra na volta, ambas no 
+posto Estrela. No reabastecimento para a viagem de ida, 
+deve considerar também combustível suficiente para se 
+deslocar por 200 km no seu destino.
+A quantidade mínima de combustível, em litro, que 
+esse motociclista deve reabastecer no posto Estrela na 
+viagem de ida, que seja suficiente para fazer o segundo 
+reabastecimento, é
+A)13.
+B)14.
+C)17.
+D)18.
+E)21.
+MT - 2° dia | Caderno 7 - AZUL - Página 23
+ 
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 161        
+Uma loja de materiais de construção vende dois tipos de 
+caixas-d’água: tipo A e tipo B. Ambas têm formato cilíndrico e 
+possuem o mesmo volume, e a altura da caixa-d’água do 
+tipo B é igual a 25% da altura da caixa-d’água do tipo A.
+Se R denota o raio da caixa-d’água do tipo A, então o raio 
+da caixa-d’água do tipo B é
+A)R
+2
+B) 2 R
+C)4 R
+D)5 R
+E)16 R
+
+(RESPOSTA CORRETA): B
+
+(Enem/2020)  QUESTÃO 162        
+A lei municipal para a edificação de casas em lotes 
+de uma cidade determina que sejam obedecidos os 
+seguintes critérios:
+• afastamento mínimo de 4 m da rua; 
+• afastamento mínimo de 1 m da divisa com outro lote;
+• área total construída da casa entre 40% e 50% da 
+área total do lote. 
+Um construtor submeteu para aprovação na 
+prefeitura dessa cidade uma planta com propostas para a 
+construção de casas em seus 5 lotes. Cada lote tem área 
+medindo 200 m². 
+A imagem apresenta um esquema, sem escala, 
+no qual estão representados os lotes, as ruas e os 
+afastamentos considerados nos projetos entre as 
+casas e as divisas dos lotes. As medidas indicadas no 
+esquema estão expressas em metro.
+ 
+1
+Rua
+Casa 3
+Casa 5
+Casa 4
+Lote
+Lote
+Casa 1
+Casa 2
+Lote
+Lote
+10
+4
+1
+1
+10
+10
+10
+4
+4
+4
+2
+2
+1
+1
+4
+1
+1
+2
+2
+20
+20
+20
+Rua
+4
+4
+1
+1
+A prefeitura aprovará apenas a planta da casa
+A)1.
+B)2.
+C)3.
+D)4.
+E)5.
+
+(RESPOSTA CORRETA): E
+
+(Enem/2020)  QUESTÃO 165        
+O técnico de um time de basquete pretende aumentar 
+a estatura média de sua equipe de 1,93 m para, no 
+mínimo, 1,99 m. Para tanto, dentre os 15 jogadores que 
+fazem parte de sua equipe, irá substituir os quatro mais 
+baixos, de estaturas: 1,78 m, 1,82 m, 1,84 m e 1,86 m. 
+Para isso, o técnico contratou um novo jogador de 2,02 m. 
+Os outros três jogadores que ele ainda precisa contratar 
+devem satisfazer à sua necessidade de aumentar a média 
+das estaturas da equipe. Ele fi xará a média das estaturas 
+para os três jogadores que ainda precisa contratar dentro 
+do critério inicialmente estabelecido. 
+Qual deverá ser a média mínima das estaturas, em metro, 
+que ele deverá fi xar para o grupo de três novos jogadores 
+que ainda irá contratar?
+A)1,96
+B)1,98 
+C)2,05
+D)2,06 
+E)2,08
+
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 169        
+Um grupo sanguíneo, ou tipo sanguíneo, baseia-se na 
+presença ou ausência de dois antígenos, A e B, na superfície 
+das células vermelhas do sangue. Como dois antígenos 
+estão envolvidos, os quatro tipos sanguíneos distintos são:
+• Tipo A: apenas o antígeno A está presente;
+• Tipo B: apenas o antígeno B está presente;
+• Tipo AB: ambos os antígenos estão presentes;
+• Tipo O: nenhum dos antígenos está presente.
+Disponível em: http://saude.hsw.uol.com.br. Acesso em: 15 abr. 2012 (adaptado).
+Foram coletadas amostras de sangue de 200 pessoas 
+e, após análise laboratorial, foi identificado que em 100 
+amostras está presente o antígeno A, em 110 amostras 
+há presença do antígeno B e em 20 amostras nenhum 
+dos antígenos está presente.
+Dessas pessoas que foram submetidas à coleta de 
+sangue, o número das que possuem o tipo sanguíneo A)é igual a
+A)30.
+B)60.
+C)70.
+D)90.
+E)100.
+
+(RESPOSTA CORRETA): C
+
+(Enem/2020)  QUESTÃO 171        
+Azulejo designa peça de cerâmica vitrificada e/ou 
+esmaltada usada, sobretudo, no revestimento de paredes. A)origem das técnicas de fabricação de azulejos é oriental, mas 
+sua expansão pela Europa traz consigo uma diversificação 
+de estilos, padrões e usos, que podem ser decorativos, 
+utilitários e arquitetônicos.
+Disponível em: www.itaucultural.org.br. Acesso em: 31 jul. 2012.
+Azulejos no formato de octógonos regulares serão 
+utilizados para cobrir um painel retangular conforme 
+ilustrado na figura.
+Entre os octógonos e na borda lateral dessa área, 
+será necessária a colocação de 15 azulejos de outros 
+formatos para preencher os 15 espaços em branco do 
+painel. Uma loja oferece azulejos nos seguintes formatos:
+1 – Triângulo retângulo isósceles;
+2 – Triângulo equilátero;
+3 – Quadrado.
+Os azulejos necessários para o devido preenchimento 
+das áreas em branco desse painel são os de formato
+A)1.
+B)3.
+C)1 e 2.
+D)1 e 3.
+E)2 e 3.
+MT - 2° dia | Caderno 7 - AZUL - Página 26
+ 
+(RESPOSTA CORRETA): D
+
+(Enem/2020)  QUESTÃO 174                
+O fenômeno das manifestações populares de massa traz à discussão como estimar o número de pessoas 
+presentes nesse tipo de evento. Uma metodologia usada é: no momento do ápice do evento, é feita uma foto aérea 
+da via pública principal na área ocupada, bem como das vias afl uentes que apresentem aglomerações de pessoas 
+que acessam a via principal. A foto é sobreposta por um mapa virtual das vias, ambos na mesma escala, fazendo-se 
+um esboço geométrico da situação. Em seguida, subdivide-se o espaço total em trechos, quantifi cando a densidade, 
+da seguinte forma:
+• 4 pessoas por metro quadrado, se elas estiverem andando em uma mesma direção;
+• 5 pessoas por metro quadrado, se elas estiverem se movimentando sem deixar o local;
+• 6 pessoas por metro quadrado, se elas estiverem paradas.
+É feito, então, o cálculo do total de pessoas, considerando os diversos trechos, e desconta-se daí 1 000 pessoas 
+para cada carro de som fotografado.
+Com essa metodologia, procederam-se aos cálculos para estimar o número de participantes na manifestação cujo 
+esboço geométrico é dado na fi gura. Há três trechos na via principal: MN, NO e OP, e um trecho numa via afl uente 
+da principal: QR .
+Legenda:
+30 m
+100 m
+100 m
+300 m
+200 m
+Via
+principal
+M
+N
+R
+O
+P
+Q
+30 m
+Andando em uma
+mesma direção
+ou
+Movimentando sem
+deixar o local
+Parado
+Carro de som
+Obs.: a figura não está em escala (considere as medidas dadas).
+Segundo a metodologia descrita, o número estimado de pessoas presentes a essa manifestação foi igual a
+A)110 000.
+B)104 000.
+C)93 000.
+D)92 000.
+E)87 000.
+MT - 2° dia | Caderno 7 - AZUL - Página 28
+
+ 
+(RESPOSTA CORRETA): B
+
+(Enem/2020)  QUESTÃO 178        
+Suponha que uma equipe de corrida de automóveis 
+disponha de cinco tipos de pneu (I, II, III, IV, V), em que 
+o fator de eficiência climática EC (índice que fornece o 
+comportamento do pneu em uso, dependendo do clima) 
+é apresentado:
+• EC do pneu I: com chuva 6, sem chuva 3;
+• EC do pneu II: com chuva 7, sem chuva −4;
+• EC do pneu III: com chuva −2, sem chuva 10;
+• EC do pneu IV: com chuva 2, sem chuva 8;
+• EC do pneu V: com chuva −6, sem chuva 7.
+O coeficiente de rendimento climático (CRC) de um 
+pneu é calculado como a soma dos produtos dos fatores 
+de EC, com ou sem chuva, pelas correspondentes 
+probabilidades de se ter tais condições climáticas: 
+ele é utilizado para determinar qual pneu deve ser 
+selecionado para uma dada corrida, escolhendo-se o 
+pneu que apresentar o maior CRC naquele dia. No dia 
+de certa corrida, a probabilidade de chover era de 70% 
+e o chefe da equipe calculou o CRC de cada um dos 
+cinco tipos de pneu.
+O pneu escolhido foi
+A)I.
+B)II.
+C)III.
+D)IV.
+E)V.
+
+(RESPOSTA CORRETA): A
+
+(Enem/2020)  QUESTÃO 179        
+Um pé de eucalipto em idade adequada para o corte 
+rende, em média, 20 mil folhas de papel A4. A densidade 
+superficial do papel A4, medida pela razão da massa de 
+uma folha desse papel por sua área, é de 75 gramas por 
+metro quadrado, e a área de uma folha de A4 é 0,062 
+metro quadrado.
+Disponível em: http://revistagalileu.globo.com. Acesso em: 28 fev. 2013 (adaptado).
+Nessas condições, quantos quilogramas de papel rende, 
+em média, um pé de eucalipto?
+A)4 301
+B)1 500
+C)930
+D)267
+E)93
+
+(RESPOSTA CORRETA): E
+

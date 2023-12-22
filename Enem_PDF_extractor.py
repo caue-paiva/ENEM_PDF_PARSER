@@ -3,9 +3,8 @@ from typing import Any
 
 """
 A melhorar: 
-1) gabarito das questões de 2020 , a primeira questão de ingles ta errada
 
-2) melhorar função de parsear as alternativas
+1) melhorar função de parsear as alternativas
 
 
 código age:
@@ -197,7 +196,6 @@ class EnemPDFextractor():
                 
             else: 
                 return "não achou a questão"
-            print(answer_index)
             return self.answer_pdf_text[answer_index]
         else:
             question_number += 90  #gabarito do segundo dia começa da questão 91, mas a lógica do código conta as questões do 0 independente do dia, entao para achar é preciso somar +90
@@ -228,7 +226,6 @@ class EnemPDFextractor():
         first_question_str_index: int = next(self.__yield_all_substrings__(input_str = page_text, sub_str = self.__QUESTION_IDENTIFIER__) , -1 ) #acha a primeira questão da folha
         
         if first_question_str_index == -1:
-            print("sem questões")
             return {} # se não tiver questões na página (pagina de redação) pula a iteração
          
         page_text = page_text[first_question_str_index:]  #antes da primeira questão temos apenas um header inútil (ex: ENEM 2022, ENEM 2022....) do PDF
@@ -245,7 +242,6 @@ class EnemPDFextractor():
         image_list:list = current_page.get_images()
 
         if image_list:
-            print(f" temos : {len(image_list)} imagens")
             text_processing_dict.update({"text":"","page_first_question": page_first_question, "total_question_number": total_question_number})
             return text_processing_dict #retorna dict sem imagens
             
@@ -310,7 +306,7 @@ class EnemPDFextractor():
                     pix = fitz.Pixmap(pix, 0)  # tenta tirar o canal alfa
 
                 except ValueError as e:
-                    print(f"Error dropping alpha channel: {e}")
+                    print(f"Erro ao tentar remover canal alfa da imagem: {e}")
                     continue  # não foi possível tirar o canal alfa, vai para a proxima imagem
 
             # se a imagem é CMYK, converte para RGB    
@@ -430,10 +426,7 @@ class EnemPDFextractor():
                     in_spanish_question = True  #verifica se a questão é de espanhol
                 else:
                     in_spanish_question = False
-                if answer_number == 1:
-                    print(text)
-                    print(in_spanish_question)
-
+            
                 # se a questão for de espanhol é necessário uma pequena mudança na parte de pegar a resposta
                 correct_answer:str = self.__find_correct_answer__(
                     question_number= answer_number, 
@@ -477,7 +470,7 @@ class EnemPDFextractor():
                     else:
                         english_questions.append(question_json)
 
-                elif answer_number in range(start_spa, end_spa+1):
+                elif answer_number in range(start_spa, end_spa+1): 
                     if self.output_type == "txt":
                         spanish_questions += parsed_question
                     else:

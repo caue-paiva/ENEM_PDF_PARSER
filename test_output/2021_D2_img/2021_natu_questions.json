@@ -1,0 +1,36 @@
+[
+    {
+        "question_text": "QUESTÃO 102\nÉ possível ligar aparelhos elétricos de baixa corrente utilizando materiais comuns de laboratório no lugar das \n�������������������������������������������������������������������������������������������������\nVoltímetro\n2,20 v\n00:0652\nCronômetro\nZn(s)\nZnSO4(aq)\nCuSO4(aq)\nZnSO4(aq)\nCuSO4(aq)\nZn(s)\nCu(s)\nCu(s)\nPapel umedecido\ncom Na SO (aq)\n2\n4\nPapel umedecido\ncom Na SO (aq)\n2\n4\n�����������������������������������������������������������������������������������������\nA)v\nD)v\nB)v\nE)v\nC)v\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)v\n",
+            "D)v\n",
+            "B)v\n",
+            "E)v\n",
+            "C)v\n "
+        ],
+        "page_images": [],
+        "ID": "2021_D2_N102",
+        "year": 2021,
+        "day": "D2",
+        "question_num": 102
+    },
+    {
+        "question_text": "QUESTÃO 126\nUm garoto precisa montar um circuito que acenda \ntrês lâmpadas de cores diferentes, uma de cada vez. \n���� ������� ���� ���������� ��� ����� ���� �������� �� �����\ninterruptores, como ilustrado, junto com seu símbolo de \n�������������������������������������������������������\n�������������\nLâmpadas\nVERDE\nVERMELHA)ZUL\nBateria\nA\nB\nC\nA\nB\nC\nO garoto fez cinco circuitos elétricos usando os dois \ninterruptores, mas apenas um satisfaz a sua necessidade. \nEsse circuito é representado por\nA \nVERDE\nVERMELHA)ZUL\nA\nB\nC\nA\nB\nC\nB \nVERDE\nVERMELHA)ZUL\nA\nB\nC\nA\nB\nC)VERDE\nVERMELHA)ZUL\nA\nB\nC\nA\nB\nC\nD \nVERDE\nVERMELHA)ZUL\nA\nB\nC\nA\nB\nC\nE \nVERDE\nVERMELHA)ZUL\nA\nB\nC\nA\nB\nC\n ",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)ZUL\nBateria\nA\nB\nC\nA\nB\nC\nO garoto fez cinco circuitos elétricos usando os dois \ninterruptores, mas apenas um satisfaz a sua necessidade. \nEsse circuito é representado por\nA \nVERDE\nVERMELH",
+            "A)ZUL\nA\nB\nC\nA\nB\nC\nB \nVERDE\nVERMELH",
+            "A)ZUL\nA\nB\nC\nA\nB\n",
+            "C)VERDE\nVERMELH",
+            "A)ZUL\nA\nB\nC\nA\nB\nC\nD \nVERDE\nVERMELH",
+            "A)ZUL\nA\nB\nC\nA\nB\nC\nE \nVERDE\nVERMELH",
+            "A)ZUL\nA\nB\nC\nA\nB\nC\n "
+        ],
+        "page_images": [],
+        "ID": "2021_D2_N126",
+        "year": 2021,
+        "day": "D2",
+        "question_num": 126
+    }
+]

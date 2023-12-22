@@ -1,0 +1,684 @@
+[
+    {
+        "question_text": "QUESTÃO 06 \nUrgência emocional\nSe tudo é para ontem, se a vida engata uma primeira \ne sai em disparada, se não há mais tempo para paradas \nestratégicas, caímos fatalmente no vício de querer que \nos amores sejam igualmente resolvidos num átimo de \nsegundo. Temos pressa para ouvir “eu te amo”. Não vemos \na hora de que fiquem estabelecidas as regras de convívio: \nsomos namorados, ficantes, casados, amantes? Urgência \nemocional. Uma cilada. Associamos diversas palavras ao \nAMOR: paixão, romance, sexo, adrenalina, palpitação. \nEsquecemos, no entanto, da palavra que viabiliza esse \nsentimento: “paciência”. Amor sem paciência não vinga. \nAmor não pode ser mastigado e engolido com emergência, \ncom fome desesperada. É uma refeição que pode durar \numa vida.\nMEDEIROS, M. Disponível em: http://porumavidasimples.blogspot.com.br. \nAcesso em: 20 ago. 2017 (adaptado).\nNesse texto de opinião, as marcas linguísticas revelam \numa situação distensa e de pouca formalidade, o que se \nevidencia pelo(a)\nA)impessoalização ao longo do texto, como em: “se \nnão há mais tempo”.\nB)construção de uma atmosfera de urgência, em \npalavras como: “pressa”.\nC)repetição de uma determinada estrutura sintática, \ncomo em: “Se tudo é para ontem”.\nD)ênfase no emprego da hipérbole, como em: “uma \nrefeição que pode durar uma vida”.\nE)emprego de metáforas, como em: “a vida engata \numa primeira e sai em disparada”.\n\n ",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)impessoalização ao longo do texto, como em: “se \nnão há mais tempo”.\n",
+            "B)construção de uma atmosfera de urgência, em \npalavras como: “pressa”.\n",
+            "C)repetição de uma determinada estrutura sintática, \ncomo em: “Se tudo é para ontem”.\n",
+            "D)ênfase no emprego da hipérbole, como em: “uma \nrefeição que pode durar uma vida”.\n",
+            "E)emprego de metáforas, como em: “a vida engata \numa primeira e sai em disparada”.\n\n "
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page4_1.png",
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page4_2.png",
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page4_3.png"
+        ],
+        "ID": "2022_D1_N6",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 6
+    },
+    {
+        "question_text": "QUESTÃO 07 \nTEXTO I\nEI...\nME LEVE PARA SUA CASA!!!\nADOTE UM\nANIMAL DE RUA\n14ª FEIRA DE ADOÇÃO\nDE CÃES E GATOS\nDOCUMENTOS OBRIGATÓRIOS PARA ADOÇÃO\nCARTEIRA DE IDENTIDADE   CPF   COMPROVANTE DE RESIDÊNCIA \nE muito amor!!\nDisponível em: https://amigodobicho.wordpress.com. Acesso em: 10 dez. 2017.\nTEXTO II\nNas ruas, na cidade e no parque\nNinguém nunca prendeu o Delegado. O vaivém de rua \nem rua e sua longa vida são relembrados e recontados. \nExemplo de sobrevivência, liderança, inteligência canina, \ndesde pequenininho seu focinho negro e seus olhos \ndelineados desenharam um mapa mental olfativo-visual de \nLavras. Corria de quem precisava correr e se aproximava \nde quem não lhe faria mal, distinguia este daquele. Assim, \ntornou-se um cão comunitário. Nunca se soube por que \nescolheu a rua, talvez lhe tenham feito mal dentro de quatro \nparedes. Idoso, teve câncer e desapareceu. O querido foi \nprocurado pela cidade inteira por duas protetoras, mas \nnunca encontrado.\nCOSTA, A. R. N. Viver o amor aos cães: Parque Francisco de Assis. \nCarmo do Cachoeira: Irdin, 2014 (adaptado).\nOs dois textos abordam a temática de animais de rua, \nporém, em relação ao Texto I, o Texto II\nA)problematiza a necessidade de adoção de animais \nsem lar.\nB)valida a troca afetiva entre os pets adotados e seus \ndonos.\nC)reforça a importância da campanha de adoção de \nanimais.\nD)exalta a natureza amigável de cães e de gatos.\nE)promove a campanha de adoção de animais.\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)problematiza a necessidade de adoção de animais \nsem lar.\n",
+            "B)valida a troca afetiva entre os pets adotados e seus \ndonos.\n",
+            "C)reforça a importância da campanha de adoção de \nanimais.\n",
+            "D)exalta a natureza amigável de cães e de gatos.\n",
+            "E)promove a campanha de adoção de animais.\n"
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page5_1.png",
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page5_2.png"
+        ],
+        "ID": "2022_D1_N7",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 7
+    },
+    {
+        "question_text": "QUESTÃO 08 \nÉ ruivo? Tem olhos azuis? É homem ou mulher? \nUsa chapéu? Quem jogou Cara a Cara na infância sabe \nde cor o roteiro de perguntas para adivinhar quem é o \npersonagem misterioso do seu oponente.\nAgora, o jogo está prestes a ganhar uma nova \nversão. A designer polonesa Zuzia Kozerska-Girard está \ndesenvolvendo uma variação do Guess Who? (nome  \ndo Cara a Cara em inglês), em que as personalidades do \ntabuleiro são, na verdade, mulheres notáveis da história \ne da atualidade, como a artista Frida Kahlo, a ativista \nMalala Yousafzai, a astronauta Valentina Tereshkova e a \naviadora Amelia Earhart. O Who’s She? (“Quem é ela?”, \nem português) traz, no total, 28 mulheres que representam \ndiversas profissões, nacionalidades e idades.\nA ideia é que, em vez de perguntar sobre a aparência \ndas personagens, as questões sejam direcionadas aos \nfeitos delas: ganhou algum Nobel, fez alguma descoberta? \nPara cada personagem há um cartão com fatos divertidos \ne interessantes sobre sua vida. Uma campanha entrou no \nar com o objetivo de arrecadar dinheiro para desenvolver \no Who’s She?. A meta inicial era reunir 17 mil dólares. \nOito dias antes de a campanha acabar, o projeto já \nangariou quase 350 mil dólares.\nA chegada do jogo à casa do comprador varia de \nacordo com a quantia doada — quanto mais você doou, \nmais rápido vai poder jogar.\nDisponível em: www.super.abril.com.br. Acesso em: 4 dez. 2018 (adaptado).\nAo divulgar a adaptação do jogo para questões relativas a \nações e habilidades de mulheres notáveis, o texto busca\nA)contribuir para a formação cidadã dos jogadores.\nB)refutar \nmodelos \nestereotipados \nde \nbeleza \ne \nelegância.\nC)estimular \na \ncompetitividade \nentre \npotenciais \ncompradores.\nD)exemplificar estratégias de arrecadação financeira \npela internet.\nE)desenvolver conhecimentos lúdicos específicos dos \ntempos atuais.\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)contribuir para a formação cidadã dos jogadores.\n",
+            "B)refutar \nmodelos \nestereotipados \nde \nbeleza \ne \nelegância.\n",
+            "C)estimular \na \ncompetitividade \nentre \npotenciais \ncompradores.\n",
+            "D)exemplificar estratégias de arrecadação financeira \npela internet.\n",
+            "E)desenvolver conhecimentos lúdicos específicos dos \ntempos atuais.\n"
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page5_1.png",
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page5_2.png"
+        ],
+        "ID": "2022_D1_N8",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 8
+    },
+    {
+        "question_text": "QUESTÃO 09 \nDETRAN  ES\nCausar um acidente\né algo que você leva\npro resto da vida.\nNão beba se for dirigir.\nArrependimento\nArrependimento\nCausar um acidente\né algo que você leva\npro resto da vida.\nNão beba se for dirigir.\nDETRAN  ES\nDisponível em: www.portaldapropaganda.com.br. Acesso em: 29 out. 2013 (adaptado).\nPara convencer o público-alvo sobre a necessidade de \num trânsito mais seguro, essa peça publicitária apela \npara o(a)\nA)sentimento de culpa provocado no condutor \ncausador de acidentes.\nB)dano psicológico causado nas vítimas da violência \nnas estradas.\nC)importância do monitoramento do trânsito pelas \nautoridades competentes.\nD)necessidade de punição a motoristas alcoolizados \nenvolvidos em acidentes.\nE)sofrimento decorrente da perda de entes queridos em \nacidentes automobilísticos.\n\n ",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)sentimento de culpa provocado no condutor \ncausador de acidentes.\n",
+            "B)dano psicológico causado nas vítimas da violência \nnas estradas.\n",
+            "C)importância do monitoramento do trânsito pelas \nautoridades competentes.\n",
+            "D)necessidade de punição a motoristas alcoolizados \nenvolvidos em acidentes.\n",
+            "E)sofrimento decorrente da perda de entes queridos em \nacidentes automobilísticos.\n\n "
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page5_1.png",
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page5_2.png"
+        ],
+        "ID": "2022_D1_N9",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 9
+    },
+    {
+        "question_text": "QUESTÃO 10 \nCiente de que, no campo da criação, as inovações \ntecnológicas abrem amplo leque de possibilidades \n— ao permitir, e mesmo estimular, que o artista \nexplore a fundo, em seu processo criativo, questões \ncomo a aleatoriedade, o acaso, a não linearidade e a \nhipermídia —, Leo Cunha comenta que, no que tange \nao campo da divulgação, as alternativas são ainda \nmais evidentes: “Afinal, é imensa a capacidade de \nreprodução, multiplicação e compartilhamento das \nobras artísticas/culturais. Ao mesmo tempo, ganham \ndimensão os dilemas envolvidos com a questão \nda autoria, dos direitos autorais, da reprodução e \nintervenção não autorizadas, entre outras questões”. \nJá segundo a professora Yacy-Ara Froner, o uso de \nferramentas tecnológicas não pode ser visto como \num fim em si mesmo. Isso porque computadores, \nsamplers, programas de imersão, internet e intranet, \nvídeo, televisão, rádio, GPD etc. são apenas suportes \ncom os quais os artistas exercem sua imaginação.\nSILVA JR., M. G. Movidas pela dúvida. Minas faz Ciências, \nn. 52, dez.-fev. 2013 (adaptado).\nSegundo os autores citados no texto, a expansão de \npossibilidades no campo das manifestações artísticas \npromovida pela internet pode pôr em risco o(a)\nA)sucesso dos artistas.\nB)valorização dos suportes.\nC)proteção da produção estética.\nD)modo de distribuição de obras.\nE)compartilhamento das obras artísticas.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)sucesso dos artistas.\n",
+            "B)valorização dos suportes.\n",
+            "C)proteção da produção estética.\n",
+            "D)modo de distribuição de obras.\n",
+            "E)compartilhamento das obras artísticas.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N10",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 10
+    },
+    {
+        "question_text": "QUESTÃO 11 \nOra, sempre que surge uma nova técnica, ela quer \ndemonstrar que revogará as regras e coerções que \npresidiram o nascimento de todas as outras invenções \ndo passado. Ela se pretende orgulhosa e única. Como \nse a nova técnica carreasse com ela, automaticamente, \npara seus novos usuários, uma propensão natural a fazer \neconomia de qualquer aprendizagem. Como se ela se \npreparasse para varrer tudo que a precedeu, ao mesmo \ntempo transformando em analfabetos todos os que \nousassem repeli-la.\nFui testemunha dessa mudança ao longo de toda \na minha vida. Ao passo que, na realidade, é o contrário \nque acontece. Cada nova técnica exige uma longa \niniciação numa nova linguagem, ainda mais longa na \nmedida em que nosso espírito é formatado pela utilização \ndas linguagens que precederam o nascimento da \nrecém-chegada.\nECO, U.; CARRIÈRE, J.-C. Não contem com o fim do livro. \nRio de Janeiro: Record, 2010 (adaptado).\nO texto revela que, quando a sociedade promove o \ndesenvolvimento de uma nova técnica, o que mais \nimpacta seus usuários é a\nA)dificuldade na apropriação da nova linguagem.\nB)valorização da utilização da nova tecnologia.\nC)recorrência das mudanças tecnológicas.\nD)suplantação imediata dos conhecimentos prévios.\nE)rapidez no aprendizado do manuseio das novas \ninvenções.\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)dificuldade na apropriação da nova linguagem.\n",
+            "B)valorização da utilização da nova tecnologia.\n",
+            "C)recorrência das mudanças tecnológicas.\n",
+            "D)suplantação imediata dos conhecimentos prévios.\n",
+            "E)rapidez no aprendizado do manuseio das novas \ninvenções.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N11",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 11
+    },
+    {
+        "question_text": "QUESTÃO 12 \nPapos\n— Me disseram...\n— Disseram-me.\n— Hein?\n— O correto é “disseram-me”. Não “me disseram”.\n— Eu falo como quero. E te digo mais... Ou é “digo-te”?\n— O quê?\n— Digo-te que você...\n— O “te” e o “você” não combinam.\n— Lhe digo?\n— Também não. O que você ia me dizer?\n — Que você está sendo grosseiro, pedante e \nchato. [...] \n — Dispenso as suas correções. Vê se esquece-me. \nFalo como bem entender. Mais uma correção e eu...\n— O quê?\n— O mato.\n— Que mato?\n — Mato-o. Mato-lhe. Mato você. Matar-lhe-ei-te. \nOuviu bem? Pois esqueça-o e para-te. Pronome \nno lugar certo é elitismo!\n— Se você prefere falar errado...\n — Falo como todo mundo fala. O importante é me \nentenderem. Ou entenderem-me?\nVERISSIMO, L. F. Comédias para se ler na escola.\nRio de Janeiro: Objetiva, 2001 (adaptado).\nNesse texto, o uso da norma-padrão defendido por um \ndos personagens torna-se inadequado em razão do(a)\nA)falta de compreensão causada pelo choque entre \ngerações.\nB)contexto de comunicação em que a conversa se \ndá.\nC)grau de polidez distinto entre os interlocutores.\nD)diferença de escolaridade entre os falantes.\nE)nível social dos participantes da situação.\n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)falta de compreensão causada pelo choque entre \ngerações.\n",
+            "B)contexto de comunicação em que a conversa se \ndá.\n",
+            "C)grau de polidez distinto entre os interlocutores.\n",
+            "D)diferença de escolaridade entre os falantes.\n",
+            "E)nível social dos participantes da situação.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N12",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 12
+    },
+    {
+        "question_text": "QUESTÃO 13 \nSão vários os fatores, internos e externos, que \ninfluenciam os hábitos das pessoas no acesso à internet, \nassim como nas práticas culturais realizadas na rede. \nA utilização das tecnologias de informação e comunicação \nestá diretamente relacionada aos aspectos como: \nconhecimento de seu uso, acesso à linguagem letrada, \nnível de instrução, escolaridade, letramento digital etc. \nOs que detêm tais recursos (os mais escolarizados) \nsão os que mais acessam a rede e também os que \npossuem maior índice de acumulatividade das práticas. \nA análise dos dados nos possibilita dizer que a falta \nde acesso à rede repete as mesmas adversidades e \nexclusões já verificadas na sociedade brasileira no que \nse refere a analfabetos, menos escolarizados, negros, \npopulação indígena e desempregados. Isso significa \ndizer que a internet, se não produz diretamente a \nexclusão, certamente a reproduz, tendo em vista \nque os que mais a acessam são justamente os mais \njovens, escolarizados, remunerados, trabalhadores \nqualificados, homens e brancos.\nSILVA, F. A. B.; ZIVIANE, P.; GHEZZI, D. R. As tecnologias digitais e seus usos. \nBrasília; Rio de Janeiro: Ipea, 2019 (adaptado).\nAo analisarem a correlação entre os hábitos e o perfil \nsocioeconômico dos usuários da internet no Brasil, os \npesquisadores\nA)apontam \no \ndesenvolvimento \neconômico \ncomo \nsolução para ampliar o uso da rede.\nB)questionam a crença de que o acesso à informação é \nigualitário e democrático.\nC)afirmam que o uso comercial da rede é a causa da \nexclusão de minorias.\nD)refutam o vínculo entre níveis de escolaridade e \ndificuldade de acesso.\nE)condicionam a expansão da rede à elaboração de \npolíticas inclusivas.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)apontam \no \ndesenvolvimento \neconômico \ncomo \nsolução para ampliar o uso da rede.\n",
+            "B)questionam a crença de que o acesso à informação é \nigualitário e democrático.\n",
+            "C)afirmam que o uso comercial da rede é a causa da \nexclusão de minorias.\n",
+            "D)refutam o vínculo entre níveis de escolaridade e \ndificuldade de acesso.\n",
+            "E)condicionam a expansão da rede à elaboração de \npolíticas inclusivas.\n"
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page7_1.png"
+        ],
+        "ID": "2022_D1_N13",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 13
+    },
+    {
+        "question_text": "QUESTÃO 14 \nTEXTO I\nA língua não é uma nomenclatura, que se apõe a \numa realidade pré-categorizada, ela é que classifica \na realidade. No léxico, percebe-se, de maneira mais \nimediata, o fato de que a língua condensa as experiências \nde um dado povo.\nFIORIN, J. L. Língua, modernidade e tradição. Diversitas, n. 2, mar.-set. 2014. \nTEXTO II\nAs expressões coloquiais ainda estão impregnadas de \ndiscriminação contra os negros. Basta recordar algumas \ndelas, como passar um “dia negro”, ter um “lado negro”, \nser a “ovelha negra” da família ou praticar “magia negra”.\nDisponível em: https://brasil.elpais.com. Acesso em: 22 maio 2018.\nO Texto II exemplifica o que se afirma no Texto I, na \nmedida em que defende a ideia de que as escolhas \nlexicais são resultantes de um\nA)expediente próprio do sistema linguístico que nos \napresenta diferentes possibilidades para traduzir \nestados de coisas.\nB)ato inventivo de nomear novas realidades que \nsurgem diante de uma comunidade de falantes de \numa língua.\nC)mecanismo de apropriação de formas linguísticas que \nestão no acervo da formação do idioma nacional.\nD)processo de incorporação de preconceitos que são \nrecorrentes na história de uma sociedade.\nE)recurso de expressão marcado pela objetividade que \nse requer na comunicação diária.\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)expediente próprio do sistema linguístico que nos \napresenta diferentes possibilidades para traduzir \nestados de coisas.\n",
+            "B)ato inventivo de nomear novas realidades que \nsurgem diante de uma comunidade de falantes de \numa língua.\n",
+            "C)mecanismo de apropriação de formas linguísticas que \nestão no acervo da formação do idioma nacional.\n",
+            "D)processo de incorporação de preconceitos que são \nrecorrentes na história de uma sociedade.\n",
+            "E)recurso de expressão marcado pela objetividade que \nse requer na comunicação diária.\n"
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page7_1.png"
+        ],
+        "ID": "2022_D1_N14",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 14
+    },
+    {
+        "question_text": "QUESTÃO 15 \nQUANTO CUSTOU?\nProposta obriga órgão público a divulgar gasto\ncom anúncio na própria peça publicitária.\nQual sua opinião?\nDisponível em: www.facebook.com/senadofederal. Acesso em: 9 dez. 2017.\nConsiderando-se a função social dos posts, essa imagem \nevidencia a apropriação de outro gênero com o objetivo de\nA)promover o uso adequado de campanhas publicitárias \ndo governo.\nB)divulgar \no \nprojeto \nsobre \ntransparência \nda \nadministração pública.\nC)responsabilizar o cidadão pelo controle dos gastos \npúblicos.\nD)delegar a gestão de projetos de lei ao contribuinte.\nE)assegurar a fiscalização dos gastos públicos.\n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)promover o uso adequado de campanhas publicitárias \ndo governo.\n",
+            "B)divulgar \no \nprojeto \nsobre \ntransparência \nda \nadministração pública.\n",
+            "C)responsabilizar o cidadão pelo controle dos gastos \npúblicos.\n",
+            "D)delegar a gestão de projetos de lei ao contribuinte.\n",
+            "E)assegurar a fiscalização dos gastos públicos.\n\n "
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page7_1.png"
+        ],
+        "ID": "2022_D1_N15",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 15
+    },
+    {
+        "question_text": "QUESTÃO 16 \nEla era linda. Gostava de dançar, fazia teatro em São \nPaulo e sonhava ser atriz em Hollywood. Tinha 13 anos \nquando ganhou uma câmera de vídeo — e uma irmã.  \nAs \nduas \nse \ntornaram \nsuas \ncompanheiras \nde \nexperimentações. Adolescente, Elena vivia a criar \nfilminhos e se empenhava em dirigir a pequena Petra nas \ncenas que inventava. Era exigente com a irmã. E acreditava \nno potencial da menina para satisfazer seus arroubos de \ndiretora precoce. Por cinco anos, integrou algumas das \nmelhores companhias paulistanas de teatro e participou \nde preleções para filmes e trabalhos na TV. Nunca foi \nchamada. No início de 1990, Elena tinha 20 anos quando se \nmudou para Nova York para cursar artes cênicas e batalhar \numa chance no mercado americano. Deslocada, ansiosa, \nfrustrada após alguns testes de elenco malsucedidos, \ndecepcionada com a ausência de reconhecimento e \nvitimada por uma depressão que se agravava com a falta \nde perspectivas, Elena pôs fim à vida no segundo semestre. \nPetra tinha 7 anos. Vinte anos depois, é ela, a irmã caçula, \nque volta a Nova York para percorrer os últimos passos da \nirmã, vasculhar seus arquivos e transformar suas memórias \nem imagem e poesia.\nElena é um filme sobre a irmã que parte e sobre a irmã \nque fica. É um filme sobre a busca, a perda, a saudade, mas \ntambém sobre o encontro, o legado, a memória. Um filme sobre \na Elena de Petra e sobre a Petra de Elena, sobre o que ficou de \numa na outra e, essencialmente, um filme sobre a delicadeza.\nVANUCHI, C. Época, 19 out. 2012 (adaptado).\nO texto é exemplar de um gênero discursivo que cumpre \na função social de\nA)narrar, por meio de imagem e poesia, cenas da vida \ndas irmãs Petra e Elena.\nB)descrever, por meio das memórias de Petra, a \nseparação de duas irmãs.\nC)sintetizar, por meio das principais cenas do filme, a \nhistória de Elena.\nD)lançar, por meio da história de vida do autor, um filme \nautobiográfico.\nE)avaliar, por meio de análise crítica, o filme em \nreferência.\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)narrar, por meio de imagem e poesia, cenas da vida \ndas irmãs Petra e Elena.\n",
+            "B)descrever, por meio das memórias de Petra, a \nseparação de duas irmãs.\n",
+            "C)sintetizar, por meio das principais cenas do filme, a \nhistória de Elena.\n",
+            "D)lançar, por meio da história de vida do autor, um filme \nautobiográfico.\n",
+            "E)avaliar, por meio de análise crítica, o filme em \nreferência.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N16",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 16
+    },
+    {
+        "question_text": "QUESTÃO 17 \nPALAVRA – As gramáticas classificam as palavras \nem substantivo, adjetivo, verbo, advérbio, conjunção, \npronome, numeral, artigo e preposição. Os poetas \nclassificam as palavras pela alma porque gostam de \nbrincar com elas, e para brincar com elas é preciso ter \nintimidade primeiro. É a alma da palavra que define, \nexplica, ofende ou elogia, se coloca entre o significante \ne o significado para dizer o que quer, dar sentimento às \ncoisas, fazer sentido. A palavra nuvem chove. A palavra \ntriste chora. A palavra sono dorme. A palavra tempo \npassa. A palavra fogo queima. A palavra faca corta. \nA palavra carro corre. A palavra “palavra” diz. O que quer. \nE nunca desdiz depois. As palavras têm corpo e alma, \nmas são diferentes das pessoas em vários pontos.\nAs palavras dizem o que querem, está dito, e pronto.\nFALCÃO, A. Pequeno dicionário de palavras ao vento. \nSão Paulo: Salamandra, 2013 (adaptado).\nEsse texto, que simula um verbete para a palavra \n“palavra’’, constitui-se como um poema porque\nA)tematiza o fazer poético, como em “Os poetas \nclassificam as palavras pela alma”.\nB)utiliza o recurso expressivo da metáfora, como \nem “As palavras têm corpo e alma”.\nC)valoriza a gramática da língua, como em “substantivo, \nadjetivo, verbo, advérbio, conjunção”.\nD)estabelece comparações, como em “As palavras têm \ncorpo e alma, mas são diferentes das pessoas”.\nE)apresenta informações pertinentes acerca do \nconceito de “palavra”, como em “As gramáticas \nclassificam as palavras”.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)tematiza o fazer poético, como em “Os poetas \nclassificam as palavras pela alma”.\n",
+            "B)utiliza o recurso expressivo da metáfora, como \nem “As palavras têm corpo e alma”.\n",
+            "C)valoriza a gramática da língua, como em “substantivo, \nadjetivo, verbo, advérbio, conjunção”.\n",
+            "D)estabelece comparações, como em “As palavras têm \ncorpo e alma, mas são diferentes das pessoas”.\n",
+            "E)apresenta informações pertinentes acerca do \nconceito de “palavra”, como em “As gramáticas \nclassificam as palavras”.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N17",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 17
+    },
+    {
+        "question_text": "QUESTÃO 18 \nMorte lenta ao luso infame que inventou a calçada \nportuguesa. Maldito D. Manuel I e sua corja de tenentes \nEusébios. Quadrados de pedregulho irregular socados à \nmão. À mão! É claro que ia soltar, ninguém reparou que \nia soltar? Branco, preto, branco, preto, as ondas do mar \nde Copacabana. De que me servem as ondas do mar de \nCopacabana? Me deem chão liso, sem protuberâncias \ncalcárias. Mosaico estúpido. Mania de mosaico. Joga \nconcreto em cima e aplaina. Buraco, cratera, pedra \nsolta, bueiro-bomba. Depois dos setenta, a vida se \ntransforma numa interminável corrida de obstáculos. \nA queda é a maior ameaça para o idoso. “Idoso”, palavra \nodienta. Pior, só “terceira idade”. A queda separa a \nvelhice da senilidade extrema. O tombo destrói a cadeia \nque liga a cabeça aos pés. Adeus, corpo. Em casa, vou \nde corrimão em corrimão, tateio móveis e paredes, e \ntomo banho sentado. Da poltrona para a janela, da janela \npara a cama, da cama para a poltrona, da poltrona para \na janela. Olha aí, outra vez, a pedrinha traiçoeira atrás de \nme pegar. Um dia eu caio, hoje não.\nTORRES, F. Fim. São Paulo: Cia. das Letras, 2013.\nO recurso que caracteriza a organização estrutural desse \ntexto é o(a)\nA)justaposição de sequências verbais e nominais.\nB)mudança de eventos resultante do jogo temporal.\nC)uso de adjetivos qualificativos na descrição do cenário.\nD)encadeamento semântico pelo uso de substantivos \nsinônimos.\nE)inter-relação entre orações por elementos linguísticos \nlógicos.\n\n ",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)justaposição de sequências verbais e nominais.\n",
+            "B)mudança de eventos resultante do jogo temporal.\n",
+            "C)uso de adjetivos qualificativos na descrição do cenário.\n",
+            "D)encadeamento semântico pelo uso de substantivos \nsinônimos.\n",
+            "E)inter-relação entre orações por elementos linguísticos \nlógicos.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N18",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 18
+    },
+    {
+        "question_text": "QUESTÃO 19 \nPisoteamento, arrastão, empurra-empurra, agressões, \nvandalismo e até furto a um torcedor que estava caído no \nasfalto após ser atropelado nas imediações do estádio do \nMaracanã. As cenas de selvageria tiveram como estopim \na invasão de milhares de torcedores sem ingresso, que \nfuraram o bloqueio policial e transformaram o estádio \nem terra de ninguém. Um reflexo não só do quadro de \ninsegurança que assola o Rio de Janeiro, mas também \nde como a violência social se embrenha pelo esporte \nmais popular do país. Em 2017, foram registrados \n104 episódios de violência no futebol brasileiro, que \nresultaram em 11 mortes de torcedores. Desde 1995, \nquando 101 torcedores ficaram feridos e um morreu \ndurante uma batalha campal no estádio do Pacaembu, \nautoridades têm focado as ações de enfrentamento à \nviolência no futebol em grupos uniformizados, alguns \nproibidos de frequentar estádios. Porém, a postura \nmeramente repressiva contra torcidas organizadas \né ineficaz em uma sociedade que registra mais de \n61 000 homicídios por ano. “É impossível dissociar \na escalada de violência no futebol do panorama de \ndesordem pública, social, econômica e política vivida \npelo país”, de acordo com um doutor em sociologia do \nesporte.\nDisponível em: https://brasil.elpais.com. Acesso em: 22 jun. 2019 (adaptado).\nNesse texto, a violência no futebol está caracterizada \ncomo um(a)\nA)problema social localizado numa região do país.\nB)desafio para as torcidas organizadas dos clubes.\nC)reflexo da precariedade da organização social no \npaís.\nD)inadequação de espaço nos estádios para receber o \npúblico.\nE)consequência da insatisfação dos clubes com a \norganização dos jogos.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)problema social localizado numa região do país.\n",
+            "B)desafio para as torcidas organizadas dos clubes.\n",
+            "C)reflexo da precariedade da organização social no \npaís.\n",
+            "D)inadequação de espaço nos estádios para receber o \npúblico.\n",
+            "E)consequência da insatisfação dos clubes com a \norganização dos jogos.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N19",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 19
+    },
+    {
+        "question_text": "QUESTÃO 20 \nSeis em cada dez pessoas com 15 anos ou mais \nnão praticam esporte ou atividade física. São mais de \n100 milhões de sedentários. Esses são dados do estudo \nPráticas de esporte e atividade física, da Pnad 2015, \nrealizado pelo IBGE. A falta de tempo e de interesse são \nos principais motivos apontados para o sedentarismo. \nParalelamente, 73,3% das pessoas de 15 anos ou mais \nafirmaram que o poder público deveria investir em esporte \nou atividades físicas. Observou-se uma relação direta \nentre escolaridade e renda na realização de esportes ou \natividades físicas. Enquanto 17,3% das pessoas que não \ntinham instrução realizavam diversas práticas corporais, \nesse percentual chegava a 56,7% das pessoas com \nsuperior completo. Entre as pessoas que têm práticas \nde esporte e atividade física regulares, o percentual de \npraticantes ia de 31,1%, na classe sem rendimento, a \n65,2%, na classe de cinco salários mínimos ou mais. \nA falta de tempo foi mais declarada pela população adulta, \ncom destaque entre as pessoas de 25 a 39 anos. Entre \nos adolescentes de 15 a 17 anos, o principal motivo foi não \ngostarem ou não quererem. Já o principal motivo para praticar \nesporte, declarado por 11,2 milhões de pessoas, foi relaxar \nou se divertir, seguido de melhorar a qualidade de vida ou o \nbem-estar. A falta de instalação esportiva acessível ou nas \nproximidades foi um motivo pouco citado, demonstrando \nque a não prática estaria menos associada à infraestrutura \ndisponível.\nDisponível em: www.esporte.gov.br. Acesso em: 9 ago. 2017 (adaptado).\nCom base na pesquisa e em uma visão ampliada de \nsaúde, para a prática regular de exercícios ter influência \nsignificativa na saúde dos brasileiros, é necessário o \ndesenvolvimento de estratégias que\nA)promovam a melhoria da aptidão física da população, \ndedicando-se mais tempo aos esportes.\nB)combatam o sedentarismo presente em parcela \nsignificativa da população no território nacional.\nC)facilitem a adoção da prática de exercícios, com \nações relacionadas à educação e à distribuição de \nrenda.\nD)auxiliem na construção de mais instalações esportivas \ne espaços adequados para a prática de atividades \nfísicas e esportes.\nE)estimulem o incentivo fiscal para a iniciativa privada \ndestinar verbas aos programas nacionais de \npromoção da saúde pelo esporte.\n\n ",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)promovam a melhoria da aptidão física da população, \ndedicando-se mais tempo aos esportes.\n",
+            "B)combatam o sedentarismo presente em parcela \nsignificativa da população no território nacional.\n",
+            "C)facilitem a adoção da prática de exercícios, com \nações relacionadas à educação e à distribuição de \nrenda.\n",
+            "D)auxiliem na construção de mais instalações esportivas \ne espaços adequados para a prática de atividades \nfísicas e esportes.\n",
+            "E)estimulem o incentivo fiscal para a iniciativa privada \ndestinar verbas aos programas nacionais de \npromoção da saúde pelo esporte.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N20",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 20
+    },
+    {
+        "question_text": "QUESTÃO 21 \nA escrava\n— Admira-me —, disse uma senhora de sentimentos \nsinceramente abolicionistas —; faz-me até pasmar como \nse possa sentir, e expressar sentimentos escravocratas, \nno presente século, no século dezenove! A moral \nreligiosa e a moral cívica aí se erguem, e falam bem \nalto esmagando a hidra que envenena a família no mais \nsagrado santuário seu, e desmoraliza, e avilta a nação \ninteira! Levantai os olhos ao Gólgota, ou percorrei-os em \ntorno da sociedade, e dizei-me:\n— Para que se deu em sacrifício o Homem Deus, \nque ali exalou seu derradeiro alento? Ah! Então não é \nverdade que seu sangue era o resgate do homem! É \nentão uma mentira abominável ter esse sangue comprado \na liberdade!? E depois, olhai a sociedade... Não vedes \no abutre que a corrói constantemente!… Não sentis a \ndesmoralização que a enerva, o cancro que a destrói?\nPor qualquer modo que encaremos a escravidão, ela \né, e será sempre um grande mal. Dela a decadência do \ncomércio; porque o comércio e a lavoura caminham de \nmãos dadas, e o escravo não pode fazer florescer a lavoura; \nporque o seu trabalho é forçado.\nREIS, M. F. Úrsula e outras obras. Brasília: Câmara dos Deputados, 2018.\nInscrito na estética romântica da literatura brasileira, \no conto descortina aspectos da realidade nacional no \nséculo XIX ao\nA)revelar a imposição de crenças religiosas a pessoas \nescravizadas.\nB)apontar a hipocrisia do discurso conservador na \ndefesa da escravidão.\nC)sugerir práticas de violência física e moral em nome \ndo progresso material.\nD)relacionar o declínio da produção agrícola e \ncomercial a questões raciais.\nE)ironizar o comportamento dos proprietários de \nterra na exploração do trabalho.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)revelar a imposição de crenças religiosas a pessoas \nescravizadas.\n",
+            "B)apontar a hipocrisia do discurso conservador na \ndefesa da escravidão.\n",
+            "C)sugerir práticas de violência física e moral em nome \ndo progresso material.\n",
+            "D)relacionar o declínio da produção agrícola e \ncomercial a questões raciais.\n",
+            "E)ironizar o comportamento dos proprietários de \nterra na exploração do trabalho.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N21",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 21
+    },
+    {
+        "question_text": "QUESTÃO 22 \nTEXTO I\nProjeto Mural Eletrônico desenvolvido no INT, \nsemelhante a um totem, promete tornar o acesso à \ninformação disponível para todos\nA inclusão de pessoas com deficiência se constituiu um \ndos principais desafios e preocupações para a sociedade \nao longo das últimas décadas. E o uso da tecnologia tem \nse revelado um aliado fundamental em muitas iniciativas \nvoltadas para essa área. Exemplo disso é uma das recentes \ncriações do Instituto Nacional de Tecnologia (INT) — unidade \nde pesquisa do Ministério da Ciência, Tecnologia, Inovações \ne Comunicações (MCTIC). Ali, com o objetivo de que as \ndiferenças entre pessoas não sejam sinônimo de obstáculos \nno acesso à informação ou na comunicação, engenheiros e \ntecnólogos vêm trabalhando no desenvolvimento do projeto \nMural Eletrônico.\nO Mural Eletrônico nasceu da necessidade de \npromover a inclusão nas escolas. Com interface \nmultimídia e interativa, todos têm a possibilidade de \nacessar o Mural Eletrônico. Por meio do equipamento, \npodem ser disponibilizados vídeos com Libras, leitura \nsonora de textos, que também estarão acessíveis em \numa plataforma de braille dinâmico, ao lado do teclado.\nKIFFER, D. Inclusão ampla e irrestrita. Rio Pesquisa, n. 36, set. 2016 (adaptado).\nTEXTO II\nProjeto Surdonews, desenvolvido na UFRJ, garante \nacesso de surdos à informação e contribui para \nsua “inclusão científica”\nPara não permitir que a falta de informação seja \num fator para o isolamento e a inacessibilidade da \ncomunidade surda, a jornalista e pesquisadora Roberta \nSavedra Schiaffino criou o projeto “Surdonews: montando \nos quebra-cabeças das notícias para o surdo”. Trata-se de \numa página no Facebook, com notícias constantemente \natualizadas e apresentadas por surdos em Libras, e \nveiculadas por meio de vídeos.\nA ideia de criar o projeto surgiu quando Roberta, ela \nprópria surda profunda, ainda cursava o mestrado. Para \nisso, ela procurou traçar um diagnóstico do conhecimento \ninformal entre as pessoas com surdez. Ela entrevistou \ncinquenta alunos surdos do ensino fundamental e viu que \neles tinham muita dificuldade de ler, além de não captar a \nnotícia falada. “Isso é muito grave, pois 90% do saber de \num indivíduo vem do conhecimento informal, adquirido em \nfeiras científicas, conversas, cinema, teatro, incluindo a \nmídia, por todas as suas possibilidades disseminadoras”, \nexplica a pesquisadora. “Prezamos pelo conteúdo científico \nem nossas pautas. Contudo, independentemente disso, \nnosso principal trabalho é, além de informar e atualizar, fazer \ncom que os textos não sejam empobrecidos no processo de \n‘tradução’ e, sim, acessíveis”.\nKIFFER, D. Comunicação sem barreiras. Rio Pesquisa, n. 37, dez. 2016 (adaptado).\nConsiderando-se o tema tecnologias e acessibilidade, os \ntextos I e II aproximam-se porque apresentam projetos que\nA)garantem a igualdade entre as pessoas.\nB)foram criados por uma pesquisadora surda.\nC)tiveram origem em um curso de pós-graduação.\nD)estão circunscritos ao espaço institucional da escola.\nE)têm como objetivo a disseminação do conhecimento.\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "C). Ali, com o objetivo de que as \ndiferenças entre pessoas não sejam sinônimo de obstáculos \nno acesso à informação ou na comunicação, engenheiros e \ntecnólogos vêm trabalhando no desenvolvimento do projeto \nMural Eletrônico.\nO Mural Eletrônico nasceu da necessidade de \npromover a inclusão nas escolas. Com interface \nmultimídia e interativa, todos têm a possibilidade de \nacessar o Mural Eletrônico. Por meio do equipamento, \npodem ser disponibilizados vídeos com Libras, leitura \nsonora de textos, que também estarão acessíveis em \numa plataforma de braille dinâmico, ao lado do teclado.\nKIFFER, D. Inclusão ampla e irrestrita. Rio Pesquisa, n. 36, set. 2016 (adaptado).\nTEXTO II\nProjeto Surdonews, desenvolvido na UFRJ, garante \nacesso de surdos à informação e contribui para \nsua “inclusão científica”\nPara não permitir que a falta de informação seja \num fator para o isolamento e a inacessibilidade da \ncomunidade surda, a jornalista e pesquisadora Roberta \nSavedra Schiaffino criou o projeto “Surdonews: montando \nos quebra-cabeças das notícias para o surdo”. Trata-se de \numa página no Facebook, com notícias constantemente \natualizadas e apresentadas por surdos em Libras, e \nveiculadas por meio de vídeos.\nA ideia de criar o projeto surgiu quando Roberta, ela \nprópria surda profunda, ainda cursava o mestrado. Para \nisso, ela procurou traçar um diagnóstico do conhecimento \ninformal entre as pessoas com surdez. Ela entrevistou \ncinquenta alunos surdos do ensino fundamental e viu que \neles tinham muita dificuldade de ler, além de não captar a \nnotícia falada. “Isso é muito grave, pois 90% do saber de \num indivíduo vem do conhecimento informal, adquirido em \nfeiras científicas, conversas, cinema, teatro, incluindo a \nmídia, por todas as suas possibilidades disseminadoras”, \nexplica a pesquisadora. “Prezamos pelo conteúdo científico \nem nossas pautas. Contudo, independentemente disso, \nnosso principal trabalho é, além de informar e atualizar, fazer \ncom que os textos não sejam empobrecidos no processo de \n‘tradução’ e, sim, acessíveis”.\nKIFFER, D. Comunicação sem barreiras. Rio Pesquisa, n. 37, dez. 2016 (adaptado).\nConsiderando-se o tema tecnologias e acessibilidade, os \ntextos I e II aproximam-se porque apresentam projetos que\n",
+            "A)garantem a igualdade entre as pessoas.\n",
+            "B)foram criados por uma pesquisadora surda.\n",
+            "C)tiveram origem em um curso de pós-graduação.\n",
+            "D)estão circunscritos ao espaço institucional da escola.\n",
+            "E)têm como objetivo a disseminação do conhecimento.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N22",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 22
+    },
+    {
+        "question_text": "QUESTÃO 23 \nMas seu olhar verde, inconfundível, impressionante, \niluminava com sua luz misteriosa as sombrias arcadas \nsuperciliares, que pareciam queimadas por ela, dizia logo \na sua origem cruzada e decantada através das misérias \ne dos orgulhos de homens de aventura, contadores de \nhistórias fantásticas, e de mulheres caladas e sofredoras, \nque acompanhavam os maridos e amantes através \ndas matas intermináveis, expostas às febres, às feras, \nàs cobras do sertão indecifrável, ameaçador e sem fim, que \nelas percorriam com a ambição única de um “pouso” onde \npudessem viver, por alguns dias, a vida ilusória de família \ne de lar, sempre no encalço dos homens, enfebrados pela \nprocura do ouro e do diamante.\nPENNA, C. Fronteira. Rio de Janeiro: Tecnoprint, s/d.\nAo descrever os olhos de Maria Santa, o narrador \nestabelece correlações que refletem a\nA)caracterização da personagem como mestiça.\nB)construção do enredo de conquistas da família.\nC)relação conflituosa das mulheres e seus maridos.\nD)nostalgia do desejo de viver como os antepassados.\nE)marca de antigos sofrimentos no fluxo de consciência.\n\n ",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)caracterização da personagem como mestiça.\n",
+            "B)construção do enredo de conquistas da família.\n",
+            "C)relação conflituosa das mulheres e seus maridos.\n",
+            "D)nostalgia do desejo de viver como os antepassados.\n",
+            "E)marca de antigos sofrimentos no fluxo de consciência.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N23",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 23
+    },
+    {
+        "question_text": "QUESTÃO 24 \nO complexo de falar difícil\nO que importa realmente é que o(a) detentor(a) \ndo notável saber jurídico saiba quando e como deve \nfazer uso desse português versão 2.0, até porque não \ntem necessidade de alguém entrar numa padaria de \nmanhã com aquela cara de sono falando o seguinte: \n“Por obséquio, Vossa Senhoria teria a hipotética \npossibilidade de estabelecer com minha pessoa uma \nrelação de compra e venda, mediante as imposições \ndos códigos Civil e do Consumidor, para que seja \npossível a obtenção de 10 pãezinhos em temperatura \nestável para que a relação pecuniária no valor de \nR$ 5,00 seja plenamente legítima e capaz de saciar \nminha fome matinal?”.\nO problema é que temos uma cultura de valorizar \nquem demonstra ser inteligente ao invés de valorizar quem \né. Pela nossa lógica, todo mundo que fala difícil tende a \nser mais inteligente do que quem valoriza o simples, e \n99,9% das pessoas que estivessem na padaria iriam ficar \nboquiabertas se alguém fizesse uso das palavras que \neu disse acima em plenas 7 da manhã em vez de dizer: \n“Bom dia! O senhor poderia me vender cinco reais de pão \nfrancês?”.\nAgora entramos na parte interessante: o que \nrealmente é falar difícil? Simplesmente fazer uso de \npalavras que a maioria não faz ideia do que seja é um \nato de falar difícil? Eu penso que não, mas é assim que \nmuita gente age. Falar difícil é fazer uso do simples, \nmas com coerência e coesão, deixar tudo amarradinho \ngramaticalmente falando. Falar difícil pode fazer alguém \nparecer inteligente, mas não por muito tempo. É claro que \nem alguns momentos não temos como fugir do português \nrebuscado, do juridiquês propriamente dito, como no \ncaso de documentos jurídicos, entre outros.\nARAÚJO, H. Disponível em: www.diariojurista.com. Acesso em: 20 nov. 2021 (adaptado).\nNesse artigo de opinião, ao fazer uso de uma fala \nrebuscada no exemplo da compra do pão, o autor \nevidencia a importância de(a)\nA)se ter um notável saber jurídico.\nB)valorização da inteligência do falante.\nC)falar difícil para demonstrar inteligência.\nD)coesão e da coerência em documentos jurídicos.\nE)adequação da linguagem à situação de comunicação.\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)se ter um notável saber jurídico.\n",
+            "B)valorização da inteligência do falante.\n",
+            "C)falar difícil para demonstrar inteligência.\n",
+            "D)coesão e da coerência em documentos jurídicos.\n",
+            "E)adequação da linguagem à situação de comunicação.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N24",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 24
+    },
+    {
+        "question_text": "QUESTÃO 25 \nA conquista da medalha de prata por Rayssa Leal, \nno skate street nos Jogos Olímpicos, é exemplo da \nrepresentatividade feminina no esporte, avalia a âncora do \njornal da rede de televisão da CNN. A apresentadora, que \ntambém anda de skate, celebrou a vitória da brasileira, \nque entrou para a história como a atleta mais nova a subir \nnum pódio defendendo o Brasil. “Essa representatividade \ndo esporte nos Jogos faz pensarmos que não temos que \nficar nos encaixando em nenhum lugar. Posso gostar de \npassar notícia e, mesmo assim, gostar de skate, subir \nmontanha, mergulhar, andar de bike, fazer yoga. Temos \nque parar de ficar enquadrando as pessoas dentro de \nregras. A gente vive num padrão no qual a menina ganha \nboneca, mas por que também não fazer um esporte de \naventura? Por que o homem pode se machucar, cair de \njoelhos, e a menina tem que estar sempre lindinha dentro \nde um padrão? Acabamos limitando os talentos das \npessoas”, afirmou a jornalista, sobre a prática do skate \npor mulheres.\nDisponível em: www.cnnbrasil.com.br. Acesso em: 31 out. 2021 (adaptado).\nO discurso da jornalista traz questionamentos sobre a \nrelação da conquista da skatista com a\nA)conciliação do jornalismo com a prática do skate.\nB)inserção das mulheres na modalidade skate street.\nC)desconstrução da noção do skate como modalidade \nmasculina.\nD)vanguarda de ser a atleta mais jovem a subir no pódio \nolímpico.\nE)conquista de medalha nos Jogos Olímpicos \nde Tóquio.\n\n ",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)conciliação do jornalismo com a prática do skate.\n",
+            "B)inserção das mulheres na modalidade skate street.\n",
+            "C)desconstrução da noção do skate como modalidade \nmasculina.\n",
+            "D)vanguarda de ser a atleta mais jovem a subir no pódio \nolímpico.\n",
+            "E)conquista de medalha nos Jogos Olímpicos \nde Tóquio.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N25",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 25
+    },
+    {
+        "question_text": "QUESTÃO 26 \nAssentamento\nZanza daqui\nZanza pra acolá\nFim de feira, periferia afora\nA cidade não mora mais em mim\nFrancisco, Serafim\nVamos embora\nVer o capim\nVer o baobá\nVamos ver a campina quando flora\nA piracema, rios contravim\nBinho, Bel, Bia, Quim\nVamos embora\nQuando eu morrer\nCansado de guerra\nMorro de bem\nCom a minha terra:\nCana, caqui\nInhame, abóbora\nOnde só vento se semeava outrora\nAmplidão, nação, sertão sem fim\nÓ Manuel, Miguilim\nVamos embora\nBUARQUE, C. As cidades. Rio de Janeiro: RCA, 1998 (fragmento).\nNesse texto, predomina a função poética da linguagem. \nEntretanto, a função emotiva pode ser identificada no verso:\nA)“Zanza pra acolá”.\nB)“Fim de feira, periferia afora”.\nC)“A cidade não mora mais em mim”.\nD)“Onde só vento se semeava outrora”.\nE)“Ó Manuel, Miguilim”.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)“Zanza pra acolá”.\n",
+            "B)“Fim de feira, periferia afora”.\n",
+            "C)“A cidade não mora mais em mim”.\n",
+            "D)“Onde só vento se semeava outrora”.\n",
+            "E)“Ó Manuel, Miguilim”.\n"
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page12_1.png"
+        ],
+        "ID": "2022_D1_N26",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 26
+    },
+    {
+        "question_text": "QUESTÃO 27 \ntem estrada para andar\nOs homens\nnão choram.\nMulher ao volante,\nperigo constante.\nDisponível em: https://viva-porto.pt. Acesso em: 24 nov. 2021 (adaptado).\nA articulação entre os elementos verbais e os não verbais \ndo texto tem como propósito desencadear a\nA)identificação de distinções entre mulheres e homens.\nB)revisão \nde \nrepresentações \nestereotipadas \nde \ngênero.\nC)adoção de medidas preventivas de combate ao \nsexismo.\nD)ratificação \nde \ncomportamentos \nfemininos \ne \nmasculinos.\nE)retomada de opiniões a respeito da diversidade dos \npapéis sociais.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)identificação de distinções entre mulheres e homens.\n",
+            "B)revisão \nde \nrepresentações \nestereotipadas \nde \ngênero.\n",
+            "C)adoção de medidas preventivas de combate ao \nsexismo.\n",
+            "D)ratificação \nde \ncomportamentos \nfemininos \ne \nmasculinos.\n",
+            "E)retomada de opiniões a respeito da diversidade dos \npapéis sociais.\n"
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page12_1.png"
+        ],
+        "ID": "2022_D1_N27",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 27
+    },
+    {
+        "question_text": "QUESTÃO 28 \nAs línguas silenciadas do Brasil\nPara aprender a língua de seu povo, o professor \nTxaywa Pataxó, de 29 anos, precisou estudar os fatores \nque, por diversas vezes, quase provocaram a extinção \nda língua patxôhã. Mergulhou na história do Brasil e \ndescobriu fatos violentos que dispersaram os pataxós, \nforçados a abandonar a própria língua para escapar da \nperseguição. “Os pataxós se espalharam, principalmente, \ndepois do Fogo de 1951. Queimaram tudo e expulsaram \na gente das nossas terras. Isso constrange o nosso povo \naté hoje”, conta Txaywa, estudante da Universidade \nFederal de Minas Gerais e professor na aldeia Barra \nVelha, região de Porto Seguro (BA). Mais de quatro \ndécadas depois, membros da etnia retornaram ao antigo \nlocal e iniciaram um movimento de recuperação da língua \npatxôhã. Os filhos de Sameary Pataxó já são fluentes — \ne ela, que se mudou quando já era adulta para a aldeia, \ntenta aprender um pouco com eles. “É a nossa identidade. \nVocê diz quem você é por meio da sua língua”, afirma a \nprofessora de ensino fundamental sobre a importância \nde restaurar a língua dos pataxós. O patxôhã está entre \nas línguas indígenas faladas no Brasil: o IBGE estimou \n274 línguas no último censo. A publicação Povos indígenas \nno Brasil 2011/2016, do Instituto Socioambiental, calcula \n160. Antes da chegada dos portugueses, elas totalizavam \nmais de mil.\nDisponível em: https://brasil.elpais.com. Acesso em: 11 jun. 2019 (adaptado).\nO movimento de recuperação da língua patxôhã assume \num caráter identitário peculiar na medida em que\nA)denuncia o processo de perseguição histórica sofrida \npelos povos indígenas.\nB)conjuga o ato de resistência étnica à preservação \nda memória cultural.\nC)associa a preservação linguística ao campo da \npesquisa acadêmica.\nD)estimula o retorno de povos indígenas a suas terras \nde origem.\nE)aumenta o número de línguas indígenas faladas \nno Brasil.\n\n ",
+        "correct_answer": "B",
+        "alternatives": [
+            "A). Mais de quatro \ndécadas depois, membros da etnia retornaram ao antigo \nlocal e iniciaram um movimento de recuperação da língua \npatxôhã. Os filhos de Sameary Pataxó já são fluentes — \ne ela, que se mudou quando já era adulta para a aldeia, \ntenta aprender um pouco com eles. “É a nossa identidade. \nVocê diz quem você é por meio da sua língua”, afirma a \nprofessora de ensino fundamental sobre a importância \nde restaurar a língua dos pataxós. O patxôhã está entre \nas línguas indígenas faladas no Brasil: o IBGE estimou \n274 línguas no último censo. A publicação Povos indígenas \nno Brasil 2011/2016, do Instituto Socioambiental, calcula \n160. Antes da chegada dos portugueses, elas totalizavam \nmais de mil.\nDisponível em: https://brasil.elpais.com. Acesso em: 11 jun. 2019 (adaptado).\nO movimento de recuperação da língua patxôhã assume \num caráter identitário peculiar na medida em que\n",
+            "A)denuncia o processo de perseguição histórica sofrida \npelos povos indígenas.\n",
+            "B)conjuga o ato de resistência étnica à preservação \nda memória cultural.\n",
+            "C)associa a preservação linguística ao campo da \npesquisa acadêmica.\n",
+            "D)estimula o retorno de povos indígenas a suas terras \nde origem.\n",
+            "E)aumenta o número de línguas indígenas faladas \nno Brasil.\n\n "
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page12_1.png"
+        ],
+        "ID": "2022_D1_N28",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 28
+    },
+    {
+        "question_text": "QUESTÃO 29 \nEsaú e Jacó\nBárbara entrou, enquanto o pai pegou da viola e \npassou ao patamar de pedra, à porta da esquerda. \nEra uma criaturinha leve e breve, saia bordada, chinelinha \nno pé. Não se lhe podia negar um corpo airoso. Os cabelos, \napanhados no alto da cabeça por um pedaço de fita \nenxovalhada, faziam-lhe um solidéu natural, cuja borla era \nsuprida por um raminho de arruda. Já vai nisto um pouco \nde sacerdotisa. O mistério estava nos olhos. Estes eram \nopacos, não sempre nem tanto que não fossem também \nlúcidos e agudos, e neste último estado eram igualmente \ncompridos; tão compridos e tão agudos que entravam \npela gente abaixo, revolviam o coração e tornavam cá \nfora, prontos para nova entrada e outro revolvimento. \nNão te minto dizendo que as duas sentiram tal ou qual \nfascinação. Bárbara interrogou-as; Natividade disse \nao que vinha e entregou-lhe os retratos dos filhos e os \ncabelos cortados, por lhe haverem dito que bastava.\n— Basta, confirmou Bárbara. Os meninos são seus filhos?\n— São.\nASSIS, M. Obra completa. Rio de Janeiro: Nova Aguilar, 1994.\nNo relato da visita de duas mulheres ricas a uma vidente \nno Morro do Castelo, a ironia — um dos traços mais \nrepresentativos da narrativa machadiana — consiste no\nA)modo de vestir dos moradores do morro carioca.\nB)senso prático em relação às oportunidades de renda.\nC)mistério que cerca as clientes de práticas de \nvidência.\nD)misto de singeleza e astúcia dos gestos da \npersonagem.\nE)interesse do narrador pelas figuras femininas \nambíguas.\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)modo de vestir dos moradores do morro carioca.\n",
+            "B)senso prático em relação às oportunidades de renda.\n",
+            "C)mistério que cerca as clientes de práticas de \nvidência.\n",
+            "D)misto de singeleza e astúcia dos gestos da \npersonagem.\n",
+            "E)interesse do narrador pelas figuras femininas \nambíguas.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N29",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 29
+    },
+    {
+        "question_text": "QUESTÃO 30 \nA senhora manifestava-se por atos, por gestos, \ne sobretudo por um certo silêncio, que amargava, que esfolava. \nPorém desmoralizar escancaradamente o marido, não era \ncom ela. [...]\nAs negras receberam ordem para meter no serviço a gente \ndo tal compadre Silveira: as cunhadas, ao fuso; os cunhados, \nao campo, tratar do gado com os vaqueiros; a mulher e as \nirmãs, que se ocupassem da ninhada. Margarida não tivera \nfilhos, e como os desejasse com a força de suas vontades, \ntratava sempre bem aos pequenitos e às mães que os estavam \ncriando. Não era isso uma sentimentalidade cristã, uma ternura, \nera o egoísta e cru instinto da maternidade, obrando por mera \nsimpatia carnal. Quanto ao pai do lote (referia-se ao Antônio), \nesse que fosse ajudar ao vaqueiro das bestas.\nOrdens dadas, o Quinquim referendava. Cada um \nmoralizava o outro, para moralizar-se.\nPAIVA, M. O. Dona Guidinha do Poço. Rio de Janeiro: Tecnoprint, s/d.\nNo trecho do romance naturalista, a forma como \no narrador julga comportamentos e emoções das \npersonagens femininas revela influência do pensamento\nA)capitalista, marcado pela distribuição funcional do \ntrabalho.\nB)liberal, buscando a igualdade entre pessoas \nescravizadas e livres.\nC)científico, considerando o ser humano como um \nfenômeno biológico.\nD)religioso, fundamentado na fé e na aceitação dos \ndogmas do cristianismo.\nE)afetivo, manifesto na determinação de acolher \nfamiliares e no respeito mútuo.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)capitalista, marcado pela distribuição funcional do \ntrabalho.\n",
+            "B)liberal, buscando a igualdade entre pessoas \nescravizadas e livres.\n",
+            "C)científico, considerando o ser humano como um \nfenômeno biológico.\n",
+            "D)religioso, fundamentado na fé e na aceitação dos \ndogmas do cristianismo.\n",
+            "E)afetivo, manifesto na determinação de acolher \nfamiliares e no respeito mútuo.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N30",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 30
+    },
+    {
+        "question_text": "QUESTÃO 31 \nEra o êxodo da seca de 1898. Uma ressurreição de \ncemitérios antigos — esqueletos redivivos, com o aspecto \nterroso e o fedor das covas podres. \nOs fantasmas estropiados como que iam dançando, \nde tão trôpegos e trêmulos, num passo arrastado de \nquem leva as pernas, em vez de ser levado por elas. \nAndavam devagar, olhando para trás, como quem \nquer voltar. Não tinham pressa em chegar, porque não \nsabiam aonde iam. Expulsos de seu paraíso por espadas \nde fogo, iam, ao acaso, em descaminhos, no arrastão dos \nmaus fados. \nFugiam do sol e o sol guiava-os nesse forçado \nnomadismo.\nAdelgaçados na magreira cômica, cresciam, como se \no vento os levantasse. E os braços afinados desciam-lhes \naos joelhos, de mãos abanando.\nVinham escoteiros. Menos os hidrópicos — de ascite \nconsecutiva à alimentação tóxica — com os fardos das \nbarrigas alarmantes.\nNão tinham sexo, nem idade, nem condição nenhuma. \nEram os retirantes. Nada mais.\nALMEIDA, J. A. A bagaceira. Rio de Janeiro: J. Olympio, 1978.\nOs recursos composicionais que inserem a obra no \nchamado “Romance de 30” da literatura brasileira \nmanifestam-se aqui no(a)\nA)desenho cru da realidade dramática dos retirantes.\nB)indefinição dos espaços para efeito de generalização.\nC)análise psicológica da reação dos personagens à seca.\nD)engajamento político do narrador ante as desigualdades.\nE)contemplação lírica da paisagem transformada em \nalegoria.\n\n ",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)desenho cru da realidade dramática dos retirantes.\n",
+            "B)indefinição dos espaços para efeito de generalização.\n",
+            "C)análise psicológica da reação dos personagens à seca.\n",
+            "D)engajamento político do narrador ante as desigualdades.\n",
+            "E)contemplação lírica da paisagem transformada em \nalegoria.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N31",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 31
+    },
+    {
+        "question_text": "QUESTÃO 32 \nMANUAL DE ORIENTAÇÃO\nO primeiro guia prático da Sociedade Brasileira de Pediatria para ajudar\npais e pediatras no desafio de educar nativos digitais\nTRABALHO DE BASE\nAté 2 anos\nDe 2 a 5 anos\nAté 10 anos\nA criança não deve ser exposta\npassivamente às telas — TV,\ntablet, celular etc. —, principalmente\ndurante as refeições e até 2\nhoras antes de dormir.\nO tempo de exposição às telas deve\nser limitado a 1 hora por dia. Crianças\ndessa faixa etária devem ser mais\nprotegidas da violência virtual, pois \nnão sabem separar fantasia de realidade.\nDevem ter acesso controlado\na computadores e dispositivos\nmóveis. Crianças de até 10\nanos não devem usar TV ou\ncomputador no próprio quarto.\nDisponível em: https://tab.uol.com.br. Acesso em: 25 ago. 2017 (adaptado).\nO texto sobre os chamados nativos digitais traz informações com a função de\nA)propor ações específicas para cada etapa da infância.\nB)estabelecer regras que devem ser seguidas à risca.\nC)explicar os efeitos do acesso precoce à internet.\nD)determinar a incorporação de rituais à educação dos filhos.\nE)educar com base em um conjunto de estratégias formativas.\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)propor ações específicas para cada etapa da infância.\n",
+            "B)estabelecer regras que devem ser seguidas à risca.\n",
+            "C)explicar os efeitos do acesso precoce à internet.\n",
+            "D)determinar a incorporação de rituais à educação dos filhos.\n",
+            "E)educar com base em um conjunto de estratégias formativas.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N32",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 32
+    },
+    {
+        "question_text": "QUESTÃO 33 \nNotas\nSoluços, lágrimas, casa armada, veludo preto nos portais, um homem que veio vestir o cadáver, outro que \ntomou a medida do caixão, caixão, essa, tocheiros, convites, convidados que entravam, lentamente, a passo surdo, \ne apertavam a mão à família, alguns tristes, todos sérios e calados, padre e sacristão, rezas, aspersões d’água benta, \no fechar do caixão, a prego e martelo, seis pessoas que o tomam da essa, e o levantam, e o descem a custo pela \nescada, não obstante os gritos, soluços e novas lágrimas da família, e vão até o coche fúnebre, e o colocam em cima \ne traspassam e apertam as correias, o rodar do coche, o rodar dos carros, um a um... Isto que parece um simples \ninventário eram notas que eu havia tomado para um capítulo triste e vulgar que não escrevo.\nASSIS, M. Memórias póstumas de Brás Cubas. Disponível em: www.dominiopublico.gov.br. \nAcesso em: 25 jul. 2022.\nO recurso linguístico que permite a Machado de Assis considerar um capítulo de Memórias póstumas de Brás Cubas \ncomo inventário é a\nA)enumeração de objetos e fatos.\nB)predominância de linguagem objetiva.\nC)ocorrência de período longo no trecho.\nD)combinação de verbos no presente e no pretérito.\nE)presença de léxico do campo semântico de funerais.\n\n ",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)enumeração de objetos e fatos.\n",
+            "B)predominância de linguagem objetiva.\n",
+            "C)ocorrência de período longo no trecho.\n",
+            "D)combinação de verbos no presente e no pretérito.\n",
+            "E)presença de léxico do campo semântico de funerais.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N33",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 33
+    },
+    {
+        "question_text": "QUESTÃO 34  \nCriado há cerca de 20 anos na Califórnia, o \nmountainboard é um esporte de aventura que utiliza uma \nespécie de skate off-road para realizar manobras similares \nàs das modalidades de snowboard, surf e do próprio \nskate. A atividade chegou ao Brasil em 1997 e hoje possui \ncentenas de praticantes, um circuito nacional respeitável \ne mais de uma dezena de pistas espalhadas pelo país. \nSegundo consta na história oficial, o mountainboard foi \ncriado por praticantes de snowboard que sentiam falta \nde praticar o esporte nos períodos sem neve. Para isso, \neles desenvolveram um equipamento bem simples: \numa prancha semelhante ao modelo utilizado na neve \n(menor e um pouco menos flexível), com dois eixos \nbem resistentes, alças para encaixar os pés e quatro \npneus com câmaras de ar para regular a velocidade que \npode ser alcançada em diferentes condições. Com essa \nconfiguração, o esporte se mostrou possível em diversos \ntipos de terreno: grama, terra, pedras, asfalto e areia. \nAlém desses pisos, também é possível procurar pelas \npróprias trilhas para treinar as manobras.\nDisponível em: www.webventure.com.br. Acesso em: 19 jun. 2019.\nA história da prática do mountainboard representa \numa das principais marcas das atividades de aventura, \ncaracterizada pela\nA)competitividade entre seus praticantes.\nB)atividade com padrões técnicos definidos.\nC)modalidade com regras predeterminadas.\nD)criatividade para adaptações a novos espaços.\nE)necessidade de espaços definidos para a sua realização.\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)competitividade entre seus praticantes.\n",
+            "B)atividade com padrões técnicos definidos.\n",
+            "C)modalidade com regras predeterminadas.\n",
+            "D)criatividade para adaptações a novos espaços.\n",
+            "E)necessidade de espaços definidos para a sua realização.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N34",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 34
+    },
+    {
+        "question_text": "QUESTÃO 35 \nSer cronista\nSei que não sou, mas tenho meditado ligeiramente \nno assunto.\nCrônica é um relato? É uma conversa? É um resumo \nde um estado de espírito? Não sei, pois antes de começar \na escrever para o Jornal do Brasil, eu só tinha escrito \nromances e contos.\nE também sem perceber, à medida que escrevia para \naqui, ia me tornando pessoal demais, correndo o risco \nde em breve publicar minha vida passada e presente, o \nque não pretendo. Outra coisa notei: basta eu saber que \nestou escrevendo para o jornal, isto é, para algo aberto \nfacilmente por todo o mundo, e não para um livro, que \nsó é aberto por quem realmente quer, para que, sem \nmesmo sentir, o modo de escrever se transforme. Não é \nque me desagrade mudar, pelo contrário. Mas queria que \nfossem mudanças mais profundas e interiores que não \nviessem a se refletir no escrever. Mas mudar só porque \nisso é uma coluna ou uma crônica? Ser mais leve só \nporque o leitor assim o quer? Divertir? Fazer passar uns \nminutos de leitura? E outra coisa: nos meus livros quero \nprofundamente a comunicação profunda comigo e com o \nleitor. Aqui no jornal apenas falo com o leitor e agrada-me \nque ele fique agradado. Vou dizer a verdade: não estou \ncontente.\nLISPECTOR, C. In: A descoberta do mundo. Rio de Janeiro: Rocco, 1999.\nNo texto, ao refletir sobre a atividade de cronista, a autora \nquestiona características do gênero crônica, como\nA)relação distanciada entre os interlocutores.\nB)articulação de vários núcleos narrativos.\nC)brevidade no tratamento da temática.\nD)descrição minuciosa dos personagens.\nE)público leitor exclusivo.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)relação distanciada entre os interlocutores.\n",
+            "B)articulação de vários núcleos narrativos.\n",
+            "C)brevidade no tratamento da temática.\n",
+            "D)descrição minuciosa dos personagens.\n",
+            "E)público leitor exclusivo.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N35",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 35
+    },
+    {
+        "question_text": "QUESTÃO 36 \nProjeto na Câmara de BH quer a vacinação gratuita \nde cães contra a leishmaniose\nA doença é grave e vem causando preocupação na \nregião metropolitana da capital mineira\nEla é uma doença grave, transmitida pela picada do \nmosquito-palha, e afeta tanto os seres humanos quanto \nos cachorros: a leishmaniose. Por ser um problema de \nsaúde pública, a doença pode ganhar uma ação preventiva \nimportante, caso um projeto de lei seja aprovado na \nCâmara Municipal de Belo Horizonte (CMBH). Diante \ndo alto número de casos da doença na Grande BH, a \nComissão de Saúde e Saneamento da CMBH aprovou \na proposta de realização de campanhas públicas de \nvacinação gratuita de cães contra a leishmaniose, tema \ndo PL 404/17, apreciado pelo colegiado em reunião \nordinária, no dia 6 de dezembro.\nDisponível em: https://revistaencontro.com.br. Acesso em: 11 dez. 2017.\nEssa notícia, além de cumprir sua função informativa, \nassume o papel de\nA)fiscalizar as ações de saúde e saneamento da \ncidade.\nB)defender os serviços gratuitos de atendimento à \npopulação.\nC)conscientizar a população sobre grave problema de \nsaúde pública.\nD)propor campanhas para a ampliação de acesso aos \nserviços públicos.\nE)responsabilizar os agentes públicos pela demora na \ntomada de decisões.\n\n ",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)fiscalizar as ações de saúde e saneamento da \ncidade.\n",
+            "B)defender os serviços gratuitos de atendimento à \npopulação.\n",
+            "C)conscientizar a população sobre grave problema de \nsaúde pública.\n",
+            "D)propor campanhas para a ampliação de acesso aos \nserviços públicos.\n",
+            "E)responsabilizar os agentes públicos pela demora na \ntomada de decisões.\n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N36",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 36
+    },
+    {
+        "question_text": "QUESTÃO 37 \n“Vida perfeita” em redes sociais pode afetar a \nsaúde mental\nNas várias redes sociais que povoam a internet, \nos chamados digital influencers estão sempre felizes \ne pregam a felicidade como um estilo de vida. Essas \npessoas espalham conteúdo para milhares de seguidores, \nditando tendência e mostrando um estilo de vida sonhado \npor muitos, como o corpo esbelto, viagens incríveis, \ncasas deslumbrantes, carros novos e alegria em tempo \nintegral, algo bem improvável de ocorrer o tempo todo, \naponta Carla Furtado, mestre em psicologia e fundadora \ndo Instituto Feliciência.\nA problemática pode surgir com a busca incessante \npor essa felicidade, que gera efeitos colaterais em quem \nconsome diariamente a “vida perfeita” de outros. Daí vem \no conceito de positividade tóxica: a expressão tem sido \nusada para abordar uma espécie de pressão pela adoção \nde um discurso positivo, aliada a uma vida editada para \nas redes sociais. Para manter a saúde mental e evitar ser \natingido pela positividade tóxica, o uso racional das redes \nsociais é o mais indicado, aconselha a médica psiquiatra \nRenata Nayara Figueiredo, presidente da Associação \nPsiquiátrica de Brasília (APBr).\nDisponível em: https://agenciabrasil.ebc.com.br. Acesso em: 21 nov. 2021 (adaptado).\nAssociada ao ideário de uma “vida perfeita”, a positividade \ntóxica mencionada no texto é um fenômeno social \nrecente, que se constitui com base em\nA)representações estereotipadas e superficiais de \nfelicidade.\nB)ressignificações contemporâneas do conceito de \nalegria.\nC)estilos de vida inacessíveis para a sociedade brasileira.\nD)atitudes contraditórias de influenciadores digitais.\nE)padrões idealizados e nocivos de beleza física.\n",
+        "correct_answer": "A",
+        "alternatives": [
+            "A)representações estereotipadas e superficiais de \nfelicidade.\n",
+            "B)ressignificações contemporâneas do conceito de \nalegria.\n",
+            "C)estilos de vida inacessíveis para a sociedade brasileira.\n",
+            "D)atitudes contraditórias de influenciadores digitais.\n",
+            "E)padrões idealizados e nocivos de beleza física.\n"
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page16_1.png",
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page16_2.png"
+        ],
+        "ID": "2022_D1_N37",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 37
+    },
+    {
+        "question_text": "QUESTÃO 38 \nTEXTO I\nEL GRECO. Laocoonte. Óleo sobre tela, 1,37cm x 1,72cm. \nNational Gallery of Art, Washington, Estados Unidos, circa 1610-1614.\nDisponível em: https://images.nga.gov. Acesso em: 28 jun. 2019 (adaptado).\nTEXTO II\nEssa impressionante obra apresenta o sacerdote \nLaocoonte sendo punido pelos deuses por tentar alertar \nos troianos da ameaça do Cavalo de Troia, que escondia \num grupo de soldados gregos. Enviadas pelos deuses, \nserpentes marinhas são vistas matando Laocoonte e \nseus dois filhos como forma de punição.\nKAY, A. In: FARTHING, S. (Org.). Tudo sobre arte. \nRio de Janeiro: Sextante, 2011 (adaptado).\nProduzida no início do século XVII, a obra maneirista \ndistingue-se pela\nA)representação da nudez masculina.\nB)distorção ao representar a figura humana.\nC)evocação de um fato da cultura clássica grega.\nD)presença do tema da morte como punição da família.\nE)utilização da perspectiva para integrar os diferentes \nplanos.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)representação da nudez masculina.\n",
+            "B)distorção ao representar a figura humana.\n",
+            "C)evocação de um fato da cultura clássica grega.\n",
+            "D)presença do tema da morte como punição da família.\n",
+            "E)utilização da perspectiva para integrar os diferentes \nplanos.\n"
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page16_1.png",
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page16_2.png"
+        ],
+        "ID": "2022_D1_N38",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 38
+    },
+    {
+        "question_text": "QUESTÃO 39 \nTEXTO I\nJUDD, D. Sem título. 1969.\nDisponível em: https://dasartes.com.br. Acesso em: 16 jun. 2022.\nTEXTO II\nEmbora não fosse um grupo ou um movimento \norganizado, o Minimalismo foi um dos muitos rótulos \n(incluindo estruturas primárias, objetos unitários, arte \nABC e Cool Art) aplicados pelos críticos para descrever \nestruturas aparentemente simples que alguns artistas \nestavam criando. Quando a arte minimalista começou \na surgir, muitos críticos e um público opinativo \njulgaram-na fria, anônima e imperdoável. Os materiais \nindustriais pré-fabricados frequentemente usados não \npareciam “arte”.\nDEMPSEY, A. Estilos, escolas e movimentos. São Paulo: Cosac & Naify, 2003 (adaptado).\nDe acordo com os textos I e II, compreende-se que a obra \nminimalista é uma\nA)representação da simplicidade pelo artista.\nB)exploração da técnica da escultura cubista.\nC)valorização do cotidiano por meio da geometria.\nD)utilização da complexidade dos elementos formais.\nE)combinação de formas sintéticas no espaço utilizado.\n\n ",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)representação da simplicidade pelo artista.\n",
+            "B)exploração da técnica da escultura cubista.\n",
+            "C)valorização do cotidiano por meio da geometria.\n",
+            "D)utilização da complexidade dos elementos formais.\n",
+            "E)combinação de formas sintéticas no espaço utilizado.\n\n "
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page16_1.png",
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page16_2.png"
+        ],
+        "ID": "2022_D1_N39",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 39
+    },
+    {
+        "question_text": "QUESTÃO 40 \nFirmo, o vaqueiro\nNo dia seguinte, à hora em que saía o gado, estava eu \ndebruçado à varanda quando vi o cafuzo que preparava o \nanimal viajeiro:\n— Raimundinho, como vai ele?...\nDe longe apontou a palhoça.\n— Sim.\nO braço caiu-lhe, olhou-me algum tempo comovido; \ndepois, saltando para o animal, levou o polegar à boca \nfazendo estalar a unha nos dentes: “Às quatro horas \nda manhã... Atirei um verso e disse, para bulir com ele: \nPega, velho! Não respondeu. Tio Firmo, mesmo velho e \ndoente, não era homem para deixar um verso no chão... \nFui ver, coitado!... estava morto”. E deu de esporas para \nque eu não lhe visse as lágrimas.\nNETTO, C. In: MARCHEZAN, L. G. (Org.). O conto regionalista. \nSão Paulo: Martins Fontes, 2009.\nA passagem registra um momento em que a \nexpressividade lírica é reforçada pela\nA)plasticidade da imagem do rebanho reunido.\nB)sugestão da firmeza do sertanejo ao arrear o cavalo.\nC)situação de pobreza encontrada nos sertões \nbrasileiros.\nD)afetividade demonstrada ao noticiar a morte do \ncantador.\nE)preocupação do vaqueiro em demonstrar sua \nvirilidade.\n",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)plasticidade da imagem do rebanho reunido.\n",
+            "B)sugestão da firmeza do sertanejo ao arrear o cavalo.\n",
+            "C)situação de pobreza encontrada nos sertões \nbrasileiros.\n",
+            "D)afetividade demonstrada ao noticiar a morte do \ncantador.\n",
+            "E)preocupação do vaqueiro em demonstrar sua \nvirilidade.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N40",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 40
+    },
+    {
+        "question_text": "QUESTÃO 41 \nO bebê de tarlatana rosa\n— [...] Na terça desliguei-me do grupo e caí no mar alto \nda depravação, só, com uma roupa leve por cima da pele e \ntodos os maus instintos fustigados. De resto a cidade inteira \nestava assim. É o momento em que por trás das máscaras \nas meninas confessam paixões aos rapazes, é o instante \nem que as ligações mais secretas transparecem, em que \na virgindade é dúbia, e todos nós a achamos inútil, a honra \numa caceteação, o bom senso uma fadiga. Nesse momento \ntudo é possível, os maiores absurdos, os maiores crimes; \nnesse momento há um riso que galvaniza os sentidos e o \nbeijo se desata naturalmente.\nEu estava trepidante, com uma ânsia de acanalhar-me, \nquase mórbida. Nada de raparigas do galarim perfumadas \ne por demais conhecidas, nada do contato familiar, \nmas o deboche anônimo, o deboche ritual de chegar, \npegar, acabar, continuar. Era ignóbil. Felizmente muita \ngente sofre do mesmo mal no carnaval.\nRIO, J. Dentro da noite. São Paulo: Antiqua, 2002.\nNo texto, o personagem vincula ao carnaval atitudes e \nreações coletivas diante das quais expressa\nA)consagração da alegria do povo.\nB)atração e asco perante atitudes libertinas.\nC)espanto com a quantidade de foliões nas ruas.\nD)intenção de confraternizar com desconhecidos.\nE)reconhecimento da festa como manifestação cultural.\n",
+        "correct_answer": "B",
+        "alternatives": [
+            "A)consagração da alegria do povo.\n",
+            "B)atração e asco perante atitudes libertinas.\n",
+            "C)espanto com a quantidade de foliões nas ruas.\n",
+            "D)intenção de confraternizar com desconhecidos.\n",
+            "E)reconhecimento da festa como manifestação cultural.\n"
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N41",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 41
+    },
+    {
+        "question_text": "QUESTÃO 42 \n10 de maio\nFui na delegacia e falei com o tenente. Que homem \namavel! Se eu soubesse que ele era tão amavel, eu teria \nido na delegacia na primeira intimação. [...] O tenente \ninteressou-se pela educação dos meus filhos. Disse-me \nque a favela é um ambiente propenso, que as pessoas \ntem mais possibilidade de delinquir do que tornar-se util \na patria e ao país. Pensei: se ele sabe disto, porque não \nfaz um relatorio e envia para os politicos? O senhor Janio \nQuadros, o Kubstchek e o Dr. Adhemar de Barros? \nAgora falar para mim, que sou uma pobre lixeira. \nNão posso resolver nem as minhas dificuldades.\n... O Brasil precisa ser dirigido por uma pessoa que já \npassou fome. A fome tambem é professora.  \nQuem passa fome aprende a pensar no próximo, \ne nas crianças.\nJESUS, C. M. Quarto de despejo: diário de uma favelada. São Paulo: Ática, 2014.\nA partir da intimação recebida pelo filho de 9 anos, \na autora faz uma reflexão em que transparece a\nA)lição de vida comunicada pelo tenente.\nB)predisposição materna para se emocionar. \nC)atividade política marcante da comunidade.\nD)resposta irônica ante o discurso da autoridade.\nE)necessidade de revelar seus anseios mais íntimos. \n\n ",
+        "correct_answer": "D",
+        "alternatives": [
+            "A)lição de vida comunicada pelo tenente.\n",
+            "B)predisposição materna para se emocionar. \n",
+            "C)atividade política marcante da comunidade.\n",
+            "D)resposta irônica ante o discurso da autoridade.\n",
+            "E)necessidade de revelar seus anseios mais íntimos. \n\n "
+        ],
+        "page_images": [],
+        "ID": "2022_D1_N42",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 42
+    },
+    {
+        "question_text": "QUESTÃO 43 \nVanda vinha do interior de Minas Gerais e de dentro \nde um livro de Charles Dickens. Sem dinheiro para criá-la, \nsua mãe a dera, com seus sete anos, a uma conhecida. \nAo recebê-la, a mulher perguntou o que a garotinha \ngostava de comer. Anotou tudo num papel. Mal a mãe \nvirou as costas, no entanto, a fulana amassou a lista e, \ncomo uma vilã de folhetim, decretou: “A partir de hoje, \nvocê não vai mais nem sentir o cheiro dessas comidas!”.\nVanda trabalhou lá até os quinze anos, quando \nrecebeu a carta de uma prima com uma nota de cem \ncruzeiros, saiu de casa com a roupa do corpo e fugiu num \nônibus para São Paulo.\nTodas as vezes que eu e minha irmã a importunávamos \ncom nossas demandas de criança mimada, ela nos contava \nhistórias da infância de gata-borralheira, fazia-nos apertar \nseu nariz quebrado por uma das filhas da “patroa” com um \nrolo de amassar pão e nos expulsava da cozinha: “Sai pra \nlá, peste, e me deixa acabar essa janta”.\nPRATA, A. Nu de botas. São Paulo: Cia. das Letras, 2013 (adaptado). \nPela ótica do narrador, a trajetória da empregada de sua \ncasa assume um efeito expressivo decorrente da\nA)citação a referências literárias tradicionais.\nB)alusão à inocência das crianças da época.\nC)estratégia de questionar a bondade humana.\nD)descrição detalhada das pessoas do interior.\nE)representação anedótica de atos de violência.\n",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)citação a referências literárias tradicionais.\n",
+            "B)alusão à inocência das crianças da época.\n",
+            "C)estratégia de questionar a bondade humana.\n",
+            "D)descrição detalhada das pessoas do interior.\n",
+            "E)representação anedótica de atos de violência.\n"
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page18_1.png"
+        ],
+        "ID": "2022_D1_N43",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 43
+    },
+    {
+        "question_text": "QUESTÃO 44 \nTEXTO I\nSILVEIRA, R. In absentia, 1983. Instalação, 17ª Bienal de São Paulo.\nDisponível em: www.bienal.org.br. Acesso em: 1 set. 2016 (adaptado).\nTEXTO II\nO termo ready-made foi criado por Marcel Duchamp \n(1887-1968) para designar um tipo de objeto, por ele \ninventado, que consiste em um ou mais artigos de uso \ncotidiano, produzidos em massa, selecionados sem \ncritérios estéticos e expostos como obras de arte em \nespaços especializados (museus e galerias). Seu primeiro \nready-made, de 1912, é uma roda de bicicleta montada \nsobre um banquinho (Roda de bicicleta). Ao transformar \nqualquer objeto em obra de arte, o artista realiza uma \ncrítica radical ao sistema da arte.\nDisponível em: www.bienal.org.br. Acesso em: 1 set. 2016 (adaptado).\nA instalação In absentia propõe um diálogo com o \nready-made Roda de bicicleta, demonstrando que\nA)as formas de criticar obras do passado se repetem.\nB)a recorrência de temas marca a arte do final do \nséculo XX.\nC)as criações desmistificam os valores estéticos \nestabelecidos.\nD)o distanciamento temporal permite a transformação \ndos referenciais estéticos.\nE)o objeto ausente sugere a degradação da forma \nsuperando o modelo artístico.\n",
+        "correct_answer": "C",
+        "alternatives": [
+            "A)as formas de criticar obras do passado se repetem.\n",
+            "B)a recorrência de temas marca a arte do final do \nséculo XX.\n",
+            "C)as criações desmistificam os valores estéticos \nestabelecidos.\n",
+            "D)o distanciamento temporal permite a transformação \ndos referenciais estéticos.\n",
+            "E)o objeto ausente sugere a degradação da forma \nsuperando o modelo artístico.\n"
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page18_1.png"
+        ],
+        "ID": "2022_D1_N44",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 44
+    },
+    {
+        "question_text": "QUESTÃO 45 \nO Recife fervilhava no começo da década de 1990, e \nos artistas trabalhavam para resgatar o prestígio da cultura \npernambucana. Era preciso se inspirar, literalmente, nas \nraízes sobre as quais a cidade se construiu. Foi aí que, \nem 1992, com a publicação de um manifesto escrito \npelo músico e jornalista Fred Zero Quatro, da banda \nMundo Livre S/A, nasceu o manguebeat. O nome vem \nde “mangue”, vegetação típica da região, e “beat”, para \nrepresentar as batidas e as influências musicais que o \nmovimento abraçaria a partir dali. Era a hora e a vez \nde os caranguejos — aos quais os músicos recifenses \ngostavam de se comparar — mostrarem as caras:  \no maracatu e suas alfaias se misturaram com as batidas \ndo hip-hop, as guitarras do rock, elementos eletrônicos e \no sotaque recifense de Chico Science. A busca pelo novo \nrendeu uma perspectiva diferente do Brasil ao olhar para o \nRecife. A cidade deixou de ser o lugar apenas do frevo \ne do carnaval, transformando-se na ebulição musical \nque continua a acontecer mesmo após os 25 anos do \nlançamento do primeiro disco da Nação Zumbi, Da lama \nao caos.\nFORCIONI, G. et al. O mangue está de volta. Revista Esquinas, n. 87, set. 2019 (adaptado).\nChico Science foi fundamental para a renovação da \nmúsica pernambucana, fato que se deu pela\nA)utilização de aparelhos musicais eletrônicos em \nlugar dos instrumentos tradicionais.\nB)ocupação de espaços da natureza local para a \nprodução de eventos musicais memoráveis.\nC)substituição de antigas práticas musicais, como o \nfrevo, por melodias e harmonias inovadoras.\nD)recuperação de composições tradicionais folclóricas \ne sua apresentação em grandes festivais.\nE)integração de referenciais culturais de diferentes \norigens, criando uma nova combinação estética.\n\n ",
+        "correct_answer": "E",
+        "alternatives": [
+            "A)utilização de aparelhos musicais eletrônicos em \nlugar dos instrumentos tradicionais.\n",
+            "B)ocupação de espaços da natureza local para a \nprodução de eventos musicais memoráveis.\n",
+            "C)substituição de antigas práticas musicais, como o \nfrevo, por melodias e harmonias inovadoras.\n",
+            "D)recuperação de composições tradicionais folclóricas \ne sua apresentação em grandes festivais.\n",
+            "E)integração de referenciais culturais de diferentes \norigens, criando uma nova combinação estética.\n\n "
+        ],
+        "page_images": [
+            "/home/kap/Desktop/PyPDF2/test_output/2022_D1_img/images/2022_D1_page18_1.png"
+        ],
+        "ID": "2022_D1_N45",
+        "year": 2022,
+        "day": "D1",
+        "question_num": 45
+    }
+]
