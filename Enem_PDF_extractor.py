@@ -25,13 +25,15 @@ class EnemPDFextractor():
     Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS, isso é feito com o objetivo de filtrar. 
     questões de texto puro, que podem ser utilizadas facilmente sem se preocupar com falta de contexto devido à imagens associadas (Útil para várias tarefas de NLP)
 
+    Mesmo com  extração de imagens habilitadas, a ferramenta não vai adicionar questões cujas alternativas estejam fora do comum (ex: alternativas são imagens)
+    Isso pode levar à menos questões do que o total na prova em alguns casos
 
     Atributos:
         output_type (str) :  Tipos de arquivo de output do texto, são suportados outputs .TXT e .JSON. 
-        -OBS:  arquivos JSON contem informações adicionais como lista de alternativas e lista de imagens associadas, caso imagens sejam extraidas.
+        -OBS:  arquivos JSON contem informações adicionais como lista de alternativas e lista de imagens associadas,caso imagens sejam extraidas.
 
-         process_questions_with_images (bool) : Dita se textos e imagens de páginas com imagens serão processadas ou não.
-        -OBS: Caso a EXTRAÇÃO DE IMAGENS NÃO ESTEJA HABILITADA o código VAI PULAR PÁGINAS/QUESTÕES COM IMAGENS.
+        process_questions_with_images (bool) : Dita se textos e imagens de páginas com imagens serão processadas ou não.
+
     """
 
     #-------constantes baseadas na nomeclatura do INEP dos arquivos do enem, ex: 2022_GB_impresso_D1_CD1.pdf------- 
