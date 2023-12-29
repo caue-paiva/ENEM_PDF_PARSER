@@ -1,6 +1,6 @@
 
 
-:br:
+:brazil:
 
 Todas as benchmarks foram testandas com o arquivo **extraction_test.py**, e todas as médias foram medidas com **3 testes**
 
@@ -12,6 +12,11 @@ Todas as benchmarks foram testandas com o arquivo **extraction_test.py**, e toda
 
 * Média para extrair um PDF  do Enem com as imagens: 0,59s
 
+
+<br>
+<br>
+<br>
+<br>
 
 :us:
 
