@@ -29,5 +29,5 @@ All benchmarks were tested using the **extraction_test.py file**, and all averag
 * Average time to extract an ENEM PDF without images: 0.172s
 
 * Average time to extract an ENEM PDF with images: 0.59s
-AG
+
 
