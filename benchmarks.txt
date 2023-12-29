@@ -1,9 +1,0 @@
-Todas as benchmarks foram testandas com o arquivo extraction_test.py, e todas as médias foram medidas com 3 testes
-
-Runtime total medido com o comando time do Linux:
-
-Média de executar o código todo:  12,41s
-
-Média para extrair um PDF do Enem sem as Imagens: 0,172s
-
-Média para extrair um PDF  do Enem com as imagens: 0,59s
