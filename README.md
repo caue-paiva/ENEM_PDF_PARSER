@@ -1,4 +1,4 @@
-# Enem PDF Parser
+# Enem PDF Parser (English and PT-BR docs)
 
 :brazil:
 
@@ -103,7 +103,7 @@ The motivation for creating the project came from the need to extract ENEM test 
 An inspiration for the project and the way of structuring the extracted data in JSON was the repository of the [GPT-4 ENEM project](https://github.com/piresramon/gpt-4-enem?tab=readme-ov-file), which benchmarks GPT-4 in the task of answering ENEM questions.
 
 
-# Note about the ENEM exam
+**Note about the ENEM exam**
 
 In the documentation, code, and output, reference is made to the days of the test:
 
