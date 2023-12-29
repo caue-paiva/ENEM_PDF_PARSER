@@ -92,7 +92,7 @@ Esse método recebe os seguintes parâmetros:
 
 
 
-:US:
+:us:
 
 ## About the Project
 
