@@ -13,9 +13,9 @@ Uma inspiração para o projeto e para a forma de estruturar os dados extraídos
 **Observação sobre a prova ENEM**
 Na documentação, código e output se faz referência aos dias do ENEM:
 
-**Primeiro dia** são as provas de Lingua estrangeira (Inglês, Espanhol), Linguagens e Humanas
+* **Primeiro dia** são as provas de Lingua estrangeira (Inglês, Espanhol), Linguagens e Humanas
 
-**Segundo Dia** são as provas de Ciências da Natureza e Matemática
+* **Segundo Dia** são as provas de Ciências da Natureza e Matemática
 
 
 ## Dados Extraídos
@@ -69,9 +69,9 @@ from enem_pdf_extractor import EnemPDFextractor
 
 # 4) instanciar a classe 
 
-O parâmetro output_type dita qual vai ser o formato de arquivo do output, recebe uma str "txt" ou "json" como parâmetro
+O parâmetro **output_type** dita qual vai ser o formato de arquivo do output, recebe uma str "txt" ou "json" como parâmetro
 
-O segundo parâmetro, process_questions_with_images, dita se a ferramenta irá processar questões com imagens e extrair suas imagens ou se irá pular elas
+O segundo parâmetro, **process_questions_with_images**, dita se a ferramenta irá processar questões com imagens e extrair suas imagens ou se irá pular elas
 
 Ex:
 ``` Python
