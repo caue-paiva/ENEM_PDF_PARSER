@@ -10,7 +10,7 @@ A motivação para a criação do projeto veio da necessidade de extrair dados d
 
 Uma inspiração para o projeto e para a forma de estruturar os dados extraídos em JSON foi o repositório do projeto [GPT-4 ENEM](https://github.com/piresramon/gpt-4-enem?tab=readme-ov-file), que realiza benchmarks do GPT-4 na tarefa de responder questões do ENEM
 
-* Observação sobre a prova ENEM
+**Observação sobre a prova ENEM**
 Na documentação, código e output se faz referência aos dias do ENEM:
 
 **Primeiro dia** são as provas de Lingua estrangeira (Inglês, Espanhol), Linguagens e Humanas
@@ -47,7 +47,7 @@ Caso o formato do output seja  JSON, então serão extraídos como diferentes ke
 
 * Ano, dia e número da questão, respectivamento como : "year", "day", "question_num"
 
-Em todos os casos é extráido a resposta correta da questão, por isso se faz necessário ter o arquivo do gabarito correspondente à prova para a ferramenta funcionar.
+Em **todos os casos é extráido a resposta correta da questão**, por isso se faz necessário ter o arquivo do gabarito correspondente à prova para a ferramenta funcionar.
 
 ## Como utilizar a ferramenta
 
@@ -82,9 +82,9 @@ text_extractor = EnemPDFextractor(output_type="txt", process_questions_with_imag
 
 Esse método recebe os seguintes parâmetros:
 
-* test_pdf_path: path do arquivo pdf da prova
+* **test_pdf_path**: path do arquivo pdf da prova
 
-* answers_pdf_path: path do arquivo pdf do gabarito correspondente
+* **answers_pdf_path**: path do arquivo pdf do gabarito correspondente
 
-* extracted_data_path: path para o diretório onde o output será extráido, caso não exista um novo diretório será criado
+*  **extracted_data_path**: path para o diretório onde o output será extráido, caso não exista um novo diretório será criado
 
