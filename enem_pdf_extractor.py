@@ -2,17 +2,15 @@ import re, os ,json , fitz
 from typing import Any 
 
 """
-A melhorar: 
 
-1) melhorar função de parsear as alternativas
+Performance da ferramenta nos PDFs do ENEM:
 
+Boa funcionalidade de extração de textos e imagens:
+    ENEM 2023/22
 
-código age:
-bem com ENEM 2023/22
+Extração de texto com problemas:
+    ENEM 2020 (codificação não usual de caracteres impede a extração de texto)
 
-alguns problemas com o de 2020
-
-não funciona com o de 2021 (chars estranhos que não conseguem ser decodados)
 """
 
 class EnemPDFextractor():
