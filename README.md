@@ -4,7 +4,7 @@
 
 ## Sobre o Projeto
 
-O objetivo desse projeto é fornecer uma ferramenta para extração de dados textuais e visuais dos PDFs do Exame Nacional do Ensino Médio (ENEM), disponíveis no site oficial do [INEP](https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos).     Para uma melhor padronização e funcionamento da ferramenta, a **nomeclatura dos arquivos PDFs no site oficial mencionado acima foi utilizada.**
+O objetivo desse projeto é fornecer uma ferramenta para extração de dados textuais e visuais dos PDFs do Exame Nacional do Ensino Médio (ENEM), disponíveis no site oficial do [INEP](https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos).     Para uma melhor padronização e funcionamento da ferramenta, a **nomenclatura dos arquivos PDFs no site oficial mencionado acima foi utilizada.**
 
 A motivação para a criação do projeto veio da necessidade de extrair dados do ENEM para uso em **aplicações de Processamento de Linguagem Natural (NLP)**, a exemplo de tarefas de retrieval por busca semântica **(RAG com vector Databases)** para melhorar a performance de Modelos de Linguagem (LLMs) existentes e também datasets para fine-tuning/treinamento de modelos open-source para tarefas específicas relacionadas à assuntos como utilização de IA no cenário de educação brasileiro.
 
@@ -69,9 +69,9 @@ from enem_pdf_extractor import EnemPDFextractor
 
 # 4) instanciar a classe 
 
-O parâmetro **output_type** dita qual vai ser o formato de arquivo do output, recebe uma str "txt" ou "json" como parâmetro
+O parâmetro **output_type** dita qual vai ser o formato de arquivo do output, recebe uma string "txt" ou "json" como parâmetro
 
-O segundo parâmetro, **process_questions_with_images**, dita se a ferramenta irá processar questões com imagens e extrair suas imagens ou se irá pular elas
+O segundo parâmetro, **process_questions_with_images**, dita se a ferramenta irá processar e extrair questões com imagens ou se irá pulá-las".
 
 Ex:
 ``` Python
@@ -86,5 +86,5 @@ Esse método recebe os seguintes parâmetros:
 
 * **answers_pdf_path**: path do arquivo pdf do gabarito correspondente
 
-*  **extracted_data_path**: path para o diretório onde o output será extráido, caso não exista um novo diretório será criado
+*  **extracted_data_path**: path para o diretório onde o output será extráido, caso não exista, um novo diretório será criado
 
