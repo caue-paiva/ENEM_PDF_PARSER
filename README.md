@@ -45,7 +45,7 @@ Caso o formato do output seja  JSON, então serão extraídos como diferentes ke
 
 * um ID que identifica o ano, dia e  número correspondente à questão, como "ID"
 
-* Ano, dia e número da questão, respectivamento como : "year", "day", "question_num"
+* Ano, dia e número da questão, respectivamente como : "year", "day", "question_num"
 
 Em **todos os casos é extráido a resposta correta da questão**, por isso se faz necessário ter o arquivo do gabarito correspondente à prova para a ferramenta funcionar.
 
@@ -89,8 +89,8 @@ Esse método recebe os seguintes parâmetros:
 *  **extracted_data_path**: path para o diretório onde o output será extráido, caso não exista, um novo diretório será criado
 
 
-
-
+<br>
+<br>
 
 :us:
 
