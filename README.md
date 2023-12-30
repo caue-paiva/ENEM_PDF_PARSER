@@ -20,6 +20,8 @@ Na documentação, código e output se faz referência aos dias do ENEM:
 
 ## Dados Extraídos
 
+Exemplos do Output da ferramenta nas provas de 2023/22/20 estão no diretório "test_output"
+
 # TXT
 
 Caso o formato do output seja  TXT, então serão extraídos:
@@ -114,6 +116,9 @@ In the documentation, code, and output, reference is made to the days of the tes
 * **Day two or D2** have the subjects:  Natural Sciences and Mathematics.
 
 ## Extracted Data
+
+Exemples of extracted data from the 2023/22/20 tests can be found at the directory "test_output"
+
 # TXT
 If the output format is TXT, then the following will be extracted:
 
