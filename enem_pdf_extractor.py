@@ -1,6 +1,6 @@
-import re, os ,json , fitz
-from typing import Any 
-
+import re, os ,json 
+from typing import Any  
+import fitz
 """
 
 Performance da ferramenta nos PDFs do ENEM:
@@ -45,7 +45,8 @@ class EnemPDFextractor():
     __NUM_PATTERN2__ = r"\*\w{10}\*"
     __QUESTION_IDENTIFIER__ = "QUESTÃO"
     __TXT_QUESTION_TEMPLATE__= "(Enem/{test_year})  {question_text}\n(RESPOSTA CORRETA): {correct_answer}\n\n"
-    __SUPPORTED_OUTPUT_FILES__:tuple = ("txt", "json")
+    __MD_QUESTION_TEMPLATE__ = "# Ano: (Enem/{test_year}) \n# texto da questão: \n {question_text} \n # (RESPOSTA CORRETA): {correct_answer}\n\n"
+    __SUPPORTED_OUTPUT_FILES__:tuple = ("txt", "json", "markdown")
     __TEST_COLOR_PATTERN__ = "CD\d{1}"  #provas/cadernos e gabaritos  são separadas por cores, se as cores de ambos forem iguais, eles estão relacionados
 
     #-------variáveis específicas de cada classe-------
@@ -61,7 +62,7 @@ class EnemPDFextractor():
         Construtor para a classe EnemPDFextractor.
         
         Argumentos:
-            output_type (str) :  Tipos de arquivo de output do texto, são suportados outputs .TXT e .JSON.
+            output_type (str) :  Tipos de arquivo de output do texto, são suportados outputs .TXT e .JSON e Markdown.
             -OBS:  arquivos JSON contem informações adicionais como lista de alternativas e lista de imagens associadas, caso imagens sejam extraidas.
             
 
@@ -114,6 +115,7 @@ class EnemPDFextractor():
         #troca a letra por ela mesmo com um ) depois
         def replace_match(match):
             return f"{match.group(1)})"
+        
         number_substi: int 
         question, number_substi = re.subn(pattern, replace_match, question)
         if number_substi < 5:
@@ -146,6 +148,15 @@ class EnemPDFextractor():
         return return_val  
     
     #retorna uma lista das alternativas da questão
+
+    def __md_parse_alternatives__(self, question:str)->str:
+        alternative_pattern = r"[A-E]\).*?"
+        first_match = re.search(alternative_pattern,question)
+        if first_match:
+         start_index: int = first_match.start()
+         question = question[:start_index] + "\n# alternativas: \n" + question[start_index:]
+        
+        return question 
 
     def __get_alternative_list__(self,question:str)->list[str]:
         regex_pattern = "[A-E]\)"
@@ -381,7 +392,7 @@ class EnemPDFextractor():
     def __handle_day_one_with_images__(self, pdf_reader: fitz.fitz.Document, test_year:int)->None:
         
         total_question_number: int = 0 
-        if self.output_type == "txt":
+        if self.output_type == "txt" or self.output_type == "markdown" :
             english_questions: str = ""
             spanish_questions: str = ""
             humanities_questions: str = ""
@@ -441,6 +452,9 @@ class EnemPDFextractor():
                     alternative_list = parsed_question_vals[1]
                 elif isinstance(parsed_question_vals, str):
                     parsed_question:str = parsed_question_vals
+                
+                if self.output_type == "markdown":
+                    parsed_question: str = self.__md_parse_alternatives__(parsed_question)
                     
                 if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                     question_start_index = position
@@ -449,6 +463,8 @@ class EnemPDFextractor():
 
                 if self.output_type == "txt":
                     parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+                elif self.output_type == "markdown":
+                    parsed_question = self.__MD_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
                 else:
                     question_json:dict = self.__get_json_from_question__(
                         question= parsed_question,
@@ -465,25 +481,25 @@ class EnemPDFextractor():
                 start_huma, end_huma = topic_question_range["huma"]
 
                 if answer_number in range(start_eng, end_eng+1):
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                         english_questions += parsed_question
                     else:
                         english_questions.append(question_json)
 
                 elif answer_number in range(start_spa, end_spa+1): 
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                         spanish_questions += parsed_question
                     else:
                         spanish_questions.append(question_json)
 
                 elif answer_number in range(start_lang, end_lang+1):
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                         languages_arts_questions += parsed_question
                     else:
                         languages_arts_questions.append(question_json)
 
                 elif answer_number in range(start_huma, end_huma+1):
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                         humanities_questions += parsed_question
                     else:
                         humanities_questions.append(question_json)
@@ -492,20 +508,22 @@ class EnemPDFextractor():
                 answer_number += 1
         
      #escrever as strings extraidas nos seus arquivos respectivos
-        if self.output_type == "txt":   
-            file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.txt" )
+        if self.output_type == "txt"  or self.output_type == "markdown":   
+            file_type_iden: str = ".txt" if self.output_type == "txt" else ".md"
+
+            file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions{file_type_iden}" )
             with open(file_path, "w") as f_eng:
                 f_eng.write(english_questions)
                 
-            file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions.txt" )
+            file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions{file_type_iden}" )
             with open(file_path, "w") as f_spani:
                     f_spani.write(spanish_questions)
 
-            file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions.txt" )     
+            file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions{file_type_iden}" )     
             with open(file_path, "w") as f_lang:
                 f_lang.write(languages_arts_questions)
                 
-            file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.txt" )
+            file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions{file_type_iden}")
             with open(file_path, "w") as f_huma:
                 f_huma.write(humanities_questions)
         else:
@@ -527,7 +545,7 @@ class EnemPDFextractor():
 
     def __handle_day_two_with_images__(self, pdf_reader: fitz.fitz.Document, test_year:int)->None: 
         total_question_number: int = 0 
-        if self.output_type == "txt":
+        if self.output_type == "txt" or self.output_type == "markdown":
              math_questions: str = ""
              natural_sci_questions: str = ""
         else:
@@ -577,6 +595,9 @@ class EnemPDFextractor():
                     alternative_list = parsed_question_vals[1]
                 elif isinstance(parsed_question_vals, str):
                     parsed_question:str = parsed_question_vals
+                
+                if self.output_type == "markdown":
+                    parsed_question: str = self.__md_parse_alternatives__(parsed_question)
 
                 if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                     question_start_index = position
@@ -585,6 +606,8 @@ class EnemPDFextractor():
 
                 if self.output_type == "txt":
                     parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+                elif self.output_type == "markdown":
+                    parsed_question = self.__MD_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)   
                 else:
                     question_json:dict = self.__get_json_from_question__(  #retorna um dict com as informações da questão, para ser carregada num JSON
                         question= parsed_question,
@@ -600,13 +623,13 @@ class EnemPDFextractor():
                 start_math, end_math = topic_question_range["math"]
 
                 if answer_number in range(start_natu, end_natu+1):  #acha qual é a matéria da questão e adiciona a questão na variável associada
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                        natural_sci_questions += parsed_question
                     else:
                         natural_sci_questions.append(question_json)
 
                 elif answer_number in range(start_math, end_math+1):
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                         math_questions += parsed_question
                     else:
                         math_questions.append(question_json)
@@ -615,12 +638,14 @@ class EnemPDFextractor():
                 answer_number += 1
        
         #escrever as strings extraidas nos seus arquivos respectivos
-        if self.output_type == "txt":   
-             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.txt" )
+        if self.output_type == "txt" or self.output_type == "markdown":   
+             file_type_iden: str = ".txt" if self.output_type == "txt" else ".md"
+
+             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions{file_type_iden}")
              with open(file_path, "w") as f_natu:
                 f_natu.write(natural_sci_questions)
             
-             file_path = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.txt" )
+             file_path = os.path.join(self.extracted_data_path,f"{test_year}_math_questions{file_type_iden}")
              with open(file_path, "w") as f_math:
                   f_math.write(math_questions)
         else:
@@ -635,7 +660,7 @@ class EnemPDFextractor():
     def __handle_day_one_tests__(self, pdf_reader: fitz.fitz.Document, test_year:int)->None:
 
         total_question_number: int = 0 
-        if self.output_type == "txt":
+        if self.output_type == "txt" or self.output_type == "markdown" :
             english_questions: str = ""
             spanish_questions: str = ""
             humanities_questions: str = ""
@@ -687,6 +712,8 @@ class EnemPDFextractor():
                         day_one=True
                 ) 
                 unparsed_alternatives: str = text[question_start_index:position]
+
+                
                 
                 parsed_question_vals: Any   = self.__parse_alternatives__(unparsed_alternatives)
                 if isinstance(parsed_question_vals, tuple):
@@ -695,6 +722,8 @@ class EnemPDFextractor():
                 elif isinstance(parsed_question_vals, str):
                     parsed_question:str = parsed_question_vals
                 
+                if self.output_type == "markdown":
+                    parsed_question: str = self.__md_parse_alternatives__(parsed_question)
                 
                 if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                     question_start_index = position
@@ -703,6 +732,8 @@ class EnemPDFextractor():
                 
                 if self.output_type == "txt":
                     parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+                elif self.output_type == "markdown":
+                    parsed_question = self.__MD_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
                 else:
                     question_json:dict = self.__get_json_from_question__(
                         question= parsed_question,
@@ -719,25 +750,25 @@ class EnemPDFextractor():
                 start_huma, end_huma = topic_question_range["huma"]
 
                 if answer_number in range(start_eng, end_eng+1):
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                         english_questions += parsed_question
                     else:
                         english_questions.append(question_json)
 
                 elif answer_number in range(start_spa, end_spa+1):
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                         spanish_questions += parsed_question
                     else:
                         spanish_questions.append(question_json)
 
                 elif answer_number in range(start_lang, end_lang+1):
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                         languages_arts_questions += parsed_question
                     else:
                         languages_arts_questions.append(question_json)
 
                 elif answer_number in range(start_huma, end_huma+1):
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                         humanities_questions += parsed_question
                     else:
                         humanities_questions.append(question_json)
@@ -749,20 +780,22 @@ class EnemPDFextractor():
             
         
         #escrever as strings extraidas nos seus arquivos respectivos
-        if self.output_type == "txt":   
-            file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions.txt" )
+        if self.output_type == "txt"  or self.output_type == "markdown":   
+            file_type_iden: str = ".txt" if self.output_type == "txt" else ".md"
+
+            file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_eng_questions{file_type_iden}" )
             with open(file_path, "w") as f_eng:
                 f_eng.write(english_questions)
                 
-            file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions.txt" )
+            file_path = os.path.join(self.extracted_data_path,f"{test_year}_spani_questions{file_type_iden}" )
             with open(file_path, "w") as f_spani:
                     f_spani.write(spanish_questions)
 
-            file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions.txt" )     
+            file_path = os.path.join(self.extracted_data_path,f"{test_year}_lang_questions{file_type_iden}" )     
             with open(file_path, "w") as f_lang:
                 f_lang.write(languages_arts_questions)
                 
-            file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions.txt" )
+            file_path= os.path.join(self.extracted_data_path, f"{test_year}_huma_questions{file_type_iden}")
             with open(file_path, "w") as f_huma:
                 f_huma.write(humanities_questions)
         else:
@@ -785,7 +818,7 @@ class EnemPDFextractor():
     def __handle_day_two_tests__(self, pdf_reader: fitz.fitz.Document, test_year:int)->None:
         
         total_question_number: int = 0 
-        if self.output_type == "txt":  #a variavel para as questões de cada matéria depende do tipo de output, se for .txt é uma string, se for JSON é uma lista de dicts
+        if self.output_type == "txt" or self.output_type == "markdown" :  #a variavel para as questões de cada matéria depende do tipo de output, se for .txt é uma string, se for JSON é uma lista de dicts
              math_questions: str = ""
              natural_sci_questions: str = ""
         else:
@@ -835,6 +868,9 @@ class EnemPDFextractor():
                 elif isinstance(parsed_question_vals, str):
                     parsed_question:str = parsed_question_vals
                 
+                if self.output_type == "markdown":
+                    parsed_question: str = self.__md_parse_alternatives__(parsed_question)
+                
                 if parsed_question == "non-standard alternatives": #caso a questão tenha alternativas de imagens (mas que o PDF não consegue detectar)     
                     question_start_index = position
                     answer_number += 1
@@ -842,6 +878,8 @@ class EnemPDFextractor():
                 
                 if self.output_type == "txt":  #valor da questão depende do tipo de output
                     parsed_question = self.__TXT_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
+                elif self.output_type == "markdown":
+                    parsed_question = self.__MD_QUESTION_TEMPLATE__.format(test_year = test_year, question_text = parsed_question, correct_answer = correct_answer)
                 else:
                     question_json:dict = self.__get_json_from_question__(
                         question= parsed_question,
@@ -856,13 +894,13 @@ class EnemPDFextractor():
                 start_math, end_math = topic_question_range["math"]
 
                 if answer_number in range(start_natu, end_natu+1):
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                        natural_sci_questions += parsed_question
                     else:
                         natural_sci_questions.append(question_json)
 
                 elif answer_number in range(start_math,  end_math+1):
-                    if self.output_type == "txt":
+                    if self.output_type == "txt" or self.output_type == "markdown":
                         math_questions += parsed_question
                     else:
                         math_questions.append(question_json)
@@ -871,12 +909,14 @@ class EnemPDFextractor():
                 answer_number += 1
             
         #escrever as strings extraidas nos seus arquivos respectivos, dependendo do tipo de output
-        if self.output_type == "txt":   
-             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions.txt")
+        if self.output_type == "txt" or self.output_type == "markdown":   
+             file_type_iden: str = ".txt" if self.output_type == "txt" else ".md"
+
+             file_path:str = os.path.join(self.extracted_data_path,f"{test_year}_natu_questions{file_type_iden}")
              with open(file_path, "w") as f_natu:
                 f_natu.write(natural_sci_questions)
             
-             file_path = os.path.join(self.extracted_data_path,f"{test_year}_math_questions.txt")
+             file_path = os.path.join(self.extracted_data_path,f"{test_year}_math_questions{file_type_iden}")
              with open(file_path, "w") as f_math:
                   f_math.write(math_questions)
         else:
